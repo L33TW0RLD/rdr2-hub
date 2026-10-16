@@ -20,7 +20,7 @@
 ## 2. Key spaces and permanence
 
 - **Family ID:** S01 through S30 immutable; a new proposed family starts at S31. Never silently reuse an ID. Family renames preserve their ID.
-- **Mechanic ID:** Sxx.Mnn (for example S06.M03). Allocate from 01, append new numbers; IDs do not encode story chapter, mission sequence, or priority. Once published, IDs remain mapped even when a mechanic is moved.
+- **Mechanic ID:** Sxx.Mnn (for example S06.M02). Allocate from 01, append new numbers; IDs do not encode story chapter, mission sequence, or priority. Once published, IDs remain mapped even when a mechanic is moved.
 - **Subcategory code:** human-readable stable slug, e.g. horse-care; free to rename via recorded alias migration, but not an ID.
 - **Dossier:** one or more mechanic IDs point to a separately versioned deep-dive document. A dossier is not a new family and cannot write campaign state.
 - **External goal criterion ID:** C100.*, CGOLD.*, CACH.*, CEXH.*, CCONV.*, CIMM.*. These belong to a criterion catalogue if commissioned later; avoid inventing a completed-goal ledger now.
@@ -65,7 +65,7 @@ Null/unknown is preferable to a guessed prerequisite or value. A family entry ma
 
 **Gate expression:** ALL, ANY, ONE_OF, EVENT, CHAPTER_WINDOW, REGION, TIME_WINDOW, PLAYER_OBSERVED; each subcondition has a documented assertion status. Gate predicates describe *rule dependencies*, never write unlock flags to player state.
 
-**Typed edges:** REQUIRES (hard prerequisite); ENABLES (new mechanic access); MATERIAL_FOR (inventory/craft input); OUTPUT_TO (receiving service); IMPROVES (optional enhancement); INTERACTS_WITH (bidirectional noncausal); CONFLICTS_WITH (mutually exclusive destination/choice); HAZARD_TO (may close opportunity); CONTRIBUTES_TO (goal); RECORDED_IN (in-game reference screen). Use REQUIRES only where researched, not merely because things are convenient together. Cross-reference target may be an Sxx.Mnn, Gate Uxx, criterion C*, or external read-only source URI; dangling edges flagged.
+**Typed edges:** REQUIRES (hard prerequisite, directed dependent -> prerequisite; only source-verified edges may enforce gating); ENABLES (new mechanic access); MATERIAL_FOR (inventory/craft input); OUTPUT_TO (receiving service); IMPROVES (optional enhancement); INTERACTS_WITH (bidirectional noncausal); CONFLICTS_WITH (mutually exclusive destination/choice); HAZARD_TO (may close opportunity); CONTRIBUTES_TO (goal); RECORDED_IN (in-game reference screen). Use REQUIRES only where researched, not merely because things are convenient together. A provisional dependency must remain a candidate relationship, not an enforceable REQUIRES edge; gate Uxx conditions and actual player observations must be checked separately. Cross-reference target may be an Sxx.Mnn, Gate Uxx, criterion C*, or external read-only source URI; dangling edges flagged.
 
 **Risk:** irreversible / missable / chapter_sensitive / conditional / recoverable / disputed / ordinary. A 'missable' label is **claim-scoped**, not inferred from a chapter number alone.
 
@@ -73,7 +73,7 @@ Null/unknown is preferable to a guessed prerequisite or value. A family entry ma
 
 ## 5. Reference record (illustrative, proposal; not a player assertion)
 
-    id: S06.M03
+    id: S06.M02
     name: Horse care and bonding
     parent_family: S06
     subcategory: ownership-care
