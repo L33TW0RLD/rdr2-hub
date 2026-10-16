@@ -328,7 +328,7 @@
 | Input / entry | Typed relation | Destination / effect | Gate / evidence requirement |
 |---|---|---|---|
 | S09.M01 Ledger | ENABLES | S09.M04 Leather Working Tools purchase route | U02, only after qualifying deposit |
-| S09.M04 Tools purchase | REQUIRES for | S10.M02 Pearson satchel recipe access | U03 and actual in-game purchase |
+| S10.M02 Pearson satchel recipe access | REQUIRES (conditional candidate; not enforceable until sourced) | S09.M04 Leather Working Tools purchase | U03; confirm actual purchase and recipe-specific exceptions before gating |
 | S12.M03 Clean kill | MATERIAL_FOR | S10.M03 Pearson craft or S13.M03 Trapper craft | Correct pelt quality; destination inventory exclusive |
 | S12.M04 Intact carcass | MATERIAL_FOR | S27.M02 hunting-request turn-in | Item must satisfy recipient contract |
 | S06.M02 Horse bonding | CONTRIBUTES_TO | S29.M01 official Player goal | In-game Level 4 on one horse |
@@ -347,7 +347,7 @@
 | S03.M03 Mask wearing | INTERACTS_WITH | S05.M02 witness identity | No universal immunity |
 | S12.M02 Tracking | INTERACTS_WITH | S31.M02 tool taxonomy proposal | Does not mean Dead Eye target marking |
 
-These graph edges are illustrative research architecture. Before any automated gate inference, every REQUIRES/HAZARD_TO relation needs a confirmed rule, mode and evidence claim ID under the [schema](taxonomy_schema_v0_1.md).
+Graph direction convention: for REQUIRES, the left-hand mechanic depends on the right-hand prerequisite; other edge types retain their stated semantics. Conditional candidates must not be used to suppress availability without claim-level evidence. These graph edges are illustrative research architecture. Before any automated gate inference, every REQUIRES/HAZARD_TO relation needs a confirmed rule, mode and evidence claim ID under the [schema](taxonomy_schema_v0_1.md).
 
 ## Examples of human discovery without creating a progress ledger
 
