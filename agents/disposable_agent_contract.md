@@ -1,6 +1,6 @@
-# Disposable Agent Contract v0.2 — PROPOSED
+# Disposable Agent Contract v0.2 — ACTIVE
 
-**Status:** DRAFT / OWNER REVIEW REQUIRED. Complements [Parallel Workflow](../protocol/parallel_agent_workflow.md) and [Registry](registry.md). No change to gameplay authority.
+**Status:** OPERATIVE COORDINATION CONTRACT after governance PR #1 merged on 2026-10-16. Complements [Parallel Workflow](../protocol/parallel_agent_workflow.md) and [Registry](registry.md). No change to gameplay authority.
 
 ## Principle
 
