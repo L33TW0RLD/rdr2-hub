@@ -1,5 +1,25 @@
-# Disposable agents
+# Disposable agents — GitHub-first coordination
 
-Use a fresh thread per bounded task. Read `README.md`, `agents/disposable_agent_contract.md`, relevant area README and current GitHub main. Work only inside the named area. Commit useful durable research/design deliverables with verification. Close with a concise handoff; do not rely on thread memory as authority.
+**Status:** workflow hardening v0.1 proposed on `agent/multi-agent-infra-003`. Until merged by owner approval, use the existing `main` agent contract and explicit task assignments; these new files are review candidates, not automatically active policy.
 
-Initial lanes: `atlas-research`, `free-roam-design`, `mission-interface-review`, `architecture-audit`. Lanes are responsibility labels, not permanent running bots. No background execution is implied.
+- [Registry](registry.md) — coordinator-owned task-to-branch routing index, status, write leases, dependencies and review gate.
+- [Disposable Agent Contract](disposable_agent_contract.md) — minimal permissions, lifecycle and fresh-thread recovery.
+- [Parallel Agent Workflow](../protocol/parallel_agent_workflow.md) — read-first startup, checkpoint cadence, owner approvals, conflict checks and integration.
+- [Checkpoint Template](checkpoint_template.md) — branch-local `agents/checkpoints/<task_id>.md`; durable **next exact action** for unfinished threads.
+- [Task & Final Handoff Template](handoff_template.md) — scoped assignment and completion report.
+- [Recovery Rehearsal](recovery_rehearsal_v0_1.md) — documentary cold-start checks and remaining real-client test.
+
+## Worker startup (when this workflow is adopted)
+
+Given just `task_id` and the repo:
+
+1. Read **current `main`** and registry to locate lane, branch, permitted paths and approval status.
+2. Fetch **assigned branch by explicit `ref`**; compare branch against `main`; read checkpoint and/or final handoff.
+3. If `IN_PROGRESS`, recover completed commits and exact next permitted action. If delivered, stop and recommend a **new task/branch**. Missing or contradictory checkpoint means **do not write** until coordinator resolves.
+4. Confirm dependencies and protected path leases. Use GitHub readback before declaring committed work.
+
+## Role boundary
+
+Agent lanes are disposable research/design workers, not concurrently executing bots that can be detected as online. Do not depend on a prior chat memory, graphical checkbox, background execution or hidden state. The original `L33TW0RLD/rdr2` remains the only gameplay-progress authority.
+
+Completed existing branches `agent/hub-ux-001` and `agent/atlas-taxonomy-002` have final handoffs but **no mid-task checkpoints** because they predate this proposal. Do not retroactively alter those branches.
