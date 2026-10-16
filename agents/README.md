@@ -1,6 +1,6 @@
 # Disposable agents — GitHub-first coordination
 
-**Status:** workflow hardening v0.1 proposed on `agent/multi-agent-infra-003`. Until merged by owner approval, use the existing `main` agent contract and explicit task assignments; these new files are review candidates, not automatically active policy.
+**Status:** ACTIVE COORDINATION WORKFLOW · governance PR #1 merged on 2026-10-16. Read the current `main` registry for assignments and exclusive leases. Neither Agent 001's UX nor Agent 002's taxonomy was ratified by this merge.
 
 - [Registry](registry.md) — coordinator-owned task-to-branch routing index, status, write leases, dependencies and review gate.
 - [Disposable Agent Contract](disposable_agent_contract.md) — minimal permissions, lifecycle and fresh-thread recovery.
@@ -22,4 +22,4 @@ Given just `task_id` and the repo:
 
 Agent lanes are disposable research/design workers, not concurrently executing bots that can be detected as online. Do not depend on a prior chat memory, graphical checkbox, background execution or hidden state. The original `L33TW0RLD/rdr2` remains the only gameplay-progress authority.
 
-Completed existing branches `agent/hub-ux-001` and `agent/atlas-taxonomy-002` have final handoffs but **no mid-task checkpoints** because they predate this proposal. Do not retroactively alter those branches.
+Completed existing branches `agent/hub-ux-001` and `agent/atlas-taxonomy-002` have final handoffs but **no mid-task checkpoints** because they predate this workflow. Do not retroactively alter those branches.
