@@ -1,4 +1,4 @@
-# Disposable Agent Assignment & Handoff Template v0.2 — PROPOSED
+# Disposable Agent Assignment & Handoff Template v0.2 — ACTIVE
 
 ## Task assignment (issued before branch work)
 
