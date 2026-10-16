@@ -1,6 +1,6 @@
 # Disposable-Agent Mid-Task Checkpoint Template v0.1
 
-**Status:** PROPOSED / OWNER REVIEW REQUIRED — no automatic state monitoring.
+**Status:** ACTIVE COORDINATION TEMPLATE · governance PR #1 merged 2026-10-16; no automatic state monitoring.
 
 Use one file per task at `agents/checkpoints/<task_id>.md` **inside that task's own branch**. This is distinct from its immutable final handoff. Replace example values before using; write checkpoints only with authorization for this exact path.
 
