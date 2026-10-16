@@ -1,13 +1,13 @@
-# Parallel Disposable-Agent Workflow v0.1 — PROPOSED
+# Parallel Disposable-Agent Workflow v0.1 — ACTIVE
 
-**Status:** DRAFT / OWNER REVIEW REQUIRED · 2026-10-16
+**Status:** OPERATIVE COORDINATION CONTRACT · governance PR #1 merged on 2026-10-16. This does not approve any gameplay or design proposals.
 **Repository:** `L33TW0RLD/rdr2-hub`
 **Purpose:** Make multiple isolated ChatGPT threads restartable, reviewable, and safe to integrate. This is a **coordination protocol**, not a new RDR2 gameplay authority or an automatic execution system.
 
 ## 1. Authority and the two axes of state
 
 - `main` is the accepted **Hub source baseline** only. A design on a task branch is not approved simply because it has a commit or PR.
-- `agents/registry.md` on **main** is the coordinator-maintained **task routing index** after this protocol is approved and merged. A copy on an unmerged proposal branch is *not yet an operative registry*.
+- `agents/registry.md` on **main** is the coordinator-maintained **task routing index** under this now-merged workflow. A copy on an unmerged proposal branch is *not an operative registry*.
 - Every task branch owns its own `agents/checkpoints/<task_id>.md` (work-in-progress recovery) and a final `agents/handoffs/<date>_<task_id>.md` (completed assignment).
 - `L33TW0RLD/rdr2/campaign/` remains the only authoritative gameplay-state record. No Hub registry, checkpoint, draft, PR, chat, or checkbox can confer medals, unlocks, inventory, saves, or player progress.
 - **Agent status** (`IN_PROGRESS`, `DELIVERED_REVIEW_PENDING`) is different from **content maturity** (`DRAFT`, `RESEARCHED_REVIEW_PENDING`, `ADOPTED`). Neither implies the other.
