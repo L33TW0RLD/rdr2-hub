@@ -1,6 +1,6 @@
 # Systems Atlas
 
-**Status:** TAXONOMY DRAFT / UNRATIFIED · **Twenty source-checked dossiers integrated as RESEARCHED — REVIEW PENDING** · **Updated:** 2026-10-17.
+**Status:** TAXONOMY DRAFT / UNRATIFIED · **Twenty-eight source-checked dossiers integrated as RESEARCHED — REVIEW PENDING** · **Updated:** 2026-10-17.
 
 The Atlas documents gameplay mechanics and dependencies for RDR2 Story Mode. It is a **reference**, not a live campaign commander, compulsory checklist or proof of the player's progress.
 
@@ -51,6 +51,23 @@ All nine Wave 3 specialist branches supplied an independently scoped dossier/che
 
 **Read [Wave 3 cross-dossier review](reviews/2026-10-17_wave3_cross_dossier_review.md) before presenting a disputed irreversible choice.** Two coordinator-only presentation repairs are documented in the review: D09 escaped Markdown was fixed; D20's three sibling-dossier relative links were corrected. All other dossier source blobs are unchanged. Wave 4's **eight** dossiers are [registered for independent research](../agents/atlas_parallel_wave4_v1.md), not automatically launched, researched or merged.
 
+## Wave 4 — final eight researched dossiers (NOT ADOPTED)
+
+All eight final Wave 4 specialists delivered their own source-backed dossiers, checkpoints and handoffs. Integration completes **D01–D28 research-production coverage**. This is not factual ratification, interactive-Companion release or proof of player achievements. For source boundaries, editorial fix and unresolved conflicts, see the [Wave 4 cross-dossier review](reviews/2026-10-17_wave4_final_cross_dossier_review.md).
+
+| Dossier | Research subject | Important caution |
+|---|---|---|
+| [D07 Contextual controls](dossiers/d07_context_controls_prompts_v0_1.md) | Focus/inspect, wheels, Eagle Eye/Dead Eye, map/HUD, mappings | Contextual controls are not universal; proposed **S31 unratified**. D07 Markdown formatting repaired in coordinator copy only |
+| [D14 Town services](dossiers/d14_town_services_games_v0_1.md) | Shops, barber, baths, doctors, stables, shows, table games | Buying, participating, winning and completion criteria differ |
+| [D19 Bounties and robberies](dossiers/d19_bounties_robbery_classes_v0_1.md) | Poster bounty jobs versus Arthur's Wanted bounty; 4 robbery types | Payout and mission-credit conflicts kept DISPUTED |
+| [D21 World encounters](dossiers/d21_finite_encounters_outcomes_v0_1.md) | Finite vs ambient encounters, repeatability, mutually exclusive outcomes | No fixed undocumented spawn timer or compulsory encounter checklist |
+| [D23 Camp micro-events](dossiers/d23_camp_microevents_v0_1.md) | Optional scenes, limited camp conversations, roster changes | Scene timing, requests and some triggers disputed; D05 camp requests remains primary |
+| [D25 Gang hideouts](dossiers/d25_gang_hideouts_ambushes_v0_1.md) | Hideout vs camp/ambush, faction and edition-specific differences | 100% fixed-site credit ≠ ambient combat encounters |
+| [D26 World inspection](dossiers/d26_world_lore_secrets_inspection_v0_1.md) | Shacks, POIs, sketches, secrets, environmental evidence | Full personal exploration ≠ official 100%; later mysteries spoiler-gated |
+| [D28 Photography](dossiers/d28_cosmetics_photography_v0_1.md) | Grooming, handheld camera, Photo Mode, optional venues | Story/edition/patch and Gallery limitations; photos not broadly mandatory |
+
+**Research production milestone:** 28/28 dossiers integrated as **RESEARCHED — REVIEW PENDING**, not `ADOPTED`. Every game-specific uncertainty, claim-level evidence and contradiction still requires the correct evidence/owner gate. No live GameGuide campaign state or save decoder progress is inferred.
+
 ## Taxonomy Architect 002 — review-only additions
 
 - [Taxonomy Record Schema v0.1](taxonomy_schema_v0_1.md) — proposed stable Sxx.Mnn addresses, evidence, typed dependencies, chapter/spoiler metadata and campaign-state separation.
@@ -91,4 +108,4 @@ The Atlas is **one shared mechanics knowledge foundation** for Mission Control, 
 - [Free Roam examples](../free_roam/content/README.md) — link Atlas mechanic rules without inventing acquired gear or completed tasks.
 - [Companion routing](../companion/context_contract_v1.md) — explanatory detours and return context.
 
-**Dossier production:** [Atlas Parallel Wave 1](../agents/atlas_parallel_wave1_v1.md) delivered D01–D06 references for coordinator integration; each remains **RESEARCHED — REVIEW PENDING**. Continue the eight remaining Wave 4 dossier tasks according to [Wave 3/4 plan](../agents/atlas_waves3_4_plan_v1.md) and leave the original S01–S30/proposed S31 unchanged. Merged research does **not** mean owner/gameplay adoption.
+**Dossier production:** [Atlas Parallel Wave 1](../agents/atlas_parallel_wave1_v1.md) delivered D01–D06 references for coordinator integration; each remains **RESEARCHED — REVIEW PENDING**. The 28-dossier research-production backlog is covered; continue source audits, conditional validation and downstream ChatGPT-native Companion integration and leave the original S01–S30/proposed S31 unchanged. Merged research does **not** mean owner/gameplay adoption.

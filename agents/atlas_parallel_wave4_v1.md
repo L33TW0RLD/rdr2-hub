@@ -1,11 +1,11 @@
 # Systems Atlas — Parallel Wave 4: Final Eight Research Dossiers
 
-**Date registered:** 2026-10-17 · **Status:** EIGHT TASK LANES REGISTERED / **NOT AUTOMATICALLY RUNNING**.
+**Date registered:** 2026-10-17 · **Final state:** EIGHT TASK DOSSIERS DELIVERED/INTEGRATED as **RESEARCHED — REVIEW PENDING**; initial registration/history retained; no automatic worker launch was implied.
 **Repository:** `L33TW0RLD/rdr2-hub` · **All new branch baseline:** `0021c319d0232c3a303aeadbe899055260120d54`.
 
 ## Research coverage and exclusivity
 
-Wave 1 (6), Wave 2 (5) and Wave 3 (9) dossiers already appear on `main` as **RESEARCHED — REVIEW PENDING**. These **last eight** will close the **D01–D28 research-production backlog** when their exact deliverables are independently reviewed and merged. That does not by itself ratify mechanic details, prove full game achievements, ship a UI, or authorize game-save observations.
+Wave 1 (6), Wave 2 (5), Wave 3 (9) and now Wave 4 (8) research references are **integrated / review-pending**, totaling **28/28** dossier production coverage. Final Wave 4 handoffs and source boundaries are captured in [Wave 4 cross-review](../systems_atlas/reviews/2026-10-17_wave4_final_cross_dossier_review.md). That does not by itself ratify mechanic details, prove full game achievements, ship a UI, or authorize game-save observations.
 
 | Lane | Dossier | Task ID | Issue | Exact branch | Dossier file |
 |---|---|---|---|---|---|
@@ -46,6 +46,6 @@ Every specialist must:
 
 **Worker chats are not automatically started by GitHub registration.** User dispatches exactly one prompt per specialist chat. This coordinator plan and registry merely make the assignments deterministic.
 
-## Coordinator final integration gate
+## Coordinator final integration gate — SATISFIED FOR RESEARCH DELIVERY (NOT GAMEPLAY RATIFICATION)
 
-Require exact 3-path branch diff, 11-section substantive source dossier and final handoff for all eight tasks; independently reconcile D07/UI semantics, D14 vs D19 money/law, D21/D23 vs D08 closing windows, D25 vs D15 official progress, and D26/D28 optional exploration/Photo Mode. Preserve source caveats, validate relative links/Markdown, and merge with a separate integration PR. Only after verified `main` readback may the 28-dossier **research production** milestone be claimed. GameGuide/save state and user achievements remain independent; no full factual certification or UI launch follows automatically.
+Require exact 3-path branch diff, 11-section substantive source dossier and final handoff for all eight tasks; independently reconcile D07/UI semantics, D14 vs D19 money/law, D21/D23 vs D08 closing windows, D25 vs D15 official progress, and D26/D28 optional exploration/Photo Mode. Preserve source caveats, validate relative links/Markdown, and merge with a separate integration PR. The Wave 4 integration is subject to PR merge and exact `main` readback. The 28-dossier **research production** milestone means source references are present, NOT gameplay/mechanic ratification. GameGuide/save state and user achievements remain independent; no full factual certification or UI launch follows automatically.

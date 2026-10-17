@@ -32,7 +32,7 @@ rdr2-hub/
 │   ├── content/discoveries/     Player-reported organic interruptions (planned)
 │   └── ...                     Existing decision model and UX scenarios
 ├── systems_atlas/               Mechanics taxonomy, gates, evidence and research queue
-│   └── dossiers/                20 integrated research references; 8 planned
+│   └── dossiers/                28 source-backed research references; review pending
 ├── knowledge/                   Content record contract and cross-source map
 ├── quality/                     Evidence, functional and visual acceptance tests
 ├── architecture/                Existing design lineage + remaster blueprint
@@ -79,7 +79,7 @@ We are building **complete researched content before claiming complete game cove
 - [Readiness/acceptance matrix](quality/acceptance_matrix_v1.md)
 - [Repository remaster blueprint](architecture/repository_remaster_blueprint_v1.md)
 
-**Systems Atlas progress:** **20 of 28** source-backed mechanic dossiers integrated: Wave 1 (6), Wave 2 (5), **Wave 3 (9)**, all **RESEARCHED — REVIEW PENDING / NOT ADOPTED**. The nine Wave 3 results and uncertainty boundaries are in the [cross-dossier review](systems_atlas/reviews/2026-10-17_wave3_cross_dossier_review.md) and [Atlas index](systems_atlas/README.md). Wave 4 has **8 remaining dossiers**, now [registered as independent specialist issues/branches](agents/atlas_parallel_wave4_v1.md); no worker chats automatically launched.
+**Systems Atlas research-production milestone:** **28 of 28** source-backed mechanic dossiers integrated across Wave 1 (6), Wave 2 (5), Wave 3 (9), and Wave 4 (8), all **RESEARCHED — REVIEW PENDING / NOT ADOPTED**. The nine Wave 3 results and uncertainty boundaries are in the [cross-dossier review](systems_atlas/reviews/2026-10-17_wave3_cross_dossier_review.md) and [Atlas index](systems_atlas/README.md). Wave 4's **eight** specialist references completed research and are reviewed in the [final Wave 4 cross-dossier report](systems_atlas/reviews/2026-10-17_wave4_final_cross_dossier_review.md). The `main` Atlas research library covers 28 dossiers, while factual adoption, current player progress, save decoding and UI completion remain distinct.
 
 **Systems Atlas Wave 1 delivery:** D01 Horses, D02 Camp, D03 Satchels, D04 Hunting, D05 Camp Life and D06 Inventory are [six substantive source-checked dossiers](systems_atlas/README.md), with [cross-dossier review](systems_atlas/reviews/2026-10-17_wave1_cross_dossier_review.md). All retain **RESEARCHED — REVIEW PENDING**, not ADOPTED. Specialist threads remain reusable; their branches and handoffs remain available. [Wave 1 production history](agents/atlas_parallel_wave1_v1.md). Adaptive Companion 010 remains separately planned.
 
