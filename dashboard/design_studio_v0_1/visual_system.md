@@ -363,3 +363,41 @@ The owner finalized the compact Mission Control A1 treatment with two correction
 Neither indicator changes story prerequisites, in-game availability, medal state, mission ordering or priority. Future feature text is hidden **only for its own evidence reasons** (mission not observed, feature already accessible, unsupported source claim, or no substantive introduction)—never merely because a different row is urgent. Same full original Field Guide row-click action.
 
 **LOCKED:** Chapter II medal/header rail and dot lane, hover titles, Home, compact mission rows, gold stars, title-case `New Possibilities` and simultaneous inline urgency labels. No original GameGuide, real campaign, progress engine or source admission changes. Client device acceptance still pending.
+
+---
+
+## 17. Final Mission Control microtype and next-container design study v1.0 (2026-10-18)
+
+**Owner-finalized microtype:** The gold sparkle remains. The mini-label beside it is **`NEW POSSIBILITIES`** in small, compact, **bold uppercase**, matching the owner's supplied visual reference. The **rest of the label preserves its previous regular mixed-case typography**, e.g.:
+
+```text
+✧  NEW POSSIBILITIES   ·   Stables & horse care
+   ↑ small, bold uppercase    ↑ normal body font
+```
+
+Use warm subdued gold (`#D6AC49`) for the **sparkle** and a legible light neutral for the uppercase mini-label (the screenshot uses light text); the mechanic description remains normal muted body text. Do not capitalize the mechanic, bold the entire line, create a colored badge, or increase its height. Earlier v0.9 title-case advice is superseded by this final specific typography approval.
+
+**Owner lock:** The Chapter II header and Mission Control list (compact A1, separate urgency row label, independently visible source-backed features) are **DESIGN LOCKED**. Actual source-adapter implementation and mobile-device confirmation remain untested.
+
+### Next design boundary: Adventure container *beneath* Mission Control
+
+**Design research, not owner approval yet.** The next content surface below Mission Control is Free Roam, rendered with the player-facing name **Adventure**. No new permanent Home/Story/Adventure/Atlas header tabs.
+
+Canonical Free Roam rhythms from `free_roam/README.md`:
+- PROJECT: an optional multi-session purpose, currently represented by a *conditional* `Develop the Gang's Camp` reference; never falsely call it a user-selected active project.
+- OUTING: one coherent optional trip, currently `Heartlands Hunting Reconnaissance` design content; valid only if Arthur actually has roaming control and the chosen location/tools make sense. No fabricated wildlife/loot.
+- DISCOVERY: emergent reaction to what the player finds, **not** a scripted map-pin catalogue or a mandatory third checklist.
+
+#### Candidate Adventure A — balanced, flat two-row container
+
+One section heading, then two flat pressable rows (PROJECT / OUTING) with brief benefit, one next *observable* prerequisite, and a chevron. A single gentle line below says unexpected discoveries can change the plan. No heavy nested progress meter or fictitious completed milestones.
+
+#### Candidate Adventure B — one contextual thread with optional alternative
+
+One source-linked suggested PROJECT occupies slightly more space for the next sensible action, with OUTING as a compact alternative row; Discovery remains a subtle permission, not a prepared hidden-reward prompt. A "suggested" focus needs a real player preference or explicit **fictional UI fixture**, not arbitrary assignment.
+
+**Presentation tests:** compare A/B with fictional confirmed free-roam control, real-control-unknown, and a fictional active John oil-wagon urgency state. In unknown control mode, make conditional invitation explicit and offer one real "check whether Arthur can roam" action. During a confirmed active irreversible stage, subordinate the outing and give the full original Story guide priority; do not present hunting as if safely available.
+
+Both candidate rows should route to their exact Hub source document in a new ChatGPT turn and query latest authoritative GameGuide for *availability only*. Clicking Project/Outing is **not a gameplay action or completion record**. Projects and outings are `DRAFT / NOT ADOPTED` content and should be labelled as planning help, not authoritative campaign state.
+
+**Acceptance:** user has not selected A or B. This study is the next iteration, preserving both locked components untouched.
