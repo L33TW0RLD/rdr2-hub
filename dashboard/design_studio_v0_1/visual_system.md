@@ -222,3 +222,70 @@ This is a **design-only** amendment. Segment popover behavior and accessibility 
 **Presentation goal:** the secondary marks are a quiet annotation of the rail, **not a new bulky information row**. Do not enlarge the header or insert more chrome. User-approved hover and action are preserved exactly.
 
 Status: DESIGN SPECIFIED; dot positioning, hover integration and mobile legibility require client click-through.
+
+
+---
+
+## 13. Mission Control container v0.6 — exploratory A/B/C, header locked (2026-10-17)
+
+**Design gate:** Chapter II header/18-segment best-medal rail, status summary, neutral map-availability dots, hover-title, click-full-source and Home **LOCKED by owner**. This proposal changes **only the first Mission Control container beneath it**; no header restyle or new header navigation tabs. Do not treat any variant as approved until the owner selects it.
+
+### What Mission Control owns
+
+**Mission Control is a choice surface, not a miniature full Field Guide and not a replay catalogue.** It displays only missions whose markers were actually observed available in the relevant game checkpoint; other known mission dossiers remain reference-accessible through the medal rail. It must not silently infer eligibility from story numbering, medal history or disputed prerequisites.
+
+**The central decision:** how do we make two, four or more observed choices feel effortless without turning this into a repetitive dashboard?
+
+#### Variant A — Compact Mission List (high scan efficiency)
+
+- One clean shared container. Row = mission heading, one meaningful muted descriptor (mission-giver only when independently observed/researched), single chevron / entire row activates full original guide.
+- No redundant "Available" label on every row; container title + source confidence do that once.
+- Thin dividers, no heavy card nested around every mission, no thumbnails by default.
+- Scales best to three or more choices and mobile.
+
+#### Variant B — Editorial Mission Cards (more character)
+
+- Separate restrained full-width cards with heading, one **source-grounded spoiler-free** sentence of premise, NPC label when known, small arrow.
+- Never show fabricated Gold deadlines, location, difficulty, implied route or earned medals.
+- Story previews may be wider on desktop but retain one-column order on mobile, no generic stock image requirement.
+- Stronger atmosphere but takes more vertical room.
+
+#### Variant C — Featured Choice + Alternates (contextual focus)
+
+- One top featured observed option with **transparent why-featured** rationale only when genuinely supported by expressed player intent, active safety risk or a deliberate selection; otherwise feature **none**, not the first numbered operation.
+- Remaining observed choices as compact rows below. Do not imply featured choice is canonical mission order or that alternatives are unavailable.
+- If a specific skippable event is explicitly active, it can receive the spotlight with a direct inline safety explanation; **no invented countdown**.
+- Strongest pacing, but highest risk of accidental steering and hiding legitimate choices.
+
+### Required states in each variant
+
+| State | Display rule | What must not happen |
+|---|---|---|
+| Two observed markers | Two equally available actions | Forced "Mission 007 first" |
+| Four or more observed markers | All can be reached; compact format, no default teaser for every entry | Hide a mission solely because the screen is short |
+| **Unknown map** | Small honest empty state: "Available markers not checked"; one real action to ask for a map observation | Display zero available or infer marker visibility from ledger |
+| Explicitly active skippable Story stage | Action-critical warning **inline and visible**, appropriate mission top-ranked by safety—not generic preference | Timer/countdown guessed, camping/hunting suggestion above risk |
+| Replay requested | Separate clear replay/Gold cleanup context; when medal already Gold, don't invent a pending cleanup | Mix medal history into presently available Story markers |
+
+**Real available markers currently unverified:** any displayed NPC mission list in the in-chat design example must be introduced as **SIMULATED MARKERS**. The actual canonical medal ledger is a historical best-result record, not current map telemetry.
+
+### Micro-visuals and interaction constraints
+
+1. **Header → divider → Mission Control title → available mission choices**. The container should begin close to the rail without another status dashboard.
+2. Main primary action is **open the complete original GameGuide Field Guide**. The card/row itself can be the click surface; a chevron communicates navigation but is not a separate inert control.
+3. Body should not have redundant operation IDs, medal counts, Gold/Silver/Bronze labels, or a progress bar. Those already belong in the locked header.
+4. A small \`Observed markers / Simulated fixture\` evidence cue can sit *once* below the heading—not once per row.
+5. A/B/C switchers, scene selectors and voting controls are **design-lab only**, not part of the final Mission Control container.
+6. First visible result should be useful in one glance, mobile-first.
+7. Selecting a mission never completes it; every action requests the **full source**, re-checks current protocol, and keeps source-reported medal history separate from the fictional availability vignette.
+8. Keep location, Gold count, mission length, time deadline and honor choices out of mission cards unless independently sourced, materially relevant and spoiler-safe. Even then the full Field Guide remains authoritative.
+9. The existing **small map dot** and visible mission list derive from the same observed marker IDs; never let them disagree because of local styling.
+10. Unknown vs not available vs already completed are separate epistemic states. An absence of a dot without current map observation is not proof of unavailability.
+11. Use actual player intent to feature when appropriate. Don't use source file order as ranking.
+12. Prefer native semantic pressable rows / buttons; on desktop and mobile the entire row provides a generous hit zone.
+
+### Design recommendation to test, not ratify
+
+Hypothesis: **A (list)** as scalable default, with **C's top featured exception only for a truly active risk**. Compare to B because the owner values a more immersive presentation. In particular test 2 vs 4 vs 0 observed markers, and one urgent story marker. Pick based on real screenshot/interaction feedback, not preference claimed by the design author.
+
+**Design-only scope:** no changing medal colors/segments, no fake chapter progress, no new Story gates, no original GameGuide edits. The historical v0.1 always-visible four-button header is superseded by the locked owner design.
