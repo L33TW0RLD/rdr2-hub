@@ -1,41 +1,46 @@
-# Mission Shady Belle 039 — Initial task checkpoint
+# Mission Shady Belle 039 — Research complete, handoff pending checkpoint
 
 **Task:** `mission-shady-belle-039` · [Issue #53](https://github.com/L33TW0RLD/rdr2-hub/issues/53)  
-**Scope:** Mission Control Chapter 4 — Shady Belle, complete medal-bearing Story and relevant optional entries  
-**Branch:** `agent/mission-shady-belle-039`  
+**Scope:** Chapter 4 — Shady Belle / Saint Denis, Story Mode mission source/transfer pack  
+**Assigned branch:** `agent/mission-shady-belle-039`  
 **Registered baseline:** `8f0e9e64cfb0bff79fbb0ebe2f6dc0ada8e2131d`  
-**Latest `main` inspected:** `613193b9b1790cf7b6cba7ae4056e3a6d8f02a7b`  
-**Checkpoint date:** 2026-10-17  
-**Workflow:** `IN_PROGRESS`, prior to substantive mission source research.
+**Main at startup:** `613193b9b1790cf7b6cba7ae4056e3a6d8f02a7b`  
+**Date:** 2026-10-17  
+**Workflow:** `IN_PROGRESS` — complete source pack read back, final handoff remains.  
+**Research:** `RESEARCHED — REVIEW PENDING`, NOT ADOPTED.
 
-## Exclusive three-path lease
+## Three-file exclusive lease
 
-1. `mission_control/chapter_research/chapter_04_v0_1.md`
-2. `agents/checkpoints/mission_shady_belle_039.md`
-3. `agents/handoffs/2026-10-17_mission_shady_belle_039.md`
+- `mission_control/chapter_research/chapter_04_v0_1.md`
+- `agents/checkpoints/mission_shady_belle_039.md`
+- `agents/handoffs/2026-10-17_mission_shady_belle_039.md`
 
-Protected: latest `main`, registry/shared plan/adapter, sibling chapter research, Atlas sources (read-only, review pending), original `L33TW0RLD/rdr2` mission dossiers, preflight, Field Guide and `campaign/`, and all save/decoder paths. No self-merge, rebase, reset, force push, adoption or any player progress write.
+Protected: main, registry, plan, Atlas/adapter, all sibling mission packs and specialists, original GameGuide `L33TW0RLD/rdr2` (missions/preflight/guides/campaign), Save Intelligence. No reset/rebase/force push/merge/ratification.
 
-## Starting verification
+## Durable source/work receipts
 
-- Issue #53 and `agents/registry.md` agree with exact task, branch, baseline and three paths.
-- Branch exists, zero task commits, one coordinator commit behind `main`; no conflicting changed paths.
-- All three leased files absent at start. This checkpoint must precede any substantive new research.
-- Last verified branch baseline: `8f0e9e64cfb0bff79fbb0ebe2f6dc0ada8e2131d`.
-
-## Intended deliverable / acceptance
-
-Source-checked research and transfer pack for all Chapter 4 medal-bearing Story missions and relevant optional entries. For each: named mission identity and eligible Gold status (not shelf ID), complete objectives/thresholds and uncertainty, flexible story unlocks/episode windows, detailed phase-by-phase chronology to Field Guide v1.1 transfer, unique items and missables, Honor/saves/campaign hazards and correctly delimited missions/Stranger/events. Explicit GameGuide file mapping and `NEEDS_GAMEGUIDE_AUTHORING` where missing. Claim-level source URLs and checked dates; separate spoiler tier for future chapters. No user state inferred.
-
-**Dependencies:** `agents/mission_parallel_wave1_v1.md`, `mission_control/source_adapter_v1.md`, `knowledge/record_contract_v1.md`, the original GameGuide read-only, and Atlas D08/D18/D22/D24 references (RESEARCHED — REVIEW PENDING, not ADOPTED).
-
-## Durable progress
-
-| Milestone | Receipt |
+| Milestone | GitHub commit / readback |
 |---|---|
-| Exact issue, registry, plan, branch and lease recovered | `main` at `613193b9`; branch baseline `8f0e9e6` |
-| Pre-research initial task checkpoint | This file; commit/readback pending |
+| Contract, chapter identity and lease recovered | Baseline `8f0e9e64cfb0bff79fbb0ebe2f6dc0ada8e2131d`; main at startup `613193b9b1790cf7b6cba7ae4056e3a6d8f02a7b`; no overlap |
+| **Initial checkpoint before content/research** | Commit `cda8184fd1efeb04a13ce6584df3bca46ef1a12f`; explicit branch readback blob `506cfdfcf4ccf27d433e9dee08a338053747aa4e` |
+| 14 standard + one bonus Chapter 4 inventory and gates | `4ee47e45d87775b3c2d21ea4010dfeb2888f7016` |
+| First eight full A–D medal mission sequences | `e9bca7d76b151c7c02f3a94fd2e4a600f36f498c` |
+| Remaining seven mission field phase maps incl. conditional bonus | `73bb6c87464008bf15c0f3ebd5410c0a0fc42c62` |
+| Non-medal Strauss/part setup, chapter exit, source register, conflicts | `15183942ac4c680205b686dfaa5dd71a869f11fb` |
+| GameGuide transfer and independent QA, 11 sections | `31852d2ace7cc7f840bbf3182f2e4230bb54b1cb` |
+| Source reference integrity repair | `60120371ff33fa35f8af8cdaf8258cec5b100745` · final dossier verified blob **`59a2cd3c26157f8cc953321038326e466ae04521`** |
 
-**Next precise authorized action:** Read back this checkpoint from exact branch, read original `rdr2` mission README / Field Guide / preflight and independently sourced Chapter 4 mission inventory/Gold criteria, then create only leased chapter pack, handoff and final checkpoint. Stop at `DELIVERED_REVIEW_PENDING`.
+**Source pack verified by branch readback:** **11** numbered sections, **15** medal-eligible conditional entries (**14 standard + 1 edition extra**), **60** named A–D phases for medals plus **3** non-medal debt phases, **45** Gold criterion checklist rows, relevant nonmedal Strauss V/letter and introduction setup, **14** disputes, all source IDs defined, direct per-mission URLs, original GameGuide read-only audit and every future original-dossier row `NEEDS_GAMEGUIDE_AUTHORING`. Blob size **77,452 characters / 814 lines** at last readback.
 
-**Unresolved:** Full list/number of medal-bearing Chapter 4 entries, optional/non-medal portions, numerical medal targets, original GameGuide chapter-4 coverage and conflicts. No player mission, Gold, save, Honor or inventory is asserted.
+**Scope confidence:** Gold requirements compared PowerPyx Gold (2018) and Hold To Reset (2018-era), RDR2.org per-scene four pages (updated 2023) and PowerPyx individual walkthrough; edition bonus additionally GTA Base and iRedDead. Direct Rockstar engine mission flags not tested. No gameplay state, inventory, medal, save, equipment or progress inferred; actual marker/entitlement player evidence UNKNOWN.
+
+**Key unresolved:** bonus `High and Low Finance` counting for Gold Rush; Bank exact story prerequisite graph; John-following graveyard 10:40 timing; original-world replay-vs-Honor trophy; rare one-off loot; original GameGuide Chapter 4 dossier absent in inspected index.
+
+## Exact next permitted action
+
+1. Read back this updated research checkpoint on exact branch ref.
+2. Publish `agents/handoffs/2026-10-17_mission_shady_belle_039.md` in **third and final leased path**.
+3. Update checkpoint status to `DELIVERED_REVIEW_PENDING`, then read back all three and compare to baseline + current main, verify terminal SHA.
+4. **STOP task 039**, no self-merge, adoption, original repo or next task.
+
+No actual GitHub conflict occurred. Branch was exactly one coordinator commit behind main at kickoff; no rebase needed.
