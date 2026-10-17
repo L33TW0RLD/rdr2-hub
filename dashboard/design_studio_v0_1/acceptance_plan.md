@@ -128,3 +128,20 @@ Do not ask all five as a form. Let real feedback identify which one to refine fi
 | H15 | Keyboard/screen reader inspection | Semantics allow discovering identity/status without a cluttered visible dropdown | UNTESTED |
 
 **Supersession:** H05's previous Operation/status inspection and H06's `accessible selector` alternative are replaced by title-only popover and accessible padded segment controls. Do not show a visible select or extra below-rail detail. No mission availability/Gold/campaign mutation; this is a local design rehearsal.
+
+
+---
+
+## Owner-directed hover/action tests H16–H20 (2026-10-17)
+
+This replaces H12–H13's popover-on-click and H15's click-to-inspect expectations.
+
+| ID | User action | Expected | State |
+|---|---|---|---|
+| H16 | Hover a segment | Native compact title-only tooltip; no heavy popover or persistent card; no source turn | PENDING USER |
+| H17 | Move mouse away | Tooltip dismisses; nothing beneath the bar changes | PENDING USER |
+| H18 | Click one of the 18 segments | Starts the correct original FULL Field Guide fetch/render turn, not the decorative tooltip | PENDING USER |
+| H19 | Click a neutral/unverified mission | Opens a **reference**, never claims a playable marker or completed/GOLD mission | PENDING USER |
+| H20 | Tap on mobile / focus with keyboard | Accessible real action without relying on hover or a 4px hit area | UNTESTED |
+
+**Constraint:** This is a UI routing test only; hover/click and follow-up source read are not actual gameplay progress or save readback. The native tooltip's shape/appearance may still need client-level improvement; if host styling is insufficient, don't claim a custom rendered tooltip was implemented.
