@@ -106,6 +106,8 @@ export function planProgressionWindow(graph,hierarchy,policy,scenario,options={}
  if(!scenario?.synthetic||scenario.source!=="SIMULATION_FIXTURE")throw Error("Only explicit synthetic fixtures permitted");
  const opts={verbosity:"adaptive",goals:[],intent:"unspecified",...options};
  if(!["quiet","adaptive","active"].includes(opts.verbosity))throw Error("Invalid verbosity");
+ if(!Array.isArray(opts.goals)||opts.goals.some(g=>typeof g!=="string"||!policy.supported_goals.includes(g)))throw Error("Unknown or malformed goal scope");
+ if(opts.requested_focus&&!hierarchy.nodes.some(n=>n.id===opts.requested_focus))throw Error("Requested focus must be an actual hierarchy node");
  if(!["free_roam","camp_limited","mission_chained","unknown"].includes(scenario.control))throw Error("Unsupported control");
  if(opts.previous_scenario&&(!opts.previous_scenario.synthetic||opts.previous_scenario.source!=="SIMULATION_FIXTURE"))throw Error("Prior scenario must be synthetic");
  const receipts=validatedReceipts(opts.receipts);
@@ -172,12 +174,12 @@ export function planProgressionWindow(graph,hierarchy,policy,scenario,options={}
      outing=blocked?null:preferProjectOuting?projection.trailhead.outing:eventWindow?{
        source_window:eventWindow.id,activity_ref:eventWindow.outings[0],why_now:eventWindow.title,confidence:eventWindow.confidence
      }:projection.trailhead.outing;
-   }else if(hasIntent&&opts.intent==="explore"&&opts.verbosity!=="quiet"&&!blocked){
+   }else if(hasIntent&&opts.intent==="explore"&&!blocked){
      mode="user_requested_outing";
      const x=projection.trailhead.outing;
      primary={kind:"optional_outing",id:x?.activity_ref||null,title:x?"Explore a suitable outing":"Choose where to explore",reason:"Only the current fictional control window is used; no unseen location is invented"};
      keepProject=true;outing=x;
-   }else if(opts.intent==="completion"&&opts.verbosity!=="quiet"){
+   }else if(opts.intent==="completion"){
      mode="user_requested_completion_review";
      primary={kind:"review_options",id:"completion_check",title:"Review available opportunities",reason:"Differentiate 100%, Gold, achievements and exhaustive extras; no fake progress counted"};
    }
