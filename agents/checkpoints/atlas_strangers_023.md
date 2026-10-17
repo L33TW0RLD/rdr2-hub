@@ -4,7 +4,7 @@
 **Branch:** `agent/atlas-stranger-023` · **Registration baseline:** `d3bc807c75633fec042f4a34af72515a24cc2696`  
 **Latest main at recovery:** `b578aec6f1edab1279f2f2c5989326d4e86231ed`  
 **Recorded:** 2026-10-17 UTC (exact clock time not inferred)  
-**Status:** `IN_PROGRESS` — substantive research verified, final handoff pending; content `RESEARCHED_REVIEW_PENDING`, not ADOPTED.
+**Status:** `DELIVERED_REVIEW_PENDING` — this task is closed to specialist writes; content `RESEARCHED_REVIEW_PENDING`, not ADOPTED.
 
 ## Exact exclusive three-file lease
 - `systems_atlas/dossiers/d18_stranger_strands_quests_v0_1.md`
@@ -33,7 +33,13 @@ Primary proposed Atlas leaves `S21.M01–M04`, `S30.M05`. Deliver a substantive,
 - No primary in-game session, trophy telemetry or player-state evidence obtained; disputed Fundraiser start gate and later partial-stage/cutoff claims retained.
 - Last verified commit before this checkpoint update: `a4a361ea2fbaaa07e80636ddfc9241b7b876ce1d`.
 
-## Resumption instruction
-**Exact next permitted action:** Commit final scoped handoff at `agents/handoffs/2026-10-17_atlas_strangers_023.md`, preserving source quality and all unresolved review questions.
+## Final branch delivery verification — 2026-10-17
+- Handoff created at commit `d68c5daba3c056c1df86b93d1ea40f54e7dd45a0`, then exact branch readback verified blob `c6b5f6d590a7a66a7df4e68fd281f6a0ee576b1c` (8,793 chars).
+- After handoff, `main...agent/atlas-stranger-023` comparison: **ahead 4 / behind 1** versus main `b578aec6f1edab1279f2f2c5989326d4e86231ed`. **Exactly three changed files**, all leased: dossier, this checkpoint, handoff.
+- No edits to other agent branches, D08, shared indexes, original rdr2 or save intelligence; no rebase/reset/merge, no gameplay progress asserted.
+- Last independently verified commit before final checkpoint update: `d68c5daba3c056c1df86b93d1ea40f54e7dd45a0`. This checkpoint cannot predict its own commit SHA; terminal SHA will be reported after exact-ref verification.
 
-Then read back handoff, update checkpoint to `DELIVERED_REVIEW_PENDING`, compare all three files to latest main, report terminal SHA and **stop writes**. On unexpected same-path conflict re-fetch blob SHA/branch and stop rather than overwrite another worker.
+## Resumption instruction
+**Exact next permitted action:** **NONE within closed Task 023.** Coordinator/owner reviews the source-backed D18 dossier, conflicts and integration options. New specialist work requires separately registered and activated task/branch/lease.
+
+**Closure:** all three leased files committed and read back before final checkpoint; terminal exact-ref / diff verification and completion report only, then **STOP WRITES**. On unexpected same-path conflict re-fetch blob SHA/branch and stop rather than overwrite another worker.
