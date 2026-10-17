@@ -64,3 +64,71 @@
 - **DISPUTED:** sources conflict on Good, Honest, Snake Oil deadline, Mary's exact appearance gate, oil-wagon hours, optional honor label for wagon, Pearson trigger, and specific NPC pre-packing cutoff. State uncertainty and use observable in-game prompts; no fabricated timer.
 
 **Conflict of duties:** once a player-observed NOW mission stage is active, avoid delaying it for pelt runs, camp upgrades, Stranger checklist or companion requests. The player may deliberately waive a goal; GameGuide must honor that choice and independently confirm any completed activity/save, not Atlas.
+
+
+## 5. Benefits, costs, risk, preservation and recoverability
+
+**Opportunity benefit versus time cost:** an optional Honor stage advances a separate achievement; a camp outing may meet a Chapter 2-specific companion achievement condition; a named camp request may meet the five hand-ins trophy; basic Strangers and collections can offer enjoyment now but are rarely a mandatory first-Chapter-2 task. Once John has an active time-sensitive wagon objective, long optional hunting or collecting has **real opportunity cost** [E01][E06]. A short camp visit after meaningful story progression is reasonable; a compulsory full-game clearance before every yellow marker is not.
+
+**Choice/irreversibility:** accepting/declining Mary's optional request and leaving a chapter are different risk types; no known way to guarantee an ignored Chapter 2-only offer reappears after camp has moved. Ordinary encounter scenes and camp talks can be context dependent; **not all carry official progress credit** [E01][R01][R02]. Treat one-time items found during a *later stage* of otherwise-deferrable quest separately: PowerPyx warns that the **Old Brass Compass** in a return scene of **Geology for Beginners** can be lost when an interior becomes inaccessible [E16]. D06 inventory dossier owns exact item classification.
+
+**Saves and replay:** A genuinely existing *pre-window manual save* can offer a return to earlier campaign circumstances **at the expense of later changes**. Nothing in an Atlas dossier asserts a save actually exists. The Story replay menu can support Gold-medal attempts on eligible missions [E03], but PowerPyx warns that playing a missed optional Honor story through **replay does not normally confer the original-run Lending a Hand criterion** [E01]. Its historical **Patch 1.03** anomalous trophy shortcut is **not a supported restoration protocol**; no guarantee it exists in the installed version. Do not claim that replay restores free-roam camp NPCs, camp requests, unique pickups, honor decisions or wagon stage back into the original save.
+
+**Completion separation:**
+
+| Exact track | What the criterion measures | Chapter 2 implication and safe verification |
+|---|---|---|
+| `OFFICIAL_100` / **Best in the West** | In-game **Progress > Total Completion** five categories; 10 Stranger *strands*, not every white marker; selective checklist [E02] | Optional Honor Story episodes, camp request exhaustiveness and arbitrary ambient events are **not each universal requirements**. PowerPyx says official tracker can be cleaned after story |
+| `ACHIEVEMENT` / **Lending a Hand** | All applicable optional Honor **Story** episodes in original playthrough [E01] | Preserve Strauss optional opening debts, Mary's offered strand and sheriff intro when available. Wagon classification disputed; original-run replay warning applies |
+| `ACHIEVEMENT` / **Friends With Benefits** | One **qualifying** companion activity in Chapters 2, 3 and 4 [E01][R01] | A Chapter 2 opportunity must be preserved before camp moves. Do not credit ordinary table play automatically (D05 dispute) |
+| `ACHIEVEMENT` / **Errand Boy** | Five **delivered** companion item requests during possible camp windows [E01][R01] | One particular narrow Ch2 request may be personally missable, but overall trophy does not require five *in Chapter 2* |
+| `ACHIEVEMENT` / **Give to the Poor** | Player personally contributes $250 cumulative to gang tithing box **before it disappears after Ch4** [E01][R01] | **Not** a Chapter 2 exit blocker; distinguish initial Strauss debt Ledger activation from achievement donating |
+| `ACHIEVEMENT` / **Gold Rush** | **70 Gold** Story missions [E01][E03] | Different from personally striving for every eligible medal. A skippable story stage can affect a personal all-Gold objective without making official 100% impossible |
+| `PERSONAL_ALL_GOLD / OPTIONAL_EXHAUSTIVE` | Individual preference for every available Story medal, unique letter, camp scene and collectible [E01][E16][R02] | Some exclusive/mutually exclusive outcomes; not a verified single mandatory 104/105 count. Only actual GameGuide chapter medal eligibility/player-reported outcomes count |
+
+## 6. Typed provisional dependency / relationship edges
+
+No source here authorizes a new adopted dependency graph. `REQUIRES` is avoided unless an actual task trigger is source-verified; `INTERACTS_WITH` is not a hard prerequisite.
+
+| D08 source | Typed research relationship | Target | Evidence limit |
+|---|---|---|---|
+| `U09` observed wagon request | `HAZARD_TO` / `INTERACTS_WITH` | `S30.M02` potentially lost optional Gold stage | Skippable accepted John stage [E06][E07]; precise timeout disputed |
+| `S30.M05` chapter closure | `HAZARD_TO` | `S21.M04` optional Chapter 2 Honor story | Mary/Strauss timing [E01][E04][E05] |
+| `S21.M04` optional Story | `CONTRIBUTES_TO` | `S29.M03` Lending a Hand | Honor Story criteria [E01]; wagon exception disputed |
+| `S11.M02` marked companion | `CONTRIBUTES_TO` | `S29.M03` Friends With Benefits | **D05 owns**, RESEARCHED — REVIEW PENDING [R01] |
+| `S11.M03` delivered favor | `CONTRIBUTES_TO` | `S29.M03` Errand Boy | **D05 owns**, request must be accepted and handed over [R01] |
+| `S21.M01/M02` Stranger continuation | `CONTRIBUTES_TO` | `S29.M01` official 100% subset | Ten full qualifying strands, not all first-seen `?` markers [E02][E10] |
+| `S17.M04` unique item | `INTERACTS_WITH` | D06 item preservation, read-only | One-time compass return-stage caution [E16] |
+| `S30.M03/M04` replay/save | `INTERACTS_WITH` | `S29.M02` all-Gold / `S29.M03` Gold Rush | D24 reserved for deep replay research; never invent original save state |
+| `U11` camp move | `HAZARD_TO` | D05 activity/request availability | Exact NPC pre-packing boundary unknown [R01][R02] |
+
+## 7. Claim-level ledger and source register (checked 2026-10-17)
+
+**Evidence classes:** S-GUIDE = independently authored specialist walkthrough/trophy guide; COMMUNITY-WIKI = contributed secondary reference; GAMEFAQ = individual authored walkthrough/Q&A; LEGACY-REVIEW = existing repo research **RESEARCHED — REVIEW PENDING**; UI-OBSERVATION = real player evidence to be requested, **not performed**. No directly authored Rockstar mission script/modern patch note or observed account achievement telemetry was verified. `CORROBORATED` indicates two suitable independent sources, **not** certainty of an undocumented internal timer.
+
+| Claim | Bounded Story Mode assertion | Evidence | Status / confidence |
+|---|---|---|---|
+| C01 | John's assigned wagon stage may be bypassed by John when Arthur delays | E06, E07, E08 | CORROBORATED / HIGH |
+| C02 | Specialist mission pages show wagon Gold delivery within 1:45 | E06, E07 | CORROBORATED / HIGH for stage, mission grouping verify |
+| C03 | "Same day" vs "4 in-game hours" versus no fixed timer | E07, E08, R05 | **DISPUTED / LOW exact countdown** |
+| C04 | Wagon Part II not Lending a Hand per PowerPyx vs optional Honor label per GTA Base | E01, E06 | **DISPUTED / HIGH confidence of contradiction** |
+| C05 | Mary's optional Chapter 2 Story starts from letter and supports Lending a Hand | E01, E05, E12, E13 | CORROBORATED / HIGH |
+| C06 | Precise Mary prerequisites stated by GameFAQs but not by others | E13 vs E12 | SINGLE_SOURCE / MEDIUM |
+| C07 | Three Strauss introductory debt contacts are Ch2 optional Honor strand; Part III separate | E01, E04, E14 | CORROBORATED / HIGH |
+| C08 | Strauss I/II no standalone Gold and not replayable per GTA Base | E04 | SINGLE_SOURCE / MEDIUM |
+| C09 | Sheriff Good, Honest, Snake Oil unlocks after Valentine introduction | E09, E15 | CORROBORATED / HIGH |
+| C10 | Sheriff story expires at Ch2 exit vs can remain to late Ch6 | E09 vs E08, E15 | **DISPUTED / HIGH confidence sources conflict** |
+| C11 | One eligible Ch2/3/4 companion outing and five handed-over requests are separate trophy goals | E01, R01 | CORROBORATED / HIGH |
+| C12 | Most named Stranger strands first available in Ch2 remain accessible after story | E10, E11 | CORROBORATED / HIGH, exceptions |
+| C13 | Fundraiser only available until later chapter, not Ch2 exit | E11 | SINGLE_SOURCE / MEDIUM |
+| C14 | Official Total Completion 10 Stranger strands and forgiving subset; not every Honor side | E02, E10 | CORROBORATED / HIGH |
+| C15 | Normal Story replay does not backfill missed original-run optional Honor trophy | E01 | SINGLE_SOURCE / HIGH specialist guidance |
+| C16 | Horseshoe camp activities close upon relocation; exact earlier NPC packing unknown | E17, R01, R02 | CORROBORATED / MEDIUM, exact cutoff UNKNOWN |
+| C17 | Geology for Beginners return room includes one-shot Old Brass Compass | E16 | SINGLE_SOURCE / MEDIUM |
+| C18 | Eligible mission Story replay can be used for Gold, not universal original-run recovery | E03, E01 | CORROBORATED / HIGH for medal replay, limits conditional |
+| C19 | Table games, camp donation trophy, Honor story and companion activity use separate criteria | E01, E02, R01 | CORROBORATED / HIGH |
+| C20 | A Strange Kindness is Chapter 2 exit narrative point | E17, R02 | CORROBORATED / HIGH; earliest camp marker closure UNKNOWN |
+| C21 | Chapter 2 missions can be tackled in differing order | E13, E17 | CORROBORATED / HIGH |
+| C22 | Gold Rush exactly 70, but universal all-eligible story medal counts differ by online lists | E01, E03 | CORROBORATED / HIGH for 70, disputed universal all-Gold total |
+
+**No current player outcomes** or specific save/money/inventory/achievement/medal numbers have been verified by this worker.
