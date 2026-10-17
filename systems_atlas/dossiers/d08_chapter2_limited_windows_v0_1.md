@@ -179,3 +179,48 @@ Each listed external source was independently searched/read on **2026-10-17**. "
 | **D-10 Historical Patch 1.03 workaround** | E01 reports trophy anomaly but states replay normally doesn't count | Recommending unreliable exploit / lost opportunity | Original-story fulfillment with actual save; disregard stale exploit as guarantee |
 | **D-11 D05 Lenny table game** | PowerPyx excludes ordinary games; R01/R03 preserve disputed specifically marked event | False Friends With Benefits proof | D05 as owner; prioritize named hunting/robbery companion outing when seen |
 | **D-12 Medal number/operation grouping** | E01 versus E03 guide mission totals may differ by grouping/edition | Artificial all-Gold completion failure | `Gold Rush` 70, exact personal all-eligible medal list via actual Story menu |
+
+
+## 9. T2+ future chapter dependencies — hidden from ordinary Chapter 2 guidance
+
+**T2 limited abstract fact:** Some optional Honor Story opportunities for **Lending a Hand** appear in subsequent chapters, and guides report later **Honor-level restrictions** on particular appearances [E01]. This is a reason not to treat Chapter 2 achievement progress as the complete trophy. The camp donation box and five-delivery request achievement also have later windows; **their completion is not universally required before leaving Chapter 2** [E01][R01].
+
+**T3 future narrative outcomes:** Deliberately withheld. This research includes **no** late-story plot resolution, character outcome, named future-story locations or epilogue walkthrough. When a player reaches later chapters, use newly verified canonical GameGuide authority rather than this Chapter 2 research.
+
+## 10. Three spoiler-light Chapter 2 practical situations
+
+### Case A — New at Horseshoe, unidentified white question mark
+
+**OBSERVED:** Arthur can free roam; a white question mark is visible around a settlement, no John wagon objective, no specific chapter-limited offer in the task log.
+
+**Classification:** **CAN WAIT / VERIFY NAME**, not automatic "missable NOW." Identify the actor and named strand only if player chooses to investigate. Most ordinary Strangers can remain after the story; an exact source-supported exception would be reviewed on its own [E10][E11]. If a new **Mary letter actually appears**, classify that *different* optional Story opportunity **BEFORE EXIT**. No forced exhaustive camp sweep, new medal count or inferred save.
+
+### Case B — Accepted John's oil wagon; want to go hunting first
+
+**OBSERVED:** Player explicitly reports having started John's wagon task and sees a delivery objective. This satisfies U09 observation.
+
+**Classification:** **NOW / MISSABLE SKIPPABLE STAGE**, because companion substitution can remove Arthur's Part II action [E06][E07]. Give control immediately to the existing GameGuide Mission Control for exact mission objectives and gold scoring. D08 does not invent a four-hour clock, select a wagon path, guarantee a Gold medal or edit the player's original save. D04 hunting and general Free Roam outings wait until the time-sensitive story segment is resolved.
+
+### Case C — Mary letter and possible chapter end, activity unknown
+
+**OBSERVED:** Player has read Mary's Chapter 2 letter, the map contains a possible camp-ending story offer, and the player has **not confirmed** a qualifying companion outing. Exact current achievements and debt visits UNKNOWN.
+
+**Classification:** **BEFORE EXIT** for the named optional Mary strand if `Lending a Hand`/all story goals matter; perform a **short D05 read-only** companion request/activity check and check any actual Strauss debtor offers. Do not assert a new save or automatically mark camp trophy "missed". Good, Honest, Snake Oil is **DISPUTED** for precise Ch2 deadline, and an unrelated `Geology for Beginners` initial encounter can usually wait (while guarding its **later** one-shot compass). Player may complete, defer with explicit risk or waive, then GameGuide records only confirmed results.
+
+## 11. Consumer handoff, mistakes, research gaps and review decision
+
+**Three recurring false shortcuts:**
+
+1. **"All white markers are missable Chapter 2 Honor stories."** Incorrect: a white Story-side marker, a marked companion activity and a white `?` Stranger mean different things. Verify *name and log* before applying expiry rules.
+2. **"Ledger unlocked, so I've already finished Strauss's optional Chapter 2 debts."** One returned/deposited debt can unlock a camp facility, not prove three optional encounters or achievement credit [R04].
+3. **"I can replay any missed story later and get every trophy/unique item back."** Menu replay can be useful for eligible Gold reattempts, **not guaranteed original-save Honor achievement, camp/letter availability or collectible access** [E01][E03][E16].
+
+**Safe fallback:** no player-OBSERVED active urgent task → **no NOW alarm**. If named Chapter 2 optional content is currently offered and player wants the relevant goal, recommend completion **before observed chapter exit**, without mandatory precise hours. If evidence or source conflicts, show **DISPUTED**, a feasible on-screen check and explicit player choice. Any user report about missions/saves belongs in the original GameGuide campaign authority; this Atlas dossier stores none.
+
+**GameGuide/Free Roam read-only request contract:** Obtain actual chapter/location if user supplies it, map icon **with named activity**, Story log or letter/request text, evidence that the wagon task is accepted, proximity to a known chapter-closing marker and *goal* (official 100% / personal all-Gold / separate trophy / exhaustive/immersion). Return only `NOW`, `BEFORE CHAPTER EXIT`, `CAN WAIT` or `DISPUTED`, rationale, claim/source/confidence and a choice. For a live mission, open the **complete canonical Field Guide v1.1** rather than fabricating a walkthrough; for D05 use its existing read-only request/companion matrix, unchanged. Planning choices do not automatically update campaign.
+
+**Research gaps / next bounded independently authorized tests:** reproduce actual John wagon optional-stage skip without assuming old wiki exact time; confirm Good, Honest, Snake Oil availability across later chapter transitions via contemporary direct gameplay; test which optional Honor flags survive replay on supported platforms; reproduce Mary letter prerequisites across valid branching early Story orders; verify whether camp companions pack before last Chapter 2 cinematic; independently test unique compass interior reaccess after Stranger return; defer downstream camp activity recognition to D05 owner/reviewer.
+
+**Formal review request:** Coordinator/owner to review D-01 wagon trophy disagreement, D-03 sheriff deadline, D-04 Mary prerequisite and D-09 early camp closure before approving any hard dependency in adaptive recommendation logic. Preserve all source links and unresolved entries. No self-ratification; **RESEARCHED — REVIEW PENDING** is research maturity, **DELIVERED_REVIEW_PENDING** closes only task 018. This specialist conversation remains reusable solely on a future separately registered assignment.
+
+**Change history:** 2026-10-17 — source checked D08 limited-window taxonomy and evidence-based urgency contract. No original GameGuide, main/shared index, prior task branch or other worker paths edited.
