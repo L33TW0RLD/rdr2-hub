@@ -86,6 +86,7 @@ export function validateWindowPlannerPolicy(graph,policy){
  const names=new Set();
  if(policy.scope!=="SYNTHETIC_FIXTURES_ONLY")issues.push("policy scope is not synthetic");
  for(const e of policy.event_catalog||[]){
+   if(e.opportunity_ref&&!windows.has(e.opportunity_ref))issues.push("unknown related outing window "+e.opportunity_ref);
    if(names.has(e.id))issues.push("duplicate event "+e.id);
    names.add(e.id);
    if(e.type==="capability"&&!caps.has(e.source_id))issues.push("unknown capability for "+e.id);
@@ -165,7 +166,12 @@ export function planProgressionWindow(graph,hierarchy,policy,scenario,options={}
          surface:"trailhead",project_id:event.project_id,previous_scenario:opts.previous_scenario||null,intent:opts.intent
        });
      }
-     outing=!blocked?projection.trailhead.outing:null;
+     // Use the window attached to this introduction; a Fence introduction must never inherit a satchel Ledger outing.
+     const eventWindow=event.opportunity_ref?now.opportunities.find(o=>o.id===event.opportunity_ref):null;
+     const preferProjectOuting=event.id==="event.pearson_tools_milestone";
+     outing=blocked?null:preferProjectOuting?projection.trailhead.outing:eventWindow?{
+       source_window:eventWindow.id,activity_ref:eventWindow.outings[0],why_now:eventWindow.title,confidence:eventWindow.confidence
+     }:projection.trailhead.outing;
    }else if(hasIntent&&opts.intent==="explore"&&opts.verbosity!=="quiet"&&!blocked){
      mode="user_requested_outing";
      const x=projection.trailhead.outing;
