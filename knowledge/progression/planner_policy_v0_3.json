@@ -1,0 +1,233 @@
+{
+  "version": "0.3.0",
+  "status": "PROVISIONAL_EVENT_PRESENTATION_POLICY",
+  "scope": "SYNTHETIC_FIXTURES_ONLY",
+  "explanation": "This policy governs what advice to foreground, not mission availability. Chapter 2 rule truth stays in chapter_02_graph_v0_1.json.",
+  "authorizations": {
+    "player_data": "NONE",
+    "campaign_writes": false,
+    "save_reader": false,
+    "background_monitor": false,
+    "runtime": "pure deterministic input/output",
+    "source_research_maturity": "RESEARCH_REVIEW_PENDING"
+  },
+  "levels": [
+    "risk_active_story",
+    "risk_chapter_exit",
+    "risk_observed_optional",
+    "user_requested",
+    "new_relevant_system",
+    "project_revisit",
+    "routine_orientation",
+    "no_new_prompt"
+  ],
+  "verbosity": {
+    "quiet": {
+      "allow_unrequested_intros": false,
+      "allow_routine_outing": false,
+      "pin_active_critical": true,
+      "allow_requested_detail": true
+    },
+    "adaptive": {
+      "allow_unrequested_intros": true,
+      "allow_routine_outing": true,
+      "pin_active_critical": true,
+      "allow_requested_detail": true
+    },
+    "active": {
+      "allow_unrequested_intros": true,
+      "allow_routine_outing": true,
+      "pin_active_critical": true,
+      "allow_requested_detail": true
+    }
+  },
+  "alert_priority": [
+    "urgent_john_wagon",
+    "before_chapter_exit",
+    "camp_activity_window"
+  ],
+  "supported_goals": [
+    "all_gold",
+    "official_100",
+    "achievements",
+    "personal_exhaustive",
+    "high_honor",
+    "immersion"
+  ],
+  "goal_rules": {
+    "urgent_john_wagon": "always_if_activated",
+    "before_chapter_exit": "always_if_activated",
+    "camp_activity_window": {
+      "only_if_any": [
+        "achievements",
+        "personal_exhaustive"
+      ],
+      "or_explicit_intent": [
+        "camp",
+        "completion",
+        "activities"
+      ],
+      "otherwise": "suppress_optional_alert"
+    }
+  },
+  "prompt_receipts_schema": {
+    "kind": "SYNTHETIC_PRESENTATION_RECEIPTS",
+    "displayed_prompt_keys": "array of event IDs; no gameplay evidence",
+    "displayed_alert_keys": "array of alert IDs; no game evidence",
+    "note": "Ephemeral fixture-only de-duplication. Receipts are not mission completion, acquisition, save history or cross-thread persistence."
+  },
+  "activation_policy": {
+    "fresh_detection": "compare explicit prior scenario vs current; unknown-to-eligible becomes newly eligible only within those fixtures",
+    "no_prior_scenario": "present compatible current reference as contextual, never claim a newly unlocked system",
+    "shown_once": "after an optional event is presented in a synthetic sequence, suppress repetition unless explicitly requested",
+    "dormant_reactivated_alert": "newly activated evidence may re-promote existing alert, even when already displayed earlier",
+    "active_critical": "remain pinned while active; after first prompt show pinned-only unless a risky advance is explicitly requested",
+    "chapter_exit": "immediately prioritize before-advance check, but never assume optional content exists",
+    "milestone_change": "project recommendations evolve only with explicit source-backed gate/observation change; receipts do not update project stage",
+    "no_cooldown_seconds": "No time-based random windows or fabricated in-game timer"
+  },
+  "render_caps": {
+    "headline_prompts": 1,
+    "visible_warnings": 1,
+    "featured_projects": 1,
+    "suggested_outings": 1,
+    "story_choices": 3,
+    "alternatives": 2
+  },
+  "event_catalog": [
+    {
+      "id": "event.arrival_orientation",
+      "type": "opportunity",
+      "source_id": "arrival_camp_orientation",
+      "group": "arrival",
+      "tier": "routine_orientation",
+      "label": "Camp orientation",
+      "project_id": "project.camp",
+      "focus_interests": [
+        "camp",
+        "explore",
+        "immersion"
+      ],
+      "evidence_note": "Chapter 2 camp access is a general rule; actual camp talks/documents conditional",
+      "source_refs": [
+        "G_TRIGGER",
+        "H_UNLOCK"
+      ]
+    },
+    {
+      "id": "event.ledger_introduction",
+      "type": "capability",
+      "source_id": "camp_ledger",
+      "group": "camp_ledger",
+      "tier": "new_relevant_system",
+      "label": "Camp Ledger and camp improvements",
+      "project_id": "project.camp",
+      "focus_interests": [
+        "camp",
+        "crafting",
+        "economy"
+      ],
+      "evidence_note": "First qualifying returned AND deposited debt normally unlocks Ledger; verify UI",
+      "source_refs": [
+        "H_UNLOCK",
+        "H_D02"
+      ]
+    },
+    {
+      "id": "event.pearson_tools_milestone",
+      "type": "capability",
+      "source_id": "leather_tools",
+      "group": "pearson_tools",
+      "tier": "project_revisit",
+      "label": "Pearson satchel crafting milestone",
+      "project_id": "project.camp",
+      "focus_interests": [
+        "camp",
+        "hunting",
+        "crafting"
+      ],
+      "evidence_note": "Tool purchase distinct from crafting any satchel; inspect recipe/task/materials",
+      "source_refs": [
+        "H_D03",
+        "H_D02"
+      ]
+    },
+    {
+      "id": "event.horse_system_introduction",
+      "type": "capability",
+      "source_id": "stable_brush",
+      "group": "horse_care",
+      "tier": "new_relevant_system",
+      "label": "Horse care and stables",
+      "project_id": "project.horse",
+      "focus_interests": [
+        "horses",
+        "hunting",
+        "explore"
+      ],
+      "evidence_note": "Normal horse-brush/stable introduction after Hosea lesson, not proof of owned horse",
+      "source_refs": [
+        "H_UNLOCK"
+      ]
+    },
+    {
+      "id": "event.wagon_fence_introduction",
+      "type": "capability",
+      "source_id": "emerald_wagon_fence",
+      "group": "emerald_fence",
+      "tier": "new_relevant_system",
+      "label": "Emerald Ranch wagon Fence",
+      "project_id": null,
+      "focus_interests": [
+        "commerce",
+        "economy"
+      ],
+      "evidence_note": "Seamus wagon Fence introduction; no global 'all fences locked' inference",
+      "source_refs": [
+        "H_UNLOCK"
+      ]
+    },
+    {
+      "id": "event.fishing_introduction",
+      "type": "capability",
+      "source_id": "ordinary_fishing",
+      "group": "fishing",
+      "tier": "new_relevant_system",
+      "label": "Fishing becomes relevant",
+      "project_id": null,
+      "focus_interests": [
+        "fishing",
+        "explore"
+      ],
+      "evidence_note": "Normal rod/tutorial after A Fisher of Men; no legendary quest automatically unlocked",
+      "source_refs": [
+        "H_UNLOCK"
+      ]
+    }
+  ],
+  "suppression_rules": [
+    "Priority alert when activated wagon job exists; no optional outing until task dealt with",
+    "At chapter exit, only targeted conditional preservation audit; exclude stale introductory window",
+    "When story control chained or unknown, don't promise a valid free-roam outing",
+    "No recurring introduction just because a capability remains available",
+    "Disputed prerequisites cannot cause automatic new marker availability",
+    "Only explicitly observed in fixture may be called observed",
+    "Without previous scenario, never label system INTRODUCED_TODAY"
+  ],
+  "deferred_relations": [
+    {
+      "when": "event.ledger_introduction",
+      "defer": [
+        "event.arrival_orientation"
+      ],
+      "reason": "Ledger makes initial camp orientation lower relevance"
+    },
+    {
+      "when": "event.pearson_tools_milestone",
+      "defer": [
+        "event.ledger_introduction"
+      ],
+      "reason": "Satchel recipe progress supersedes repeated Ledger introduction"
+    }
+  ]
+}
