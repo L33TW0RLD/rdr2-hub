@@ -190,3 +190,27 @@ This replaces H12–H13's popover-on-click and H15's click-to-inspect expectatio
 **Decision questions:** Is a list enough personality? Are quiet cards too tall? Should C's spotlight be reserved for an active Story risk only? Keep owner feedback conversational, not a large mandatory form.
 
 No self-merging, no source-admission changes, no game state inferred or written.
+
+
+---
+
+## Owner-selected compact list and unlock emphasis comparison S01–S12 (2026-10-18)
+
+**Confirmed:** Compact Mission List A chosen over Editorial Cards B. Full Mission Spotlight C not selected as a default; urgent risk becomes **row label**. Test **A1 inline introduction vs A2 single supporting feature spotlight** without changing the locked header.
+
+| ID | Test | Pass criterion | State |
+|---|---|---|---|
+| S01 | Normal two observed fictional markers | Compact equal-weight rows, all accessible, no B-style card stack | PENDING USER |
+| S02 | A1 with Hosea/fishing intro | A specific `Introduces` note belongs to the correct mission and not to unrelated ones | PENDING USER |
+| S03 | A2 with fishing interest | A single quiet "New possibility: Fishing" area appears **after** the list; mission rows remain equal | PENDING USER |
+| S04 | A2 with horse interest | Switches spotlight to stables/horse care only when the relevant observed mission and research are provided | PENDING USER |
+| S05 | Four observed fictional markers | No false forced mission ranking; text density remains manageable | PENDING USER |
+| S06 | No source-backed system introduction | All feature decoration disappears entirely | PENDING USER |
+| S07 | Active John oil wagon | `Time-sensitive` appears **on m017's row** with no fake deadline | PENDING USER |
+| S08 | Active wagon plus unrelated capability possibility | Risk label remains, incidental feature spotlight suppressed | PENDING USER |
+| S09 | Click any mission row | Loads exact full original GameGuide A–final dossier in a genuine new turn; no invented result | PENDING USER |
+| S10 | Click A2 `Learn mechanic` action | Loads owning Systems Atlas source; doesn't start or complete mission | PENDING USER |
+| S11 | Distinguish before/after | Pre-completion introduction isn't described as item/access already owned; source maturity handled honestly | PENDING USER |
+| S12 | Test mobile/keyboard | Complete row hit area, readable small annotation, no horizontal clutter, tooltip-independent essential information | UNTESTED |
+
+**Next owner question:** Prefer A1 (inline intros), A2 (separate spotlight), or a hybrid where A2 is reserved for major newly introduced gameplay systems? Do not ratify until observed click-through feedback. The header remains LOCKED and source authority unchanged.
