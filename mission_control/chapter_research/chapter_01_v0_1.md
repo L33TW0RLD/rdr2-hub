@@ -399,7 +399,7 @@ Story Mode Chapter 1 has a restrictive snowstorm/Colter area and a small ambient
 | Code | Publisher and exact reference URL | Date / scope / evidence role |
 |---|---|---|
 | **P0** | [PowerPyx — Red Dead Redemption 2 Gold Medals Guide](https://www.powerpyx.com/red-dead-redemption-2-gold-medals-guide/) | 2018; independently published **six Chapter 1 medal entries**, source-backed list; HIGH for named criteria |
-| **P1** | [PowerPyx — Outlaws from the West](https://www.powerpyx.com/red-dead-redemption-2-outlaws-from-the-west-walkthrough/) | 2018-10-26; mission steps/3 Gold conditions, independent guide |
+| **P1** | [PowerPyx — Outlaws from the West](https://www.powerpyx.com/red-dead-redemption-2-outlaws-from-the-west-walkthrough/) | 2018-10-27; mission steps/3 Gold conditions, independent guide |
 | **P2** | [PowerPyx — Enter, Pursued by a Memory](https://www.powerpyx.com/red-dead-redemption-2-enter-pursued-by-a-memory-walkthrough/) | 2018-10-26; script/wolves/accuracy |
 | **P3** | [PowerPyx — The Aftermath of Genesis](https://www.powerpyx.com/red-dead-redemption-2-the-aftermath-of-genesis-walkthrough/) | 2018-10-26; deer one-arrow, no spook, second clean, optional risky calling tactic |
 | **P4** | [PowerPyx — Old Friends](https://www.powerpyx.com/red-dead-redemption-2-old-friends-walkthrough/) | 2018-10-26; five Gold criteria, raid, Kieran escape |
@@ -411,7 +411,7 @@ Story Mode Chapter 1 has a restrictive snowstorm/Colter area and a small ambient
 | **T3** | [GTA Base — The Aftermath of Genesis](https://www.gtabase.com/red-dead-redemption-2/missions/the-aftermath-of-genesis) | Independent three deer criteria, Bow |
 | **T4** | [GTA Base — Old Friends](https://www.gtabase.com/red-dead-redemption-2/missions/old-friends) | Independent five criteria, 45s/15:30/15 headshots/3 same Dead Eye |
 | **T5** | [GTA Base — Leviticus Cornwall](https://www.gtabase.com/red-dead-redemption-2/missions/who-the-hell-is-leviticus-cornwall) | Independent five train Gold criteria, exact 1:30 local wording |
-| **T6** | [GTA Base — Eastward Bound](https://www.gtabase.com/red-dead-redemption-2/missions/eastward-bound) | Independent 6:00/Javier; exact browser page not fetched in this pass, **cross corroborated** by P6 and PowerPyx P0 |
+| **T6** | [GTA Base — Eastward Bound](https://www.gtabase.com/red-dead-redemption-2/missions/eastward-bound) | Independent 6:00/Javier criteria **directly retrieved**, corroborates P6 and P0 |
 | **R1** | [RDR2.org — Chapter 1 Gold Medals Guide](https://www.rdr2.org/guides/chapter-1-gold-medals-guide/) and [page 2](https://www.rdr2.org/guides/chapter-1-gold-medals-guide/2/) | 2018 era, Chapter 1 Gold strategy and scene structure; checked 2026-10-17 |
 | **R2** | [Hold to Reset — Old Friends Guide](https://holdtoreset.com/old-friends-guide-red-dead-redemption-2/) | Updated 2026-03-11 per source; 5 requirements and contextual chase details; tactic guidance not universal |
 | **W1** | [Red Dead Wiki — Mining Company Letter to Cornwall](https://reddead.fandom.com/wiki/Mining_Company_Letter_to_Cornwall) | Community document entry; **Missable: Yes**, train carriage in 005; MEDIUM/HIGH for precise named item |
@@ -419,7 +419,7 @@ Story Mode Chapter 1 has a restrictive snowstorm/Colter area and a small ambient
 | **W3** | [Red Dead Wiki — Camp Events, Colter](https://reddead.fandom.com/wiki/Camp_Events) and [Chapter I account](https://rdrii.fandom.com/wiki/Story%3AChapter_I_-_Colter_%28chapter%29) | Community pages (undated revision), optional camp conversations and parallel 003/004 phase; exact window **CONDITIONAL**, not official 100% |
 | **W4** | [Red Dead Wiki — Old Friends](https://reddead.fandom.com/wiki/Old_Friends) | Community Old Friends Gold page; 45s chase tactic can harm horse/Honor; not a required Gold shortcut |
 | **H24** | [Hub D24 mission replay/save/medals](https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d24_replay_saves_medals_v0_1.md) | **RESEARCHED — REVIEW PENDING**, not adopted; read-only reference for replay/saved medal, not independent source authority |
-| **H08** | [Hub D08 chapter-sensitive opportunities](https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d08_chapter2_optional_opportunities_v0_1.md) | **READ-ONLY; exact path/version to be verified by coordinator**. Do not use as fact without readback; Chapter 1 camp specifics already W3 |
+| **H08** | [Hub D08 Chapter 2 limited windows](https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d08_chapter2_limited_windows_v0_1.md) | **READ-ONLY / RESEARCHED — REVIEW PENDING**; actual path verified against main directory. D08 covers **Chapter 2** timing, not the specific Chapter 1 Colter conversations (W3) |
 | **H15** | [Hub D15 Compendium vs official completion](https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d15_compendium_trackers_v0_1.md) | **RESEARCHED — REVIEW PENDING**, separate 100%/compendium goals |
 | **G1–G6** | [Original GameGuide Chapter 1 directory](https://github.com/L33TW0RLD/rdr2/tree/main/missions/chapter_01), six exact path links in §2 | **Primary for approved GameGuide authoring only**, not an independent Gold facts check; all six read by explicit original \`main\` on 2026-10-17 |
 
@@ -433,7 +433,7 @@ Story Mode Chapter 1 has a restrictive snowstorm/Colter area and a small ambient
 | C04 | 003 one arrow per deer, neither spooked, second deer clean kill | P3 T3 | **CORROBORATED/HIGH** |
 | C05 | 004 45s hogtie, 3 kills same Dead Eye, 15:30, 15 headshots, no health item | P4 T4 R1 | **CORROBORATED/HIGH** |
 | C06 | 005 hanging Lenny, 90s guards, no post-stop damage, 10 headshots, no health items | P5 T5 | **CORROBORATED/HIGH** |
-| C07 | 006 Javier boarding and six-minute total | P6 P0, G6; T6 source page not directly fetched | **CORROBORATED/HIGH** from guide + chapter list |
+| C07 | 006 Javier boarding and six-minute total | P6 P0, G6; T6 page subsequently opened and independently checked | **CORROBORATED/HIGH** from guide + chapter list |
 | C08 | 002 auto after 001; 005→006 auto, Chapter 2 arrival | P2 P6 G2 G5 G6 | **CORROBORATED/HIGH**, save windows contextual |
 | C09 | 003/004 parallel after 002, no hard 003→004 ordering | W3, G3 G4, mission markers | **CORROBORATED/MEDIUM-HIGH** |
 | C10 | 005 exact trigger requires both 003/004 despite P5 shortcut omitting 004 | P5 P4 W3 | **DISPUTED shorthand/MEDIUM**; actual mission marker wins |
@@ -479,7 +479,7 @@ At a live mission question, GameGuide should:
 - Preserve **W1/W2 separately** and do not assume that Gold replay rescued previously missed letters into normal inventory.
 - Reconcile 003/004 parallel-availability logic versus P5's incomplete 005 unlock shorthand, with a real current game trigger if relevant.
 - Keep **Player approval** over any original GameGuide dossier updates or Field Guide presentation; this chapter pack has **zero** authority to modify them.
-- Re-check source H08 exact filename if used by a later consumer; this pack deliberately does not rely on a guessed file path as confirmed.
+- H08 D08 path was independently checked against main; D08 remains Chapter 2 ownership and must **not** be treated as first-hand Chapter 1 Colter dialogue proof.
 - Confirm branch changes exactly its **3 leased paths** and completed handoff/checkpoint; coordinator may then integrate **review-pending research** to Hub main in a separate PR. Integration remains **not** adoption/ratification.
 
 **Completion count checked in this pack:** 6 Chapter 1 named Gold-eligible Story missions; 20 Gold objectives; 6 existing GameGuide full dossiers; 2 named separately missable private-car letters; 0 extra Chapter 1 medal missions independently documented; optional Colter camp moments marked uncertain. This is the **research inventory only**, not a new current save state or an endorsement of any whole-game 104 denominator.
