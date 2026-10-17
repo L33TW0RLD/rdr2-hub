@@ -26,7 +26,11 @@ Agent lanes are reusable conversations, not continuously executing bots that can
 Completed early branches `agent/hub-ux-001` and `agent/atlas-taxonomy-002` have final handoffs but **no mid-task checkpoints** because they predate this workflow. Do not retroactively alter those branches. The owner's subsequent [parallel research Wave 1](atlas_parallel_wave1_v1.md) superseded the 007→008→009 sequential routing: six distinct reusable specialist threads delivered D01–D06 and retain separate terminal handoffs. No new assignments are automatic.
 
 
-## Current assignment routing — Wave 2
+## Current state — Wave 2 integrated; future 9 + 8 planned
+
+Wave 2 integrated five delivered research dossiers (D08, D11, D12, D13, D15) as **RESEARCHED — REVIEW PENDING**. D09 (task `atlas-deadeye-016`, [Issue #19](https://github.com/L33TW0RLD/rdr2-hub/issues/19)) remains **PLANNED** and was requeued into Wave 3, *not* marked complete. [Wave 3/4 reservation](atlas_waves3_4_plan_v1.md) lists nine then eight research topics; no worker launch or file leases are created by that plan.
+
+## Original assignment routing — Wave 2 (historical registration)
 
 Six previous Wave 1 specialists can now receive their NEW bounded tasks (014–019) **in the same individual conversations**. See [Wave 2 registration and ownership](atlas_parallel_wave2_v1.md) and the operative [registry](registry.md). Prior task branches remain closed; each new task has its own issue, branch, checkpoint and handoff. Registration is not automatic execution.
 
