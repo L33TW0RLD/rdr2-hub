@@ -154,3 +154,98 @@ export function composeProgressionView(graph,hierarchy,scenario,opts={}){
    writes_performed:0,actual_game_state_connected:false
  };
 }
+
+
+// Pure regression utilities. Caller supplies local JSON (no campaign, save or network reads).
+export function validateProgressionHierarchy(graph,hierarchy){
+ const errors=[];
+ const nodes=hierarchy.nodes||[];
+ const byId=indexById(nodes);
+ if(Object.keys(byId).length!==nodes.length)errors.push("duplicate hierarchy node IDs");
+ if(nodes.filter(n=>n.parent===null).length!==1)errors.push("expected exactly one navigation root");
+ const sourceCatalog=hierarchy.source_catalog||{};
+ const capabilityIds=new Set((graph.capabilities||[]).map(c=>c.id));
+ const types=new Set(hierarchy.node_types||[]);
+ const relTypes=new Set(hierarchy.relationship_types||[]);
+ for(const n of nodes){
+   if(!types.has(n.type))errors.push("unknown node type "+n.id);
+   if(n.parent!==null&&!byId[n.parent])errors.push("parent missing for "+n.id);
+   for(const x of n.source_refs||[])if(!sourceCatalog[x])errors.push("source missing: "+n.id+" "+x);
+   for(const x of [n.capability_ref,n.primary_capability].filter(Boolean))if(!capabilityIds.has(x))errors.push("capability missing: "+n.id+" "+x);
+   const visited=new Set();let cur=n;
+   while(cur){
+     if(visited.has(cur.id)){errors.push("navigation cycle "+n.id);break;}
+     visited.add(cur.id);
+     cur=cur.parent?byId[cur.parent]:null;
+   }
+ }
+ for(const e of hierarchy.relationships||[]){
+   if(!byId[e.from]||!byId[e.to])errors.push("relationship endpoint missing "+e.from+" -> "+e.to);
+   if(!relTypes.has(e.type))errors.push("relationship type unknown "+e.type);
+   for(const src of e.source_refs||[])if(!sourceCatalog[src])errors.push("relationship source missing "+src);
+ }
+ const gold=graph.missions||[];
+ if(gold.length!==18||new Set(gold.map(x=>x.id)).size!==18||gold.some(x=>x.gold_identity!==1))errors.push("Chapter 2 base Gold identity invariant failed");
+ if((graph.non_medal_stages||[]).some(x=>x.gold_identity!==0))errors.push("Non-medal stage has Gold identity");
+ const campTracks=nodes.filter(x=>x.parent==="project.camp").map(x=>x.id);
+ for(const expected of ["camp.economy","camp.facilities","camp.pearson","camp.life"])if(!campTracks.includes(expected))errors.push("camp track missing "+expected);
+ return {passed:errors.length===0,errors,nodes:nodes.length,typed_relationships:(hierarchy.relationships||[]).length,camp_tracks:campTracks.length};
+}
+
+export function verifyHierarchyScenarioSuite(graph,hierarchy,baseFixtures,hierarchyFixtures){
+ const errors=[],passed=[];
+ const base=Object.fromEntries((baseFixtures.scenarios||[]).map(x=>[x.scenario.scenario_id,x.scenario]));
+ for(const test of hierarchyFixtures.scenarios||[]){
+   let input=base[test.fixture];
+   if(!input){errors.push({id:test.id,reason:"missing baseline fixture"});continue;}
+   input=JSON.parse(JSON.stringify(input));
+   if(test.scenario_patch)Object.assign(input,test.scenario_patch);
+   input.scenario_id=test.id;
+   const opts={...test.options};
+   if(opts.previous_fixture){
+     const previous=base[opts.previous_fixture];
+     if(!previous){errors.push({id:test.id,reason:"previous fixture missing"});continue;}
+     opts.previous_scenario=previous;
+     delete opts.previous_fixture;
+   }
+   let view;
+   try{view=composeProgressionView(graph,hierarchy,input,opts);}
+   catch(e){errors.push({id:test.id,reason:String(e)});continue;}
+   const t=view.trailhead,d=view.related.project_detail,a=view.related.atlas_navigation;
+   const obs={
+     surface:view.surface,
+     observed_ids:t.story_choices.map(x=>x.id),
+     project_id:t.featured_project?.id??null,
+     project_stage:d.project.stage,
+     outing_ref:t.outing?.activity_ref??null,
+     alert_id:t.one_primary_alert?.id??null,
+     priority:t.default_next,
+     control:t.control,
+     focus:d.focused_id,
+     child_ids:d.children.map(x=>x.id),
+     track_availability:Object.fromEntries(d.children.map(x=>[x.id,x.availability])),
+     selected_track_status:d.selected_track?.availability??null,
+     newly_relevant_ids:view.newly_relevant_since_supplied_prior_scenario.map(x=>x.id),
+     marker_rule_conflicts:t.marker_rule_conflicts.map(x=>x.id),
+     additional_observed_count:t.additional_observed_count,
+     atlas_selected:a.selected?.id||null,
+     atlas_family_refs:a.selected?.atlas_refs||[],
+     board_candidate_first:view.related.mission_board.may_require_observation[0]?.id||null,
+     actual_state_connected:view.actual_game_state_connected,
+     outgoing_user_state_writes:view.writes_performed,
+     no_forced_next_mission:t.default_next==="PLAYER_CHOICE",
+     gold_awarded_claim:!!view.earned_gold_claim,
+     all_unobserved_missions_hidden:t.unresolved_candidates.length===0
+   };
+   const fail=[];
+   for(const [key,expected] of Object.entries(test.expect||{})){
+     if(key==="track_availability"){
+       for(const [id,expectStatus] of Object.entries(expected))if(obs.track_availability[id]!==expectStatus)fail.push(key+"."+id+" expected "+expectStatus+" actual "+obs.track_availability[id]);
+     } else if(JSON.stringify(obs[key])!==JSON.stringify(expected))fail.push(key+" expected "+JSON.stringify(expected)+" actual "+JSON.stringify(obs[key]));
+   }
+   if(view.writes_performed!==0||view.actual_game_state_connected!==false)fail.push("violated no-game-connection invariant");
+   if(fail.length)errors.push({id:test.id,reason:fail});
+   else passed.push(test.id);
+ }
+ return {passed:errors.length===0,checks:(hierarchyFixtures.scenarios||[]).length,passing:passed.length,passing_ids:passed,errors};
+}
