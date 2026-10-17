@@ -1,0 +1,334 @@
+{
+  "version": "0.1.0",
+  "purpose": "Synthetic research test cases; no RDR2 save or campaign input",
+  "requirements": [
+    "All tested states synthetic; absent fact is UNKNOWN not false",
+    "A visible marker is not inferred from a numbered mission shelf",
+    "Candidate edges do not block availability",
+    "Ordinary system unlock is not assumed ownership or purchase",
+    "Urgent activated oil task suppresses leisure, not the mission guide"
+  ],
+  "scenarios": [
+    {
+      "scenario": {
+        "scenario_id": "arrival_two_story_choices",
+        "source": "SIMULATION_FIXTURE",
+        "synthetic": true,
+        "chapter": "02",
+        "control": "free_roam",
+        "completed": [],
+        "flags_true": [
+          "chapter2_open"
+        ],
+        "observed_markers": [
+          "m007",
+          "m008"
+        ],
+        "flags_false": [
+          "strauss_debt_deposited"
+        ],
+        "not_completed": [
+          "m009"
+        ]
+      },
+      "expected": {
+        "missions": {
+          "m007": "marker_observed_in_simulation",
+          "m008": "marker_observed_in_simulation",
+          "m009": "prerequisites_disputed_marker_unconfirmed"
+        },
+        "capabilities": {
+          "camp_ledger": "necessary_condition_not_met",
+          "stable_brush": "necessary_condition_not_met"
+        },
+        "include_opportunities": [
+          "arrival_camp_orientation"
+        ],
+        "exclude_warnings": [
+          "urgent_john_wagon"
+        ],
+        "outings_suppressed": false,
+        "priority_next": "PLAYER_CHOICE"
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "bear_mission_now_a_choice",
+        "source": "SIMULATION_FIXTURE",
+        "synthetic": true,
+        "chapter": "02",
+        "control": "free_roam",
+        "completed": [
+          "m007"
+        ],
+        "flags_true": [
+          "chapter2_open"
+        ],
+        "observed_markers": [
+          "m008",
+          "m009"
+        ],
+        "not_completed": [
+          "m009"
+        ]
+      },
+      "expected": {
+        "missions": {
+          "m007": "completed_in_simulation",
+          "m009": "marker_observed_in_simulation",
+          "m008": "marker_observed_in_simulation"
+        },
+        "capabilities": {
+          "stable_brush": "necessary_condition_not_met"
+        },
+        "outings_suppressed": false,
+        "priority_next": "PLAYER_CHOICE"
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "one_strauss_debt_ledger_open",
+        "source": "SIMULATION_FIXTURE",
+        "synthetic": true,
+        "chapter": "02",
+        "control": "free_roam",
+        "completed": [],
+        "flags_true": [
+          "chapter2_open",
+          "strauss_debt_returned",
+          "strauss_debt_deposited"
+        ],
+        "observed_markers": [],
+        "flags_false": [
+          "leather_working_tools_purchased"
+        ],
+        "observed_capabilities": [
+          "camp_ledger"
+        ],
+        "intent": "camp"
+      },
+      "expected": {
+        "capabilities": {
+          "camp_ledger": "observed_in_simulation",
+          "leather_tools": "necessary_condition_not_met"
+        },
+        "include_opportunities": [
+          "camp_ledger_open"
+        ],
+        "exclude_opportunities": [
+          "arrival_camp_orientation"
+        ],
+        "outings_suppressed": false
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "pearson_tools_owned_in_simulation",
+        "source": "SIMULATION_FIXTURE",
+        "synthetic": true,
+        "chapter": "02",
+        "control": "free_roam",
+        "completed": [],
+        "flags_true": [
+          "chapter2_open",
+          "strauss_debt_deposited",
+          "leather_working_tools_purchased"
+        ],
+        "observed_markers": [],
+        "observed_capabilities": [
+          "camp_ledger",
+          "leather_tools"
+        ],
+        "intent": "crafting"
+      },
+      "expected": {
+        "capabilities": {
+          "leather_tools": "observed_in_simulation",
+          "camp_fast_travel": "availability_unknown"
+        },
+        "include_opportunities": [
+          "camp_ledger_open"
+        ],
+        "outings_suppressed": false
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "horse_lesson_complete",
+        "source": "SIMULATION_FIXTURE",
+        "synthetic": true,
+        "chapter": "02",
+        "control": "free_roam",
+        "completed": [
+          "m009"
+        ],
+        "flags_true": [
+          "chapter2_open"
+        ],
+        "observed_markers": [],
+        "observed_capabilities": [
+          "stable_brush"
+        ],
+        "intent": "horses"
+      },
+      "expected": {
+        "missions": {
+          "m009": "completed_in_simulation"
+        },
+        "capabilities": {
+          "stable_brush": "observed_in_simulation"
+        },
+        "include_opportunities": [
+          "horse_tutorial_done"
+        ],
+        "outings_suppressed": false
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "john_oil_wagon_now_urgent",
+        "source": "SIMULATION_FIXTURE",
+        "synthetic": true,
+        "chapter": "02",
+        "control": "free_roam",
+        "completed": [],
+        "flags_true": [
+          "chapter2_open",
+          "john_wagon_task_active"
+        ],
+        "observed_markers": [
+          "m017"
+        ],
+        "intent": "explore"
+      },
+      "expected": {
+        "missions": {
+          "m017": "marker_observed_in_simulation"
+        },
+        "include_warnings": [
+          "urgent_john_wagon"
+        ],
+        "exclude_opportunities": [
+          "arrival_camp_orientation"
+        ],
+        "outings_suppressed": true,
+        "priority_next": "m017"
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "chapter2_exit_approach",
+        "source": "SIMULATION_FIXTURE",
+        "synthetic": true,
+        "chapter": "02",
+        "control": "free_roam",
+        "completed": [
+          "m023"
+        ],
+        "flags_true": [
+          "chapter2_open",
+          "chapter2_exit_imminent"
+        ],
+        "observed_markers": [
+          "m024"
+        ],
+        "intent": "completion"
+      },
+      "expected": {
+        "missions": {
+          "m024": "marker_observed_in_simulation"
+        },
+        "include_warnings": [
+          "before_chapter_exit"
+        ],
+        "include_opportunities": [
+          "chapter2_exit_audit"
+        ],
+        "outings_suppressed": false,
+        "priority_next": "REVIEW_BEFORE_CHAPTER_EXIT"
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "mission_chained_no_roam",
+        "source": "SIMULATION_FIXTURE",
+        "synthetic": true,
+        "chapter": "02",
+        "control": "mission_chained",
+        "completed": [],
+        "flags_true": [
+          "chapter2_open"
+        ],
+        "observed_markers": [
+          "m007"
+        ]
+      },
+      "expected": {
+        "missions": {
+          "m007": "marker_observed_but_control_unavailable"
+        },
+        "outings_suppressed": true,
+        "exclude_opportunities": [
+          "arrival_camp_orientation"
+        ],
+        "priority_next": "CONTINUE_ACTIVE_MISSION"
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "prerequisite_present_marker_unknown",
+        "source": "SIMULATION_FIXTURE",
+        "synthetic": true,
+        "chapter": "02",
+        "control": "free_roam",
+        "completed": [
+          "m010"
+        ],
+        "flags_true": [
+          "chapter2_open"
+        ],
+        "observed_markers": [],
+        "intent": "story"
+      },
+      "expected": {
+        "missions": {
+          "m011": "necessary_conditions_met_marker_unconfirmed",
+          "m013": "prerequisites_disputed_marker_unconfirmed"
+        },
+        "outings_suppressed": false,
+        "priority_next": "PLAYER_CHOICE"
+      }
+    },
+    {
+      "scenario": {
+        "scenario_id": "observed_marker_versus_missing_prerequisite",
+        "source": "SIMULATION_FIXTURE",
+        "synthetic": true,
+        "chapter": "02",
+        "control": "free_roam",
+        "completed": [],
+        "flags_true": [
+          "chapter2_open"
+        ],
+        "observed_markers": [
+          "m024"
+        ],
+        "not_completed": [
+          "m023"
+        ]
+      },
+      "expected": {
+        "missions": {
+          "m024": "marker_observed_in_simulation"
+        },
+        "include_warnings": [
+          "before_chapter_exit"
+        ],
+        "priority_next": "REVIEW_BEFORE_CHAPTER_EXIT",
+        "conflict_ids": [
+          "m024"
+        ]
+      }
+    }
+  ]
+}
