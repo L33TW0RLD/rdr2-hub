@@ -1,6 +1,6 @@
 # Systems Atlas — Parallel Research Wave 1
 
-**Coordinated:** 2026-10-17. **Status:** 6 registered independent task branches; agents not automatically launched by GitHub.
+**Coordinated:** 2026-10-17. **Status (updated after deliveries):** all 6 specialist branch dossiers/checkpoints/final handoffs verified; each task `DELIVERED_REVIEW_PENDING`, each dossier `RESEARCHED — REVIEW PENDING`. Research-reference integration review: [cross-dossier report](../systems_atlas/reviews/2026-10-17_wave1_cross_dossier_review.md). GitHub registration did not launch workers.
 **Owner direction:** prioritize Atlas production first. The previous sequential D01→D02→D04 thread allocation is **superseded for this wave**; each specialist conversation remains reusable for future work.
 
 ## Six independent specialists
