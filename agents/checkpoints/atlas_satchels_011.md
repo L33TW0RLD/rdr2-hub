@@ -6,7 +6,7 @@
 **Registered starting main baseline:** `e549cc963a0e8dabb918bfecd7f1b8ace8f829dc`
 **Latest main inspected at startup:** `6246ab38eede37d64b29e6a259238d65efc48006` (one coordinator commit beyond task branch baseline)
 **Checkpoint date:** 2026-10-17 UTC (time not independently recorded)
-**Workflow status:** `IN_PROGRESS` (dossier verified; final handoff pending)
+**Workflow status:** `DELIVERED_REVIEW_PENDING` — task closed for specialist writes
 **Content maturity:** `RESEARCHED_REVIEW_PENDING` (not adopted)
 
 ## Assignment and lease
@@ -37,11 +37,17 @@ Research **D03: Pearson satchels, recipe matrix, material routing and whole-carc
 - No in-game direct testing or player inventory state asserted.
 - Last verified commit before this checkpoint update: `90d87ba52cc855d019362d8485fa26468353bf40`.
 
+## Final delivery verification — 2026-10-17
+- Final handoff committed at `55ed79e782dd6fa2e708225fa49f3ebb63ca01f5` and read back at the exact branch with blob SHA `47800655590f9c46608be6ed6aaad930915b6a08` (7,660 characters).
+- Latest main SHA on final handoff verification remained `6246ab38eede37d64b29e6a259238d65efc48006`; `main...agent/atlas-satchels-011` compare: **4 ahead / 1 behind**, exact changed paths are **only** the three leased files.
+- Evidence status remains `RESEARCHED_REVIEW_PENDING`; squirrel noun, Kit milestone, optional decor, tool cost and testing gaps are explicitly logged. No player progress or save data asserted.
+- Last verified commit before this final checkpoint update: `55ed79e782dd6fa2e708225fa49f3ebb63ca01f5`. The final checkpoint cannot record its own SHA; report terminal SHA separately after readback.
+
 ## Resumption
-**Current phase:** substantive source research delivered and verified; final handoff and closure validation outstanding.
-**Exact next permitted action:** commit a final task-specific handoff at `agents/handoffs/2026-10-17_atlas_satchels_011.md` documenting verified evidence, source disputes and coordinator-only review actions.
-**Subsequent steps:** verify handoff exact ref; update this checkpoint to `DELIVERED_REVIEW_PENDING`; compare branch/main and all three leased files, report terminal SHA, stop writes.
-**Blockers:** none inside D03; parallel wave pre-scaling gate is coordinator-owned and not certified by this research task.
+**Current phase:** `DELIVERED_REVIEW_PENDING`; all research/handoff writing complete.
+**Exact next permitted action:** **NONE for specialist on this task**. Coordinator/owner reviews dossier and handoff, adjudicates disputes and owns any separately authorized integration.
+**Subsequent tasks:** only coordinator/owner review; new specialist research requires separately registered task ID, branch and file lease.
+**Blockers:** no hard delivery blocker. Parallel-wave pre-scaling verification, cross-agent reconciliation and adoption are coordinator-owned; not certified by this task.
 **Uncertainties:** whether disputed recipe rows or whole-carcass acceptance can be independently corroborated; record UNKNOWN rather than guessing. Current player tools/crafting state UNKNOWN.
 **Review:** coordinator / owner, not self-ratified.
-**Stop condition:** all three leased files committed and verified; no merge or shared-index updates.
+**Stop condition:** **MET**. Three leased files committed and verified before closure checkpoint; no merge or shared-index updates.
