@@ -382,3 +382,21 @@ The selected display is **A1 only**: compact selectable mission rows, with a sou
 - No redundant medal values, operation numbering, or Gold progress in list entries.
 
 The medal header and map-dot rail remain **owner locked** and unchanged. The star accent is warm gold but does not indicate that a Gold medal was earned. This is a read-only presentation proposal; implementation and client acceptance remain separate.
+
+
+---
+
+## 17. Owner LOCK v0.9 — independent mission-row annotations
+
+Supersedes v0.8 casing and v0.7/v0.6 suggestions to hide future gameplay possibilities globally during an active urgent event.
+
+**Mission Control selected UI:** compact A1 rows, with two **independent**, source-constrained annotations:
+
+- `future_mechanic` on an actually observed mission marker → warm-gold star, displayed as **`New Possibilities · [feature]`**. Do not say owned/unlocked. The label remains present in both normal and urgent scenarios if the associated mission and mechanic are still relevant.
+- `active_story_risk` attached to the corresponding active mission → small **`Time-sensitive`** text, no synthetic countdown or detached warning card.
+- These are evaluated **per mission**. An urgent task must not switch off feature annotation on another valid mission row. It may impact companion *recommendation priority* elsewhere, but not hide observed Mission Control choice context.
+- Standard rows are undecorated if they have neither source-backed feature nor active risk.
+
+**Presentation rule:** render `New Possibilities` in title case, not `New possibilities`, `Introduces`, or `Unlocked`. Any earlier opposite instructions are historical testing ideas, not current accepted design.
+
+**Source/action invariants:** click whole row to reload complete original Field Guide; never record save, medal, mission completion or mechanic ownership. No changes to the locked 18-slot Chapter II header, availability dots or Home.
