@@ -115,7 +115,8 @@
         ],
         "newly_relevant_ids": [
           "leather_tools"
-        ]
+        ],
+        "outing_ref": "heartlands_recon"
       }
     },
     {
@@ -319,7 +320,8 @@
         "selected_track_status": "observed_in_fixture",
         "child_ids": [],
         "project_stage": "satchel_tools",
-        "actual_state_connected": false
+        "actual_state_connected": false,
+        "outing_ref": "heartlands_recon"
       }
     }
   ],
