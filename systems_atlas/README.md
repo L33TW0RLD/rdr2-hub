@@ -49,7 +49,7 @@ All nine Wave 3 specialist branches supplied an independently scoped dossier/che
 | [D24 Replay and saves](dossiers/d24_replay_saves_medals_v0_1.md) | Manual/auto saves, mission replay, 70 Gold Rush | Replay medal ≠ original-world restore; GameGuide campaign authority |
 | [D27 Challenges](dossiers/d27_nine_challenge_strands_v0_1.md) | Nine strands × ten ordered ranks, equipment rewards | Rank-local credit and purchase/equip gates must be checked |
 
-**Read [Wave 3 cross-dossier review](reviews/2026-10-17_wave3_cross_dossier_review.md) before presenting a disputed irreversible choice.** One coordinator-only D09 formatting fix removed literal escaped inline Markdown; all other dossier source blobs are unchanged. Wave 4's **eight** dossiers [remain planned](../agents/atlas_waves3_4_plan_v1.md), not automatically researched/merged.
+**Read [Wave 3 cross-dossier review](reviews/2026-10-17_wave3_cross_dossier_review.md) before presenting a disputed irreversible choice.** Two coordinator-only presentation repairs are documented in the review: D09 escaped Markdown was fixed; D20's three sibling-dossier relative links were corrected. All other dossier source blobs are unchanged. Wave 4's **eight** dossiers [remain planned](../agents/atlas_waves3_4_plan_v1.md), not automatically researched/merged.
 
 ## Taxonomy Architect 002 — review-only additions
 
