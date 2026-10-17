@@ -731,3 +731,82 @@ The table supplies granular followable URLs, so no one has to infer a mission-sp
 | C4-ED Edition | **No PowerPyx chapter-standard page used**; GTA Base S07, RDR2.org S02d, iRedDead S15 | S07, S02d, S15 |
 
 **Traceability limit:** Links document researched guides, NOT owner approval, direct game telemetry, Gold earned or replay-save fidelity. Specific tactical shortcuts present only in community comments or a single guide are labeled **recommendation/uncertainty**, not verified engine guarantees.
+
+
+## 9. Original GameGuide transfer matrix, authority and statuses
+
+**Verified read-only as of 2026-10-17:** [Original `missions/README.md`](https://github.com/L33TW0RLD/rdr2/blob/main/missions/README.md) indexes only existing **Chapter 1/Chapter 2** prepared operation shelf 001–023; there is no indexed Chapter 4 dossier. A read request of `missions/chapter_04/README.md` returned GitHub 404. The original [mission intelligence desk](https://github.com/L33TW0RLD/rdr2/blob/main/guides/mission_intelligence/README.md) describes Chapter 1/early Chapter 2 research only, at **RESEARCHED — REVIEW PENDING**, not an adopted Chapter 4 operation pack. These negative directory/index observations justify **NEEDS_GAMEGUIDE_AUTHORING** for every Chapter 4 Story entry *within inspected sources*, but cannot prove no unofficial unpublished guide exists elsewhere.
+
+The following **proposed file slugs are only transfer destinations for an authorized future GameGuide worker**. None exists or is created by task 039, and no new original shelf operation number is assigned. A true original file path and operation ID must be determined later by that repository's owner.
+
+| Research ID | Original dossier / Intel state | Proposed future GameGuide file slug (not created) | Transfer priority |
+|---|---|---|---|
+| C4-01 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/the_joys_of_civilization.md` | High · first chapter start; hard early chase timer |
+| C4-02 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/angelo_bronte_a_man_of_honor.md` | High · dog/drunk/stealth/timer |
+| C4-03 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/no_no_and_thrice_no.md` | High · Foreman choice and accuracy |
+| C4-04 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/the_gilded_cage.md` | High · four ephemeral party events |
+| C4-05 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/a_fine_night_of_debauchery.md` | High · poker/no-help and 35-second exit |
+| C4-06 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/horsemen_apocalypse.md` | High · attack, sidearms and boat timing |
+| C4-07 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/urban_pleasures.md` | High · trolley segment 10 kills and dynamite |
+| C4-08 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/american_fathers_ii.md` | High · part identity, wagon stealth, escape |
+| C4-09 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/country_pursuits.md` | Medium · Jules 1:40 and animal scripted |
+| C4-10 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/revenge_is_a_dish_best_eaten.md` | High · all rooms before timed carry |
+| C4-11 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/banking_the_old_american_art.md` | CRITICAL · forced exit and last-chance audit |
+| C4-O1 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/help_a_brother_out.md` | CRITICAL · optional Honor before chapter exit |
+| C4-O2 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/brothers_and_sisters_one_and_all.md` | CRITICAL · previous O1 gate, 19s, missable |
+| C4-O3 | NEEDS_GAMEGUIDE_AUTHORING | `missions/chapter_04/fatherhood_and_other_dreams_ii.md` | CRITICAL · Mary optional Honor / theatre |
+| C4-ED | NEEDS_GAMEGUIDE_AUTHORING **IF EDITION PRESENT** | `missions/chapter_04/high_and_low_finance.md` | CONDITIONAL · special entitlement and Gold Rush conflict |
+| C4-N0 | NEEDS_GAMEGUIDE_AUTHORING **nonmedal optional** | `missions/chapter_04/money_lending_and_other_sins_v.md` | CRITICAL for Lending a Hand; no medal |
+| C4-N1/N2 | NEEDS SETUP LINKAGE, **no separate Gold dossier** | Include under C4-08 and C4-O3, respectively | Parent mission trigger, do not generate fake medals |
+
+**GameGuide transfer/adoption queue, executable only by original-repo owner later:**
+
+1. Before each new brief, read original `campaign/current_state.md` plus any accepted medal/save/unique-item reports. Old historical screenshots do not determine **now**.
+2. Select only next actual observed mission marker, not the alphabetical rows above; read this mission's Gold + 4 phases, conflicts and direct sources; independently verify source-critical Gold/missables.
+3. Produce a **complete** original `missions/chapter_04/` Field Guide v1.1 for this *one* entry, with Gold metric tiles, all phase checkboxes A–final visible, scene-appropriate inline Gold/missable/Honor warnings, small contextual phase images only if verified, independently expandable **topic-specific Field Intel** and simple actual-report interface. See [template](https://github.com/L33TW0RLD/rdr2/blob/main/missions/templates/chronological_walkthrough.md).
+4. Avoid a fake universal mission order / source numbering; original shelf ID allocated only by original repo after actual authoring. Mark Gold on the real Story menu entry only; no number for letter/non-medal setup. For **High and Low Finance** require entitlement/mission in current game.
+5. Only after player report and GameGuide evaluation may `campaign/` record actually earned Gold, loot, Honor, journal, save and current mission. Do not treat completed ChatGPT checkboxes, repo merge or this 15-entry transfer queue as gameplay progress.
+
+## 10. Suggested Field Intel and preflight tests per mission family
+
+**Consumer rendering contract:** This repository is not deploying an app. Original GameGuide's [v1.1](https://github.com/L33TW0RLD/rdr2/blob/main/protocol/walkthrough_presentation.md) uses a compact mission header, Gold tiles, one progress rail **derived from that mission's actual authored checklist rows**, all phases visible in order (no tab collapse), concise critical warnings inline, optional independent Intel drawers and simple medal-report control only if it genuinely submits. The 4 research-phase headings per mission are **not** a compulsory 4-phase UI template; the authorized writer may split scenes into more actual phases without dropping actions. No status from this pack is persistent UI state.
+
+| Family | Recommended independent optional Intel drawers (only if supported) | Preflight must independently confirm |
+|---|---|---|
+| Early Saint Denis chase | Time, Map/route, Stamina & mount choice | Child interception cutoff, precise 5:30 timer, cutscene handling by installed build [S04] |
+| Graveyard combat | World (dog/drunk), Combat, Law/stealth | Four headshots, both nonhostile encounters, law stealth, 10:40 route feasibility |
+| NoNo and Foreman branch | Combat/accuracy, Honor/choice, Bounties crossref | Two player-owned Foreman rider kills, 90%, alive capture for leader, optional fate |
+| Mayor's social party | Social encounters, World/tickets, Stealth | Four separate events before speaking to mayor; servant shadowing; gift is not assumed permanently owned |
+| Boat poker | Poker mechanics, Costume/gear, Loot, Timing | Strauss assistance prompt, 35s exposure point, 5 headshots, no-health item effects |
+| Shady Belle siege | Cover/sidearms, Dead Eye, Camp/world | Boat before disembark, 15 headshots, ≥70% accuracy, no non-sidearms, no health items |
+| Trolley job | Robbery mechanics, Combat, Escape | Three-or-actual customer prompts, **10 kills aboard trolley**, no boarding wagon, detonate thrown explosive |
+| Factory infiltration | Stealth, Vehicle, Map, Accuracy | **Part II** actual Gold identity, wagon ride required, Danbury undetected, all horseback pursuers |
+| Swamp Bullgator | Boat/carry, Wildlife, Combat | 1:40 Jules local timer, 5 hits vs killing scripted animal, no assumed pelt |
+| Mansion rescue | Map/rooms, Combat, Time | Every room searched **before** center, 20 headshots, 1:30 carry, no-health |
+| Brother and Sister optional chain | Honor/charity, Stranger-vs-Story classification, Law | 2:45 and no threatening, 19-second child, earlier mission prerequisite and chapter closure |
+| Mary optional chain | High Honor, Economy conditional, Theater/choice | Letter acceptance, 1:45 wagon ride, theater accepted, no wallet money inferred |
+| Bank ending | Save, Completion/missables, Sidearms/accuracy | PRE-EXIT four optional strands/box/companion and future-story transition, 25 headshots, safe 19–72–54, sidearm only |
+| Edition bonus | Edition entitlement, Coach/companion context, Gold Rush ambiguity | Correct edition + visible Charles job; 5:45 and no escape damage; whether platform counts medal toward 70 |
+
+**Priority order** is **observed Chapter 4 optional chapter-closing objective** → **mission currently chosen** → **optional exploration**. Do not direct a hypothetical early Chapter 2 user through Chapter 4 spoilers. A source may call a mission "next" when it is only one valid unlock branch; adapt to actual map marker. Failure of a route shortcut is not automatically engine failure; mark it `DISPUTED/TACTICAL` and keep objective true.
+
+**Evidence surfaces and statuses:** `Progress > Story` named in-game entry/medal; `Progress > Total Completion` official aggregate (different); on-screen mission result conditions; optional Honor quest log; Camp actor/event marker; inventory/cash only if directly reported; manual save screen with slot/time only if user provides it. `UNREPORTED` ≠ `FAILED`; an in-progress preview box ≠ `COMPLETED`. Separate **Gold earned**, **Gold saved/reloaded** and **story quest performed** [S09].
+
+## 11. Completeness audit, research limitations and owner review decision
+
+**Produced:**
+- **11 standard progression medal missions**: C4-01 through C4-11 (not claiming their listed order is forced).
+- **3 optional Honor medal missions**: C4-O1/O2/O3.
+- **1 additional edition-exclusive medal mission**: C4-ED, only if account entitled; potential Gold Rush count conflicts.
+- **1 Chapter 4 optional non-medal Honor debtor mission**: C4-N0.
+- **2 non-medal letter/meeting setups**: C4-N1/N2, modeled as prerequisites, **not two additional Story Gold medals**.
+- **15 full A→D phase research maps**, all with exact public Gold criteria, 2–3 practical subactions per phase where relevant, important point-of-action warnings and source/transfer labels; **60 named phases**. This is the **research pack**, not 15 installed original Field Guides.
+- Cross-sourced main Gold list PowerPyx [S01] with independent Hold To Reset [S03], backed by RDR2.org [S02a–d] and individual PowerPyx direct walkthrough [S04]; GTA Base/iRedDead checks for edition/non-medal. All accessed 2026-10-17.
+- **14 explicit review conflicts**, separate source of truth for replay, economy/Honor and missable Chapter 4 context.
+- Read-only original GameGuide mission index, approved Field Guide v1.1, preflight, mission intelligence desk and target authoring template verified. `missions/chapter_04/README.md` not present at inspection; no original content modified.
+
+**Limits:** No direct reproducible gameplay run, current map marker, PS/Xbox/PC version screen, validated timer in seconds, exact 104-alternative medal reconciliation, gold obtained, active Chapter 4 save, money/honor, loot, or permanent item proven. The 15 scenes are **research from 2018–2024 external sources**, not a claim of Rockstar-first-party certification. Source/date asymmetry and mission/trophy/count divergences remain explicit. Chapter 4 plot in this **T2 research document** must not be automatically displayed to a present early-story player.
+
+**Owner/coordinator decisions:** Before integration and eventual GameGuide transfer, resolve the edition extra medal's Gold Rush count MC4-X02, Bank exact unlock and save-transition MC4-X05, Angelo stealth route/time risk MC4-X08, Mary theatre acceptance interpretation MC4-X11 and unique chapter-only item status, and source collisions with D08/D18/D22/D24. Validate that every final original guide puts required inline warnings in the exact action window and respects full Field Guide v1.1 without adopting a generic 4-phase template. Do not introduce additional numbered Story Gold for Strauss debt/letter/setup.
+
+**Task status gate:** Remain **RESEARCHED — REVIEW PENDING** at document level until separate owner evidence review, even if merged as research. The specific branch task `mission-shady-belle-039` must stop at `DELIVERED_REVIEW_PENDING` after its three-file verification and final handoff; no new task is self-assigned.
