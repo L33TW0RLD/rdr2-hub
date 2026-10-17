@@ -4,7 +4,7 @@
 **Branch:** `agent/atlas-stranger-023` · **Registration baseline:** `d3bc807c75633fec042f4a34af72515a24cc2696`  
 **Latest main at recovery:** `b578aec6f1edab1279f2f2c5989326d4e86231ed`  
 **Recorded:** 2026-10-17 UTC (exact clock time not inferred)  
-**Status:** `IN_PROGRESS`; content `DRAFT`, not ADOPTED.
+**Status:** `IN_PROGRESS` — substantive research verified, final handoff pending; content `RESEARCHED_REVIEW_PENDING`, not ADOPTED.
 
 ## Exact exclusive three-file lease
 - `systems_atlas/dossiers/d18_stranger_strands_quests_v0_1.md`
@@ -25,7 +25,15 @@ Primary proposed Atlas leaves `S21.M01–M04`, `S30.M05`. Deliver a substantive,
 
 **Dependencies:** D08 Chapter 2 closing windows (read-only and REVIEW PENDING), D05 camp opportunities, D15 Compendium and D24 replay semantics if present (read-only and unratified). Campaign evidence only from original GameGuide, never inferred by Atlas.
 
-## Resumption instruction
-**Exact next permitted action:** Independently research and substantiate D18 mechanics with official and independent sources, consult Wave 1/2 references read-only, then commit only `systems_atlas/dossiers/d18_stranger_strands_quests_v0_1.md` and verify exact branch readback.
+## Durable substantive milestone — 2026-10-17
+- Initial checkpoint `da0d9c6dccb2a2610f0f54314d05685b4f72679c` committed before research; branch checkpoint readback blob `d78117cedb233b3c135ce1756ff1b4de459dea1f` verified.
+- D18 dossier committed `a4a361ea2fbaaa07e80636ddfc9241b7b876ce1d`; exact ref readback blob `0e7e903bb954524a7709c88664e2e1d064e40e82` (41,821 chars).
+- Validation: 11/11 mandatory sections, C01–C24 claim ledger, D18-X01–X12 dispute ledger, S21.M01–M04 and S30.M05 provisional coverage, four window classes, three Chapter 2 examples, 60 absolute URL occurrences.
+- Compare at this milestone: branch ahead 2, behind 1 against `main` at `b578aec6f1edab1279f2f2c5989326d4e86231ed`; changed paths **only** this checkpoint and D18 dossier. No shared writes/rebase/merge.
+- No primary in-game session, trophy telemetry or player-state evidence obtained; disputed Fundraiser start gate and later partial-stage/cutoff claims retained.
+- Last verified commit before this checkpoint update: `a4a361ea2fbaaa07e80636ddfc9241b7b876ce1d`.
 
-Then update this checkpoint for research milestone, commit final handoff, verify exactly 3 leased files against latest main, close checkpoint `DELIVERED_REVIEW_PENDING`, report branch terminal SHA, **stop writes**. On unexpected same-path conflict re-fetch blob SHA/branch and stop rather than overwrite another worker.
+## Resumption instruction
+**Exact next permitted action:** Commit final scoped handoff at `agents/handoffs/2026-10-17_atlas_strangers_023.md`, preserving source quality and all unresolved review questions.
+
+Then read back handoff, update checkpoint to `DELIVERED_REVIEW_PENDING`, compare all three files to latest main, report terminal SHA and **stop writes**. On unexpected same-path conflict re-fetch blob SHA/branch and stop rather than overwrite another worker.
