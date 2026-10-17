@@ -10,7 +10,7 @@
 
 | Research key (not engine/operation ID) | Mission identity / locale | Entry type and Gold eligibility | Safe trigger / prerequisites | Per-mission external evidence |
 |---|---|---|---|---|
-| CH05-M01 | **Welcome to the New World** — Guarma beach, chain gang, rebels | Mandatory; **1** eligible medal, **2** criteria | **Automatic** after Ch4 `Banking, the Old American Art`; no normal free-roam preparation once started | [S01],[S02],[S05],[S06] |
+| CH05-M01 | **Welcome to the New World** — Guarma beach, chain gang, rebels | Mandatory; **1** eligible medal, **2** criteria | **Automatic** after Ch4 `Banking, the Old American Art`; no normal free-roam preparation once started | [S01],[S02],[S05],[S04] |
 | CH05-M02 | **Savagery Unleashed** — Guarma jungle/factory workers | Mandatory story; **1** eligible medal, **3** criteria | Guarma `?` after M01; ordering relative to M03 **variable**; safer to complete before triggering Dutch if seeking island exploration pause | [S01],[S02],[S07],[S19] |
 | CH05-M03 | **A Kind and Benevolent Despot** — Guarma fortress/sugar refinery/Javier | Mandatory; **1** eligible medal, **2** criteria | Dutch after M01; **may be selectable alongside M02**; dependency to M04 includes both M02 and M03 | [S01],[S02],[S08],[S19] |
 | CH05-M04 | **Hell Hath No Fury** — Cinco Torres fort | Mandatory; **1** eligible medal, **3** criteria | Automatically after **both** M02 and M03 (exact ordering of the two previous missions not mandatory) | [S01],[S02],[S09] |
