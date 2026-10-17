@@ -154,3 +154,22 @@ MISSION CONTROL
 - Under Mission Control, projects/Atlas can be represented later as meaningful secondary containers; **do not design below-the-fold layouts in this header-specific checkpoint**.
 
 **Current acceptance gate:** look at the thin 18-slot line on both desktop and phone, confirm the type hierarchy and check inspectability. Only then finalize colors, density and below-Mission-Control containers.
+
+
+---
+
+## 10. Owner feedback v0.3 — completely clean medal rail (2026-10-17)
+
+**This latest decision supersedes the previous segment inspection treatment in §9.**
+
+- Header subtitle: **`Chapter II` only**. Remove `Mission medals`; medal meaning is already expressed by the colors and summary.
+- **Remove the whole under-rail inspection section**, including `18 missions · Select a segment to inspect`, the ugly mission dropdown, and the persistent details/status panel.
+- **One interaction:** hovering a rail segment may reveal a native tooltip with *only the mission title*; clicking/tapping the segment may open a tiny anchored popover containing **the mission title only**, no Operation number, redundant medal name or `Unverified` narration.
+- Keep each segment's **visible stroke 4px** and provide an enlarged accessible hit area that does not increase visible rail thickness. A click toggles its small title popover; no additional buttons, below-rail cards or forced expanded view.
+- A screen reader/keyboard should still receive a meaningful accessible segment name/status via native semantics or an offscreen accessible description, even though visible popover text is title-only. This is an accessibility requirement for later client verification; the design must not force a visual dropdown just to be accessible.
+- Selected segment is a local UI inspection only, **not** an implicit Story marker, mission open, earned medal or save update.
+- Keep the rail as an intentional, breathable element directly before **Mission Control**; do not insert a permanent bottom row or legend between them.
+
+**Resulting vertical hierarchy:** `Horseshoe Overlook` → `Chapter II` → `3 Gold · 1 Silver · 0 Bronze     4/18 recorded` → `18-slot precision rail` → **Mission Control**.
+
+This is a **design-only** amendment. Segment popover behavior and accessibility await owner click-through; no source authority or gameplay changes.
