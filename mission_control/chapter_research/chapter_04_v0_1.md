@@ -615,3 +615,119 @@ Conditional Special/Ultimate: High and Low Finance via Charles/Uncle (not standa
 **Inline warning/intel:** EDITION/REPLAY · This mission may not exist on account/platform despite guides listing it; never count unowned edition entry as Gold failure.
 
 **Source/transfer:** [S03][S02d][S07]; exact Gold criteria corroborated by [S01] PowerPyx and [S03] Hold To Reset for standard missions, [S07] for edition-only. Field sequence checked against RDR2.org Chapter 4 where applicable. `NEEDS_GAMEGUIDE_AUTHORING`; research only, not verified campaign completion.
+
+## 5. Relevant Chapter 4 non-medal Story material and preservation steps
+
+### C4-N0 — Money Lending and Other Sins — V (optional, no medal)
+
+**Gate:** Speak with Strauss at Shady Belle after the early Chapter 4 story opens; Algie Davison at Catfish Jacksons. GTA Base expressly calls it an **Optional Honor Story mission**, **missable in Chapter 4** and **not replayable / no Gold Medal**. This mission is **separate** from the Gold-bearing main Story count even though chapter walkthrough indices sometimes number it [S02b][S12].
+
+**A — Task and destination.** (1) Observe Strauss's request; do not infer mission offered from chapter alone. (2) Travel to Catfish Jacksons and meet Algie near water. **MISSABLE/CHOICE:** Home may also be part of a separate robbery; prior robbery changes interaction; don't treat a generic home stash as identical to Strauss debtor quest.
+
+**B — Debt encounter.** (1) Follow debtor to house and handle confrontation via actual prompts. (2) Locate money in chest near son's bedroom; dialogue/moral response matters. **HONOR:** Be cautious involving the son; sources disagree about exact Honor outcomes of each variant. Do not invent a mandatory violence requirement.
+
+**C — Return and verify.** (1) Recover designated debt and return/deposit as requested. (2) Verify Strauss mission log actually resolved. **CRITICAL:** This is **not** a Gold-mission replay candidate and can expire; recording a planned visit as completed would be especially damaging for Lending a Hand.
+
+**Loot/intel:** GTA Base notes a Double-Barreled Shotgun in fireplace area and other home valuables [S12]. Whether this particular shotgun is a unique indispensable pickup or repeatably purchasable is **not verified as a permanent one-time**; optional loot must not override preserving the father/son dialogue and the debt mission.
+
+### C4-N1 — American Fathers — I and C4-N2 — Fatherhood and Other Dreams — I
+
+Each is a **scene/meeting/letter prerequisite** for a **separately Gold-bearing Part II**. Do not increment Story Gold tally when the initial Evelyn Miller/Rain Falls conversation occurs or when Mary's letter is merely read. The subsequent factories/wagon chase have their Gold contracts. A white marker can be genuine main Story or optional Honor Story depending on **the actual named quest**, not arbitrary "Stranger means no medal" labeling [S01][S02b][S02c].
+
+### Chapter 4 camp windows / social scenes
+
+D05 camp life and D23 microevents own marked companion invitations and ambient scenes; D08 owns chapter closing rules. These are **not a hidden compulsory Chapter 4 mission list**. Since Chapter 4 is relevant to `Friends With Benefits` and final camp tithing box usage, evaluate only actually offered chapter-sensitive requests and player goals before the bank mission; don't prescribe arbitrary forced dialogue loops or claim all scenes trigger at the same hour [S06][S08].
+
+## 6. Missables, unique resources, Honor, save and Gold replay boundaries
+
+| Mission/context | Real preservation decision | Default recommendation / uncertainty |
+|---|---|---|
+| **The Joys of Civilization** | Chase child before market: time-critical **Gold**, not permanently lost loot from a failed catch (the story returns belongings). | If player wants first-run Gold, prep route before starting; first run watching cutscenes versus Gold speed may conflict [S02a][S04]. |
+| **Angelo Bronte** | Dog & drunk encounters before grave thieves, law stealth after combat. | These are mission Gold observations, not globally missable catalog entries. Keep requirements inline [S02a][S04]. |
+| **No, No and Thrice, No** | Anthony Foreman spare/kill branch; later bounty availability conditional. | **High Honor/preservation:** spare at actual choice when compatible with player intent. Mark later poster condition **T3-gated**; never suggest either choice already made [S02a][S11]. |
+| **The Gilded Cage** | Party's four discrete interactions are **one-time in current mission attempt**; show gift/life saving before mayor. | All four before exiting mingle phase; potential optional theatrical tickets not proven permanently irreplaceable [S02b][S04]. |
+| **Fatherhood and Other Dreams II** | Mary accepted-help letter; payment/nonviolent option; theater invite for Gold. | Preserve optional mission and choose theater for Gold; guide reports paying $100 raises Honor, but no current balance/choice assumed [S02b][S04]. |
+| **Help a Brother Out** | Hidden captives, initial Brother donation, subsequent optional sister mission. | Read red book without shopkeeper threat for Gold; refusal to join is a Chapter 4 optional Honor window [S02b][S10]. |
+| **Brothers and Sisters, One and All** | 19s child/optional Honor continuation; law can chase despite helping. | Avoid waiting until final Chapter 4 marker to start predecessor; don't assume marker immediately appears after first scene (time-of-day may vary) [S02b][S10]. |
+| **Money Lending V** | Missable, **no medal/no replay**; debt house before final exit. | Record independently from Chapter 4 medal list; engage if pursuing Lending a Hand; honor treatment of residents player choice [S12]. |
+| **A Fine Night of Debauchery** | Poker no Strauss prompt; ship safe/watch and timed escape; preset outfit/weapon changes. | Do not claim the collectible watch or outfit stays in satchel. The objective is poker success without help, **not** generic Gambler rank [S02b][S04]. |
+| **Horsemen, Apocalypse** | Boat attackers before shore; 15 headshots, sidearms; camp conflict. | Don't attempt recreational camp activity during scripted attack; sidearm & accuracy must be consistent from first shot [S02c][S04]. |
+| **Urban Pleasures** | 10 trolley lawmen only during trolley segment; all office customers before exit; dynamite thrown once. | Full inline window warning; later shootout cannot substitute [S02c][S04]. |
+| **American Fathers II** | Wagon hidden entry & Danbury stealth; scoped future topic family. | Do not classify intro white icon as ordinary Stranger; 80% accuracy and riders are separate from stealth [S02c][S04]. |
+| **Country Pursuits** | Jules 1:40 local carry and Bullgator five **hits**, not a kill; legendary animal later. | No suggestion that the Bullgator's skin/crafting item was obtained in this mission; D17 has animal reward/lost-pelt semantics [S02d][S04]. |
+| **Revenge is a Dish Best Eaten** | Mansion room sweep before central target, 1:30 carry, 20 headshots, no health items. | Side rooms first, all headshots preferably accrued before carrying; don't promise free time to loot mid-carry [S02d][S04]. |
+| **High and Low Finance** | Edition-only and chapter-bound Charles/Uncle bank operation; no damage on final escape. | Confirm installed edition/actual icon; don't count absent entitlement as missed Gold; whether extra medal feeds *70 Gold Rush* remains **DISPUTED** [S07][S13]. |
+| **Banking, the Old American Art** | Explicit forced Chapter 4 departure; optional Honor quests/camp requests/donation box can close; 25 headshots and sidearms only. | **Pre-start LAST-CHANCE check:** Brother duo, Mary's II, Strauss V, eligible camp activity, item requests, personal $250 box donation (goal-dependent), voluntary manual save if safe [S05][S06][S08]. |
+
+**Replay/Save:** `Progress > Story` offers replay of many Story medal entries. It does **not** reliably restore original-run missed Honor/storyworld outcomes, unique items, camp NPC presence, prior money, or original loot. The manual save should be user-confirmed (slot and state), not assumed to exist. Gold earned on replay should be separately checked in Story and campaign record by the authorized GameGuide writer after player report [S01][S09].
+
+**Achievement universes separated:** `Gold Rush` = **70** gold Story medals, **personal all-eligible Gold** may be stricter, `Lending a Hand` requires optional Honor Story, `Friends With Benefits` needs an eligible activity at Chapter 2/3/4 camps, `Errand Boy` requires five delivered requests, and `Give to the Poor` requires cumulative **$250 player contributions** before donation box closure. `Best in the West` is the **separate official in-game Total Completion** list, not all Golds/camp scenes [S06][S08][S09]. `High and Low Finance` extra Gold eligibility is specific to edition and whether it affects 70-Gold tally is not settled here [S13].
+
+## 7. Disputed claims / contradictions and safe fallbacks
+
+| Conflict ID | Source-specific mismatch / gap | Effect on Gold or experience | Precise fallback / owner review |
+|---|---|---|---|
+| MC4-X01 — **14 vs 15 Chapter 4 Golds** | PowerPyx [S01] lists 14 standard; HoldToReset [S03] lists **15** including edition `High and Low Finance`; RDR2.org [S02d] makes edition prerequisite explicit. | False all-medal score denominator for standard copy. | **14 standard + 1 conditional edition**; count only eligible actual `Progress > Story` rows. |
+| MC4-X02 — **Extra medal counts for Gold Rush?** | RDR2 Wiki [S13] associates edition mission with `Gold Rush`, while Steam user guide [S14] says **does not count toward 70**; Rockstar primary trophy trigger unavailable here. | Incorrect trophy arithmetic for Special edition. | **DISPUTED**; never depend on extra to satisfy 70 or exclude it from a personal goal without actual platform account evidence. |
+| MC4-X03 — **Chapter Story count vs non-medal debt** | RDR2.org's Chapter 4 contents includes Money Lending V with **no Gold** [S02b]; PowerPyx 14/15 gold lists exclude. | Inflated medal count from one non-replayable side-stage. | Keep separate non-medal Honor Story; preserve for Lending a Hand. |
+| MC4-X04 — **Mission order and numbering** | RDR2.org, PowerPyx and GTA Base use different global ordinal numbers depending on elective branches and multi-part grouping [S01][S02a][S04]. | Forcing nonexistent linear unlock. | Local C4 IDs research only, actual marker/prerequisite from current game. |
+| MC4-X05 — **Bank mandatory gate** | RDR2.org says after Revenge, other guides list additional parallel main story completion [S02d][S05]; exact graph not independently engine-tested. | Advising Banking immediately although gate absent. | Inspect live Dutch/Hosea marker and current Story journal; no hard `Revenge only` prerequisite. |
+| MC4-X06 — **Gold replay and missed Honor content** | PowerPyx allows Story replay of missed mission entries [S01] but Trophy Roadmap [S06] cautions mission replay doesn't backfill original-story `Lending a Hand`. | Recommending a replay as complete recovery. | Replay can target medal if in Story menu; original-world missables protected with **real** prior save/first run. |
+| MC4-X07 — **Joys chase route** | PowerPyx [S04] advises trolley + horse interception; comments offer shortcuts/exploits; no universally validated geometry. | Invented guaranteed gold route at a tight 5:30. | Offer guide-supported route with uncertainty; never use forced injury/exploit as requirement. |
+| MC4-X08 — **Bronte graveyard 10:40** | PowerPyx individual guide [S04] suggests following John but comments claim route frequently misses timer, unverified shortcut; RDR2.org supports dog/drunk/order [S02a]. | Gold time failure. | Mark follow-John as safe stealth but timer tight; optional alternative needs GameGuide testing, no claim 10:40 guaranteed. |
+| MC4-X09 — **Foreman killing choice** | RDR2.org [S02a] shows optional sparing, later bounty conditions indexed by D19 but edition/story branch may vary [S11]. | Claim all choices can preserve later poster. | Favor mercy for High Honor and optional later content; later condition **conditional**, not guaranteed. |
+| MC4-X10 — **Party gift/tickets** | PowerPyx calls tickets a Gold "accept gift" action [S04]; uncertain whether these remain physically in inventory post-mission. | Fabricated permanently unique item. | Complete party interaction for Gold; do not assert permanent ticket count/ownership. |
+| MC4-X11 — **Mary theatre wording** | Gold list `Take Mary to the theater` [S01]; RDR2.org says **agreeing** to attend suffices even if player exits early [S02b]. | Losing Gold by refusing; overstrict rule about show duration. | Accept theater as safe default; inspect objective tick, don't force staying to end as unsourced universal. |
+| MC4-X12 — **Country Pursuits legendary gator** | Scene contains scripted Bullgator target [S02d]; legendary hunt elsewhere has different gate [D17]. | Invented pelt/reward on mission completion. | Five registered shots for Gold, **not** confirmed harvest; D17 owns later legendary animal rules. |
+| MC4-X13 — **Money Lending V replay** | GTA Base [S12] explicitly NO Gold and non-replayable, generic chapter Story replay prose may overgeneralize [S01]. | False medal/replay rescue. | Exact no-Gold stage cannot be recovered by Story Gold replay. |
+| MC4-X14 — **Special/Ultimate entitlement and timing** | Some guide lists place High and Low Finance as main numbered story [S03], GTA Base [S07] and RDR2.org [S02d] say **edition extra**. | Treating bonus as standard progression requirement. | Only if actual purchased entitlement and Charles camp marker. |
+
+## 8. Source register, provenance and claim coverage (checked 2026-10-17)
+
+The linked sources are **primary in the sense of directly inspected source documents**, but are not Rockstar engine source code. `GUIDE` signifies an independently published gameplay guide; `PLATFORM` a platform contract when known; `REPO` a read-only internal document; `COMMUNITY` an individual answer/anecdote. Publisher first-post and update dates are distinct from the **2026-10-17 accessed** date. No source below is described as a verified 2026 game patch.
+
+| ID | Source / publisher and original date (when shown) | Scope / trust | Direct URL |
+|---|---|---|---|
+| S01 | **PowerPyx**, *Red Dead Redemption 2 Gold Medals Guide*, **2018-10-25** | Independent GUIDEs' complete 14 standard Chapter 4 criteria and 104/70 convention; replay all objectives same attempt | https://www.powerpyx.com/red-dead-redemption-2-gold-medals-guide/ |
+| S02a | **RDR2.org / Matt Gibbs**, *Chapter 4 Mission and Gold Guide* **2019-01-22**, updated **2023-01-09**, page 1 | First missions, Joys/Bronte/NoNo gates and practical stage order | https://www.rdr2.org/guides/chapter-4-missions-and-gold-medals-guide/ |
+| S02b | **RDR2.org**, same series **page 2**, update **2023-01-09** | Mary, Brother/Sister, Strauss V, Gilded party, poker riverboat | https://www.rdr2.org/guides/chapter-4-missions-and-gold-medals-guide/2/ |
+| S02c | **RDR2.org**, same series **page 3**, update **2023-01-09** | Camp assault, trolley, refinery | https://www.rdr2.org/guides/chapter-4-missions-and-gold-medals-guide/3/ |
+| S02d | **RDR2.org**, same series **page 4**, update **2023-01-09** | Jules/Bullgator, revenge mansion, bank finale, Special Edition extra | https://www.rdr2.org/guides/chapter-4-missions-and-gold-medals-guide/4/ |
+| S03 | **Hold To Reset**, *All Level Checklists*, first publication **2018** (exact day not independently validated) | Independent 15-row list **including edition-only High and Low Finance**, all numeric medal objectives | https://www.holdtoreset.com/all-level-checklists-in-red-dead-redemption-2/ |
+| S04 | **PowerPyx individual Chapter 4 mission walkthroughs**, **2018-11** (see direct table below), mission-specific scenes/checks | Per-mission evidence, distinct from PowerPyx aggregate Gold sheet; both same publisher, **not** independent publisher | Individual links in §8a below |
+| S05 | **Gamer Guides**, *Chapter 4 Banking/Pre-exit Walkthrough*, guide released 2018, later updated **2021-01-31**, detailed early-closure checklist | Independent GUIDE for forced exit, optional Brother/Mary/Strauss, camp box | https://www.gamerguides.com/red-dead-redemption-2/guide/walkthrough/chapter-4/banking-the-old-american-art |
+| S06 | **PowerPyx**, *RDR2 Trophy Roadmap*, **2018-10-25** | `Lending a Hand`, camp `Friends With Benefits`, `Errand Boy`, `Give to the Poor`, story replay caveat | https://www.powerpyx.com/red-dead-redemption-2-trophy-guide-roadmap |
+| S07 | **GTA Base**, *High and Low Finance* (published date not visible), edition-specific extra Gold requirements | Independent GUIDE + edition gate / two objectives | https://www.gtabase.com/red-dead-redemption-2/missions/high-and-low-finance |
+| S08 | **Atlas D08 Chapter 2 windows** + **D05 camp life** (RESEARCHED — REVIEW PENDING) | REPO, contextual chapter urgency/companions only, not adopted | https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d08_chapter2_limited_windows_v0_1.md |
+| S09 | **Original GameGuide Field Guide v1.1 + preflight** (approved presentation), **2026-10-13** and **Atlas D24 Replay** review pending | REPO, evidence/medal/save distinction; no source is a player report for Chapter 4 | https://github.com/L33TW0RLD/rdr2/blob/main/protocol/mission_preflight.md |
+| S10 | **PowerPyx**, *Help a Brother Out Walkthrough*, **2018-10-26** | Individual Honor/Gold source + book, contextual donation | https://www.powerpyx.com/red-dead-redemption-2-help-a-brother-out-walkthrough/ |
+| S11 | **Atlas D19 bounties / D13 honor**, both RESEARCHED — REVIEW PENDING | REPO, later Anthony choice consequence only, not confirmed actual later poster | https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d19_bounties_robbery_classes_v0_1.md |
+| S12 | **GTA Base**, *Money Lending and Other Sins — V*, first-post date UNKNOWN, **no medal/no replay** | Independent GUIDE, nonmedal optional Honor and weapon-in-house note | https://www.gtabase.com/red-dead-redemption-2/missions/money-lending-and-other-sins-v |
+| S13 | **Red Dead Wiki**, *High and Low Finance* (community-edited, publication date UNKNOWN) | COMMUNITY, lists optional companion and Gold Rush linkage; **disputed** attribution | https://reddead.fandom.com/wiki/High_and_Low_Finance |
+| S14 | **Steam Community**, *Gold Medals, Challenges and 100%*, published **2024**, user-authored | COMMUNITY, explicitly says special edition Gold does **not** count for Gold Rush; conflicts with S13 | https://steamcommunity.com/sharedfiles/filedetails/?id=3270312816 |
+| S15 | **iRedDead**, *High and Low Finance*, **2018-11-12**, updated **2018-11-25** | GUIDE, independent edition and 5:45/no-damage escape corroboration | https://www.ireddead.com/rdr2/guides/high-and-low-finance |
+| S16 | **iRedDead**, *Money Lending V*, published **2018-11-09** | GUIDE, no Gold and no replay corroboration | https://www.ireddead.com/rdr2/guides/money-lending-and-other-sins-v |
+
+### 8a. Mission-by-mission directly inspected independent source-link index
+
+The table supplies granular followable URLs, so no one has to infer a mission-specific source from a general Chapter 4 page. All checked 2026-10-17. For each Gold criterion use **S01 + S03** (independent publishers), plus a direct mission page and RDR2.org series for the scene order. PowerPyx link dates are 2018 (individual dates displayed on each page).
+
+| Entry | Per-mission PowerPyx walkthrough URL (verified directly) | Independent chapter context |
+|---|---|---|
+| C4-01 Joys | https://www.powerpyx.com/red-dead-redemption-2-the-joys-of-civilization-walkthrough/ | S02a |
+| C4-02 Bronte | https://www.powerpyx.com/red-dead-redemption-2-angelo-bronte-a-man-of-honor-walkthrough/ | S02a |
+| C4-03 No No | https://www.powerpyx.com/red-dead-redemption-2-no-no-and-thrice-no-walkthrough/ | S02a |
+| C4-04 Gilded | https://www.powerpyx.com/red-dead-redemption-2-the-gilded-cage-walkthrough/ | S02b |
+| C4-05 Debauchery | https://www.powerpyx.com/red-dead-redemption-2-a-fine-night-of-debauchery-walkthrough/ | S02b |
+| C4-06 Horsemen | https://www.powerpyx.com/red-dead-redemption-2-horsemen-apocalypse-walkthrough/ | S02c |
+| C4-07 Urban | https://www.powerpyx.com/red-dead-redemption-2-urban-pleasures-walkthrough/ | S02c |
+| C4-08 Fathers II | https://www.powerpyx.com/red-dead-redemption-2-american-fathers-ii-walkthrough/ | S02c |
+| C4-09 Country | https://www.powerpyx.com/red-dead-redemption-2-country-pursuits-walkthrough/ | S02d |
+| C4-10 Revenge | https://www.powerpyx.com/red-dead-redemption-2-revenge-is-a-dish-best-eaten-walkthrough/ | S02d |
+| C4-11 Banking | https://www.powerpyx.com/red-dead-redemption-2-banking-the-old-american-art-walkthrough/ | S02d, S05 |
+| C4-O1 Brother | https://www.powerpyx.com/red-dead-redemption-2-help-a-brother-out-walkthrough/ | S02b |
+| C4-O2 Sister | https://www.powerpyx.com/red-dead-redemption-2-brothers-and-sisters-one-and-all-walkthrough/ | S02b |
+| C4-O3 Mary | https://www.powerpyx.com/red-dead-redemption-2-fatherhood-and-other-dreams-walkthrough/ | S02b |
+| C4-ED Edition | **No PowerPyx chapter-standard page used**; GTA Base S07, RDR2.org S02d, iRedDead S15 | S07, S02d, S15 |
+
+**Traceability limit:** Links document researched guides, NOT owner approval, direct game telemetry, Gold earned or replay-save fidelity. Specific tactical shortcuts present only in community comments or a single guide are labeled **recommendation/uncertainty**, not verified engine guarantees.
