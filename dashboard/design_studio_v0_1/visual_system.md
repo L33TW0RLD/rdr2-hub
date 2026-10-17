@@ -416,3 +416,68 @@ Apply Bronze consistently to **both the header's `Bronze` summary label and any 
 **NO other redesign:** 18 thin mission segments and separately sourced map-marker dots, current-chapter-only scope, hover-title/click-full-Guide, Home, and A1 compact Mission Control including small bold uppercase `NEW POSSIBILITIES` and independent Time-sensitive label all remain **LOCKED**. Actual Chapter II record presently has 0 best-Bronze medals; synthetic later-chapter-stage simulations can display Bronze for visual verification but must remain unmistakably fictional.
 
 Adventure/system categorization below Mission Control remains **UNSELECTED**. This color adjustment is the only newly locked visual change. Client color validation still pending.
+
+
+---
+
+## 19. Living Systems prominence study v1.2 — what deserves Mission-scale space? (2026-10-18)
+
+**User direction:** Before designing Adventure or any third container, classify game systems by deserved **UI prominence**. Some merit nearly Mission Control's weight, some a smaller linked presence, and some are purely complementary/contextual. The approved Chapter II header, bronze token, Mission Control, hover/click, map dots, small bold uppercase \`NEW POSSIBILITIES\` and urgency are **LOCKED**; this study begins *below* them.
+
+**Reference scope:** read the existing \`systems_atlas/mechanics_taxonomy_v0_2.md\` S01–S30 with **S31 PROPOSED ONLY**, the source-checked but **RESEARCHED — REVIEW PENDING** D01–D28 dossiers, and the conditional Free Roam Project/Outing/Discovery model. This is a **presentation taxonomy**, NOT a rewrite or adoption of the Atlas mechanic taxonomy. Do not turn indexed mechanic coverage into owned equipment, verified active quest availability or release-ready guides.
+
+### 1. Presentation roles, not one static ranking for each mechanic
+
+| Role | Default visible form | Promotion or suppression evidence |
+|---|---|---|
+| **LOCKED STORY** | Existing chapter header and full Mission Control container | Always first on Home, but explicit player query can open another system directly; do not force mission path |
+| **MAJOR / Living system** | At most ONE nearly Mission-scale featured container below Story, with a meaningful purpose and next choice | Explicit player interest, a confirmed active project/milestone or an observed newly accessible mechanic. None if no credible focus |
+| **SUPPORTING / linked system** | 2–4 compact rows/sections under a relevant major system or in a small browse rail; can be opened directly | Nearby goal, related unlocked system, relevant question. Promote when the player intentionally undertakes the system as their primary activity |
+| **CONTEXTUAL / companion intelligence** | Brief inline tip, safety line or source-linked optional Field Intel at actual action window; no permanent panel | Only when directly relevant, action-critical, observed or explicitly requested. It may expand into a focused Atlas view on request |
+| **ATLAS ONLY** | On-demand searchable reference; no home real estate by default | Always available by conversation or source-backed local discoverability, no 30-card dashboard |
+
+**Adaptive and reversible:** "Fishing" may be supporting before the normal Chapter 2 introduction but **major for a player-initiated fishing outing**. "Horse care" can become major during stabling/bonding decisions and shrink to an inline travel reminder afterward. "Gold objectives" stay in Mission Control rather than becoming a second cross-system scorecard. There is no inferred, permanent user "favorite systems" ranking.
+
+### 2. Whole-taxonomy assignment: S01–S31 without duplicating research authority
+
+"Primary home" is the **UX browse grouping**, not a second owner of mechanic facts. A cross-link may appear in several relevant situations.
+
+| Atlas families | Player-facing domain | Normal role | Conditional changes |
+|---|---|---|---|
+| S30 chapter/mission flow, replay, saves | **Story** | LOCKED STORY; completed with original Field Guide and campaign | Save/replay warnings may surface contextually; Gold source never duplicated |
+| S08 Camp resources, S09 Ledger, S10 Pearson crafting, S11 gang life | **Camp & Crafting** | MAJOR candidate | Ledger/upgrade/satchel subtopics become supporting or inline outside an actual camp project; chapter-limited observed scenes can receive a small timely note |
+| S06 horse lifecycle and S07 travel, routes, temporary camps | **Horse & Travel** | MAJOR candidate | Routine waypoints and mounted controls are contextual; horse recovery/loss can be action-critical |
+| S12 hunting, S13 legendary wildlife, S14 fishing, S15 herbs, S16 field recipes | **Wilderness** | MAJOR candidate | Fishing/herbs/cooking often supporting; a dedicated fishing/legendary expedition promotes that topic to major |
+| S18 treasure, S19 NPC bounties, S20 robberies, S21 Stranger strands, S22 chance encounters, S23 exploration, S24 gangs, S25 town life/minigames | **World & Activities** | MAJOR candidate as a player-selected adventure theme | Treasure/robbery/bounty/town games supporting; S22 spontaneous events primarily CONTEXTUAL, never fake pre-revealed pins |
+| S26 challenges, S27 collectibles/hand-ins, S28 Compendium, S29 distinct completion goals | **Progress & Collections** | MAJOR candidate | One selected challenge/collection may promote; avoid implying total 100%, all Gold, achievements and exhaustive collections are the same objective |
+| S17 inventory, valuables, money, vendor routing | **Resources & Gear** | SUPPORTING | Scarce/unique-item disposal warnings are contextual and possibly critical; a dedicated inventory audit can be a focused Atlas answer |
+| S04 combat and weapon mechanics | **Skills & Combat** | SUPPORTING | Precise Gold combat advice belongs in active Mission Field Guide; learning combat can become a major *requested lesson* without a permanent front-page combat card |
+| S03 cosmetics/clothing | **Life & Style** | SUPPORTING / on demand | Thermal outfit warning contextual; self-directed fashion/photo session can get full focused study |
+| S01 vitals, S02 condition/rest, S05 Honor/law, S31 contextual prompts (**S31 PROPOSED**) | **Companion Intelligence** | CONTEXTUAL / reference only | Honor/health/control guidance must appear at the relevant decision, never clutter Home; any explicit request opens Atlas |
+
+**No omissions:** S01–S31 are accounted for once each as a primary UX grouping. S31 remains PROPOSED (taxonomy only). Dossier adoption gates apply independently.
+
+### 3. Two competing presentations BELOW the locked first two containers
+
+**A — Department shelves:** Five same-weight discoverable flat rows: Camp & Crafting; Horse & Travel; Wilderness; World & Activities; Progress & Collections. A small "Skills / Resources / Life & Style" link remains. Pros: stable browse organization. Cons: spreads equal attention to unrelated systems and underuses high-value focus.
+
+**B — Living focus + small index:** One MAJOR focus surface only if source/player intent grounds it, then 2–4 small quick-access domains. Example: player explicitly working on satchels → **Camp & Crafting** gets meaningful first step; Horse & Travel / Wilderness / Progress are compact. Unknown intent → NO invented featured goal; just the small discoverable domain index. Pros: feels like an adaptive adventure; Cons: must clearly distinguish selected player objective from suggested optional example.
+
+**Dynamic examples for the design lab:**
+- CAMP: optional interest in satchel upgrade → Camp & Crafting large; Wilderness, Resources & Gear, Horse as compact linked support. Ledger/purchase **unknown** until GameGuide/player confirmation.
+- HORSE: explicit horse-training interest → Horse & Travel large; Wilderness, Camp, Progress compact; horse Level 4 reported but stable/brush access not confirmed in latest read.
+- WILDERNESS: intentional perfect-pelt outing → Wilderness large; Horse cargo, crafting, gear compact; no invented 3-star species or owned weapon.
+- PROGRESS: explicit completion planning → Progress & Collections large; World, Camp, Wilderness compact; never invent checklist counts or combine completion definitions.
+- UNSET: no current focus or current free-roam control unknown → do not auto-select a large domain. Show discoverable index and ask only for a critical missing observation when necessary.
+
+### 4. Rules to preserve the companion character
+
+- A system can be a large reading view **without being a permanent large home dashboard widget**. Direct chat requests bypass Home navigation and load a focused, fully sourced Atlas explanation.
+- Do not simply expose 31 Atlas families as 31 equal user-facing destinations. Full mechanics taxonomy remains an internal source address.
+- Never make Project, Outing, and Discovery **the whole organizing taxonomy**: these are *ways of enjoying systems*, not mutually exclusive system families. A horse outing can serve a camp Project; discovery can replace the route.
+- Only one active major focus by default. A player may explicitly browse another major domain without losing the real Story marker list or status truth.
+- System emphasis is not a recommendation to rush an irreversible story unlock or complete all optional material before Story.
+- No invented live map/progress, no permanent sync claims, no implicit modification to GameGuide.
+- Client A/B comparison and owner acceptance remain PENDING; do **not** label presentation A or B ratified yet.
+
+**Proposed experiment:** evaluate the five fictional focus states above in a native design lab; compare A (department shelves) and B (one relevant focus + compact cross-system links). Use exact source-backed routes on real click, not decorative fake controls; do not create new heading tabs in the locked header.
