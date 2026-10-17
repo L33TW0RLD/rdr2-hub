@@ -53,6 +53,22 @@ This iteration resolves a **distinct problem from notification timing**: the fic
 
 **Regression readback (2026-10-17):** 10/10 v0.1 + 16/16 v0.2 + 37/37 v0.3 + 32/32 v0.4 positive synthetic checks passed; 9/9 v0.3 + 7/7 v0.4 deliberately invalid inputs rejected. Evaluator functions were executed from committed GitHub sources inside a JS sandbox. Node CLI **was not independently run** due to the repository not being present in the local runtime; this is not a live ChatGPT client or gameplay acceptance result.
 
+## Iteration v0.5 — connected companion journeys
+
+The v0.1–v0.4 systems can now be consumed by a **single synthetic navigation model**. The in-chat semantic route is Home → Camp Development → Pearson → Atlas source request → exactly the same Pearson context, or Home → observed Story marker → original GameGuide full dossier request → Atlas detour → **re-request the entire** original full dossier. No guide content was copied into the Hub and a source request is not a source fetch or rendered Field Guide.
+
+| Additional file | Function |
+|---|---|
+| [v0.5 route contract](companion_route_contract_v0_5.json) | Eight allowed semantic route actions, nine known Atlas source cross-links, original GameGuide full-guide reload requirement |
+| [v0.5 router](companion_router_v0_5.mjs) | Pure navigation frames, safe return stack, source-request packets and regression runner |
+| [v0.5 journeys](companion_journeys_v0_5.json) | Thirteen fictional cross-view journeys, 44 transitions and 16 rejected invalid navigations |
+| [v0.5 integration design](companion_integration_design_v0_5.md) | Practical connected flow, UI disclosure and source authority/return rules |
+| [v0.5 prerequisite evidence update](prerequisite_evidence_update_v0_5.md) | Dated source-claim comparison for seven contested Chapter 2 mission prerequisites/expiry questions; **NO newly admitted hard gates** |
+
+**Synthetic regression readback (2026-10-17):** 10/10 v0.1, 16/16 v0.2, 37/37 v0.3, 32/32 v0.4 and **13/13 v0.5** positive cases passed (108/108 total). 9/9 v0.3, 7/7 v0.4 and 16/16 v0.5 invalid-input cases rejected (32/32 total). The v0.5 suite exercised 44 semantic navigation steps, and all 18 original Chapter 2 mission dossier paths were checked against current original GameGuide `main`. Actual Node CLI execution, full-dossier reconstruction by a live client, mobile/desktop interaction, real game-state observation and gameplay-result persistence **are not proven by these tests**.
+
+**Exit-window correction:** once the fictitious Chapter 2 finale is complete, the Home view suppresses stale Horseshoe arrival advice and calls Horseshoe the **former** Chapter 2 camp, with the present location unknown. It does not silently transition to a fictitious Chapter 3 campaign.
+
 ## Files and boundaries
 
 | File | Content |
