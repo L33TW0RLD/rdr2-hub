@@ -1,4 +1,4 @@
-# Disposable-Agent Mid-Task Checkpoint Template v0.1
+# Specialist Mid-Task Checkpoint Template v0.2
 
 **Status:** ACTIVE COORDINATION TEMPLATE · governance PR #1 merged 2026-10-16; no automatic state monitoring.
 
@@ -48,6 +48,6 @@ Use one file per task at `agents/checkpoints/<task_id>.md` **inside that task's 
 
 ### Closure rule
 
-A final handoff documents all delivered files, known limitations, required decisions, branch/readback verification, and an *advisory* next task. It closes the existing task; it does not authorize a new agent to keep working on the same completed scope. Report the terminal SHA in the final chat message; a self-referential SHA inside the commit that creates this checkpoint/handoff cannot reliably be known.
+A final handoff documents all delivered files, known limitations, required decisions, branch/readback verification, and an *advisory* next task. It closes the current **task**, not the specialist conversation. The same conversation can act on a new task after explicit coordinator assignment and independent branch recovery. Report the terminal SHA in the final chat message; a self-referential SHA inside the commit that creates this checkpoint/handoff cannot reliably be known.
 
 **Evidence boundary:** checkpoint completion refers to *repository work only*. It cannot confirm player actions, save state, medals, unlocks, or in-game purchases.

@@ -1,25 +1,26 @@
-# Disposable agents — GitHub-first coordination
+# Persistent specialists, disposable tasks — GitHub-first coordination
 
 **Status:** ACTIVE COORDINATION WORKFLOW · governance PR #1 merged on 2026-10-16. Read the current `main` registry for assignments and exclusive leases. Neither Agent 001's UX nor Agent 002's taxonomy was ratified by this merge.
 
 - [Registry](registry.md) — coordinator-owned task-to-branch routing index, status, write leases, dependencies and review gate.
-- [Disposable Agent Contract](disposable_agent_contract.md) — minimal permissions, lifecycle and fresh-thread recovery.
+- [Specialist Agent / Disposable Task Contract](disposable_agent_contract.md) — scoped permissions, task lifecycle and branch recovery.
+- [Persistent Specialist Threads](persistent_specialist_threads_v0_1.md) — reuse one conversation across separately assigned tasks.
 - [Parallel Agent Workflow](../protocol/parallel_agent_workflow.md) — read-first startup, checkpoint cadence, owner approvals, conflict checks and integration.
 - [Checkpoint Template](checkpoint_template.md) — branch-local `agents/checkpoints/<task_id>.md`; durable **next exact action** for unfinished threads.
 - [Task & Final Handoff Template](handoff_template.md) — scoped assignment and completion report.
 - [Recovery Rehearsal](recovery_rehearsal_v0_1.md) — documentary cold-start checks and remaining real-client test.
 
-## Worker startup (when this workflow is adopted)
+## Startup or transition in a reusable specialist thread
 
-Given just `task_id` and the repo:
+Given an assigned `task_id` and the repo, in an existing or new chat:
 
 1. Read **current `main`** and registry to locate lane, branch, permitted paths and approval status.
 2. Fetch **assigned branch by explicit `ref`**; compare branch against `main`; read checkpoint and/or final handoff.
-3. If `IN_PROGRESS`, recover completed commits and exact next permitted action. If delivered, stop and recommend a **new task/branch**. Missing or contradictory checkpoint means **do not write** until coordinator resolves.
+3. If `IN_PROGRESS`, recover committed work and exact next permitted action. If delivered, **stop that task**; use the same conversation for another task only when coordinator registers/selects its new branch and lease. Missing or conflicting checkpoint means **do not write** until resolved.
 4. Confirm dependencies and protected path leases. Use GitHub readback before declaring committed work.
 
 ## Role boundary
 
-Agent lanes are disposable research/design workers, not concurrently executing bots that can be detected as online. Do not depend on a prior chat memory, graphical checkbox, background execution or hidden state. The original `L33TW0RLD/rdr2` remains the only gameplay-progress authority.
+Agent lanes are reusable conversations, not continuously executing bots that can be detected as online. Never depend on prior chat memory, graphical checkbox, background execution or hidden state as evidence of work. The original `L33TW0RLD/rdr2` remains the only gameplay-progress authority.
 
-Completed existing branches `agent/hub-ux-001` and `agent/atlas-taxonomy-002` have final handoffs but **no mid-task checkpoints** because they predate this workflow. Do not retroactively alter those branches.
+Completed existing branches `agent/hub-ux-001` and `agent/atlas-taxonomy-002` have final handoffs but **no mid-task checkpoints** because they predate this workflow. Do not retroactively alter those branches. The existing Atlas specialist conversation can instead handle separately registered tasks 007, 008 and 009 sequentially.

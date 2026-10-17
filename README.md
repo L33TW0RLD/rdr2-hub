@@ -22,7 +22,7 @@ A ChatGPT-native command hub for a slow, immersive, High Honor, 100%-completioni
 | `free_roam/` | Between-mission gameplay loop, priorities and activity planning |
 | `systems_atlas/` | Mechanics taxonomy and topic research queue |
 | `campaign/` | Future hub-facing state contracts; not authoritative gameplay records yet |
-| `agents/` | Disposable agent operating contract and handoff templates |
+| `agents/` | Persistent specialist threads, bounded task contracts, branch checkpoints and handoff templates |
 | `decisions/` | Owner-approved decisions and open questions |
 | `protocol/` | Source authority, research evidence, safety and change control |
 
@@ -34,8 +34,8 @@ A ChatGPT-native command hub for a slow, immersive, High Honor, 100%-completioni
 4. Pilot a Chapter 2 free-roam session without inventing or changing campaign progress.
 5. Ratify architecture before implementing permanent gameplay-state synchronization.
 
-## Disposable agents
+## Persistent specialist threads and bounded tasks
 
-Each task runs in a fresh ChatGPT thread with one bounded role, an explicit scope, a GitHub read-first startup, a concrete deliverable and a stop condition. See [agent contract](agents/disposable_agent_contract.md) and [handoff template](agents/handoff_template.md).
+Reuse a specialist ChatGPT conversation for successive **coordinator-assigned** tasks instead of retiring it after one dossier. Each task still has its own isolated branch, exclusive write paths, checkpoint, deliverable and review/merge gate. Closing a task does not end the conversation; a separate registered assignment is required to continue. See [owner-approved persistent specialist workflow](agents/persistent_specialist_threads_v0_1.md), [task contract](agents/disposable_agent_contract.md) and [handoff template](agents/handoff_template.md).
 
 **Owner decisions remain with the player.** Agents may draft and commit within assigned design files, but may not ratify architecture, modify `L33TW0RLD/rdr2`, or advance in-game progress without explicit authority.

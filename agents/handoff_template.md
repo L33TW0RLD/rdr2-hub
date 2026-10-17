@@ -1,4 +1,4 @@
-# Disposable Agent Assignment & Handoff Template v0.2 — ACTIVE
+# Specialist Task Assignment & Handoff Template v0.3 — ACTIVE
 
 ## Task assignment (issued before branch work)
 
@@ -25,7 +25,7 @@
 - **Allowed-path compare and explicit-branch readback:**
 - **Known missing tests / uncommitted work:**
 - **Owner decisions required before integration:**
-- **Next *new* bounded task (not a continuation of this closed assignment):**
+- **Suggested next *new* bounded task (advisory, not authorization; may run in the same conversation after coordinator registration):**
 - **Terminal branch SHA:** put SHA in final chat report; Git commit containing this handoff cannot predict its own ID.
 
-Read `agents/checkpoint_template.md` for a **different** mid-task record, which must say the exact next permitted action while unfinished. A final handoff closes the task and disallows autonomous extra work from a successor without a new assignment.
+Read `agents/checkpoint_template.md` for a **different** mid-task record, which must say the exact next permitted action while unfinished. A final handoff closes the **task**, not the specialist conversation. New work in the same thread requires a new coordinator-activated task ID, branch and exclusive lease; no self-assigned continuation.
