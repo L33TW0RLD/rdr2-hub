@@ -288,3 +288,32 @@ The owner selected A1 permanently for this design iteration and approved the fin
 | BC6 | Adventure/system prominence taxonomy beneath Mission Control remains unselected | Pending separate design |
 
 **No gameplay writes, no self-merge, no implementation claim.** This is a narrow design-token correction.
+
+---
+
+## Systems prominence A/B design gate v1.2 (2026-10-18)
+
+**Owner intent:** System categories warrant unequal, evolving dashboard prominence. This is a design study before a third container is ratified. Chapter header and Mission Control remain locked.
+
+| ID | Test | Acceptance evidence | Status |
+|---|---|---|---|
+| P01 | Audit Systems Atlas S01–S31 | Every family mapped into a UX domain or contextual support once; S31 remains PROPOSED | RESEARCH READ; OWNER REVIEW |
+| P02 | Browse five proposed major domains | Camp, Horse, Wilderness, World, Progress understandable without exposing 31 separate topic cards | PENDING USER |
+| P03 | View A fixed shelves | All five destinations present with equal flat weight, working actions | PENDING USER |
+| P04 | View B with player interest in Camp | Camp takes nearly Mission-scale focus, 2–4 related smaller references remain accessible | PENDING USER |
+| P05 | Switch B to Horse | Horse becomes major; former Camp focus shrinks; no player-progress mutation | PENDING USER |
+| P06 | Switch B to Wilderness | Hunting activity appears as optional, without asserting 3-star animal, equipment or free-roam status | PENDING USER |
+| P07 | Switch B to Progress | Distinguishes official 100%, all-Gold, achievements and optional exhaustive | PENDING USER |
+| P08 | Select no focus | No fake primary project assigned, compact paths still discoverable | PENDING USER |
+| P09 | Ask a supporting topic directly | Small resources/combat/style topic expands on demand into sourced explanation | PENDING CLIENT |
+| P10 | Active confirmed skippable Story stage | Mission Control retains urgency priority; no optional hunting plan offered as safe now | PENDING USER |
+| P11 | Source maturity | Research statuses shown accurately, never upgraded from REVIEW PENDING to adopted/owned | PENDING CLIENT |
+| P12 | Tap a primary or quick path | Opens an actual source-reading turn, no inert control or progress write | PENDING CLIENT |
+| P13 | Desktop and mobile | No giant cards for every family, no horizontal overflow, no implied persistent UI sync | MOBILE UNTESTED |
+| P14 | Header and Mission Control invariant | Chapter II bar, Bronze token, marker dots, uppercase NEW POSSIBILITIES, all actions remain unchanged | OWNER LOCK |
+
+**Important false-positive checks:** a primary Horse panel does not imply brush ownership; a major Camp panel does not imply Ledger/tools purchase; a major World panel does not expose undiscovered Stranger content; a major Progress panel does not invent completion counts. UI domain prominence is not a game-unlock gate or official mechanics taxonomy revision.
+
+**Pending owner choice:** A stable system directory, B dynamically promoted one-at-a-time focus, or a specifically described hybrid. Do not silently ratify B from the assistant's design preference. Adventure Project/Outing A/B remains separately unselected until this system categorization resolves the third-container architecture.
+
+No self-merge, no GameGuide edits, no automatic save tracking.
