@@ -322,3 +322,46 @@ In-chat prototype mode selectors (\`A/B/C\`) and \`two/four/unknown/urgent\` sce
 - Direct request such as \`"load Paying a Social Call"\` bypasses Mission Control list regardless of whether marker is observed, with reference-only labeling if applicable.
 - Header and Mission Control should use the **same** data identity IDs for dot alignment and row content.
 - Actual Mission Control source-of-truth read/update integration remains a separate implementation phase. This is a design for a consumable response envelope, not a new tracking authority.
+
+
+---
+
+## 15. Owner preference v0.7 — list-based mission choices with two independent overlays (2026-10-18)
+
+**Layout decision:** A compact one-column mission list is the **selected baseline**. Editorial cards (B) and always-featured mission row (C) are not selected. The user wants C-like emphasis reallocated to **meaningful system introductions**; an actually active skippable Story job should instead carry a concise **inline urgency label**.
+
+### Data contract: observed Story marker vs future mechanic
+
+- `visible_missions`: observed current markers supplied by GameGuide-approved player observation, or explicitly labelled synthetic design fixture; no marker assumption from medals.
+- `active_risks`: source-backed currently activated events only, keyed to the affected mission ID. Label `Time-sensitive` appears on that row; the player can still select any observed choice.
+- `system_introductions`: *future capability introductions from normal source-backed routes*, keyed to mission ID and owning Atlas topic. The user must not be told a feature is already unlocked merely because the mission is available.
+- `feature_focus`: optional player-requested goal/interest. A feature is only spotlighted when relevant and source-supported. Never pick solely by shelf order.
+- `source_maturity`: if game rule provisional or disputed, qualify or withhold; do not smuggle a disputed unlock into a confident label.
+
+### Display precedence (not Story play-order precedence)
+
+1. Keep each **observed** mission in the compact list with full-source click behavior.
+2. Annotate activated risk inline on the exact affected mission row, with action-critical clarity and no invented countdown. Avoid rendering a global attention-grabbing risk banner merely because any mission has a risk.
+3. If no active high-severity risk is consuming attention, optionally expose **one** source-grounded system-introduction preview:
+   - **A1:** small in-row `Introduces: [system]` note below linked mission.
+   - **A2:** quiet `New possibility` content after mission rows, `[system] — introduced through [mission]`. A separate `Learn mechanic` action opens a verified owning Atlas dossier; it must not start/complete the mission.
+4. If no supported relevant introduction exists, omit unlock UI entirely. Unknown/currently unobserved markers cannot be promoted by system-introduction research.
+5. Keep medal history, chapter rail/availability dots and full Guide actions separately owned, exactly as the locked header contract.
+6. An urgent skippable event **suppresses unrelated new-possibility spotlight** but doesn't erase the ordinary list or its accessible mission actions.
+
+### Correct wording
+
+Use `Introduces`, `Becomes available through` (only when corroborated), `After completing [mission]` rather than `Unlocked!` when the user has **not yet completed** the mission. After explicit completion, the Progression Engine still independently determines whether access is observed before changing to `Accessible` / `Owned`. A click on `Learn fishing` opens research, not game fishing.
+
+### Action contract
+
+- **Mission row:** one whole pressable surface; new turn requests original complete Field Guide v1.1 for that source-identified mission.
+- **In-row urgency:** textual annotation, not a button or a route to a fake timer.
+- **A1 inline introduction:** informational annotation; row click still opens Guide.
+- **A2 feature spotlight:** informational, plus a true source-reading action to owning Systems Atlas.
+- **Header rail:** unchanged tooltip mission name and click→full original Field Guide as historical reference.
+- **Demo switcher:** local UI state only; doesn't report real map progress or grant capabilities.
+
+### Synthetic test case truths
+
+The current graph references these normal introductions: `completed:m009 → stable_brush`, `completed:m013 → emerald_wagon_fence`, `completed:m018 → ordinary_fishing`; separately `john_wagon_task_active → urgent_john_wagon` on `m017`. These are research-level *mechanics* contracts, not chapter opening order guarantees. A fictional scenario may show m009/m018/m013 as simultaneously observed markers solely to compare layout, never as assertion of actual current game markers or proven story prerequisite path.
