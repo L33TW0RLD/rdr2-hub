@@ -255,6 +255,10 @@ export function verifyCompanionJourneys(contracts,previousScenarios,journeySuite
  };
  const observedView=output=>({
    screen:output.screen.type,
+   header_chapter:output.header.chapter,
+   known_area:output.header.known_area,
+   home_prompt_id:output.content.presentational_prompt?.id??null,
+   home_outing:output.content.one_suggested_outing?.activity_ref??null,
    focus:output.screen.node_id||output.screen.mission_id||null,
    depth:output.stack_depth,
    child_ids:output.content.children?.map(x=>x.id)||null,
