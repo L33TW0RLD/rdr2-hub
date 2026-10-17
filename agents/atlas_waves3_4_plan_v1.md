@@ -1,6 +1,6 @@
 # Systems Atlas — Final Two Research Waves (Planning Only)
 
-**Owner decision:** 2026-10-17 · **Status:** Wave 3 DELIVERED/INTEGRATED as REVIEW PENDING research (9 dossiers); Wave 4 is REGISTERED (8 distinct task issues/branches), but no specialist automatically launched
+**Owner decision:** 2026-10-17 · **Status:** Wave 3 DELIVERED/INTEGRATED as REVIEW PENDING research (9 dossiers); Wave 4 DELIVERED/INTEGRATED as RESEARCHED — REVIEW PENDING (8 dossiers)
 **Repository:** `L33TW0RLD/rdr2-hub`
 **Purpose:** Complete the indexed **D01–D28** Systems Atlas dossier research backlog without inflating the unratified taxonomy or creating false player-state authority.
 
@@ -11,7 +11,7 @@
 | Wave 1 | D01–D06 | **6** | MERGED research, content `RESEARCHED — REVIEW PENDING` |
 | Wave 2 | D08, D11, D12, D13, D15 | **5** | Approved for coordinator reference integration; original six-task assignment amended |
 | **Wave 3** | **D09**, D10, D16, D17, D18, D20, D22, D24, D27 | **9** | **MERGED** research, contents still review-pending / not adopted |
-| **Wave 4** | D07, D14, D19, D21, D23, D25, D26, D28 | **8** | **REGISTERED:** eight independent task issues/branches, not automatically running |
+| **Wave 4** | D07, D14, D19, D21, D23, D25, D26, D28 | **8** | **MERGED** research, content remains review-pending / NOT ADOPTED |
 | **Total** | **D01–D28** | **28** | Research-production coverage target, not universal mechanic certification |
 
 **Wave 3 exact task IDs, issue numbers, branch names and exclusive leases are now authoritative in [Wave 3 coordination](atlas_parallel_wave3_v1.md).** Wave 4 is now [registered with exact issue/branch/file leases](atlas_parallel_wave4_v1.md), but its worker chats are NOT automatically launched. The D09 task is unchanged from Issue #19.
@@ -53,6 +53,6 @@
 
 This document originally reserved all 17 remaining dossiers. **Wave 3's nine lanes have been delivered and integrated with review pending**; see [Wave 3 cross-review](../systems_atlas/reviews/2026-10-17_wave3_cross_dossier_review.md). Only Wave 4's **eight** dossiers remain a planning reservation with no newly registered issues or task branches. Coordinator registers assignments after reviewing present specialist availability, source conflicts and exact independent file leases. Nine concurrent tasks require nine **distinct concurrent writer lanes** (new conversations or explicit specialist reassignment) with no duplicated task ownership; reuse completed specialist conversations where practical.
 
-Each task needs its own issue, unique ID, branch, initial checkpoint, one dossier, final handoff and branch comparison. No agent changes shared indexes, `main`, the other agent's files, or original `L33TW0RLD/rdr2`. Source-checked dossiers remain `RESEARCHED — REVIEW PENDING`, not `ADOPTED`. After Wave 3, exactly 20 of 28 dossiers are integrated as research references; 8 remain. No claim of 28 complete until Wave 4 is delivered and independently integrated.
+Each task needs its own issue, unique ID, branch, initial checkpoint, one dossier, final handoff and branch comparison. No agent changes shared indexes, `main`, the other agent's files, or original `L33TW0RLD/rdr2`. Source-checked dossiers remain `RESEARCHED — REVIEW PENDING`, not `ADOPTED`. All **28/28** source-backed dossiers are integrated as research references once the Wave 4 PR is merged and `main` is verified. This does not certify every gameplay fact or mark sources `ADOPTED`.
 
 **Boundary:** All campaign mission medals, Honor, inventory, purchased upgrades and live progress belong only in the original GameGuide after verified player evidence. Save Intelligence stays a separate experimental read-only scope.
