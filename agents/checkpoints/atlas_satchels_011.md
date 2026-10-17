@@ -6,8 +6,8 @@
 **Registered starting main baseline:** `e549cc963a0e8dabb918bfecd7f1b8ace8f829dc`
 **Latest main inspected at startup:** `6246ab38eede37d64b29e6a259238d65efc48006` (one coordinator commit beyond task branch baseline)
 **Checkpoint date:** 2026-10-17 UTC (time not independently recorded)
-**Workflow status:** `IN_PROGRESS`
-**Content maturity:** `DRAFT` (not adopted)
+**Workflow status:** `IN_PROGRESS` (dossier verified; final handoff pending)
+**Content maturity:** `RESEARCHED_REVIEW_PENDING` (not adopted)
 
 ## Assignment and lease
 Research **D03: Pearson satchels, recipe matrix, material routing and whole-carcass boundaries** (RDR2 Story Mode; T0/T1 Chapter 2 first), under [Issue #11](https://github.com/L33TW0RLD/rdr2-hub/issues/11).
@@ -29,10 +29,18 @@ Research **D03: Pearson satchels, recipe matrix, material routing and whole-carc
 - Last verified commit **before checkpoint:** registered branch baseline `e549cc963a0e8dabb918bfecd7f1b8ace8f829dc`.
 - Uncommitted/recoverable beyond GitHub: **NONE claimed**.
 
+## Verified dossier milestone — 2026-10-17
+- Initial checkpoint commit: `b16ae6e3619b0b1f63b29bdc8dfdaf75c5f3e8c3`; exact branch readback confirmed.
+- Substantive D03 dossier committed at `90d87ba52cc855d019362d8485fa26468353bf40`; exact branch readback confirmed at blob `58b683a4dd4d6b320f315be9656a98ac1d8bfd28`.
+- Tested in readback: 7 recipe rows; 21-unit/14-type calculation; claim IDs C01–C16; disputed D03-X01 squirrel; T2 separated; 40 URL occurrences; stop boundary.
+- Branch/main compare at this milestone: 2 ahead, 1 behind latest main `6246ab38eede37d64b29e6a259238d65efc48006`; changes only this checkpoint and D03 dossier.
+- No in-game direct testing or player inventory state asserted.
+- Last verified commit before this checkpoint update: `90d87ba52cc855d019362d8485fa26468353bf40`.
+
 ## Resumption
-**Current phase:** initial checkpoint, then source research.
-**Exact next permitted action:** research and cross-verify exact satchel recipe/unlock/material rules against published sources and legacy dossier, preparing `systems_atlas/dossiers/d03_satchels_crafting_v0_1.md` within lease.
-**Subsequent steps:** commit substantive D03 dossier; verify exact branch readback; update checkpoint; commit final scoped handoff; compare branch/main and stop at `DELIVERED_REVIEW_PENDING`.
+**Current phase:** substantive source research delivered and verified; final handoff and closure validation outstanding.
+**Exact next permitted action:** commit a final task-specific handoff at `agents/handoffs/2026-10-17_atlas_satchels_011.md` documenting verified evidence, source disputes and coordinator-only review actions.
+**Subsequent steps:** verify handoff exact ref; update this checkpoint to `DELIVERED_REVIEW_PENDING`; compare branch/main and all three leased files, report terminal SHA, stop writes.
 **Blockers:** none inside D03; parallel wave pre-scaling gate is coordinator-owned and not certified by this research task.
 **Uncertainties:** whether disputed recipe rows or whole-carcass acceptance can be independently corroborated; record UNKNOWN rather than guessing. Current player tools/crafting state UNKNOWN.
 **Review:** coordinator / owner, not self-ratified.
