@@ -67,8 +67,14 @@ export function evaluateScenario(graph,state){
   if((o.when_none||[]).some(p=>truth(p,state)===true))return false;
   return true;
  }).map(o=>({id:o.id,title:o.title,confidence:(o.when_none||[]).some(p=>truth(p,state)===null)?"conditional":"rule_met_synthetic",project_id:o.project_id,outings:o.outings}));
+ const projects=graph.projects.map(project=>{
+  const eligible=(project.milestones||[]).filter(m=>triAll(m.requires_all,state)===true);
+  const milestone=eligible.length?eligible[eligible.length-1]:null;
+  return {id:project.id,stage:milestone?.id||"prerequisites_unconfirmed",next_action:milestone?.next||"Check the project's first general prerequisite before recommending an activity.",deferred_by_active_story:urgent||controlBlocked};
+ });
  const next=urgent?"m017":state.control==="mission_chained"?"CONTINUE_ACTIVE_MISSION":warnings.some(w=>w.id==="before_chapter_exit")?"REVIEW_BEFORE_CHAPTER_EXIT":"PLAYER_CHOICE";
- return {scenario_id:state.scenario_id||"anonymous",source:"SIMULATION_ONLY",chapter:"02",missions,capabilities,warnings,opportunities,outings_suppressed:urgent||controlBlocked,priority_next:next,requested_intent:state.intent||"unspecified",writes_performed:0};
+ const decision={before_advancing:warnings.map(w=>({warning_id:w.id,reason:w.title,action:w.action})),worth_now:opportunities.map(o=>({id:o.id,title:o.title,confidence:o.confidence})),can_wait:urgent?["Optional camp upgrades, routine outings and repeatable activities while the specific oil delivery remains active"]:[]};
+ return {scenario_id:state.scenario_id||"anonymous",source:"SIMULATION_ONLY",chapter:"02",missions,capabilities,warnings,opportunities,projects,decision,outings_suppressed:urgent||controlBlocked,priority_next:next,requested_intent:state.intent||"unspecified",writes_performed:0};
 }
 
 function checkExpected(actual,expected){
@@ -82,6 +88,8 @@ function checkExpected(actual,expected){
  for(const id of expected.include_opportunities||[])if(!actual.opportunities.some(x=>x.id===id))errs.push("missing opportunity "+id);
  for(const id of expected.exclude_opportunities||[])if(actual.opportunities.some(x=>x.id===id))errs.push("unexpected opportunity "+id);
  for(const id of expected.conflict_ids||[])if(!missions[id]?.conflicts.length)errs.push("expected conflict "+id);
+ const projects=Object.fromEntries(actual.projects.map(x=>[x.id,x]));
+ for(const [id,stage] of Object.entries(expected.project_stages||{}))if(projects[id]?.stage!==stage)errs.push("project "+id+" expected "+stage+" received "+projects[id]?.stage);
  if("outings_suppressed" in expected&&actual.outings_suppressed!==expected.outings_suppressed)errs.push("outing suppression mismatch");
  if(expected.priority_next&&actual.priority_next!==expected.priority_next)errs.push("expected priority "+expected.priority_next+" received "+actual.priority_next);
  return errs;
@@ -100,5 +108,11 @@ if(process.argv[1]&&fileURLToPath(import.meta.url)===process.argv[1]){
    else console.log("PASS",f.scenario.scenario_id);
  }
  console.log(JSON.stringify({scenarios:fixtures.scenarios.length,failures,source:"SIMULATION_ONLY"}));
+ const i=process.argv.indexOf("--scenario");
+ if(i>=0){
+   const id=process.argv[i+1],item=fixtures.scenarios.find(x=>x.scenario.scenario_id===id);
+   if(!item)throw Error("Unknown fixture scenario: "+String(id));
+   console.log(JSON.stringify(evaluateScenario(graph,item.scenario),null,2));
+ }
  if(failures)process.exitCode=1;
 }
