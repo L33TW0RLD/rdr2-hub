@@ -33,3 +33,15 @@ The Atlas documents gameplay mechanics and dependencies for RDR2 Story Mode. It 
 ## First design milestone
 
 Give the Free Roam Designer enough structured information to design **organic, spoiler-aware between-mission play**. Start with current Chapter 2 capabilities and goals (camp, horses, hunting, money, local exploration), not a fifty-page compulsory clearing route. No live progress is modified by Atlas research.
+
+
+## Remaster consumer and dossier structure (2026-10-17)
+
+The Atlas is **one shared mechanics knowledge foundation** for Mission Control, Free Roam and the Companion. Do not create separate contradictory horse/hunting/camp guides inside each view.
+
+- [Universal research record contract](../knowledge/record_contract_v1.md) — claim-level source/status/gate and applicability obligations; supplements, does not ratify or replace the proposed Atlas schema.
+- [Legacy source crosswalk](../knowledge/source_crosswalk_v1.md) — where existing researched references live and how they are consumed.
+- [Free Roam examples](../free_roam/content/README.md) — link Atlas mechanic rules without inventing acquired gear or completed tasks.
+- [Companion routing](../companion/context_contract_v1.md) — explanatory detours and return context.
+
+**Dossier production:** registered tasks `atlas-horses-007` (D01), `atlas-camp-008` (D02), `atlas-hunting-009` (D04) own future individual files under `systems_atlas/dossiers/`. They are currently **PLANNED**, not completed. Keep the broader D01–D28 backlog, statuses, original S01–S30 and provisional S31 untouched. Directory/file creation by task agents does not mean owner adoption.
