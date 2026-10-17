@@ -3,7 +3,7 @@
 
 Usage:
   python rdr2_structural_probe.py copies/saves.zip --output private_diff.json
-  python rdr2_structural_probe.py copies/saves.zip --order SRDR30002 SRDR30001 --output private_diff.json
+  python rdr2_structural_probe.py copies/saves.zip --order SAVE_A SAVE_B --output private_diff.json
 
 Requires rdr2_save_observer.py in the same directory and cryptography.
 Source saves are read in memory, never edited or extracted. Treat resulting
