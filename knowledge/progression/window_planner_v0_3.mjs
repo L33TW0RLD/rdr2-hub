@@ -30,7 +30,7 @@ function riskSelection(current,previous,policy,receipts,options){
  const priorities=policy.alert_priority||[];
  const warning=[...warnings].sort((a,b)=>priorities.indexOf(a.id)-priorities.indexOf(b.id))[0]||null;
  if(!warning)return {warning:null,introduced:false,display_kind:"none"};
- const justActivated=!previous||!previous.warnings.some(w=>w.id===warning.id);
+ const justActivated=!!previous&&!previous.warnings.some(w=>w.id===warning.id);
  const beforeAdvance=options.advancing_to==="chapter_exit"&&warning.id==="before_chapter_exit";
  const urgentChoice=options.advancing_to==="m017"&&warning.id==="urgent_john_wagon";
  const wasPresented=receipts.displayed_alert_keys.includes(warning.id);
@@ -109,13 +109,13 @@ export function planProgressionWindow(graph,hierarchy,policy,scenario,options={}
  if(opts.previous_scenario&&(!opts.previous_scenario.synthetic||opts.previous_scenario.source!=="SIMULATION_FIXTURE"))throw Error("Prior scenario must be synthetic");
  const receipts=validatedReceipts(opts.receipts);
  const projectFocus=chooseProjectFocus(opts.intent,opts.requested_focus);
- const projection=composeProgressionView(graph,hierarchy,scenario,{surface:"trailhead",project_id:projectFocus,previous_scenario:opts.previous_scenario||null,intent:opts.intent});
+ let projection=composeProgressionView(graph,hierarchy,scenario,{surface:"trailhead",project_id:projectFocus,previous_scenario:opts.previous_scenario||null,intent:opts.intent});
  const now=evaluateScenario(graph,scenario);
  const prev=opts.previous_scenario?evaluateScenario(graph,opts.previous_scenario):null;
  const risk=riskSelection(now,prev,policy,receipts,opts);
  const eventPool=candidateEvents(graph,policy,now,prev,receipts);
  const availableObserved=projection.trailhead.story_choices;
- const blocked=now.outings_suppressed;
+ const blocked=now.outings_suppressed||scenario.control==="camp_limited";
  const hasIntent=opts.intent!=="unspecified"&&opts.intent!=="passive"&&opts.intent!=="none";
  const requestedFocus=!!opts.requested_focus||["camp","crafting","horses","horse","fishing","explore","story","mission","completion","activities"].includes(opts.intent);
  const riskMode=risk.warning?.id==="urgent_john_wagon"?"urgent_story":risk.warning?.id==="before_chapter_exit"?"chapter_exit_review":risk.warning?"observed_optional_window":null;
@@ -159,6 +159,12 @@ export function planProgressionWindow(graph,hierarchy,policy,scenario,options={}
        detected_kind:event.detected_kind,confidence,
        project_ref:event.project_id,source_refs:event.source_refs};
      keepProject=!!event.project_id;
+     if(event.project_id&&event.project_id!==projectFocus){
+       // Introduce the owning project, not whatever project the generic Trailhead last happened to feature.
+       projection=composeProgressionView(graph,hierarchy,scenario,{
+         surface:"trailhead",project_id:event.project_id,previous_scenario:opts.previous_scenario||null,intent:opts.intent
+       });
+     }
      outing=!blocked?projection.trailhead.outing:null;
    }else if(hasIntent&&opts.intent==="explore"&&opts.verbosity!=="quiet"&&!blocked){
      mode="user_requested_outing";
