@@ -89,10 +89,13 @@ function sourceMetadata(frame,graph,hierarchy,contract,returning){
 function currentFrame(session){return session.screen;}
 function appHeader(scenario,screen,life,route){
  const major=life.urgent_risks[0]||null;
+ const departed=scenario.completed?.includes("m024")===true;
  const label=screen.type==="home"?"Free Roam":screen.type==="story_board"?"Mission Control":screen.type==="mission_reference"?"Mission Control / Full Field Guide":
  screen.type==="atlas_reference"?"Systems Atlas":"Free Roam / Projects";
  return {
-   chapter:"Chapter 2",known_area:"Horseshoe Overlook (fictional scenario)",area_is_live_location:false,
+   chapter:departed?"Chapter 2 reference (fictional finale completed)":"Chapter 2",
+   known_area:departed?"Previous camp: Horseshoe Overlook; present area unknown":"Horseshoe Overlook (fictional scenario)",
+   area_is_live_location:false,
    content_source:"SIMULATION_FIXTURE",surface_label:label,
    selected_focus:screen.type==="mission_reference"?screen.mission_id:screen.node_id||null,
    one_active_safety_alert:major?{opportunity_id:major,source:"synthetic activation; claim still research pending"}:null,
@@ -113,13 +116,18 @@ function presentScreen(session,scenario,graph,hierarchy,plannerPolicy,lifecycleP
  let content;
  if(screen.type==="home"){
    const view=composeProgressionView(graph,hierarchy,scenario,{surface:"trailhead"});
+   const departed=scenario.completed?.includes("m024")===true;
+   const reported=life.opportunities.find(x=>x.id===life.attention.id);
+   const noActionStatuses=["OUTSIDE_WINDOW","RESOLVED_IN_FIXTURE","OFFER_NOT_VISIBLE_NOW","CHAPTER_WINDOW_PASSED_UNVERIFIED"];
+   // A stale v0.3 intro must not leak into a finished Chapter 2 camp scene.
+   const safeRecommendation=!departed&&life.attention.state==="FOREGROUND"&&!noActionStatuses.includes(reported?.status);
    content={
      kind:"CONTEXTUAL_TRAILHEAD",observed_story_choices:view.trailhead.story_choices,
      additional_observed_count:view.trailhead.additional_observed_count,
      uncertain_marker_candidates:view.trailhead.unresolved_candidates,
-     featured_project:life.planner.featured_project,
-     one_suggested_outing:life.planner.suggested_outing,
-     presentational_prompt:life.attention.state==="FOREGROUND"?life.attention:null,
+     featured_project:departed?null:life.planner.featured_project,
+     one_suggested_outing:departed?null:life.planner.suggested_outing,
+     presentational_prompt:safeRecommendation?life.attention:null,
      can_wait:view.trailhead.can_wait
    };
  }else if(screen.type==="story_board"){
