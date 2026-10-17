@@ -48,7 +48,10 @@
           "urgent_john_wagon"
         ],
         "outings_suppressed": false,
-        "priority_next": "PLAYER_CHOICE"
+        "priority_next": "PLAYER_CHOICE",
+        "project_stages": {
+          "camp_development": "understand_camp"
+        }
       }
     },
     {
@@ -118,7 +121,10 @@
         "exclude_opportunities": [
           "arrival_camp_orientation"
         ],
-        "outings_suppressed": false
+        "outings_suppressed": false,
+        "project_stages": {
+          "camp_development": "ledger_gate"
+        }
       }
     },
     {
@@ -149,7 +155,10 @@
         "include_opportunities": [
           "camp_ledger_open"
         ],
-        "outings_suppressed": false
+        "outings_suppressed": false,
+        "project_stages": {
+          "camp_development": "satchel_tools"
+        }
       }
     },
     {
@@ -181,7 +190,10 @@
         "include_opportunities": [
           "horse_tutorial_done"
         ],
-        "outings_suppressed": false
+        "outings_suppressed": false,
+        "project_stages": {
+          "horse_care": "after_hosea"
+        }
       }
     },
     {
@@ -212,7 +224,10 @@
           "arrival_camp_orientation"
         ],
         "outings_suppressed": true,
-        "priority_next": "m017"
+        "priority_next": "m017",
+        "project_stages": {
+          "camp_development": "understand_camp"
+        }
       }
     },
     {
