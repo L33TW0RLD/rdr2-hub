@@ -1033,6 +1033,107 @@
         "project_id": "project.horse",
         "detected_kind": "still_eligible"
       }
+    },
+    {
+      "id": "quiet_explicit_explore_respected",
+      "state": "arrival",
+      "previous_state": "arrival",
+      "receipts_from": "arrival_first",
+      "options": {
+        "verbosity": "quiet",
+        "intent": "explore",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "expect": {
+        "mode": "user_requested_outing",
+        "primary_id": "camp_orientation",
+        "outing": "camp_orientation"
+      }
+    },
+    {
+      "id": "quiet_explicit_completion_respected",
+      "state": "arrival",
+      "options": {
+        "verbosity": "quiet",
+        "intent": "completion",
+        "goals": [
+          "official_100"
+        ]
+      },
+      "expect": {
+        "mode": "user_requested_completion_review",
+        "primary_id": "completion_check",
+        "outing": null
+      }
+    },
+    {
+      "id": "oil_receipt_without_prior_does_not_falsely_reactivate",
+      "state": "oil",
+      "receipts_from": "skippable_wagon_risk_overrides_outings",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "expect": {
+        "mode": "urgent_story",
+        "primary_id": "m017",
+        "alert_id": "urgent_john_wagon",
+        "alert_presentation": "pinned_warning"
+      }
+    },
+    {
+      "id": "camp_offer_explicit_activities_even_without_achievement_goal",
+      "state": "camp_offer",
+      "options": {
+        "intent": "activities",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "expect": {
+        "mode": "observed_optional_window",
+        "primary_id": "camp_activity_window",
+        "alert_id": "camp_activity_window"
+      }
+    },
+    {
+      "id": "oil_in_quiet_protects_story",
+      "state": "oil",
+      "options": {
+        "verbosity": "quiet",
+        "intent": "passive",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "expect": {
+        "mode": "urgent_story",
+        "primary_id": "m017",
+        "alert_id": "urgent_john_wagon",
+        "alert_presentation": "foreground_interrupt",
+        "outing": null
+      }
+    },
+    {
+      "id": "arrival_active_is_not_multiple_prompts",
+      "state": "arrival",
+      "options": {
+        "verbosity": "active",
+        "intent": "passive",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "expect": {
+        "mode": "arrival_orientation",
+        "primary_id": "event.arrival_orientation",
+        "outing": "camp_orientation"
+      }
     }
   ],
   "acceptance_rules": [
@@ -1042,6 +1143,64 @@
     "System intro belongs to correct project and suggests matching outing",
     "Requested content remains accessible in quiet mode",
     "Optional achievement alerts require goal applicability",
-    "No actual game state connection or game progress writes"
+    "No actual game state connection or game progress writes",
+    "Quiet mode respects explicit requests while suppressing unsolicited optional suggestions",
+    "Policy rejects non-fixture game states, unapproved goals, fake focus and contradictory evidence"
+  ],
+  "negative_tests": [
+    {
+      "id": "reject_unsourced_game_state",
+      "state": "arrival",
+      "mutation": "synthetic_false",
+      "message_contains": "Only explicit synthetic fixtures"
+    },
+    {
+      "id": "reject_nonfixture_source",
+      "state": "arrival",
+      "mutation": "source_wrong",
+      "message_contains": "Only explicit synthetic fixtures"
+    },
+    {
+      "id": "reject_unapproved_goal",
+      "state": "arrival",
+      "mutation": "goal_bad",
+      "message_contains": "Unknown or malformed goal"
+    },
+    {
+      "id": "reject_fake_project_focus",
+      "state": "arrival",
+      "mutation": "focus_bad",
+      "message_contains": "Requested focus"
+    },
+    {
+      "id": "reject_invalid_verbosity",
+      "state": "arrival",
+      "mutation": "verbosity_bad",
+      "message_contains": "Invalid verbosity"
+    },
+    {
+      "id": "reject_gameplay_receipts",
+      "state": "arrival",
+      "mutation": "receipts_kind_bad",
+      "message_contains": "SYNTHETIC_PRESENTATION_RECEIPTS"
+    },
+    {
+      "id": "reject_malformed_receipts",
+      "state": "arrival",
+      "mutation": "receipts_array_bad",
+      "message_contains": "Invalid receipts"
+    },
+    {
+      "id": "reject_conflicting_scenario_fact",
+      "state": "arrival",
+      "mutation": "contradiction",
+      "message_contains": "Contradictory scenario truth"
+    },
+    {
+      "id": "reject_nonfixture_previous_state",
+      "state": "arrival",
+      "mutation": "previous_source_wrong",
+      "message_contains": "Prior scenario must be synthetic"
+    }
   ]
 }
