@@ -1,4 +1,4 @@
-# Systems Atlas — Final Two Research Waves (Planning Only)
+# Systems Atlas — Final Two Research Waves (Completed Historical Plan)
 
 **Owner decision:** 2026-10-17 · **Status:** Wave 3 DELIVERED/INTEGRATED as REVIEW PENDING research (9 dossiers); Wave 4 DELIVERED/INTEGRATED as RESEARCHED — REVIEW PENDING (8 dossiers)
 **Repository:** `L33TW0RLD/rdr2-hub`
@@ -14,7 +14,7 @@
 | **Wave 4** | D07, D14, D19, D21, D23, D25, D26, D28 | **8** | **MERGED** research, content remains review-pending / NOT ADOPTED |
 | **Total** | **D01–D28** | **28** | Research-production coverage target, not universal mechanic certification |
 
-**Wave 3 exact task IDs, issue numbers, branch names and exclusive leases are now authoritative in [Wave 3 coordination](atlas_parallel_wave3_v1.md).** Wave 4 is now [registered with exact issue/branch/file leases](atlas_parallel_wave4_v1.md), but its worker chats are NOT automatically launched. The D09 task is unchanged from Issue #19.
+**Closeout:** Wave 3 and Wave 4 both delivered and merged; [Wave 3](atlas_parallel_wave3_v1.md) and [Wave 4](atlas_parallel_wave4_v1.md) registrations now serve as **history only**. The D09 task retained Issue #19; it is `MERGED` and should **not** be re-dispatched. See [closeout report](../quality/2026-10-17_atlas_postresearch_closeout.md).
 
 ## Wave 3 — Nine dossiers
 
@@ -51,7 +51,7 @@
 
 ## No premature registration / research authority
 
-This document originally reserved all 17 remaining dossiers. **Wave 3's nine lanes have been delivered and integrated with review pending**; see [Wave 3 cross-review](../systems_atlas/reviews/2026-10-17_wave3_cross_dossier_review.md). Only Wave 4's **eight** dossiers remain a planning reservation with no newly registered issues or task branches. Coordinator registers assignments after reviewing present specialist availability, source conflicts and exact independent file leases. Nine concurrent tasks require nine **distinct concurrent writer lanes** (new conversations or explicit specialist reassignment) with no duplicated task ownership; reuse completed specialist conversations where practical.
+This document originally reserved all 17 remaining dossiers. **Wave 3's nine lanes have been delivered and integrated with review pending**; see [Wave 3 cross-review](../systems_atlas/reviews/2026-10-17_wave3_cross_dossier_review.md). Wave 4's **eight** dossiers were also registered, delivered and integrated through [Wave 4 PR #46](https://github.com/L33TW0RLD/rdr2-hub/pull/46); no new Atlas research assignment is pending. The following registration instructions record historical workflow and are **not current dispatch instructions**. Nine concurrent tasks require nine **distinct concurrent writer lanes** (new conversations or explicit specialist reassignment) with no duplicated task ownership; reuse completed specialist conversations where practical.
 
 Each task needs its own issue, unique ID, branch, initial checkpoint, one dossier, final handoff and branch comparison. No agent changes shared indexes, `main`, the other agent's files, or original `L33TW0RLD/rdr2`. Source-checked dossiers remain `RESEARCHED — REVIEW PENDING`, not `ADOPTED`. All **28/28** source-backed dossiers are integrated as research references once the Wave 4 PR is merged and `main` is verified. This does not certify every gameplay fact or mark sources `ADOPTED`.
 
