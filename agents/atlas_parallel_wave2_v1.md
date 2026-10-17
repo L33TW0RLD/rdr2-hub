@@ -1,6 +1,8 @@
 # Systems Atlas — Parallel Research Wave 2
 
-**Registered:** 2026-10-17 · **Status:** SIX NEW TASK ASSIGNMENTS / NOT AUTOMATICALLY RUNNING.
+**Registered:** 2026-10-17 · **Status after owner scope change:** FIVE research dossiers integrated as REVIEW PENDING; D09 / Issue #19 explicitly deferred into planned Wave 3 (9 dossiers), with Wave 4 planned as 8 dossiers. Original six-task registration is preserved below for historical provenance; registration never automatically ran the workers.
+
+**Owner-directed resolution:** [Wave 2 five-dossier scope decision](../systems_atlas/reviews/2026-10-17_wave2_scope_resolution.md) · [Waves 3 and 4, 9 + 8](atlas_waves3_4_plan_v1.md). Current merge comprises **D08, D11, D12, D13, D15**. `atlas-deadeye-016` was not delivered and must **not** be marked merged, recreated, or silently substituted. Research content is still `RESEARCHED — REVIEW PENDING`.
 
 ## Purpose
 
