@@ -8,7 +8,7 @@ The end product is **one gameplay companion**. Specialists produce pieces that t
 
 | Specialist lane | Main artifact | What it must NOT own | Current source/task |
 |---|---|---|---|
-| Atlas mechanics researcher | Deep, sourced `systems_atlas/dossiers/` | Free Roam UX, live campaign or mission medal ledger | [Atlas Wave 1](atlas_parallel_wave1_v1.md): #5, #6, #7, #11, #12, #13 in parallel, distinct leases |
+| Atlas mechanics researcher | Deep, sourced `systems_atlas/dossiers/` | Free Roam UX, live campaign or mission medal ledger | Issues #5, #6, #7: D01 → D02 → D04 sequentially |
 | Free Roam content author | Project/outings/intermission/discovery records under leased `free_roam/content/` paths | General mechanic truth or original mission guides | Conditional examples in remaster branch; future tasks unassigned |
 | Living Adventure architect | Adaptive intervention Model B + contextual header contract | Dashboard rendering code, Atlas taxonomy, player-state writes | Issue #8, task 010, leased `free_roam/adaptive_companion/` |
 | Dashboard/UX designer | Native ChatGPT interaction surfaces and visual language | Source research, claim adoption, fake persistence | New assignment only after owner accepts blueprint |

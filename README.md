@@ -79,7 +79,7 @@ We are building **complete researched content before claiming complete game cove
 - [Readiness/acceptance matrix](quality/acceptance_matrix_v1.md)
 - [Repository remaster blueprint](architecture/repository_remaster_blueprint_v1.md)
 
-**Systems Atlas parallel research wave:** 007 Horses, 008 Camp, 009 Hunting, 011 Satchels, 012 Camp Life and 013 Inventory, all on distinct branches in reusable specialist conversations. See the [Wave 1 launch plan](agents/atlas_parallel_wave1_v1.md) and existing pre-scaling gate before activating more than two workers. 010 Adaptive Companion remains separate and planned. Registered tasks are not automatically executing, adopted or merged.
+**Current assignments:** 007 Horses, 008 Camp, 009 Hunting (sequential packages for one reusable Atlas specialist thread) and 010 Adaptive Companion (a reusable architecture lane). Assignments are not automatically executing. Their work does not become ADOPTED or merged simply by being committed.
 
 ## Remaster implementation boundaries
 
