@@ -1,48 +1,48 @@
-# Atlas Exploration 034 — Initial Specialist Checkpoint
+# Atlas Exploration 034 — Terminal Specialist Checkpoint
 
-**Task:** `atlas-exploration-034` · [Issue #43](https://github.com/L33TW0RLD/rdr2-hub/issues/43) · Wave 4 / D26 · **Status:** `IN_PROGRESS`
-**Branch:** `agent/atlas-exploration-034`
-**Registered baseline:** `0021c319d0232c3a303aeadbe899055260120d54`
-**Latest main inspected at startup (2026-10-17):** `b3b902398eac80fffc798c5967486e5df1427270`
-**Recorded:** 2026-10-17, before substantive D26 writing
-**Research maturity target:** `RESEARCHED — REVIEW PENDING` (never automatically ADOPTED).
+## Identity and baseline
 
-## Exact exclusive three-file lease
+- **Task:** `atlas-exploration-034` · [Issue #43](https://github.com/L33TW0RLD/rdr2-hub/issues/43) · D26 / Wave 4.
+- **Branch:** `agent/atlas-exploration-034`
+- **Registration branch baseline:** `0021c319d0232c3a303aeadbe899055260120d54`
+- **Latest main inspected at start:** `b3b902398eac80fffc798c5967486e5df1427270`
+- **Date:** 2026-10-17
+- **Task workflow:** `DELIVERED_REVIEW_PENDING`.
+- **Content maturity:** `RESEARCHED — REVIEW PENDING` — **NOT ADOPTED**.
+- **Goal:** complete 11-section, independently evidenced, spoiler-safe Story Mode exploration dossier and final handoff.
+
+### Exactly three writable paths
+
 1. `systems_atlas/dossiers/d26_world_lore_secrets_inspection_v0_1.md`
 2. `agents/checkpoints/atlas_exploration_034.md`
 3. `agents/handoffs/2026-10-17_atlas_exploration_034.md`
 
-**Read-only/protected:** `main`, shared indices/registry, taxonomy, D21 Encounters, D22 Rare Items, D07 Controls, D15 Compendium, D20 Collections, original GameGuide `L33TW0RLD/rdr2`, all other agents/branches and `save_intelligence/`. No rebase, reset, force push, self-merge or ratification.
+**Protected:** All shared indexes, `main`, `agents/registry.md`, D07/D21/D22/D15 and other dossiers, other worker branches, original `L33TW0RLD/rdr2`, Save Intelligence. No self-merge/rebase/reset/force-push/ratification.
 
-## Recovered contract and starting evidence
-- Exact Issue #43, latest main registry, Wave 4 plan, operative parallel-agent and disposable-agent contract, Atlas provisional schema and checkpoint template read.
-- Assigned branch is still at registered baseline, with zero task-specific commits/files before this checkpoint; newer `main` work does not authorize resetting it.
-- D26 owns **investigation/inspection, world lore, environmental clues, Points of Interest, shacks and journal sketches**. D21 owns ambient encounters, D22 named rare objects, D07 context controls, D15 completion/Compendium semantics; avoid duplicate ownership.
-- No in-game save or player exploration state is available from this research task.
+## Durable progress: verified repository receipts
 
-## Durable milestones
-| Milestone | Committed evidence | Status |
+| Milestone | Committed artifact | Readback |
 |---|---|---|
-| Scope/lease recovery | Issue #43 and Wave 4 registration baseline read | VERIFIED in current GitHub session |
-| Initial checkpoint | This file | MUST verify exact branch readback after commit |
-| Full D26 research | Not yet committed | PENDING |
-| Final handoff | Not yet committed | PENDING |
+| Initial checkpoint before substantive dossier | `agents/checkpoints/atlas_exploration_034.md` commit `2a96e433c281ad3ee37e2924ac6213b21eba3f53` | **VERIFIED**, original blob `50b371fc54be2b2e4a0453068d19de37705780d6` |
+| Full D26 11-section source-backed dossier | `systems_atlas/dossiers/d26_world_lore_secrets_inspection_v0_1.md` commit `c0f636b8d735bdc58161bb23be44839e5de8c095` | **VERIFIED**, blob `96d426d048b19b28e49945306d6bb022dff3f402`; 11 section headers; 19 E references, 25 C claims, 15 X disputes; 3 T0/T1 examples; separate T2+ appendix |
+| Final handoff | `agents/handoffs/2026-10-17_atlas_exploration_034.md` commit `37504799b59e7d43f166d1435d0c9d156822450f` | **VERIFIED**, blob `552c35d5254c5425c5cc450bdf3e22154e18458b` |
 
-**Last verified branch commit before initial checkpoint:** `0021c319d0232c3a303aeadbe899055260120d54`
-**Uncommitted/not recoverable:** Substantive dossier not yet authored.
+- **Last verified commit before this terminal checkpoint:** `37504799b59e7d43f166d1435d0c9d156822450f`.
+- **Uncommitted/not recoverable:** none known.
+- **No gameplay state:** no player POI, shack, quest, loot, photo, Gold, Honor, save or completion results inferred or recorded.
+- **Dependencies:** D15 (Compendium), D20 (Collectibles), D22 (rare items), D08 (chapter windows), read-only main; D07/D21 still task-branch research in progress at dependency inspection. Provisional `S23.M01–M04` IDs, no taxonomy ratification.
 
-## Exact resumption instruction
-1. Verify this initial checkpoint on `agent/atlas-exploration-034`.
-2. Read D15/D22 from main and D07/D21 if delivered, strictly **read-only**. Independently research Points of Interest, sketch/drawing/inspection, shack secrets, notes, completion criteria, chapter/region variations, and lore rumor boundaries.
-3. Commit precisely `systems_atlas/dossiers/d26_world_lore_secrets_inspection_v0_1.md` with **11 major sections**, claim-level references, contradiction ledger, three spoiler-light Chapter 2 cases and T2+ mystery appendix.
-4. Verify dossier, update only this checkpoint and write exact handoff; compare all changed paths to baseline/current main.
-5. Finish only at `DELIVERED_REVIEW_PENDING`, without merging or changing original GameGuide progress.
+## Exact resumption instruction — STOP
 
-## Open issues and confidence limits
-- Different guide definitions of “Points of Interest”, journal illustrations and map drawings; official 100% **specific quantity** must be independently checked.
-- Inspectable shacks/strange locations may be scenic without a counted 100% objective; do not infer secret quest completion from seeing a map icon.
-- One-time notes/letters, finite world encounters and rare gear overlap neighbor dossiers and need careful owner boundaries.
-- Mystery theories are not Rockstar-canonical explanations; avoid definitive claims unsupported by game text.
-- No real game session/client controls were tested here.
+1. **Current phase:** research complete; checkpoint and handoff delivered.
+2. **Next permitted worker action:** **ONLY VERIFY** exact assigned branch readback and diff after this final checkpoint commit, then submit a delivery report; **NO FURTHER WRITES**.
+3. **Next decision belongs to coordinator:** cross-review D26 with concurrent D07/D21, reconcile POI 49/50 personal census and qualifying shack trigger nuances, evaluate source caveats before separate integration PR.
+4. **Open research:** full POI roster discrepancy, shack find/enter/investigate credit, changing-scene rare evidence, physical notes vs journal sketches, community UFO/ritual/portrait theories, version specifics.
+5. **Handoff:** `agents/handoffs/2026-10-17_atlas_exploration_034.md`.
+6. **Stop gate:** exact three changed paths, eleven section headers, sourced contradictions and T0/T1/T2 boundaries, no protected files changed, final branch SHA verified; `DELIVERED_REVIEW_PENDING`.
 
-**Stop gate:** exactly three leased files, 11-section sourced dossier, dated claims and disputes, final handoff, exact branch/compare/readback; `DELIVERED_REVIEW_PENDING`.
+## Successor startup check
+
+Read current main registry, Issue #43, Wave 4 plan, then this checkpoint on the **exact task branch** and final handoff; compare HEAD against original baseline and current main. A delivered task cannot be continued or self-merged by this worker. A future repair or new task requires coordinator activation on its own authorized scope.
+
+**Source authority:** `L33TW0RLD/rdr2/campaign/` exclusively records player-confirmed gameplay until explicit owner-approved migration. D26 cannot create gameplay truth.
