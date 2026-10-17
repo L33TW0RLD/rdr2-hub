@@ -627,12 +627,11 @@
         "chapter2_open",
         "strauss_debt_returned",
         "strauss_debt_deposited",
-        "leather_working_tools_purchased",
-        "chapter2_exit_imminent",
-        "camp_companion_activity_observed"
+        "leather_working_tools_purchased"
       ],
       "flags_false": [
-        "john_wagon_task_active"
+        "john_wagon_task_active",
+        "chapter2_exit_imminent"
       ],
       "observed_capabilities": [
         "camp_ledger",
