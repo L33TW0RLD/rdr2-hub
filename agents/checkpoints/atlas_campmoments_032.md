@@ -4,7 +4,7 @@
 **Working branch:** `agent/atlas-campmoments-032` · **Registration baseline:** `0021c319d0232c3a303aeadbe899055260120d54`  
 **Main inspected:** `b3b902398eac80fffc798c5967486e5df1427270`  
 **Checkpoint date:** 2026-10-17 UTC, no fabricated wall-clock  
-**Status:** `IN_PROGRESS` · substantive D23 committed and verified; final handoff pending. Research `RESEARCHED — REVIEW PENDING` (not adopted).
+**Status:** `DELIVERED_REVIEW_PENDING` — task closed to specialist writes. Research `RESEARCHED — REVIEW PENDING` (not adopted).
 
 ## Scope & exclusive file lease
 
@@ -32,8 +32,16 @@ Read latest `main` registry, Wave 4 plan, exact Issue #41, operating contract, p
 - Disputed specifics retained: Sean party exact start hour, Pearson Scout Jacket chapter/core/RNG/form, overlap/replay of specific lines, camp decor dialogue rate, chore XP amount.
 - Last independently verified substantive branch commit before this checkpoint update: `2bc5412a7befe361e1d6cd316e804d9b82efdbcf`.
 
+## Final delivery and handoff readback — 2026-10-17
+
+- Final handoff created in `agents/handoffs/2026-10-17_atlas_campmoments_032.md` at commit `3a7547403dff71a511fed2ccd73fcfbf47694501`; explicit task-branch readback blob `22327c64d63b71ce7f9c2e29f9b2b4658f7745d0`, 9,312 characters.
+- Branch comparison after handoff: ahead **4** / behind **1** versus latest verified `main`, **exactly 3 authorized files** (D23 dossier, checkpoint, handoff). Initial baseline one behind as expected, no rebase, no merge.
+- Prior checkpoint substantive milestone committed `530ee1e897e47f822f1c78a855e824411e1077a6`; last verified branch commit *before* this closure checkpoint was `3a7547403dff71a511fed2ccd73fcfbf47694501`.
+- No player scene, jacket/gift, Honor, achievement, chapter change or save was observed or written. D05/D08/D18/D22 are read-only REVIEW PENDING.
+- This file cannot report the SHA of its own commit. Verify current branch head and changed-path allowlist **after** this closure, then report terminal SHA in chat; perform **no more writes**.
+
 ## Exactly next authorized action
 
-Write the **final handoff** in leased `agents/handoffs/2026-10-17_atlas_campmoments_032.md` only, retaining source limitations and review requests, then read it back.
+**NONE for this closed specialist task.** Coordinator/owner must independently review source disputes and any integration; only another explicit task activation can authorize new scope.
 
-Then close this checkpoint, verify exact three-path diff and terminal branch SHA. Stop task `DELIVERED_REVIEW_PENDING`, content `RESEARCHED — REVIEW PENDING`; no autonomous successor task.
+Final readback/compare and terminal SHA reporting only; **STOP at `DELIVERED_REVIEW_PENDING`**. Stop task `DELIVERED_REVIEW_PENDING`, content `RESEARCHED — REVIEW PENDING`; no autonomous successor task.
