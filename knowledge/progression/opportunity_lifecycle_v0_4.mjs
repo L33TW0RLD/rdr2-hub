@@ -210,3 +210,106 @@ export function composeOpportunityLifecycle(graph,hierarchy,plannerPolicy,lifecy
    no_gameplay_results_inferred:true
  };
 }
+
+
+export function verifyOpportunityLifecycleSuite(graph,hierarchy,plannerPolicy,lifecyclePolicy,suite){
+ const passed=[],failed=[],outputs={};
+ const byId=records=>Object.fromEntries(records.map(x=>[x.id,x]));
+ for(const t of suite.cases||[]){
+   const scenario=suite.states?.[t.state];
+   if(!scenario){failed.push({id:t.id,errors:["Missing scenario fixture "+t.state]});continue;}
+   const options={...t.options};
+   if(t.previous_state)options.previous_scenario=suite.states?.[t.previous_state];
+   if(t.receipts_from){
+     if(!outputs[t.receipts_from]){failed.push({id:t.id,errors:["Missing presentation-receipt source "+t.receipts_from]});continue;}
+     options.receipts=outputs[t.receipts_from].planner.receipts;
+   }
+   let output;
+   try{output=composeOpportunityLifecycle(graph,hierarchy,plannerPolicy,lifecyclePolicy,scenario,options);}
+   catch(e){failed.push({id:t.id,errors:[String(e)]});continue;}
+   outputs[t.id]=output;
+   const all=byId(output.opportunities),expected=t.expect||{},errs=[];
+   for(const [key,exp] of Object.entries(expected)){
+     if(key==="statuses"||key==="transitions"){
+       for(const [id,want] of Object.entries(exp)){
+         const actual=key==="statuses"?all[id]?.status:all[id]?.transition;
+         if(actual!==want)errs.push(key+" "+id+" expected "+want+" received "+actual);
+       }
+     }else if(["context_ids","conflict_ids","unverified_loss_ids"].includes(key)){
+       const values=key==="context_ids"?output.context.map(x=>x.id):key==="conflict_ids"?output.evidence_conflicts:output.ambiguous_closure_not_counted_as_missed;
+       for(const want of exp)if(!values.includes(want))errs.push(key+" missing "+want);
+     }else if(key==="context_excludes"){
+       const values=output.context.map(x=>x.id);
+       for(const unwanted of exp)if(values.includes(unwanted))errs.push(key+" unexpectedly includes "+unwanted);
+     }else if(key==="forbid_observed"){
+       for(const id of exp)if(all[id]?.observable===true)errs.push("Unobserved marker falsely observed "+id);
+     }else if(key==="forbid_resolved"){
+       for(const id of exp)if(all[id]?.status==="RESOLVED_IN_FIXTURE")errs.push("Unconfirmed mission falsely resolved "+id);
+     }else if(key==="foreground_not"||key==="forbid_foreground"){
+       const disallowed=Array.isArray(exp)?exp:[exp];
+       if(disallowed.includes(output.attention.id))errs.push("Undesired foreground "+output.attention.id);
+     }else{
+       const value={
+         attention_id:output.attention.id,
+         attention_state:output.attention.state,
+         attention_status:output.attention.lifecycle_status,
+         project_id:output.planner.featured_project?.id??null,
+         unverified_loss_count:output.ambiguous_closure_not_counted_as_missed.length,
+         planner_mode:output.planner.mode,
+         alert_id:output.planner.alert_id,
+         no_gameplay_results_inferred:output.no_gameplay_results_inferred
+       }[key];
+       if(JSON.stringify(value)!==JSON.stringify(exp))errs.push(key+" expected "+JSON.stringify(exp)+" received "+JSON.stringify(value));
+     }
+   }
+   if(output.actual_game_state_connected!==false||output.writes_performed!==0||output.no_gameplay_results_inferred!==true)errs.push("No live-state connection invariant broken");
+   if(output.attention.state!=="SILENT"&&output.attention.state!=="FOREGROUND")errs.push("Unrecognized headline state");
+   if(output.urgent_risks.length&&output.attention.id!==output.urgent_risks[0])errs.push("Activated highest-priority risk not foreground");
+   if(new Set(output.opportunities.map(x=>x.id)).size!==output.opportunities.length)errs.push("Repeated opportunity record IDs");
+   if(output.ambiguous_closure_not_counted_as_missed.some(id=>all[id]?.status!=="CHAPTER_WINDOW_PASSED_UNVERIFIED"))errs.push("Inaccurate ambiguous closure label");
+   if(errs.length)failed.push({id:t.id,errors:errs});else passed.push(t.id);
+ }
+ const rejected=[],notRejected=[];
+ for(const t of suite.negative_tests||[]){
+   const base=suite.states?.[t.state];
+   if(!base){notRejected.push({id:t.id,reason:"Unknown base fixture"});continue;}
+   const state=JSON.parse(JSON.stringify(base)),options={intent:"passive",goals:["all_gold"],verbosity:"adaptive"};
+   let policy=lifecyclePolicy;
+   switch(t.mutation){
+     case "source_wrong":state.source="REAL_GAME";break;
+     case "synthetic_false":state.synthetic=false;break;
+     case "prior_source_wrong":options.previous_scenario={...state,source:"REAL_GAME"};break;
+     case "requested_id_bad":options.requested_opportunity_id="OP.C2.NOT_REGISTERED";break;
+     case "receipt_kind_bad":options.receipts={kind:"REAL_GAME_ACTION",displayed_prompt_keys:[],displayed_alert_keys:[]};break;
+     case "conflicting_flag":state.flags_false=[...(state.flags_false||[]),"chapter2_open"];break;
+     case "policy_scope_wrong":policy={...lifecyclePolicy,scope:"REAL_PLAYER_STATE"};break;
+     default:notRejected.push({id:t.id,reason:"Unknown mutation type "+t.mutation});continue;
+   }
+   try{
+     composeOpportunityLifecycle(graph,hierarchy,plannerPolicy,policy,state,options);
+     notRejected.push({id:t.id,reason:"Invalid input accepted"});
+   }catch(e){
+     const err=String(e);
+     if(err.includes(t.message))rejected.push(t.id);
+     else notRejected.push({id:t.id,reason:"Unexpected failure: "+err});
+   }
+ }
+ return {passed:failed.length===0&&notRejected.length===0,scenarios:(suite.cases||[]).length,
+   passing:passed.length,passing_ids:passed,
+   invalid_inputs:(suite.negative_tests||[]).length,rejected_invalid_inputs:rejected.length,
+   failures:failed,guard_failures:notRejected,source:"SYNTHETIC_ONLY",writes_performed:0};
+}
+
+// Node CLI reads only the exact registered, repository-local JSON contracts and test fixtures.
+if(process.argv[1]&&fileURLToPath(import.meta.url)===process.argv[1]){
+ const path=dirname(fileURLToPath(import.meta.url)),load=name=>JSON.parse(readFileSync(join(path,name),"utf8"));
+ const graph=load("chapter_02_graph_v0_1.json");
+ const hierarchy=load("hierarchy_v0_2.json");
+ const previousPolicy=load("planner_policy_v0_3.json");
+ const lifecyclePolicy=load("opportunity_policy_v0_4.json");
+ const suite=load("opportunity_scenarios_v0_4.json");
+ const integrity=validateOpportunityPolicy(graph,hierarchy,lifecyclePolicy);
+ const tests=verifyOpportunityLifecycleSuite(graph,hierarchy,previousPolicy,lifecyclePolicy,suite);
+ console.log(JSON.stringify({integrity,tests},null,2));
+ if(!integrity.passed||!tests.passed)process.exitCode=1;
+}
