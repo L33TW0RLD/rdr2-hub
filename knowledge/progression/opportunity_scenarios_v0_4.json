@@ -1,0 +1,1737 @@
+{
+  "version": "0.4.0",
+  "purpose": "Synthetic opportunity lifecycle and attention regression. No real player-state data.",
+  "source_contract": "SYNTHETIC_SCENARIO_ONLY",
+  "states": {
+    "arrival": {
+      "scenario_id": "arrival",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "opener": {
+      "scenario_id": "after_first_story",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007"
+      ],
+      "observed_markers": [
+        "m008",
+        "m009"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "ledger": {
+      "scenario_id": "ledger_available",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008"
+      ],
+      "observed_markers": [
+        "m009",
+        "m010"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited"
+      ],
+      "flags_false": [
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": [
+        "camp_ledger"
+      ]
+    },
+    "horse": {
+      "scenario_id": "hosea_complete",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009"
+      ],
+      "observed_markers": [
+        "m010",
+        "m013"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited"
+      ],
+      "flags_false": [
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush"
+      ]
+    },
+    "tools": {
+      "scenario_id": "pearson_tools_purchased",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009"
+      ],
+      "observed_markers": [
+        "m010",
+        "m013"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools"
+      ]
+    },
+    "fence": {
+      "scenario_id": "emerald_fence_intro",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m013"
+      ],
+      "observed_markers": [
+        "m010"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence"
+      ]
+    },
+    "fishing": {
+      "scenario_id": "fishing_intro",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m013",
+        "m018"
+      ],
+      "observed_markers": [
+        "m010"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    },
+    "oil": {
+      "scenario_id": "wagon_active",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m018"
+      ],
+      "observed_markers": [
+        "m017"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased",
+        "john_wagon_task_active"
+      ],
+      "flags_false": [],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    },
+    "oil_resolved": {
+      "scenario_id": "wagon_resolved",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m017",
+        "m018"
+      ],
+      "observed_markers": [],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [
+        "john_wagon_task_active"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    },
+    "exit": {
+      "scenario_id": "chapter_exit_window",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m017",
+        "m018",
+        "m019",
+        "m023"
+      ],
+      "observed_markers": [
+        "m024"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased",
+        "chapter2_exit_imminent",
+        "camp_companion_activity_observed"
+      ],
+      "flags_false": [
+        "john_wagon_task_active"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    },
+    "camp_offer": {
+      "scenario_id": "camp_companion_offer",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "camp_companion_activity_observed"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "unknown": {
+      "scenario_id": "unknown_control",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "unknown",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "chained": {
+      "scenario_id": "mission_chained",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "mission_chained",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "camp_only": {
+      "scenario_id": "camp_only",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "camp_limited",
+      "completed": [
+        "m007",
+        "m008",
+        "m009"
+      ],
+      "observed_markers": [
+        "m010",
+        "m013"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools"
+      ]
+    },
+    "mary_accepted": {
+      "scenario_id": "mary_accepted",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008"
+      ],
+      "observed_markers": [
+        "m009",
+        "m010"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "mary_help_accepted"
+      ],
+      "flags_false": [
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": [
+        "camp_ledger"
+      ]
+    },
+    "mary_marker": {
+      "scenario_id": "mary_marker",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008"
+      ],
+      "observed_markers": [
+        "m009",
+        "m020"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "mary_help_accepted"
+      ],
+      "flags_false": [
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": [
+        "camp_ledger"
+      ]
+    },
+    "mary_marker_absent": {
+      "scenario_id": "mary_marker_absent",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008"
+      ],
+      "observed_markers": [
+        "m009"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "mary_help_accepted"
+      ],
+      "flags_false": [
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": [
+        "camp_ledger"
+      ],
+      "markers_absent": [
+        "m020"
+      ]
+    },
+    "mary_complete": {
+      "scenario_id": "mary_complete",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m020"
+      ],
+      "observed_markers": [
+        "m009"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "mary_help_accepted"
+      ],
+      "flags_false": [
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": [
+        "camp_ledger"
+      ],
+      "markers_absent": [
+        "m020"
+      ]
+    },
+    "mary_contradict": {
+      "scenario_id": "mary_contradict",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008"
+      ],
+      "observed_markers": [
+        "m009",
+        "m020"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited"
+      ],
+      "flags_false": [
+        "mary_help_accepted"
+      ],
+      "observed_capabilities": [
+        "camp_ledger"
+      ]
+    },
+    "bounty_seen": {
+      "scenario_id": "bounty_seen",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008",
+        "m021"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "bounty_absent": {
+      "scenario_id": "bounty_absent",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": [],
+      "markers_absent": [
+        "m021"
+      ]
+    },
+    "bounty_late": {
+      "scenario_id": "bounty_late",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m017",
+        "m018",
+        "m019",
+        "m023"
+      ],
+      "observed_markers": [
+        "m024",
+        "m021"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased",
+        "chapter2_exit_imminent",
+        "camp_companion_activity_observed"
+      ],
+      "flags_false": [
+        "john_wagon_task_active"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    },
+    "bounty_after_exit": {
+      "scenario_id": "bounty_after_exit",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m017",
+        "m018",
+        "m019",
+        "m023",
+        "m024"
+      ],
+      "observed_markers": [],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [
+        "john_wagon_task_active",
+        "chapter2_exit_imminent"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ],
+      "markers_absent": []
+    },
+    "bounty_after_exit_absent": {
+      "scenario_id": "bounty_after_exit_absent",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m017",
+        "m018",
+        "m019",
+        "m023",
+        "m024"
+      ],
+      "observed_markers": [],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased",
+        "chapter2_exit_imminent",
+        "camp_companion_activity_observed"
+      ],
+      "flags_false": [
+        "john_wagon_task_active"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ],
+      "markers_absent": [
+        "m021"
+      ]
+    },
+    "offer_cleared": {
+      "scenario_id": "offer_cleared",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "camp_companion_activity_observed",
+        "strauss_debt_deposited"
+      ],
+      "observed_capabilities": []
+    },
+    "offer_after_exit": {
+      "scenario_id": "offer_after_exit",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m017",
+        "m018",
+        "m019",
+        "m023",
+        "m024"
+      ],
+      "observed_markers": [],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "john_wagon_task_active"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ],
+      "markers_absent": []
+    },
+    "wagon_active_done_conflict": {
+      "scenario_id": "wagon_active_done_conflict",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m018",
+        "m017"
+      ],
+      "observed_markers": [
+        "m017"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased",
+        "john_wagon_task_active"
+      ],
+      "flags_false": [],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    },
+    "wagon_no_longer_active": {
+      "scenario_id": "wagon_no_longer_active",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m018"
+      ],
+      "observed_markers": [
+        "m017"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [
+        "john_wagon_task_active"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    },
+    "wagon_completed": {
+      "scenario_id": "wagon_completed",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m017",
+        "m018",
+        "m017"
+      ],
+      "observed_markers": [],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [
+        "john_wagon_task_active"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    },
+    "arrival_observed_ledger_conflict": {
+      "scenario_id": "arrival_observed_ledger_conflict",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": [
+        "camp_ledger"
+      ]
+    },
+    "arrival_no_control": {
+      "scenario_id": "arrival_no_control",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "mission_chained",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "exit_completed": {
+      "scenario_id": "exit_completed",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m017",
+        "m018",
+        "m019",
+        "m023",
+        "m024"
+      ],
+      "observed_markers": [],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [
+        "camp_companion_activity_observed",
+        "john_wagon_task_active",
+        "chapter2_exit_imminent"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "arrival_observation_vs_attention",
+      "state": "arrival",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "statuses": {
+          "OP.C2.ARRIVAL": "GENERAL_WINDOW",
+          "OP.C2.LEDGER": "NORMAL_GATE_UNMET",
+          "OP.C2.PEARSON_TOOLS": "NORMAL_GATE_UNMET",
+          "OP.C2.MARY": "UNKNOWN",
+          "OP.C2.BOUNTY": "UNKNOWN",
+          "OP.C2.CAMP_PROJECT": "PROJECT_MILESTONE_CONTEXT"
+        },
+        "transitions": {
+          "OP.C2.ARRIVAL": "NO_PRIOR_COMPARISON"
+        },
+        "attention_id": "OP.C2.ARRIVAL",
+        "attention_state": "FOREGROUND"
+      }
+    },
+    {
+      "id": "arrival_recheck_keeps_opportunity_but_quiet",
+      "state": "arrival",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "arrival",
+      "receipts_from": "arrival_observation_vs_attention",
+      "expect": {
+        "statuses": {
+          "OP.C2.ARRIVAL": "GENERAL_WINDOW"
+        },
+        "transitions": {
+          "OP.C2.ARRIVAL": "UNCHANGED"
+        },
+        "attention_id": null,
+        "attention_state": "SILENT"
+      }
+    },
+    {
+      "id": "ledger_becomes_observed_not_automatically_purchased",
+      "state": "ledger",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "arrival",
+      "receipts_from": "arrival_observation_vs_attention",
+      "expect": {
+        "statuses": {
+          "OP.C2.LEDGER": "OBSERVED_ACCESS",
+          "OP.C2.PEARSON_TOOLS": "NORMAL_GATE_UNMET"
+        },
+        "transitions": {
+          "OP.C2.LEDGER": "BECAME_OBSERVED"
+        },
+        "attention_id": "OP.C2.LEDGER"
+      }
+    },
+    {
+      "id": "ledger_no_prior_not_fresh_claim",
+      "state": "ledger",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "statuses": {
+          "OP.C2.LEDGER": "OBSERVED_ACCESS"
+        },
+        "transitions": {
+          "OP.C2.LEDGER": "NO_PRIOR_COMPARISON"
+        },
+        "attention_id": "OP.C2.LEDGER"
+      }
+    },
+    {
+      "id": "horse_unlock_owns_horse_project",
+      "state": "horse",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "ledger",
+      "receipts_from": "ledger_becomes_observed_not_automatically_purchased",
+      "expect": {
+        "statuses": {
+          "OP.C2.HORSE_CARE": "OBSERVED_ACCESS"
+        },
+        "transitions": {
+          "OP.C2.HORSE_CARE": "BECAME_OBSERVED"
+        },
+        "attention_id": "OP.C2.HORSE_CARE",
+        "project_id": "project.horse"
+      }
+    },
+    {
+      "id": "pearson_tools_revisit_not_satchel_completed",
+      "state": "tools",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "horse",
+      "receipts_from": "horse_unlock_owns_horse_project",
+      "expect": {
+        "statuses": {
+          "OP.C2.PEARSON_TOOLS": "OBSERVED_ACCESS",
+          "OP.C2.CAMP_PROJECT": "PROJECT_MILESTONE_CONTEXT"
+        },
+        "transitions": {
+          "OP.C2.PEARSON_TOOLS": "BECAME_OBSERVED",
+          "OP.C2.CAMP_PROJECT": "STAGE_CHANGED"
+        },
+        "attention_id": "OP.C2.PEARSON_TOOLS",
+        "project_id": "project.camp"
+      }
+    },
+    {
+      "id": "repeat_pearson_tools_no_new_attention",
+      "state": "tools",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "tools",
+      "receipts_from": "pearson_tools_revisit_not_satchel_completed",
+      "expect": {
+        "statuses": {
+          "OP.C2.PEARSON_TOOLS": "OBSERVED_ACCESS"
+        },
+        "transitions": {
+          "OP.C2.PEARSON_TOOLS": "UNCHANGED"
+        },
+        "attention_id": null
+      }
+    },
+    {
+      "id": "mary_help_accepted_without_marker_is_candidate_only",
+      "state": "mary_accepted",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "ledger",
+      "expect": {
+        "statuses": {
+          "OP.C2.MARY": "ELIGIBLE_UNCONFIRMED"
+        },
+        "transitions": {
+          "OP.C2.MARY": "BECAME_ELIGIBLE"
+        },
+        "forbid_observed": [
+          "OP.C2.MARY"
+        ],
+        "unverified_loss_count": 0
+      }
+    },
+    {
+      "id": "mary_marker_is_observed",
+      "state": "mary_marker",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ],
+        "requested_opportunity_id": "OP.C2.MARY"
+      },
+      "previous_state": "mary_accepted",
+      "expect": {
+        "statuses": {
+          "OP.C2.MARY": "OFFER_OBSERVED"
+        },
+        "transitions": {
+          "OP.C2.MARY": "BECAME_OBSERVED"
+        },
+        "attention_id": "OP.C2.MARY"
+      }
+    },
+    {
+      "id": "mary_marker_disappears_is_not_permanent_loss",
+      "state": "mary_marker_absent",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "mary_marker",
+      "expect": {
+        "statuses": {
+          "OP.C2.MARY": "OFFER_NOT_VISIBLE_NOW"
+        },
+        "transitions": {
+          "OP.C2.MARY": "OFFER_NO_LONGER_VISIBLE"
+        },
+        "unverified_loss_count": 0,
+        "context_ids": [
+          "OP.C2.MARY"
+        ]
+      }
+    },
+    {
+      "id": "mary_explicit_completion_without_medal",
+      "state": "mary_complete",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "mary_marker",
+      "expect": {
+        "statuses": {
+          "OP.C2.MARY": "RESOLVED_IN_FIXTURE"
+        },
+        "transitions": {
+          "OP.C2.MARY": "STATE_CHANGED"
+        },
+        "no_gameplay_results_inferred": true
+      }
+    },
+    {
+      "id": "mary_contradictory_marker_gate_preserved",
+      "state": "mary_contradict",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ],
+        "requested_opportunity_id": "OP.C2.MARY"
+      },
+      "previous_state": "mary_accepted",
+      "expect": {
+        "statuses": {
+          "OP.C2.MARY": "EVIDENCE_CONFLICT"
+        },
+        "transitions": {
+          "OP.C2.MARY": "CONTRADICTORY_EVIDENCE"
+        },
+        "conflict_ids": [
+          "OP.C2.MARY"
+        ],
+        "attention_id": "OP.C2.MARY"
+      }
+    },
+    {
+      "id": "bounty_observed_not_automatic_risk",
+      "state": "bounty_seen",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "arrival",
+      "expect": {
+        "statuses": {
+          "OP.C2.BOUNTY": "OFFER_OBSERVED"
+        },
+        "transitions": {
+          "OP.C2.BOUNTY": "BECAME_OBSERVED"
+        },
+        "context_ids": [
+          "OP.C2.BOUNTY"
+        ],
+        "foreground_not": "OP.C2.BOUNTY"
+      }
+    },
+    {
+      "id": "bounty_marker_absent_not_completed",
+      "state": "bounty_absent",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "bounty_seen",
+      "expect": {
+        "statuses": {
+          "OP.C2.BOUNTY": "OFFER_NOT_VISIBLE_NOW"
+        },
+        "transitions": {
+          "OP.C2.BOUNTY": "OFFER_NO_LONGER_VISIBLE"
+        },
+        "unverified_loss_count": 0
+      }
+    },
+    {
+      "id": "bounty_at_chapter_exit_still_observed",
+      "state": "bounty_late",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "bounty_seen",
+      "expect": {
+        "statuses": {
+          "OP.C2.BOUNTY": "OFFER_OBSERVED",
+          "OP.C2.CHAPTER_EXIT": "ACTIVE_RISK"
+        },
+        "attention_id": "OP.C2.CHAPTER_EXIT",
+        "context_ids": [
+          "OP.C2.BOUNTY"
+        ]
+      }
+    },
+    {
+      "id": "bounty_after_chapter_exit_unknown_not_expired",
+      "state": "bounty_after_exit",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "bounty_late",
+      "expect": {
+        "statuses": {
+          "OP.C2.BOUNTY": "UNKNOWN",
+          "OP.C2.CHAPTER_EXIT": "RESOLVED_IN_FIXTURE"
+        },
+        "unverified_loss_count": 1,
+        "forbid_resolved": [
+          "OP.C2.BOUNTY"
+        ]
+      }
+    },
+    {
+      "id": "bounty_after_chapter_exit_absent_not_expired",
+      "state": "bounty_after_exit_absent",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "bounty_late",
+      "expect": {
+        "statuses": {
+          "OP.C2.BOUNTY": "OFFER_NOT_VISIBLE_NOW"
+        },
+        "forbid_resolved": [
+          "OP.C2.BOUNTY"
+        ]
+      }
+    },
+    {
+      "id": "camp_companion_offer_observed_for_achievement",
+      "state": "camp_offer",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "statuses": {
+          "OP.C2.CAMP_ACTIVITY": "OFFER_OBSERVED"
+        },
+        "attention_id": "OP.C2.CAMP_ACTIVITY"
+      }
+    },
+    {
+      "id": "camp_offer_not_targeted_by_all_gold",
+      "state": "camp_offer",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "expect": {
+        "statuses": {
+          "OP.C2.CAMP_ACTIVITY": "OFFER_OBSERVED"
+        },
+        "attention_id": "OP.C2.ARRIVAL",
+        "context_excludes": [
+          "OP.C2.CAMP_ACTIVITY"
+        ]
+      }
+    },
+    {
+      "id": "camp_offer_disappears_not_expired",
+      "state": "offer_cleared",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "camp_offer",
+      "expect": {
+        "statuses": {
+          "OP.C2.CAMP_ACTIVITY": "OFFER_NOT_VISIBLE_NOW"
+        },
+        "transitions": {
+          "OP.C2.CAMP_ACTIVITY": "OFFER_NO_LONGER_VISIBLE"
+        },
+        "unverified_loss_count": 0
+      }
+    },
+    {
+      "id": "chapter_exit_safety_and_observed_camp_offer",
+      "state": "exit",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "oil_resolved",
+      "expect": {
+        "statuses": {
+          "OP.C2.CHAPTER_EXIT": "ACTIVE_RISK",
+          "OP.C2.CAMP_ACTIVITY": "OFFER_OBSERVED"
+        },
+        "attention_id": "OP.C2.CHAPTER_EXIT",
+        "context_ids": [
+          "OP.C2.CAMP_ACTIVITY"
+        ]
+      }
+    },
+    {
+      "id": "after_exit_camp_window_passed_but_loss_unverified",
+      "state": "offer_after_exit",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "camp_offer",
+      "expect": {
+        "statuses": {
+          "OP.C2.CAMP_ACTIVITY": "CHAPTER_WINDOW_PASSED_UNVERIFIED",
+          "OP.C2.CHAPTER_EXIT": "RESOLVED_IN_FIXTURE"
+        },
+        "transitions": {
+          "OP.C2.CAMP_ACTIVITY": "CHAPTER_WINDOW_PASSED_UNVERIFIED"
+        },
+        "unverified_loss_ids": [
+          "OP.C2.CAMP_ACTIVITY"
+        ]
+      }
+    },
+    {
+      "id": "urgent_wagon_active_first_warning",
+      "state": "oil",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "statuses": {
+          "OP.C2.WAGON_ACTIVE": "ACTIVE_RISK"
+        },
+        "attention_id": "OP.C2.WAGON_ACTIVE",
+        "planner_mode": "urgent_story"
+      }
+    },
+    {
+      "id": "urgent_wagon_repeat_still_risk_not_newly_activated",
+      "state": "oil",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "oil",
+      "receipts_from": "urgent_wagon_active_first_warning",
+      "expect": {
+        "statuses": {
+          "OP.C2.WAGON_ACTIVE": "ACTIVE_RISK"
+        },
+        "transitions": {
+          "OP.C2.WAGON_ACTIVE": "UNCHANGED"
+        },
+        "attention_id": "OP.C2.WAGON_ACTIVE",
+        "alert_id": "urgent_john_wagon"
+      }
+    },
+    {
+      "id": "wagon_flag_false_not_gold_result",
+      "state": "wagon_no_longer_active",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "oil",
+      "expect": {
+        "statuses": {
+          "OP.C2.WAGON_ACTIVE": "OFFER_NOT_VISIBLE_NOW"
+        },
+        "transitions": {
+          "OP.C2.WAGON_ACTIVE": "STATE_CHANGED"
+        },
+        "no_gameplay_results_inferred": true
+      }
+    },
+    {
+      "id": "wagon_completed_fictional_without_gold_claim",
+      "state": "wagon_completed",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "oil",
+      "expect": {
+        "statuses": {
+          "OP.C2.WAGON_ACTIVE": "RESOLVED_IN_FIXTURE"
+        },
+        "transitions": {
+          "OP.C2.WAGON_ACTIVE": "RISK_RESOLVED"
+        },
+        "no_gameplay_results_inferred": true
+      }
+    },
+    {
+      "id": "wagon_still_active_and_completed_is_conflict",
+      "state": "wagon_active_done_conflict",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "oil",
+      "expect": {
+        "statuses": {
+          "OP.C2.WAGON_ACTIVE": "EVIDENCE_CONFLICT"
+        },
+        "transitions": {
+          "OP.C2.WAGON_ACTIVE": "CONTRADICTORY_EVIDENCE"
+        },
+        "conflict_ids": [
+          "OP.C2.WAGON_ACTIVE"
+        ]
+      }
+    },
+    {
+      "id": "observed_ledger_but_gate_denied_conflict",
+      "state": "arrival_observed_ledger_conflict",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "arrival",
+      "expect": {
+        "statuses": {
+          "OP.C2.LEDGER": "EVIDENCE_CONFLICT"
+        },
+        "conflict_ids": [
+          "OP.C2.LEDGER"
+        ]
+      }
+    },
+    {
+      "id": "requested_unknown_bounty_requires_confirmation",
+      "state": "arrival",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ],
+        "requested_opportunity_id": "OP.C2.BOUNTY"
+      },
+      "expect": {
+        "statuses": {
+          "OP.C2.BOUNTY": "UNKNOWN"
+        },
+        "attention_id": "OP.C2.BOUNTY",
+        "attention_status": "UNKNOWN"
+      }
+    },
+    {
+      "id": "no_control_no_outing",
+      "state": "arrival_no_control",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "statuses": {
+          "OP.C2.ARRIVAL": "CONTROL_UNAVAILABLE"
+        },
+        "attention_id": null,
+        "planner_mode": "mission_in_progress"
+      }
+    },
+    {
+      "id": "after_chapter_exit_no_arrival_outing",
+      "state": "exit_completed",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "statuses": {
+          "OP.C2.ARRIVAL": "OUTSIDE_WINDOW",
+          "OP.C2.CHAPTER_EXIT": "RESOLVED_IN_FIXTURE"
+        },
+        "forbid_foreground": [
+          "OP.C2.ARRIVAL"
+        ]
+      }
+    },
+    {
+      "id": "receipt_does_not_change_offer_lifecycle",
+      "state": "arrival",
+      "options": {
+        "intent": "passive",
+        "verbosity": "adaptive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "arrival",
+      "receipts_from": "arrival_observation_vs_attention",
+      "expect": {
+        "statuses": {
+          "OP.C2.ARRIVAL": "GENERAL_WINDOW"
+        },
+        "transitions": {
+          "OP.C2.ARRIVAL": "UNCHANGED"
+        },
+        "attention_id": null
+      }
+    }
+  ],
+  "negative_tests": [
+    {
+      "id": "reject_real_source",
+      "state": "arrival",
+      "mutation": "source_wrong",
+      "message": "Lifecycle input must be explicit synthetic"
+    },
+    {
+      "id": "reject_nonsynthetic",
+      "state": "arrival",
+      "mutation": "synthetic_false",
+      "message": "Lifecycle input must be explicit synthetic"
+    },
+    {
+      "id": "reject_real_previous",
+      "state": "arrival",
+      "mutation": "prior_source_wrong",
+      "message": "Lifecycle previous input must be synthetic"
+    },
+    {
+      "id": "reject_unmapped_opportunity",
+      "state": "arrival",
+      "mutation": "requested_id_bad",
+      "message": "Unknown requested opportunity ID"
+    },
+    {
+      "id": "reject_invalid_receipt",
+      "state": "arrival",
+      "mutation": "receipt_kind_bad",
+      "message": "SYNTHETIC_PRESENTATION_RECEIPTS"
+    },
+    {
+      "id": "reject_conflicting_facts",
+      "state": "arrival",
+      "mutation": "conflicting_flag",
+      "message": "Contradictory scenario truth"
+    },
+    {
+      "id": "reject_nonfixture_policy",
+      "state": "arrival",
+      "mutation": "policy_scope_wrong",
+      "message": "Only synthetic lifecycle policy supported"
+    }
+  ],
+  "acceptance": [
+    "Presentation receipts NEVER update opportunity world status",
+    "Offer absent or marker disappeared never means permanently missed",
+    "Only explicit fictional mission completion yields RESOLVED_IN_FIXTURE, never earned Gold",
+    "Chapter transition may make prior camp offer window passed but specific loss remains unverified",
+    "One active serious risk occupies the foreground; other observed optional offers remain contextual",
+    "A direct request opens detail even if current offer is unknown, with warning not a fake available action",
+    "Disputed Chapter 2 Mary/bounty expiry never silently becomes a permanent loss",
+    "No live-game, campaign, save, money, honor, inventory or persistent player-state connection"
+  ]
+}

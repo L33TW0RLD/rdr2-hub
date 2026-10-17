@@ -1,0 +1,1206 @@
+{
+  "version": "0.3.0",
+  "purpose": "Cumulative synthetic event transitions with ephemeral presentation receipts; NOT real player state or persistent tracker.",
+  "source_contract": "SYNTHETIC_SCENARIO_ONLY",
+  "states": {
+    "arrival": {
+      "scenario_id": "arrival",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "opener": {
+      "scenario_id": "after_first_story",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007"
+      ],
+      "observed_markers": [
+        "m008",
+        "m009"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "ledger": {
+      "scenario_id": "ledger_available",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008"
+      ],
+      "observed_markers": [
+        "m009",
+        "m010"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited"
+      ],
+      "flags_false": [
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": [
+        "camp_ledger"
+      ]
+    },
+    "horse": {
+      "scenario_id": "hosea_complete",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009"
+      ],
+      "observed_markers": [
+        "m010",
+        "m013"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited"
+      ],
+      "flags_false": [
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush"
+      ]
+    },
+    "tools": {
+      "scenario_id": "pearson_tools_purchased",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009"
+      ],
+      "observed_markers": [
+        "m010",
+        "m013"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools"
+      ]
+    },
+    "fence": {
+      "scenario_id": "emerald_fence_intro",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m013"
+      ],
+      "observed_markers": [
+        "m010"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence"
+      ]
+    },
+    "fishing": {
+      "scenario_id": "fishing_intro",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m013",
+        "m018"
+      ],
+      "observed_markers": [
+        "m010"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    },
+    "oil": {
+      "scenario_id": "wagon_active",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m018"
+      ],
+      "observed_markers": [
+        "m017"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased",
+        "john_wagon_task_active"
+      ],
+      "flags_false": [],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    },
+    "oil_resolved": {
+      "scenario_id": "wagon_resolved",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m017",
+        "m018"
+      ],
+      "observed_markers": [],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [
+        "john_wagon_task_active"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    },
+    "exit": {
+      "scenario_id": "chapter_exit_window",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m017",
+        "m018",
+        "m019",
+        "m023"
+      ],
+      "observed_markers": [
+        "m024"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased",
+        "chapter2_exit_imminent",
+        "camp_companion_activity_observed"
+      ],
+      "flags_false": [
+        "john_wagon_task_active"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    },
+    "camp_offer": {
+      "scenario_id": "camp_companion_offer",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "camp_companion_activity_observed"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "unknown": {
+      "scenario_id": "unknown_control",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "unknown",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "chained": {
+      "scenario_id": "mission_chained",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "mission_chained",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "camp_only": {
+      "scenario_id": "camp_only",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "camp_limited",
+      "completed": [
+        "m007",
+        "m008",
+        "m009"
+      ],
+      "observed_markers": [
+        "m010",
+        "m013"
+      ],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "arrival_first",
+      "state": "arrival",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "mode": "arrival_orientation",
+        "primary_id": "event.arrival_orientation",
+        "project_id": "project.camp",
+        "outing": "camp_orientation",
+        "alert_id": null,
+        "story_ids": [
+          "m007",
+          "m008"
+        ],
+        "new_receipt": "event.arrival_orientation"
+      }
+    },
+    {
+      "id": "arrival_repeated_passive",
+      "state": "arrival",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "arrival",
+      "receipts_from": "arrival_first",
+      "expect": {
+        "mode": "quiet_no_new_prompt",
+        "primary_id": null,
+        "outing": null,
+        "alert_id": null,
+        "story_ids": [
+          "m007",
+          "m008"
+        ]
+      }
+    },
+    {
+      "id": "arrival_quiet",
+      "state": "arrival",
+      "options": {
+        "verbosity": "quiet",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "mode": "quiet_no_new_prompt",
+        "primary_id": null,
+        "outing": null,
+        "story_ids": [
+          "m007",
+          "m008"
+        ]
+      }
+    },
+    {
+      "id": "arrival_quiet_requested_camp",
+      "state": "arrival",
+      "options": {
+        "verbosity": "quiet",
+        "intent": "camp",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "mode": "user_requested_project",
+        "primary_id": "project.camp",
+        "project_id": "project.camp"
+      }
+    },
+    {
+      "id": "opening_completed_without_forcing_next",
+      "state": "opener",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "arrival",
+      "receipts_from": "arrival_first",
+      "expect": {
+        "mode": "quiet_no_new_prompt",
+        "primary_id": null,
+        "story_ids": [
+          "m008",
+          "m009"
+        ]
+      }
+    },
+    {
+      "id": "ledger_unlock_transition",
+      "state": "ledger",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "opener",
+      "receipts_from": "opening_completed_without_forcing_next",
+      "expect": {
+        "mode": "system_introduction",
+        "primary_id": "event.ledger_introduction",
+        "project_id": "project.camp",
+        "project_stage": "ledger_gate",
+        "outing": "inspect_upgrade_ledger",
+        "new_receipt": "event.ledger_introduction"
+      }
+    },
+    {
+      "id": "ledger_passive_repeat",
+      "state": "ledger",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "ledger",
+      "receipts_from": "ledger_unlock_transition",
+      "expect": {
+        "mode": "quiet_no_new_prompt",
+        "primary_id": null,
+        "outing": null
+      }
+    },
+    {
+      "id": "horse_unlock_and_project_handoff",
+      "state": "horse",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "ledger",
+      "receipts_from": "ledger_unlock_transition",
+      "expect": {
+        "mode": "system_introduction",
+        "primary_id": "event.horse_system_introduction",
+        "project_id": "project.horse",
+        "project_stage": "after_hosea",
+        "outing": "horse_practice",
+        "new_receipt": "event.horse_system_introduction"
+      }
+    },
+    {
+      "id": "pearson_tools_move_to_recipe",
+      "state": "tools",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "horse",
+      "receipts_from": "horse_unlock_and_project_handoff",
+      "expect": {
+        "mode": "project_revisit",
+        "primary_id": "event.pearson_tools_milestone",
+        "project_id": "project.camp",
+        "project_stage": "satchel_tools",
+        "outing": "heartlands_recon"
+      }
+    },
+    {
+      "id": "pearson_tools_no_repeated_advice",
+      "state": "tools",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "tools",
+      "receipts_from": "pearson_tools_move_to_recipe",
+      "expect": {
+        "mode": "quiet_no_new_prompt",
+        "primary_id": null,
+        "outing": null
+      }
+    },
+    {
+      "id": "camp_limit_never_sends_to_heartlands",
+      "state": "camp_only",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "camp",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "tools",
+      "receipts_from": "pearson_tools_move_to_recipe",
+      "expect": {
+        "mode": "user_requested_project",
+        "primary_id": "project.camp",
+        "project_id": "project.camp",
+        "outing": null
+      }
+    },
+    {
+      "id": "explicit_pearson_detail_in_quiet",
+      "state": "tools",
+      "options": {
+        "verbosity": "quiet",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ],
+        "requested_focus": "camp.pearson"
+      },
+      "previous_state": "tools",
+      "receipts_from": "pearson_tools_move_to_recipe",
+      "expect": {
+        "mode": "user_requested_project",
+        "primary_id": "project.camp",
+        "project_stage": "satchel_tools"
+      }
+    },
+    {
+      "id": "wagon_fence_intro_not_camp_ledger",
+      "state": "fence",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "tools",
+      "receipts_from": "pearson_tools_move_to_recipe",
+      "expect": {
+        "mode": "system_introduction",
+        "primary_id": "event.wagon_fence_introduction",
+        "project_id": null,
+        "outing": "valuables_triage"
+      }
+    },
+    {
+      "id": "fishing_intro_not_camp_ledger",
+      "state": "fishing",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "fence",
+      "receipts_from": "wagon_fence_intro_not_camp_ledger",
+      "expect": {
+        "mode": "system_introduction",
+        "primary_id": "event.fishing_introduction",
+        "project_id": null,
+        "outing": "river_fishing"
+      }
+    },
+    {
+      "id": "skippable_wagon_risk_overrides_outings",
+      "state": "oil",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "fishing",
+      "receipts_from": "fishing_intro_not_camp_ledger",
+      "expect": {
+        "mode": "urgent_story",
+        "primary_id": "m017",
+        "alert_id": "urgent_john_wagon",
+        "alert_presentation": "foreground_interrupt",
+        "project_id": null,
+        "outing": null,
+        "story_ids": [
+          "m017"
+        ]
+      }
+    },
+    {
+      "id": "active_wagon_repeat_is_pinned_only",
+      "state": "oil",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "oil",
+      "receipts_from": "skippable_wagon_risk_overrides_outings",
+      "expect": {
+        "mode": "urgent_story",
+        "primary_id": "m017",
+        "alert_id": "urgent_john_wagon",
+        "alert_presentation": "pinned_warning",
+        "project_id": null,
+        "outing": null
+      }
+    },
+    {
+      "id": "after_wagon_resolution_camp_on_request",
+      "state": "oil_resolved",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "camp",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "oil",
+      "receipts_from": "active_wagon_repeat_is_pinned_only",
+      "expect": {
+        "mode": "user_requested_project",
+        "primary_id": "project.camp",
+        "alert_id": null,
+        "project_stage": "satchel_tools"
+      }
+    },
+    {
+      "id": "chapter_exit_overrides_all_existing_windows",
+      "state": "exit",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "oil_resolved",
+      "receipts_from": "after_wagon_resolution_camp_on_request",
+      "expect": {
+        "mode": "chapter_exit_review",
+        "primary_id": "chapter2_exit_audit",
+        "alert_id": "before_chapter_exit",
+        "alert_presentation": "foreground_interrupt",
+        "outing": "observed_camp_opportunity_review",
+        "story_ids": [
+          "m024"
+        ]
+      }
+    },
+    {
+      "id": "chapter_exit_repeat_pinned",
+      "state": "exit",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "exit",
+      "receipts_from": "chapter_exit_overrides_all_existing_windows",
+      "expect": {
+        "mode": "chapter_exit_review",
+        "alert_id": "before_chapter_exit",
+        "alert_presentation": "pinned_warning"
+      }
+    },
+    {
+      "id": "chapter_exit_quiet_still_protects",
+      "state": "exit",
+      "options": {
+        "verbosity": "quiet",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "exit",
+      "receipts_from": "chapter_exit_repeat_pinned",
+      "expect": {
+        "mode": "chapter_exit_review",
+        "primary_id": "chapter2_exit_audit",
+        "alert_id": "before_chapter_exit",
+        "outing": null
+      }
+    },
+    {
+      "id": "chapter_exit_finale_intent_reraises_warning",
+      "state": "exit",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "story",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ],
+        "advancing_to": "chapter_exit"
+      },
+      "previous_state": "exit",
+      "receipts_from": "chapter_exit_repeat_pinned",
+      "expect": {
+        "mode": "chapter_exit_review",
+        "alert_id": "before_chapter_exit",
+        "alert_presentation": "foreground_interrupt"
+      }
+    },
+    {
+      "id": "observed_camp_activity_for_achievement",
+      "state": "camp_offer",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "achievements"
+        ]
+      },
+      "expect": {
+        "mode": "observed_optional_window",
+        "primary_id": "camp_activity_window",
+        "alert_id": "camp_activity_window",
+        "alert_presentation": "foreground_interrupt"
+      }
+    },
+    {
+      "id": "observed_camp_activity_not_for_generic_gold",
+      "state": "camp_offer",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "expect": {
+        "mode": "arrival_orientation",
+        "primary_id": "event.arrival_orientation",
+        "alert_id": null
+      }
+    },
+    {
+      "id": "optional_camp_offer_quiet_no_nag",
+      "state": "camp_offer",
+      "options": {
+        "verbosity": "quiet",
+        "intent": "passive",
+        "goals": [
+          "achievements"
+        ]
+      },
+      "expect": {
+        "mode": "quiet_no_new_prompt",
+        "primary_id": null,
+        "alert_id": "camp_activity_window",
+        "alert_presentation": "suppressed_in_quiet"
+      }
+    },
+    {
+      "id": "unknown_control_asks_for_observation",
+      "state": "unknown",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "mode": "control_unknown",
+        "primary_id": "CHECK_CONTROL",
+        "outing": null,
+        "project_id": null
+      }
+    },
+    {
+      "id": "chained_mission_no_fake_intermission",
+      "state": "chained",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "mode": "mission_in_progress",
+        "primary_id": "MISSION_CHAINED",
+        "outing": null,
+        "project_id": null
+      }
+    },
+    {
+      "id": "player_requests_story_no_optional_detour",
+      "state": "arrival",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "story",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "mode": "story_choices_only",
+        "primary_id": null,
+        "outing": null,
+        "story_ids": [
+          "m007",
+          "m008"
+        ]
+      }
+    },
+    {
+      "id": "explicit_exploration_remains_available",
+      "state": "arrival",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "explore",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "arrival",
+      "receipts_from": "arrival_first",
+      "expect": {
+        "mode": "user_requested_outing",
+        "primary_id": "camp_orientation",
+        "outing": "camp_orientation"
+      }
+    },
+    {
+      "id": "no_prior_ledger_is_contextual_not_new_unlock",
+      "state": "ledger",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "expect": {
+        "mode": "system_introduction",
+        "primary_id": "event.ledger_introduction",
+        "detected_kind": "currently_eligible_no_prior_comparison"
+      }
+    },
+    {
+      "id": "quiet_mode_system_unlock_no_unsolicited_intro",
+      "state": "horse",
+      "options": {
+        "verbosity": "quiet",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "ledger",
+      "receipts_from": "ledger_unlock_transition",
+      "expect": {
+        "mode": "quiet_no_new_prompt",
+        "primary_id": null,
+        "outing": null
+      }
+    },
+    {
+      "id": "later_opt_in_surfaces_unpresented_horse",
+      "state": "horse",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold",
+          "high_honor",
+          "achievements"
+        ]
+      },
+      "previous_state": "horse",
+      "receipts_from": "quiet_mode_system_unlock_no_unsolicited_intro",
+      "expect": {
+        "mode": "system_introduction",
+        "primary_id": "event.horse_system_introduction",
+        "project_id": "project.horse",
+        "detected_kind": "still_eligible"
+      }
+    },
+    {
+      "id": "quiet_explicit_explore_respected",
+      "state": "arrival",
+      "previous_state": "arrival",
+      "receipts_from": "arrival_first",
+      "options": {
+        "verbosity": "quiet",
+        "intent": "explore",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "expect": {
+        "mode": "user_requested_outing",
+        "primary_id": "camp_orientation",
+        "outing": "camp_orientation"
+      }
+    },
+    {
+      "id": "quiet_explicit_completion_respected",
+      "state": "arrival",
+      "options": {
+        "verbosity": "quiet",
+        "intent": "completion",
+        "goals": [
+          "official_100"
+        ]
+      },
+      "expect": {
+        "mode": "user_requested_completion_review",
+        "primary_id": "completion_check",
+        "outing": null
+      }
+    },
+    {
+      "id": "oil_receipt_without_prior_does_not_falsely_reactivate",
+      "state": "oil",
+      "receipts_from": "skippable_wagon_risk_overrides_outings",
+      "options": {
+        "verbosity": "adaptive",
+        "intent": "passive",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "expect": {
+        "mode": "urgent_story",
+        "primary_id": "m017",
+        "alert_id": "urgent_john_wagon",
+        "alert_presentation": "pinned_warning"
+      }
+    },
+    {
+      "id": "camp_offer_explicit_activities_even_without_achievement_goal",
+      "state": "camp_offer",
+      "options": {
+        "intent": "activities",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "expect": {
+        "mode": "observed_optional_window",
+        "primary_id": "camp_activity_window",
+        "alert_id": "camp_activity_window"
+      }
+    },
+    {
+      "id": "oil_in_quiet_protects_story",
+      "state": "oil",
+      "options": {
+        "verbosity": "quiet",
+        "intent": "passive",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "expect": {
+        "mode": "urgent_story",
+        "primary_id": "m017",
+        "alert_id": "urgent_john_wagon",
+        "alert_presentation": "foreground_interrupt",
+        "outing": null
+      }
+    },
+    {
+      "id": "arrival_active_is_not_multiple_prompts",
+      "state": "arrival",
+      "options": {
+        "verbosity": "active",
+        "intent": "passive",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "expect": {
+        "mode": "arrival_orientation",
+        "primary_id": "event.arrival_orientation",
+        "outing": "camp_orientation"
+      }
+    }
+  ],
+  "acceptance_rules": [
+    "Repeated passive checks should not repeat optional prompts",
+    "Active skippable Story risk remains visible but re-prompts only when activated or user is attempting risk",
+    "After a more advanced milestone, no stale arrival/ledger suggestion",
+    "System intro belongs to correct project and suggests matching outing",
+    "Requested content remains accessible in quiet mode",
+    "Optional achievement alerts require goal applicability",
+    "No actual game state connection or game progress writes",
+    "Quiet mode respects explicit requests while suppressing unsolicited optional suggestions",
+    "Policy rejects non-fixture game states, unapproved goals, fake focus and contradictory evidence"
+  ],
+  "negative_tests": [
+    {
+      "id": "reject_unsourced_game_state",
+      "state": "arrival",
+      "mutation": "synthetic_false",
+      "message_contains": "Only explicit synthetic fixtures"
+    },
+    {
+      "id": "reject_nonfixture_source",
+      "state": "arrival",
+      "mutation": "source_wrong",
+      "message_contains": "Only explicit synthetic fixtures"
+    },
+    {
+      "id": "reject_unapproved_goal",
+      "state": "arrival",
+      "mutation": "goal_bad",
+      "message_contains": "Unknown or malformed goal"
+    },
+    {
+      "id": "reject_fake_project_focus",
+      "state": "arrival",
+      "mutation": "focus_bad",
+      "message_contains": "Requested focus"
+    },
+    {
+      "id": "reject_invalid_verbosity",
+      "state": "arrival",
+      "mutation": "verbosity_bad",
+      "message_contains": "Invalid verbosity"
+    },
+    {
+      "id": "reject_gameplay_receipts",
+      "state": "arrival",
+      "mutation": "receipts_kind_bad",
+      "message_contains": "SYNTHETIC_PRESENTATION_RECEIPTS"
+    },
+    {
+      "id": "reject_malformed_receipts",
+      "state": "arrival",
+      "mutation": "receipts_array_bad",
+      "message_contains": "Invalid receipts"
+    },
+    {
+      "id": "reject_conflicting_scenario_fact",
+      "state": "arrival",
+      "mutation": "contradiction",
+      "message_contains": "Contradictory scenario truth"
+    },
+    {
+      "id": "reject_nonfixture_previous_state",
+      "state": "arrival",
+      "mutation": "previous_source_wrong",
+      "message_contains": "Prior scenario must be synthetic"
+    }
+  ]
+}

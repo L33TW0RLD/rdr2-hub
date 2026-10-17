@@ -1,0 +1,875 @@
+{
+  "version": "0.5.0",
+  "scope": "SYNTHETIC_SCENARIO_ONLY",
+  "purpose": "Round-trip ChatGPT source-request flow; semantic navigation only, no source file content, gameplay or actual widgets.",
+  "source_states": "knowledge/progression/planner_scenarios_v0_3.json",
+  "additional_states": {
+    "four_markers": {
+      "scenario_id": "four_markers_fixture",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [],
+      "observed_markers": [
+        "m007",
+        "m008",
+        "m009",
+        "m010"
+      ],
+      "flags_true": [
+        "chapter2_open"
+      ],
+      "flags_false": [
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "observed_capabilities": []
+    },
+    "after_chapter_two_departure": {
+      "scenario_id": "fictional_chapter2_completed",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m017",
+        "m018",
+        "m019",
+        "m023",
+        "m024"
+      ],
+      "observed_markers": [],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [
+        "camp_companion_activity_observed",
+        "john_wagon_task_active",
+        "chapter2_exit_imminent"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
+    }
+  },
+  "journeys": [
+    {
+      "id": "camp_to_atlas_and_back",
+      "state": "arrival",
+      "steps": [
+        {
+          "action": {
+            "type": "open_project",
+            "node_id": "project.camp"
+          },
+          "expect": {
+            "screen": "project",
+            "focus": "project.camp",
+            "depth": 1,
+            "child_ids": [
+              "camp.economy",
+              "camp.facilities",
+              "camp.pearson",
+              "camp.life"
+            ]
+          }
+        },
+        {
+          "action": {
+            "type": "open_track",
+            "node_id": "camp.pearson"
+          },
+          "expect": {
+            "screen": "track",
+            "focus": "camp.pearson",
+            "depth": 2
+          }
+        },
+        {
+          "action": {
+            "type": "open_atlas",
+            "node_id": "atlas.hunting",
+            "depth": "practical"
+          },
+          "expect": {
+            "screen": "atlas_reference",
+            "focus": "atlas.hunting",
+            "depth": 3,
+            "source_owner": "HUB_SYSTEMS_ATLAS",
+            "source_load": false,
+            "atlas_status": "RESEARCHED_REVIEW_PENDING"
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "track",
+            "focus": "camp.pearson",
+            "depth": 2,
+            "no_source": true
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "project",
+            "focus": "project.camp",
+            "depth": 1
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "home",
+            "depth": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "story_to_full_guide_and_atlas_return",
+      "state": "arrival",
+      "steps": [
+        {
+          "action": {
+            "type": "show_story"
+          },
+          "expect": {
+            "screen": "story_board",
+            "depth": 1,
+            "observed": [
+              "m007",
+              "m008"
+            ],
+            "unknown_not_in_observed": [
+              "m010",
+              "m011"
+            ]
+          }
+        },
+        {
+          "action": {
+            "type": "select_mission",
+            "mission_id": "m007"
+          },
+          "expect": {
+            "screen": "mission_reference",
+            "focus": "m007",
+            "depth": 2,
+            "source_owner": "ORIGINAL_GAMEGUIDE",
+            "source_path": "missions/chapter_02/07_polite_society_valentine_style.md",
+            "source_load": false,
+            "full_guide_rendered": false,
+            "reference_class": "observed_marker"
+          }
+        },
+        {
+          "action": {
+            "type": "open_atlas",
+            "node_id": "atlas.horses",
+            "depth": "quick"
+          },
+          "expect": {
+            "screen": "atlas_reference",
+            "focus": "atlas.horses",
+            "depth": 3,
+            "source_owner": "HUB_SYSTEMS_ATLAS",
+            "source_load": false
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "mission_reference",
+            "focus": "m007",
+            "depth": 2,
+            "source_owner": "ORIGINAL_GAMEGUIDE",
+            "source_path": "missions/chapter_02/07_polite_society_valentine_style.md",
+            "source_load": false,
+            "source_reload": true,
+            "checkboxes_restored": false,
+            "full_guide_rendered": false
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "story_board",
+            "depth": 1
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "home",
+            "depth": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "explicit_unobserved_historical_reference",
+      "state": "arrival",
+      "steps": [
+        {
+          "action": {
+            "type": "open_mission_reference",
+            "mission_id": "m021"
+          },
+          "expect": {
+            "screen": "mission_reference",
+            "focus": "m021",
+            "depth": 1,
+            "reference_class": "reference_only",
+            "may_start": false,
+            "source_owner": "ORIGINAL_GAMEGUIDE",
+            "source_load": false
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "home",
+            "depth": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "horse_project_and_atlas",
+      "state": "horse",
+      "steps": [
+        {
+          "action": {
+            "type": "open_project",
+            "node_id": "project.horse"
+          },
+          "expect": {
+            "screen": "project",
+            "focus": "project.horse",
+            "project_stage": "after_hosea",
+            "depth": 1,
+            "child_ids": [
+              "horse.basics",
+              "horse.training"
+            ]
+          }
+        },
+        {
+          "action": {
+            "type": "open_track",
+            "node_id": "horse.basics"
+          },
+          "expect": {
+            "screen": "track",
+            "focus": "horse.basics",
+            "depth": 2
+          }
+        },
+        {
+          "action": {
+            "type": "open_atlas",
+            "node_id": "atlas.horses",
+            "depth": "comprehensive"
+          },
+          "expect": {
+            "screen": "atlas_reference",
+            "focus": "atlas.horses",
+            "depth": 3,
+            "source_load": false,
+            "atlas_status": "RESEARCHED_REVIEW_PENDING"
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "track",
+            "focus": "horse.basics",
+            "depth": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "tool_milestone_context_changes_without_player_progress",
+      "state": "ledger",
+      "steps": [
+        {
+          "action": {
+            "type": "open_project",
+            "node_id": "project.camp"
+          },
+          "expect": {
+            "screen": "project",
+            "project_stage": "ledger_gate",
+            "depth": 1
+          }
+        },
+        {
+          "action": {
+            "type": "open_track",
+            "node_id": "camp.pearson"
+          },
+          "expect": {
+            "screen": "track",
+            "focus": "camp.pearson",
+            "depth": 2,
+            "track_availability": "prerequisite_unmet"
+          }
+        },
+        {
+          "transition_state": "tools",
+          "expect": {
+            "screen": "track",
+            "focus": "camp.pearson",
+            "depth": 2,
+            "track_availability": "observed_in_fixture",
+            "project_stage": "satchel_tools",
+            "writes": 0
+          }
+        },
+        {
+          "action": {
+            "type": "open_atlas",
+            "node_id": "atlas.hunting"
+          },
+          "expect": {
+            "screen": "atlas_reference",
+            "source_load": false,
+            "depth": 3
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "track",
+            "focus": "camp.pearson",
+            "project_stage": "satchel_tools",
+            "depth": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "urgent_wagon_warning_stays_during_atlas",
+      "state": "oil",
+      "steps": [
+        {
+          "action": {
+            "type": "show_story"
+          },
+          "expect": {
+            "screen": "story_board",
+            "warning_ids": [
+              "OP.C2.WAGON_ACTIVE"
+            ],
+            "depth": 1,
+            "observed": [
+              "m017"
+            ]
+          }
+        },
+        {
+          "action": {
+            "type": "select_mission",
+            "mission_id": "m017"
+          },
+          "expect": {
+            "screen": "mission_reference",
+            "focus": "m017",
+            "warning_ids": [
+              "OP.C2.WAGON_ACTIVE"
+            ],
+            "source_load": false,
+            "depth": 2
+          }
+        },
+        {
+          "action": {
+            "type": "open_atlas",
+            "node_id": "atlas.hunting"
+          },
+          "expect": {
+            "screen": "atlas_reference",
+            "warning_ids": [
+              "OP.C2.WAGON_ACTIVE"
+            ],
+            "source_load": false,
+            "depth": 3
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "mission_reference",
+            "warning_ids": [
+              "OP.C2.WAGON_ACTIVE"
+            ],
+            "source_reload": true,
+            "source_load": false,
+            "depth": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "chapter_exit_remains_visible_in_project",
+      "state": "exit",
+      "steps": [
+        {
+          "action": {
+            "type": "open_project",
+            "node_id": "project.camp"
+          },
+          "expect": {
+            "screen": "project",
+            "warning_ids": [
+              "OP.C2.CHAPTER_EXIT"
+            ],
+            "depth": 1
+          }
+        },
+        {
+          "action": {
+            "type": "open_track",
+            "node_id": "camp.life"
+          },
+          "expect": {
+            "screen": "track",
+            "warning_ids": [
+              "OP.C2.CHAPTER_EXIT"
+            ],
+            "depth": 2
+          }
+        },
+        {
+          "action": {
+            "type": "open_atlas",
+            "node_id": "atlas.camp",
+            "depth": "quick"
+          },
+          "expect": {
+            "screen": "atlas_reference",
+            "warning_ids": [
+              "OP.C2.CHAPTER_EXIT"
+            ],
+            "depth": 3
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "track",
+            "warning_ids": [
+              "OP.C2.CHAPTER_EXIT"
+            ],
+            "depth": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "atlas_from_home_direct_and_return",
+      "state": "arrival",
+      "steps": [
+        {
+          "action": {
+            "type": "open_atlas",
+            "node_id": "atlas.hunting",
+            "depth": "practical"
+          },
+          "expect": {
+            "screen": "atlas_reference",
+            "focus": "atlas.hunting",
+            "source_load": false,
+            "depth": 1
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "home",
+            "depth": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "multi_mission_observation_four_markers",
+      "state": "four_markers",
+      "steps": [
+        {
+          "action": {
+            "type": "show_story"
+          },
+          "expect": {
+            "screen": "story_board",
+            "observed": [
+              "m007",
+              "m008",
+              "m009",
+              "m010"
+            ],
+            "depth": 1
+          }
+        },
+        {
+          "action": {
+            "type": "select_mission",
+            "mission_id": "m010"
+          },
+          "expect": {
+            "screen": "mission_reference",
+            "focus": "m010",
+            "reference_class": "observed_marker",
+            "depth": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "quiet_mode_does_not_hide_urgent_warning",
+      "state": "oil",
+      "options": {
+        "verbosity": "quiet",
+        "goals": [
+          "all_gold"
+        ]
+      },
+      "steps": [
+        {
+          "action": {
+            "type": "open_atlas",
+            "node_id": "atlas.hunting"
+          },
+          "expect": {
+            "screen": "atlas_reference",
+            "warning_ids": [
+              "OP.C2.WAGON_ACTIVE"
+            ],
+            "source_load": false,
+            "depth": 1
+          }
+        },
+        {
+          "action": {
+            "type": "return"
+          },
+          "expect": {
+            "screen": "home",
+            "warning_ids": [
+              "OP.C2.WAGON_ACTIVE"
+            ],
+            "depth": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "source_request_only_not_adopted_knowledge",
+      "state": "arrival",
+      "steps": [
+        {
+          "action": {
+            "type": "open_project",
+            "node_id": "project.camp"
+          },
+          "expect": {
+            "screen": "project",
+            "depth": 1
+          }
+        },
+        {
+          "action": {
+            "type": "open_track",
+            "node_id": "camp.pearson"
+          },
+          "expect": {
+            "screen": "track",
+            "depth": 2
+          }
+        },
+        {
+          "action": {
+            "type": "open_track",
+            "node_id": "camp.pearson.satchels"
+          },
+          "expect": {
+            "screen": "track",
+            "focus": "camp.pearson.satchels",
+            "depth": 3
+          }
+        },
+        {
+          "action": {
+            "type": "open_atlas",
+            "node_id": "atlas.hunting",
+            "depth": "quick"
+          },
+          "expect": {
+            "screen": "atlas_reference",
+            "source_load": false,
+            "atlas_status": "RESEARCHED_REVIEW_PENDING",
+            "depth": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "show_home_resets_return_stack",
+      "state": "arrival",
+      "steps": [
+        {
+          "action": {
+            "type": "show_story"
+          },
+          "expect": {
+            "screen": "story_board",
+            "depth": 1
+          }
+        },
+        {
+          "action": {
+            "type": "show_home"
+          },
+          "expect": {
+            "screen": "home",
+            "depth": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "chapter_relocation_does_not_fake_current_camp",
+      "state": "after_chapter_two_departure",
+      "steps": [
+        {
+          "action": {
+            "type": "show_home"
+          },
+          "expect": {
+            "screen": "home",
+            "depth": 0,
+            "header_chapter": "Chapter 2 reference (fictional finale completed)",
+            "known_area": "Previous camp: Horseshoe Overlook; present area unknown",
+            "home_prompt_id": null,
+            "home_outing": null
+          }
+        }
+      ]
+    }
+  ],
+  "invalid_actions": [
+    {
+      "id": "reject_mission_not_observed",
+      "state": "arrival",
+      "action": {
+        "type": "select_mission",
+        "mission_id": "m010"
+      },
+      "contains": "not explicitly observed"
+    },
+    {
+      "id": "reject_unknown_mission_reference",
+      "state": "arrival",
+      "action": {
+        "type": "open_mission_reference",
+        "mission_id": "m999"
+      },
+      "contains": "Unknown Chapter 2 mission"
+    },
+    {
+      "id": "reject_unknown_project",
+      "state": "arrival",
+      "action": {
+        "type": "open_project",
+        "node_id": "project.fake"
+      },
+      "contains": "Unknown project node"
+    },
+    {
+      "id": "reject_nonnested_track",
+      "state": "arrival",
+      "action": {
+        "type": "open_track",
+        "node_id": "camp.pearson"
+      },
+      "contains": "direct child"
+    },
+    {
+      "id": "reject_wrong_tree_child",
+      "state": "arrival",
+      "pre_actions": [
+        {
+          "type": "open_project",
+          "node_id": "project.horse"
+        }
+      ],
+      "action": {
+        "type": "open_track",
+        "node_id": "camp.economy"
+      },
+      "contains": "direct child"
+    },
+    {
+      "id": "reject_atlas_wrong_relation",
+      "state": "arrival",
+      "pre_actions": [
+        {
+          "type": "open_project",
+          "node_id": "project.horse"
+        }
+      ],
+      "action": {
+        "type": "open_atlas",
+        "node_id": "atlas.hunting"
+      },
+      "contains": "known source-linked"
+    },
+    {
+      "id": "reject_unknown_atlas_group",
+      "state": "arrival",
+      "action": {
+        "type": "open_atlas",
+        "node_id": "atlas.fake"
+      },
+      "contains": "known source-linked"
+    },
+    {
+      "id": "reject_unrecognized_nav_action",
+      "state": "arrival",
+      "action": {
+        "type": "set_mission_gold",
+        "mission_id": "m007"
+      },
+      "contains": "Unregistered navigation action"
+    },
+    {
+      "id": "reject_pop_empty_return_stack",
+      "state": "arrival",
+      "action": {
+        "type": "return"
+      },
+      "contains": "No semantic return target"
+    },
+    {
+      "id": "reject_invalid_atlas_depth",
+      "state": "arrival",
+      "action": {
+        "type": "open_atlas",
+        "node_id": "atlas.hunting",
+        "depth": "secret_unlocked"
+      },
+      "contains": "Unsupported Atlas lesson depth"
+    },
+    {
+      "id": "reject_real_game_source",
+      "state": "arrival",
+      "mutation": "source_wrong",
+      "action": {
+        "type": "show_story"
+      },
+      "contains": "Only synthetic Chapter 2 scenario"
+    },
+    {
+      "id": "reject_nonsynthetic_state",
+      "state": "arrival",
+      "mutation": "synthetic_false",
+      "action": {
+        "type": "show_story"
+      },
+      "contains": "Only synthetic Chapter 2 scenario"
+    },
+    {
+      "id": "reject_wrong_chapter",
+      "state": "arrival",
+      "mutation": "chapter_wrong",
+      "action": {
+        "type": "show_story"
+      },
+      "contains": "Unsupported chapter fixture"
+    },
+    {
+      "id": "reject_forged_nav_session_kind",
+      "state": "arrival",
+      "mutation": "session_kind_wrong",
+      "action": {
+        "type": "show_story"
+      },
+      "contains": "Navigation session must be synthetic"
+    },
+    {
+      "id": "reject_backfilled_mission_frame",
+      "state": "arrival",
+      "mutation": "session_forged_mission",
+      "action": {
+        "type": "open_atlas",
+        "node_id": "atlas.hunting"
+      },
+      "contains": "Mission frame must point at"
+    },
+    {
+      "id": "reject_too_deep_navigation",
+      "state": "arrival",
+      "mutation": "deep_nav",
+      "action": {
+        "type": "show_story"
+      },
+      "contains": "Navigation depth exceeded"
+    }
+  ],
+  "invariants": [
+    "Return Atlas→Mission must request complete ORIGINAL GameGuide dossier again, never return a summary.",
+    "Selected mission available for hypothetical live start only if observed marker from fixture.",
+    "Named unobserved mission dossier can open as reference_only, never claimed playable.",
+    "Atlas lessons are source requests, not invented research or adopted tactics.",
+    "Global activated risk persists while navigating a project or Atlas.",
+    "No gameplay result writes, Gold, saves, owned items, funds or horse status from UI navigation.",
+    "Project milestone may change when a synthetic fixture changes, but selection alone does not advance it.",
+    "Every screen is a bounded model and source-read placeholder, not proof of real UI rendering.",
+    "After the fictional Chapter 2 finale, do not continue to promote a stale Horseshoe Overlook arrival outing or assert Horseshoe as the current camp."
+  ],
+  "design_limitations": [
+    "No real provider source fetch performed by the router",
+    "No automatic saved-game observation",
+    "No actual ChatGPT-native click test in this fixture runner",
+    "Only Chapter 2 Gold dossier identity references"
+  ]
+}

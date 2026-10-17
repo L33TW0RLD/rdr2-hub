@@ -1,0 +1,362 @@
+{
+  "version": "0.4.0",
+  "status": "DESIGN_RESEARCH_REVIEW_PENDING",
+  "scope": "SYNTHETIC_SCENARIO_ONLY",
+  "mission_and_mechanic_authority": "REFERENCES_ONLY_NO_DUPLICATED_ADOPTED_RULES",
+  "definitions": {
+    "lifecycle": "Game-world status inferred ONLY within an explicit synthetic fixture, not what the companion recommended.",
+    "attention": "Whether this specific item deserves the foreground, contextual mention, on-demand discoverability or silence at this moment.",
+    "presentation_receipt": "What text the synthetic planner already displayed; NEVER evidence that the player acted.",
+    "closure": "Resolved requires named explicit fictional completion, never absence of a marker or expiry guessed from a chapter alone.",
+    "unknown": "No predicate observed; neither confirmed available nor confirmed blocked.",
+    "conflicts": "Simultaneously simulated incompatible facts remain visible; do not silently choose one."
+  },
+  "selectors": [
+    "capability",
+    "warning",
+    "story_marker",
+    "project",
+    "opportunity"
+  ],
+  "lifecycle_states": [
+    "OBSERVED_ACCESS",
+    "ELIGIBLE_UNCONFIRMED",
+    "NORMAL_GATE_UNMET",
+    "UNAVAILABLE_IN_FIXTURE",
+    "UNKNOWN",
+    "ACTIVE_RISK",
+    "OFFER_OBSERVED",
+    "OFFER_NOT_VISIBLE_NOW",
+    "RESOLVED_IN_FIXTURE",
+    "CHAPTER_WINDOW_PASSED_UNVERIFIED",
+    "GENERAL_WINDOW",
+    "OUTSIDE_WINDOW",
+    "CONTROL_UNAVAILABLE",
+    "PROJECT_MILESTONE_CONTEXT",
+    "PROJECT_GATE_UNKNOWN",
+    "EVIDENCE_CONFLICT"
+  ],
+  "lifecycle_transition_classes": [
+    "NO_PRIOR_COMPARISON",
+    "UNCHANGED",
+    "BECAME_OBSERVED",
+    "BECAME_ELIGIBLE",
+    "ACTIVATED_RISK",
+    "RISK_RESOLVED",
+    "OFFER_NO_LONGER_VISIBLE",
+    "CHAPTER_WINDOW_PASSED_UNVERIFIED",
+    "STAGE_CHANGED",
+    "WENT_UNKNOWN",
+    "CONTRADICTORY_EVIDENCE",
+    "STATE_CHANGED"
+  ],
+  "attention_states": [
+    "FOREGROUND",
+    "CONTEXT",
+    "ON_DEMAND",
+    "SILENT"
+  ],
+  "priority_order": [
+    "activated_irreversible_risk",
+    "observed_chapter_exit",
+    "explicit_user_request",
+    "goal_relevant_observed_offer",
+    "new_capability_or_milestone",
+    "ordinary_outing",
+    "no_change"
+  ],
+  "goals": [
+    "official_100",
+    "all_gold",
+    "achievements",
+    "personal_exhaustive",
+    "high_honor",
+    "immersion"
+  ],
+  "no_implicit_expiry": [
+    "Mary optional Story strand",
+    "Valentine sheriff bounty",
+    "An American Pastoral Scene",
+    "unseen camp requests"
+  ],
+  "hard_safety": {
+    "max_foreground": 1,
+    "max_context_items": 4,
+    "max_suggested_outings": 1,
+    "risk_foreground_ids": [
+      "OP.C2.WAGON_ACTIVE",
+      "OP.C2.CHAPTER_EXIT"
+    ],
+    "claim_no_permanent_loss_without_explicit_proof": true,
+    "no_live_campaign_connection": true
+  },
+  "opportunities": [
+    {
+      "id": "OP.C2.ARRIVAL",
+      "title": "Camp Orientation",
+      "kind": "window",
+      "selector": {
+        "type": "opportunity",
+        "ref": "arrival_camp_orientation"
+      },
+      "project_ref": "project.camp",
+      "goal_tags": [
+        "immersion"
+      ],
+      "source_refs": [
+        "G_TRIGGER",
+        "H_UNLOCK"
+      ],
+      "priority": "ordinary_outing",
+      "phase": "early_camp",
+      "closure_rule": "No after-Chapter-2-arrival inferred completed flag."
+    },
+    {
+      "id": "OP.C2.LEDGER",
+      "title": "Camp Ledger access",
+      "kind": "system",
+      "selector": {
+        "type": "capability",
+        "ref": "camp_ledger"
+      },
+      "project_ref": "project.camp",
+      "goal_tags": [
+        "immersion",
+        "personal_exhaustive"
+      ],
+      "source_refs": [
+        "H_D02",
+        "H_UNLOCK"
+      ],
+      "priority": "new_capability_or_milestone"
+    },
+    {
+      "id": "OP.C2.PEARSON_TOOLS",
+      "title": "Pearson Satchel Tool Route",
+      "kind": "system",
+      "selector": {
+        "type": "capability",
+        "ref": "leather_tools"
+      },
+      "project_ref": "project.camp",
+      "goal_tags": [
+        "personal_exhaustive",
+        "immersion"
+      ],
+      "source_refs": [
+        "H_D03",
+        "H_D02"
+      ],
+      "priority": "new_capability_or_milestone",
+      "scope_note": "Tools observed does NOT imply a satchel crafted."
+    },
+    {
+      "id": "OP.C2.HORSE_CARE",
+      "title": "Stables, horse brush and care",
+      "kind": "system",
+      "selector": {
+        "type": "capability",
+        "ref": "stable_brush"
+      },
+      "project_ref": "project.horse",
+      "goal_tags": [
+        "immersion"
+      ],
+      "source_refs": [
+        "H_UNLOCK"
+      ],
+      "priority": "new_capability_or_milestone"
+    },
+    {
+      "id": "OP.C2.FENCE",
+      "title": "Seamus wagon Fence",
+      "kind": "system",
+      "selector": {
+        "type": "capability",
+        "ref": "emerald_wagon_fence"
+      },
+      "project_ref": null,
+      "goal_tags": [
+        "immersion"
+      ],
+      "source_refs": [
+        "H_UNLOCK"
+      ],
+      "priority": "new_capability_or_milestone",
+      "scope_note": "No global claim about every other Fence."
+    },
+    {
+      "id": "OP.C2.FISHING",
+      "title": "Ordinary fishing",
+      "kind": "system",
+      "selector": {
+        "type": "capability",
+        "ref": "ordinary_fishing"
+      },
+      "project_ref": null,
+      "goal_tags": [
+        "official_100",
+        "immersion"
+      ],
+      "source_refs": [
+        "H_UNLOCK"
+      ],
+      "priority": "new_capability_or_milestone"
+    },
+    {
+      "id": "OP.C2.CAMP_PROJECT",
+      "title": "Develop the Camp",
+      "kind": "project",
+      "selector": {
+        "type": "project",
+        "ref": "camp_development"
+      },
+      "project_ref": "project.camp",
+      "goal_tags": [
+        "immersion"
+      ],
+      "source_refs": [
+        "H_D02",
+        "H_D03"
+      ],
+      "priority": "new_capability_or_milestone",
+      "scope_note": "Milestone navigation is not actual project completion."
+    },
+    {
+      "id": "OP.C2.WAGON_ACTIVE",
+      "title": "John's active skippable oil-wagon job",
+      "kind": "urgent_story",
+      "selector": {
+        "type": "warning",
+        "ref": "urgent_john_wagon"
+      },
+      "resolved_by": "completed:m017",
+      "project_ref": null,
+      "goal_tags": [
+        "all_gold"
+      ],
+      "source_refs": [
+        "G_TRIGGER",
+        "H_RESEARCH"
+      ],
+      "priority": "activated_irreversible_risk",
+      "scope_note": "No invented countdown. A task flag becoming false is not proof of earned medal."
+    },
+    {
+      "id": "OP.C2.CHAPTER_EXIT",
+      "title": "Before leaving Horseshoe Overlook",
+      "kind": "chapter_boundary",
+      "selector": {
+        "type": "warning",
+        "ref": "before_chapter_exit"
+      },
+      "resolved_by": "completed:m024",
+      "project_ref": "project.camp",
+      "goal_tags": [
+        "all_gold",
+        "achievements",
+        "personal_exhaustive",
+        "immersion"
+      ],
+      "source_refs": [
+        "G_TRIGGER",
+        "H_RESEARCH",
+        "W_PP_EXIT"
+      ],
+      "priority": "observed_chapter_exit"
+    },
+    {
+      "id": "OP.C2.CAMP_ACTIVITY",
+      "title": "Observed camp companion invitation",
+      "kind": "conditional_offer",
+      "selector": {
+        "type": "warning",
+        "ref": "camp_activity_window"
+      },
+      "closure_context": "chapter2_end",
+      "project_ref": "project.camp",
+      "goal_tags": [
+        "achievements",
+        "personal_exhaustive",
+        "immersion"
+      ],
+      "source_refs": [
+        "G_TRIGGER",
+        "H_D08"
+      ],
+      "priority": "goal_relevant_observed_offer",
+      "scope_note": "Do NOT equate any ordinary camp Poker with qualifying achievement activity."
+    },
+    {
+      "id": "OP.C2.MARY",
+      "title": "Mary's optional Story strand",
+      "kind": "optional_story",
+      "selector": {
+        "type": "story_marker",
+        "ref": "m020"
+      },
+      "resolved_by": "completed:m020",
+      "project_ref": null,
+      "goal_tags": [
+        "all_gold",
+        "achievements",
+        "high_honor",
+        "personal_exhaustive"
+      ],
+      "source_refs": [
+        "H_RESEARCH",
+        "H_D08"
+      ],
+      "priority": "goal_relevant_observed_offer",
+      "scope_note": "Letter accepted vs mission marker; cannot conclude permanently missable from simple Chapter 2 exit."
+    },
+    {
+      "id": "OP.C2.BOUNTY",
+      "title": "Valentine introductory bounty offer",
+      "kind": "optional_story",
+      "selector": {
+        "type": "story_marker",
+        "ref": "m021"
+      },
+      "resolved_by": "completed:m021",
+      "project_ref": null,
+      "goal_tags": [
+        "all_gold",
+        "achievements",
+        "immersion"
+      ],
+      "source_refs": [
+        "G_TRIGGER",
+        "H_D08"
+      ],
+      "priority": "goal_relevant_observed_offer",
+      "scope_note": "Expiry across chapter boundary disputed; no automatic expired state."
+    }
+  ],
+  "planner_key_mappings": {
+    "event.arrival_orientation": "OP.C2.ARRIVAL",
+    "event.ledger_introduction": "OP.C2.LEDGER",
+    "event.pearson_tools_milestone": "OP.C2.PEARSON_TOOLS",
+    "event.horse_system_introduction": "OP.C2.HORSE_CARE",
+    "event.wagon_fence_introduction": "OP.C2.FENCE",
+    "event.fishing_introduction": "OP.C2.FISHING",
+    "m017": "OP.C2.WAGON_ACTIVE",
+    "chapter2_exit_audit": "OP.C2.CHAPTER_EXIT",
+    "camp_activity_window": "OP.C2.CAMP_ACTIVITY",
+    "project.camp": "OP.C2.CAMP_PROJECT"
+  },
+  "warning_interpretations": {
+    "urgent_john_wagon": "ACTIVE_OBLIGATION_NOT_EXPIRY_TIMER",
+    "before_chapter_exit": "BEFORE_ADVANCING_AUDIT_NOT_FUTURE_MISSABLE_CERTAINTY",
+    "camp_activity_window": "ONLY_OBSERVED_OFFER_IN_FIXTURE"
+  },
+  "prohibited_claims": [
+    "a mission marker disappeared therefore this optional Story was permanently missed",
+    "a general unlock rule is satisfied therefore game UI actually shows the purchase",
+    "Pearson tools acquired therefore one satchel crafted",
+    "the player ignored our prompt therefore a missable is lost",
+    "a receipt marked shown therefore content completed",
+    "ch.2 crossed therefore Mary's strand or sheriff bounty automatically expired",
+    "actual save files or campaign tracker are already connected"
+  ]
+}

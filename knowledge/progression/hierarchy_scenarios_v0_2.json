@@ -1,0 +1,338 @@
+{
+  "version": "0.2.0",
+  "status": "SYNTHETIC_ONLY",
+  "description": "UI hierarchy and progressive disclosure acceptance scenarios; references v0.1 fictional scenarios without actual campaign state.",
+  "scenarios": [
+    {
+      "id": "arrival_small_board",
+      "fixture": "arrival_two_story_choices",
+      "options": {
+        "surface": "trailhead"
+      },
+      "expect": {
+        "surface": "trailhead",
+        "observed_ids": [
+          "m007",
+          "m008"
+        ],
+        "project_id": "project.camp",
+        "project_stage": "understand_camp",
+        "outing_ref": "camp_orientation",
+        "alert_id": null,
+        "control": "free_roam",
+        "child_ids": [
+          "camp.economy",
+          "camp.facilities",
+          "camp.pearson",
+          "camp.life"
+        ],
+        "all_unobserved_missions_hidden": true
+      }
+    },
+    {
+      "id": "arrival_camp_expanded",
+      "fixture": "arrival_two_story_choices",
+      "options": {
+        "surface": "project",
+        "focus_node_id": "project.camp"
+      },
+      "expect": {
+        "surface": "project",
+        "focus": "project.camp",
+        "child_ids": [
+          "camp.economy",
+          "camp.facilities",
+          "camp.pearson",
+          "camp.life"
+        ],
+        "track_availability": {
+          "camp.economy": "prerequisite_unmet",
+          "camp.facilities": "prerequisite_unmet",
+          "camp.pearson": "prerequisite_unmet",
+          "camp.life": "check_if_observed"
+        },
+        "project_id": "project.camp"
+      }
+    },
+    {
+      "id": "first_opening_alternatives",
+      "fixture": "bear_mission_now_a_choice",
+      "options": {
+        "surface": "trailhead"
+      },
+      "expect": {
+        "surface": "trailhead",
+        "observed_ids": [
+          "m008",
+          "m009"
+        ],
+        "project_id": "project.camp",
+        "alert_id": null,
+        "outing_ref": "camp_orientation",
+        "no_forced_next_mission": true
+      }
+    },
+    {
+      "id": "ledger_step_expanded",
+      "fixture": "one_strauss_debt_ledger_open",
+      "options": {
+        "surface": "project",
+        "focus_node_id": "project.camp",
+        "previous_fixture": "arrival_two_story_choices"
+      },
+      "expect": {
+        "surface": "project",
+        "project_id": "project.camp",
+        "project_stage": "ledger_gate",
+        "outing_ref": "inspect_upgrade_ledger",
+        "track_availability": {
+          "camp.economy": "observed_in_fixture",
+          "camp.pearson": "prerequisite_unmet",
+          "camp.life": "check_if_observed"
+        },
+        "newly_relevant_ids": [
+          "camp_ledger"
+        ]
+      }
+    },
+    {
+      "id": "tools_pearson_detail",
+      "fixture": "pearson_tools_owned_in_simulation",
+      "options": {
+        "surface": "project",
+        "focus_node_id": "camp.pearson",
+        "previous_fixture": "one_strauss_debt_ledger_open"
+      },
+      "expect": {
+        "surface": "project",
+        "focus": "camp.pearson",
+        "project_id": "project.camp",
+        "project_stage": "satchel_tools",
+        "selected_track_status": "observed_in_fixture",
+        "child_ids": [
+          "camp.pearson.satchels",
+          "camp.pearson.decor"
+        ],
+        "newly_relevant_ids": [
+          "leather_tools"
+        ],
+        "outing_ref": "heartlands_recon"
+      }
+    },
+    {
+      "id": "horse_project_after_hosea",
+      "fixture": "horse_lesson_complete",
+      "options": {
+        "surface": "project",
+        "focus_node_id": "project.horse"
+      },
+      "expect": {
+        "surface": "project",
+        "project_id": "project.horse",
+        "project_stage": "after_hosea",
+        "child_ids": [
+          "horse.basics",
+          "horse.training"
+        ],
+        "track_availability": {
+          "horse.basics": "observed_in_fixture",
+          "horse.training": "observed_in_fixture"
+        },
+        "outing_ref": "horse_practice"
+      }
+    },
+    {
+      "id": "urgent_john_suppresses_optimization",
+      "fixture": "john_oil_wagon_now_urgent",
+      "options": {
+        "surface": "trailhead"
+      },
+      "expect": {
+        "surface": "trailhead",
+        "observed_ids": [
+          "m017"
+        ],
+        "project_id": null,
+        "outing_ref": null,
+        "alert_id": "urgent_john_wagon",
+        "priority": "m017",
+        "no_forced_next_mission": false
+      }
+    },
+    {
+      "id": "chapter_exit_overrides_arrival_window",
+      "fixture": "chapter2_exit_approach",
+      "options": {
+        "surface": "trailhead"
+      },
+      "expect": {
+        "surface": "trailhead",
+        "observed_ids": [
+          "m024"
+        ],
+        "project_id": "project.camp",
+        "alert_id": "before_chapter_exit",
+        "outing_ref": "observed_camp_opportunity_review",
+        "priority": "REVIEW_BEFORE_CHAPTER_EXIT",
+        "all_unobserved_missions_hidden": true
+      }
+    },
+    {
+      "id": "control_chained_no_free_roam",
+      "fixture": "mission_chained_no_roam",
+      "options": {
+        "surface": "trailhead"
+      },
+      "expect": {
+        "surface": "trailhead",
+        "observed_ids": [
+          "m007"
+        ],
+        "project_id": null,
+        "outing_ref": null,
+        "control": "mission_chained",
+        "priority": "CONTINUE_ACTIVE_MISSION"
+      }
+    },
+    {
+      "id": "candidate_needs_marker",
+      "fixture": "prerequisite_present_marker_unknown",
+      "options": {
+        "surface": "missions"
+      },
+      "expect": {
+        "surface": "missions",
+        "observed_ids": [],
+        "board_candidate_first": "m011",
+        "gold_awarded_claim": false
+      }
+    },
+    {
+      "id": "contradicted_gate_observation",
+      "fixture": "observed_marker_versus_missing_prerequisite",
+      "options": {
+        "surface": "trailhead"
+      },
+      "expect": {
+        "surface": "trailhead",
+        "observed_ids": [
+          "m024"
+        ],
+        "alert_id": "before_chapter_exit",
+        "marker_rule_conflicts": [
+          "m024"
+        ],
+        "outgoing_user_state_writes": 0
+      }
+    },
+    {
+      "id": "atlas_is_a_readonly_depth",
+      "fixture": "pearson_tools_owned_in_simulation",
+      "options": {
+        "surface": "atlas",
+        "focus_node_id": "atlas.camp"
+      },
+      "expect": {
+        "surface": "atlas",
+        "atlas_selected": "atlas.camp",
+        "atlas_family_refs": [
+          "S08",
+          "S09",
+          "S10",
+          "S11"
+        ],
+        "project_id": "project.camp"
+      }
+    },
+    {
+      "id": "four_markers_compact_limit",
+      "fixture": "arrival_two_story_choices",
+      "scenario_patch": {
+        "observed_markers": [
+          "m007",
+          "m008",
+          "m009",
+          "m010"
+        ]
+      },
+      "options": {
+        "surface": "trailhead"
+      },
+      "expect": {
+        "surface": "trailhead",
+        "observed_ids": [
+          "m007",
+          "m008",
+          "m009"
+        ],
+        "additional_observed_count": 1,
+        "project_id": "project.camp"
+      }
+    },
+    {
+      "id": "camp_activity_real_offer_only",
+      "fixture": "arrival_two_story_choices",
+      "scenario_patch": {
+        "flags_true": [
+          "chapter2_open",
+          "camp_companion_activity_observed"
+        ]
+      },
+      "options": {
+        "surface": "project",
+        "focus_node_id": "project.camp"
+      },
+      "expect": {
+        "surface": "project",
+        "alert_id": "camp_activity_window",
+        "track_availability": {
+          "camp.life": "observed_in_fixture"
+        },
+        "project_id": "project.camp"
+      }
+    },
+    {
+      "id": "unknown_control_means_no_outing",
+      "fixture": "arrival_two_story_choices",
+      "scenario_patch": {
+        "control": "unknown"
+      },
+      "options": {
+        "surface": "trailhead"
+      },
+      "expect": {
+        "surface": "trailhead",
+        "project_id": null,
+        "outing_ref": null,
+        "control": "unknown"
+      }
+    },
+    {
+      "id": "deep_satchel_feature_does_not_imply_crafted",
+      "fixture": "pearson_tools_owned_in_simulation",
+      "options": {
+        "surface": "project",
+        "focus_node_id": "camp.pearson.satchels"
+      },
+      "expect": {
+        "surface": "project",
+        "focus": "camp.pearson.satchels",
+        "selected_track_status": "observed_in_fixture",
+        "child_ids": [],
+        "project_stage": "satchel_tools",
+        "actual_state_connected": false,
+        "outing_ref": "heartlands_recon"
+      }
+    }
+  ],
+  "policy_checks": [
+    "One navigation parent per node; no cycles or duplicate IDs",
+    "Hierarchy edges link valid nodes and source keys",
+    "Mission Gold identities remain in source graph, not copied as guide text",
+    "Only observed fictional markers are offered as present; candidates separately marked",
+    "No faux completion, currency, inventory or save progress",
+    "Alerts outrank lower-priority projects without inventing a clock",
+    "A historical optional system does not become mandatory",
+    "Views never connect actual player game data"
+  ]
+}
