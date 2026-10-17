@@ -19,6 +19,25 @@ The model separates:
 - **Projects:** camp upgrades and Pearson crafting as optional multi-mission milestones.
 - **Safety:** a specific active skippable Gold wagon stage outranks leisurely outings, while a chapter exit requests a targeted review.
 
+## Iteration v0.3 — event-window planner
+
+The initial graph (v0.1) and layered navigation (v0.2) now have a separate **synthetic-only** event/window decision layer (v0.3). It decides **when to introduce a system, revisit a project, show one real activated risk or remain quiet**, rather than simply listing still-eligible opportunities on every response. All earlier prerequisite uncertainties and source maturity boundaries remain unchanged.
+
+| Additional design artifact | Scope |
+|---|---|
+| [Hierarchy v0.2](hierarchy_v0_2.json) | 29 navigation nodes, 12 typed cross-links; four Camp Development tracks |
+| [Hierarchy projection v0.2](view_model_v0_2.mjs) | Compact trailhead, mission-board and L2/L3 project details; no persistent UI |
+| [Hierarchy fixtures](hierarchy_scenarios_v0_2.json) | 16 synthetic screen/progressive disclosure checks |
+| [Hierarchy design v0.2](hierarchy_design_v0_2.md) | Ownership tree ≠ progression graph; hierarchy, navigation and safety policy |
+| [Planner policy v0.3](planner_policy_v0_3.json) | Six source-linked introduction events, priorities, goal filtering, one-headline display caps and synthetic presentation receipts |
+| [Planner v0.3](window_planner_v0_3.mjs) | Pure event transition planner, warning vs outing arbitration, receipts and 37+9 reproducible synthetic tests |
+| [Planner fixtures v0.3](planner_scenarios_v0_3.json) | Cumulative fictional scenarios and rejected invalid inputs; no user facts |
+| [Planner design v0.3](planner_design_v0_3.md) | Event-driven behavior, anti-nag and quiet/adaptive/active boundaries |
+
+**Run fixture suites:** `node knowledge/progression/evaluate_v0_1.mjs` and `node knowledge/progression/window_planner_v0_3.mjs`; the v0.3 script runs its registered positive and rejected-input suites with repository-local static contracts. The committed JavaScript cores have been regression-tested in a JS sandbox; the Node CLI and actual ChatGPT client are not independently verified here.
+
+**No actual player data connection:** `source:"SIMULATION_FIXTURE"` and `synthetic:true` are required. The presentation receipts record only which fictional advice was already displayed, never completed mission stages or owned items, and have no promised persistence.
+
 ## Files and boundaries
 
 | File | Content |
