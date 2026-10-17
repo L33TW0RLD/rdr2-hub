@@ -11,9 +11,9 @@ The purpose is to make **mission intermissions feel like an adventure with direc
 | `projects/` | A longer-lived interest or capability to build over several outings | `project_template_v1.md` |
 | `outings/` | A satisfying, local exploration session or skill practice | `outing_template_v1.md` |
 | `intermissions/` | Context-sensitive choice set after a mission, when free-roam control exists | `intermission_template_v1.md` |
-| `discoveries/` | Respond to a player-reported stranger, animal, unusual location or item without spoiling surprises | Upcoming template after first validated example |
+| `discoveries/` | Respond to a player-reported stranger, animal, unusual location or item without spoiling surprises | `discovery_template_v1.md` |
 
-**Examples:** [Developing camp](projects/camp_development_v0_1.md) and [Heartlands hunting reconnaissance](outings/heartlands_hunting_recon_v0_1.md) are CONDITIONAL DEMOS, not recorded player projects or outing completions.
+**Examples:** [Developing camp](projects/camp_development_v0_1.md), [Heartlands hunting reconnaissance](outings/heartlands_hunting_recon_v0_1.md) and [Chapter 2 conditional intermission](intermissions/chapter_02_open_window_v0_1.md) are CONDITIONAL DEMOS, not recorded player projects, outings or mission results. The [discovery template](discoveries/discovery_template_v1.md) is a writing contract, not a found encounter.
 
 ## Rules for authors
 
