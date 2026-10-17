@@ -437,3 +437,14 @@ Actions must be real direct ChatGPT follow-up turns:
 **Separate design-only toggles** may compare A/B and the fictional/unknown/urgent cases. They cannot grant gameplay capabilities, establish currently visible markers, or persist between ChatGPT turns. No extra global header tabs or a second campaign database.
 
 **State:** Adventure A/B **UNSELECTED** until user reaction. Header and Mission Control design locks preserved.
+
+
+---
+
+## 19. Owner Bronze token correction v1.1 — presentation-only
+
+**Use `#A76D52` for Bronze** (medal rail segments and Bronze achievement count); replaces earlier proposed `#C28A60` / `#B47D59`. Gold remains `#D6AC49`, Silver `#C2C9D1`, and neutral unverified segment `#454A52`.
+
+Do not infer Bronze from an unverified result. The actual Chapter II best-medal ledger currently has no Bronze; 021's historical Bronze was superseded by best Gold. In the explicitly fictional mid/late chapter-stage demonstrations, treat the darker hue as a visual scenario test only.
+
+Owner has declared the combined header + compact Mission Control design **perfect apart from this correction**. Preserve all interactions, 18 mission identities, independent marker-dot overlay, action/source contracts and small bold uppercase `NEW POSSIBILITIES` microtype exactly. Do not change the under-Mission-Control Adventure proposal or mark system categorization ratified.
