@@ -191,3 +191,24 @@ At 18 slots across a narrow phone, each line segment may be thinner than a tap t
 ### Deferred decision
 
 Where exactly the **Adventure** and **Atlas** containers sit under Mission Control, and how they open, remains deliberately **unsettled** for later A/B testing. This iteration concerns the top header + first Mission Control container only.
+
+
+---
+
+## 11. Owner decision v0.3 — medal segment interaction only
+
+Supersedes §10's line saying to reveal a full Operation/medal status detail line or provide a visible mission-selection dropdown.
+
+| UI surface | When idle | On segment hover/click/tap |
+|---|---|---|
+| Chapter subtitle | `Chapter II` | Never say `Mission medals` |
+| Achievement row | Existing best-medal count and `4 / 18 recorded` | Unchanged |
+| Rail | Exactly 18 thin fixed-order medal-colored segments | Title-only anchored tooltip/popover; no persistent extra block |
+| Under rail | **Nothing** | **Nothing**; Mission Control immediately follows |
+| Mission Control | Current marker list or honest unknown state | Does not change from rail inspection |
+
+**Exact segment-content rule:** the **visible** tooltip/popover body is only the canonical mission title. No reference number, medal badge, uncertainty text, historical best medal, completion score or explanation. Source status remains encoded by rail color and count. A larger invisible interactive hit zone may be used to preserve usability of the 4px visible rail. Screen reader name/status semantics remain part of the underlying accessible control even when visually hidden.
+
+**Behavioral boundary:** selecting medal history does NOT open a mission, assert it is currently available, or change the GameGuide ledger. No Story/Adventure/Atlas header buttons or expanded medal selector are reintroduced.
+
+**Test status:** real click/touch/keyboard popover acceptance PENDING USER.
