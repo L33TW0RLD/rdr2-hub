@@ -6,7 +6,7 @@
 **Branch registration baseline:** `9931058e69ac3c6e7923841da87813de7f015f41`  
 **Latest main observed:** `6f08f4ed60abde51831f8b72cf6c363aa49feb2d` (branch behind one coordinator commit; expected)  
 **Recorded:** 2026-10-17, UTC date  
-**Workflow status:** `IN_PROGRESS` — **checkpoint before substantive research**.  
+**Workflow status:** `IN_PROGRESS` — initial checkpoint committed before research; D13 dossier delivered on same branch and final handoff in progress.  
 **Scoped lane:** D13 law/Honor/witness/bounties/restraint/robbery Story Mode evidence. The owner has explicitly reissued Issue #18 to this conversation, superseding a prior chat-routing concern; this does not authorize any other path.
 
 ## Exclusive writable paths — exact file lease
@@ -31,11 +31,22 @@ Produce one full D13 dossier covering `S05.M01–M04`, `S04.M04`, `S20.M01–M05
 
 ## Recovery and next exact action
 
-1. **Current phase:** checkpoint initialized, research has **not started**.
-2. **Next permitted action:** read `systems_atlas/mechanics_taxonomy_v0_2.md`, `systems_atlas/taxonomy_schema_v0_1.md`, `knowledge/record_contract_v1.md` and Wave 1 review at exact `main` reference to recover D13 requirements and dependencies.
-3. Then independently source-check law/Honor/robbery rules against official/in-game and credible guides; author and commit only D13 dossier; re-read exact branch; update checkpoint; author final handoff.
+1. **Current phase:** D13 sourced dossier committed and verified; final handoff and closure pending.
+2. **Next permitted action:** Write and commit only `agents/handoffs/2026-10-17_atlas_law_015.md`; independently read it back and compare all changes against latest main.
+3. Then finalize checkpoint as `DELIVERED_REVIEW_PENDING` and stop writes. Owner/coordinator controls merge/adoption.
 4. **Stop:** after three-path compare/readback, `DELIVERED_REVIEW_PENDING`; owner/coordinator handles PR/merge/adoption and any registry edit.
 
 **Last verified commit before this checkpoint:** `9931058e69ac3c6e7923841da87813de7f015f41`.  
-**Uncommitted research claimed:** none.  
+**Last verified research commit BEFORE this checkpoint update:** `d916dd0227b574aa81e0e1883e7b14b8b2ba1419` (D13 source ledger & 11 sections; explicit branch blob `a762a65f65b835f908137484a98919628bcd73d8`).
+**Uncommitted research claimed:** none; full dossier already committed and read back.  
 **Decision risks:** masks do not guarantee immunity; exact honor/bounty deltas and witness outcomes must be bounded, not guessed; official 100% categories need separate verification.
+
+## Durable research milestone (2026-10-17)
+
+| Milestone | Verified artifact | Validation |
+|---|---|---|
+| Initial checkpoint | `agents/checkpoints/atlas_law_015.md` on law branch; commit `7b00ab6ee6a2b75b72f6e102697872b2406ad5ad` | Verified existing checkpoint first committed before substantive work |
+| D13 dossier | `systems_atlas/dossiers/d13_law_honor_robbery_v0_1.md` @ `d916dd0227b574aa81e0e1883e7b14b8b2ba1419` | Explicit branch readback, blob `a762a65f65b835f908137484a98919628bcd73d8`, 11 sections, 20 claims, 17 source IDs, three examples |
+
+**Unresolved research disputes:** mission robberies counted toward official coach 100% (GameFAQs vs Gamer Guides), exact Honor point increments, civilian/official identification details, jail financial outcome, unintended crimes/self-defense. All classified in D13 claim and contradiction ledgers, not silently resolved.
+**Main comparison at milestone:** main `6f08f4ed60abde51831f8b72cf6c363aa49feb2d`, branch ahead two / behind one, changed files limited to D13 dossier and checkpoint. Neither other worker branches nor `save_intelligence/` touched.
