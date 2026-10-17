@@ -4,7 +4,7 @@
 **Chapter:** 3, Clemens Point · **Branch:** `agent/mission-clemens-038`  
 **Registered baseline:** `8f0e9e64cfb0bff79fbb0ebe2f6dc0ada8e2131d`  
 **Latest main at recovery:** `613193b9b1790cf7b6cba7ae4056e3a6d8f02a7b`  
-**Date:** 2026-10-17 UTC · **State:** `IN_PROGRESS` / researched chapter pack committed, review-pending handoff not yet finished.
+**Date:** 2026-10-17 UTC · **State:** `DELIVERED_REVIEW_PENDING` / research-only, NOT ADOPTED. Task closed to specialist writes.
 
 ## Exclusive three-file lease
 1. `mission_control/chapter_research/chapter_03_v0_1.md`
@@ -30,9 +30,17 @@
 - Diff after pack: branch **ahead 2/behind 1** latest main, two authorized files (checkpoint and chapter pack). No original GameGuide writes or user progress claims.
 - Source-level disputes remain about optional Honor closure, grouping of II vs intro I, ability to replay one-time rare rewards, cutscene timer reports and precise conditional gates. Details in pack X01–X14.
 
+## Final delivery verification — 2026-10-17
+
+- Handoff committed `7a6069d490cf0ec9e1719e4061e1f193146b691d`; exact-ref readback blob `7394dd7d7b5a6406743a1811563cc504ed066309` (10,498 chars). Pack blob unchanged `514d0ee4ffec3bcd52c2b5a34d417a5055653c43`.
+- Last independently verified branch commit before closing checkpoint: `7a6069d490cf0ec9e1719e4061e1f193146b691d`.
+- Branch compare after handoff: **ahead 4 / behind 1** current main. Exactly 3 modified paths: `mission_control/chapter_research/chapter_03_v0_1.md`, `agents/checkpoints/mission_clemens_038.md`, `agents/handoffs/2026-10-17_mission_clemens_038.md`. No unleased file.
+- Post-closure check must re-read all three exact branch blobs and verify terminal head. This file cannot self-reference its own commit SHA; completion response carries terminal SHA.
+- All original `L33TW0RLD/rdr2` materials and shared indexes untouched; no Gold, save or player mission progress inferred or recorded.
+
 ## Assignment, acceptance and next step
 Research all Chapter 3 story missions, chapter-sensitive optional medal stages, distinguish Stranger/non-medal content, precise independently checked Gold objectives with thresholds and credible conflicts. Build **per-mission** comprehensive chronological A→final actionable research phases (not adopted Field Guide) with story/branch prerequisites, High Honor decisions, missables and replay limitations. Read original `rdr2` mission index, Field Guide v1.1 and preflight **read-only**; cite actual URL/date/check and mark missing original dossiers `NEEDS_GAMEGUIDE_AUTHORING`. Do not equate shelf operation number with official Gold count or invent player progression.
 
-**Exact next permitted action:** Author and commit `agents/handoffs/2026-10-17_mission_clemens_038.md` final handoff with source/Gold/transfer QA and exact research file readback; do not modify original GameGuide.
+**Exact next permitted action:** **NONE for this closed task.** Coordinator reviews and separately authorizes integration; GameGuide alone may author canonical Chapter 3 dossiers and update player records on actual evidence.
 
-After handoff: verify its exact branch readback, close this checkpoint `DELIVERED_REVIEW_PENDING`, compare exact three leased paths, verify terminal SHA and **stop writes**. No self-adoption or successor assignment.
+Post-closure **read-only** verification of terminal head and exact three leased paths, then **STOP at `DELIVERED_REVIEW_PENDING`**. No future task without separate explicit activation. No self-adoption or successor assignment.
