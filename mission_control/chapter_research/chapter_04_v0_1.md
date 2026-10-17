@@ -689,6 +689,7 @@ The linked sources are **primary in the sense of directly inspected source docum
 | ID | Source / publisher and original date (when shown) | Scope / trust | Direct URL |
 |---|---|---|---|
 | S01 | **PowerPyx**, *Red Dead Redemption 2 Gold Medals Guide*, **2018-10-25** | Independent GUIDEs' complete 14 standard Chapter 4 criteria and 104/70 convention; replay all objectives same attempt | https://www.powerpyx.com/red-dead-redemption-2-gold-medals-guide/ |
+| S02 | **RDR2.org**, *Chapter 4 Missions and Gold Medals Guide* (four-page series), **2019-01-22**, updated **2023-01-09** | Independent GUIDE umbrella reference for S02a–S02d, general mission triggers/scene order; no separate evidence beyond pages | https://www.rdr2.org/guides/chapter-4-missions-and-gold-medals-guide/ |
 | S02a | **RDR2.org / Matt Gibbs**, *Chapter 4 Mission and Gold Guide* **2019-01-22**, updated **2023-01-09**, page 1 | First missions, Joys/Bronte/NoNo gates and practical stage order | https://www.rdr2.org/guides/chapter-4-missions-and-gold-medals-guide/ |
 | S02b | **RDR2.org**, same series **page 2**, update **2023-01-09** | Mary, Brother/Sister, Strauss V, Gilded party, poker riverboat | https://www.rdr2.org/guides/chapter-4-missions-and-gold-medals-guide/2/ |
 | S02c | **RDR2.org**, same series **page 3**, update **2023-01-09** | Camp assault, trolley, refinery | https://www.rdr2.org/guides/chapter-4-missions-and-gold-medals-guide/3/ |
