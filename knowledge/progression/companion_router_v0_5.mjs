@@ -234,3 +234,121 @@ export function validateCompanionRouteContract(graph,hierarchy,route){
    errors.push("Source reload requirement missing");
  return {passed:errors.length===0,errors,actions:act.size,atlas_links:Object.keys(route.atlas_crosslinks||{}).length,missions:Object.keys(m).length,read_only:true};
 }
+
+
+// Source-linked end-to-end navigation regression. Requires only explicitly supplied JSON fixtures.
+export function verifyCompanionJourneys(contracts,previousScenarios,journeySuite){
+ const errors=[],passing=[],rejected=[],guardErrors=[];
+ const states={...previousScenarios.states,...journeySuite.additional_states};
+ const check=(actual,expect,key)=>{
+   if(key==="unknown_not_in_observed")return expect.every(x=>!actual.observed.includes(x));
+   if(key==="warning_ids"||key==="child_ids"||key==="observed")return JSON.stringify(actual[key])===JSON.stringify(expect);
+   return JSON.stringify(actual[key])===JSON.stringify(expect);
+ };
+ const observedView=output=>({
+   screen:output.screen.type,
+   focus:output.screen.node_id||output.screen.mission_id||null,
+   depth:output.stack_depth,
+   child_ids:output.content.children?.map(x=>x.id)||null,
+   observed:(output.content.observed_missions||output.content.observed_story_choices||[]).map(x=>x.id),
+   source_owner:output.source_request?.owner??null,
+   source_path:output.source_request?.path??null,
+   source_load:output.source_request?.contents_loaded??false,
+   source_reload:output.source_request?.needs_full_reload_on_return??false,
+   checkboxes_restored:output.source_request?.checklist_restored??false,
+   full_guide_rendered:output.content.full_guide_rendered??false,
+   atlas_status:output.source_request?.research_status??null,
+   reference_class:output.screen.launch_class??null,
+   may_start:output.content.may_start_current_story??null,
+   project_stage:output.content.project?.stage??null,
+   track_availability:output.content.selected_track?.availability??null,
+   warning_ids:output.warnings_never_hidden,
+   writes:output.writes_performed,
+   no_source:output.source_request===null
+ });
+ let totalSteps=0;
+ for(const journey of journeySuite.journeys||[]){
+   let scenario=states[journey.state],output;
+   try{output=createSyntheticCompanionSession(scenario,contracts,journey.options||{});}
+   catch(e){errors.push({id:journey.id,reason:"Setup: "+String(e)});continue;}
+   const localErrors=[];
+   for(let i=0;i<journey.steps.length;i++){
+     const step=journey.steps[i],expected=step.expect||{};
+     try{
+       if(step.transition_state){
+         scenario=states[step.transition_state];
+         output=transitionSyntheticCompanion(output.session,scenario,contracts,journey.options||{});
+       }else output=navigateSyntheticCompanion(output.session,step.action,scenario,contracts,journey.options||{});
+       totalSteps++;
+       const actual=observedView(output);
+       for(const [key,value] of Object.entries(expected)){
+         if(!check(actual,value,key))localErrors.push({
+           step:i+1,key,expected:value,actual:actual[key]
+         });
+       }
+       if(output.actual_game_state_connected!==false||output.writes_performed!==0||
+         output.gameplay_progress_changed!==false) localErrors.push({step:i+1,reason:"Unauthorized game-state effect"});
+       if(output.source_request&&output.source_request.contents_loaded!==false)
+         localErrors.push({step:i+1,reason:"Source declared fetched without actual read"});
+       if(output.screen.type==="mission_reference"&&
+          (output.content.full_guide_rendered!==false||!output.source_request?.render_requirement.startsWith("FULL_ORIGINAL")))
+         localErrors.push({step:i+1,reason:"Original complete Field Guide contract lost"});
+       if(output.screen.type==="atlas_reference"&&
+          (output.source_request?.source_research_adopted!==false||output.source_request?.research_status!=="RESEARCHED_REVIEW_PENDING"))
+         localErrors.push({step:i+1,reason:"Atlas research improperly promoted"});
+     }catch(e){localErrors.push({step:i+1,reason:String(e)});break;}
+   }
+   if(localErrors.length)errors.push({id:journey.id,failures:localErrors});
+   else passing.push(journey.id);
+ }
+ for(const bad of journeySuite.invalid_actions||[]){
+   const state=JSON.parse(JSON.stringify(states[bad.state]||{}));
+   let output;
+   try{
+     output=createSyntheticCompanionSession(state,contracts);
+     for(const action of bad.pre_actions||[])output=navigateSyntheticCompanion(output.session,action,state,contracts);
+   }catch(e){guardErrors.push({id:bad.id,reason:"Setup failed: "+String(e)});continue;}
+   let session=output.session;
+   switch(bad.mutation){
+     case "source_wrong":state.source="REAL_GAME";break;
+     case "synthetic_false":state.synthetic=false;break;
+     case "chapter_wrong":state.chapter="03";break;
+     case "session_kind_wrong":session={...session,kind:"LIVE_GAME_SESSION"};break;
+     case "session_forged_mission":session={...session,screen:{type:"mission_reference",mission_id:"m999",launch_class:"observed_marker"}};break;
+     case "deep_nav":session={...session,stack:Array.from({length:9},()=>({type:"home"}))};break;
+     case undefined:break;
+     default:guardErrors.push({id:bad.id,reason:"Unknown mutation"});continue;
+   }
+   try{
+     navigateSyntheticCompanion(session,bad.action,state,contracts);
+     guardErrors.push({id:bad.id,reason:"Invalid input was not rejected"});
+   }catch(e){
+     if(String(e).includes(bad.contains))rejected.push(bad.id);
+     else guardErrors.push({id:bad.id,reason:"Unexpected exception: "+String(e)});
+   }
+ }
+ return {passed:errors.length===0&&guardErrors.length===0,
+   journey_cases:(journeySuite.journeys||[]).length,journeys_passed:passing.length,steps_exercised:totalSteps,
+   invalid_cases:(journeySuite.invalid_actions||[]).length,rejected_invalid:rejected.length,
+   failures:errors,guard_failures:guardErrors,
+   source:"SIMULATION_ONLY",actual_game_state_connected:false,writes_performed:0};
+}
+
+// CLI consumes only static JSON fixture/contract inputs in the same isolated directory.
+if(process.argv[1]&&fileURLToPath(import.meta.url)===process.argv[1]){
+ const dir=dirname(fileURLToPath(import.meta.url));
+ const load=name=>JSON.parse(readFileSync(join(dir,name),"utf8"));
+ const contracts={
+   graph:load("chapter_02_graph_v0_1.json"),
+   hierarchy:load("hierarchy_v0_2.json"),
+   planner_policy:load("planner_policy_v0_3.json"),
+   lifecycle_policy:load("opportunity_policy_v0_4.json"),
+   route_contract:load("companion_route_contract_v0_5.json")
+ };
+ const previous=load("planner_scenarios_v0_3.json");
+ const journeys=load("companion_journeys_v0_5.json");
+ const integrity=validateCompanionRouteContract(contracts.graph,contracts.hierarchy,contracts.route_contract);
+ const tests=verifyCompanionJourneys(contracts,previous,journeys);
+ console.log(JSON.stringify({integrity,tests},null,2));
+ if(!integrity.passed||!tests.passed)process.exitCode=1;
+}
