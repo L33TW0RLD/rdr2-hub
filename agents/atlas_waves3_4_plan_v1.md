@@ -1,6 +1,6 @@
 # Systems Atlas — Final Two Research Waves (Planning Only)
 
-**Owner decision:** 2026-10-17 · **Status:** Wave 3 DELIVERED/INTEGRATED as REVIEW PENDING research (9 dossiers); Wave 4 remains PLANNED (8 dossiers)
+**Owner decision:** 2026-10-17 · **Status:** Wave 3 DELIVERED/INTEGRATED as REVIEW PENDING research (9 dossiers); Wave 4 is REGISTERED (8 distinct task issues/branches), but no specialist automatically launched
 **Repository:** `L33TW0RLD/rdr2-hub`
 **Purpose:** Complete the indexed **D01–D28** Systems Atlas dossier research backlog without inflating the unratified taxonomy or creating false player-state authority.
 
@@ -11,10 +11,10 @@
 | Wave 1 | D01–D06 | **6** | MERGED research, content `RESEARCHED — REVIEW PENDING` |
 | Wave 2 | D08, D11, D12, D13, D15 | **5** | Approved for coordinator reference integration; original six-task assignment amended |
 | **Wave 3** | **D09**, D10, D16, D17, D18, D20, D22, D24, D27 | **9** | **MERGED** research, contents still review-pending / not adopted |
-| **Wave 4** | D07, D14, D19, D21, D23, D25, D26, D28 | **8** | Planned, not launched |
+| **Wave 4** | D07, D14, D19, D21, D23, D25, D26, D28 | **8** | **REGISTERED:** eight independent task issues/branches, not automatically running |
 | **Total** | **D01–D28** | **28** | Research-production coverage target, not universal mechanic certification |
 
-**Wave 3 exact task IDs, issue numbers, branch names and exclusive leases are now authoritative in [Wave 3 coordination](atlas_parallel_wave3_v1.md).** Wave 4 remains unregistered. The D09 task is unchanged from Issue #19.
+**Wave 3 exact task IDs, issue numbers, branch names and exclusive leases are now authoritative in [Wave 3 coordination](atlas_parallel_wave3_v1.md).** Wave 4 is now [registered with exact issue/branch/file leases](atlas_parallel_wave4_v1.md), but its worker chats are NOT automatically launched. The D09 task is unchanged from Issue #19.
 
 ## Wave 3 — Nine dossiers
 
