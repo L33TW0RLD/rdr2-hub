@@ -163,16 +163,20 @@ Avoid a permanent six-column cockpit: the default screen remains lightweight, wi
 - Missing marker `!=` mission completed or lost. Full original dossier `!=` fictional medal earned. Opening a hunting lesson `!=` acquired pelt.
 - Project stages can update when a new **explicit hypothetical world observation** is supplied; navigation click alone cannot advance them.
 
+### Post-chapter location integrity
+
+A Chapter 2 reference must not masquerade as an always-current Horseshoe Overlook location. If the fictional scenario explicitly marks `m024` completed, the header identifies **Horseshoe Overlook as the previous camp** and the present location as unknown; the L1 home suppresses any lingering camp-arrival prompts and outings, even if older source-rule snapshots still contain an historical `chapter2_open` flag. This is a display safety adapter, **not** proof of Chapter 3 progress or a permanent world-state migration.
+
 ## 8. Tested artifacts and limitations
 
 | Added file | Role |
 |---|---|
 | [companion_route_contract_v0_5.json](companion_route_contract_v0_5.json) | Eight semantic actions, nine source-linked Atlas crosslinks, source reload and safe return rules |
 | [companion_router_v0_5.mjs](companion_router_v0_5.mjs) | `createSyntheticCompanionSession`, `navigateSyntheticCompanion`, `transitionSyntheticCompanion`, `validateCompanionRouteContract`, `verifyCompanionJourneys` |
-| [companion_journeys_v0_5.json](companion_journeys_v0_5.json) | Twelve cross-view journeys, 43 navigation transitions, 16 rejected invalid-action cases |
+| [companion_journeys_v0_5.json](companion_journeys_v0_5.json) | Thirteen cross-view journeys, 44 navigation transitions, 16 rejected invalid-action cases |
 | [prerequisite_evidence_update_v0_5.md](prerequisite_evidence_update_v0_5.md) | Independent source comparison for seven contested Chapter 2 prerequisite/expiry issues |
 
-**Preliminary readback:** actual committed JavaScript function bodies executed in JS sandbox against exact committed JSON fixtures: **12/12 journeys (43 steps) and 16/16 rejected invalid actions**, route/source integrity PASS (18 original Chapter 2 references, eight actions, nine Atlas links). This validates **envelopes and navigation semantics only**, not actual remote document loading or a real ChatGPT-native UI.
+**Preliminary readback:** actual committed JavaScript function bodies executed in JS sandbox against exact committed JSON fixtures: **13/13 journeys (44 steps) and 16/16 rejected invalid actions**, route/source integrity PASS (18 original Chapter 2 references, eight actions, nine Atlas links). This validates **envelopes and navigation semantics only**, not actual remote document loading or a real ChatGPT-native UI.
 
 ### Explicit non-goals
 
