@@ -190,3 +190,35 @@ This is a **design-only** amendment. Segment popover behavior and accessibility 
 - Mission Control remains the first main container; the slim medal rail is **a chapter-wide historical mission index**, not the list of currently available mission markers.
 
 **Unchanged:** Chapter II only, 3 Gold / 1 Silver / 0 Bronze / 4 of 18 recorded per original GameGuide, other fourteen neutral. No save or gameplay writes.
+
+
+---
+
+## 12. Owner decision v0.5 — map-marker dots and bronze tint (2026-10-17)
+
+**Keep the owner-approved v0.4 header exactly:** `Horseshoe Overlook`, `Chapter II`, the best-medal summary, the 18-segment thin rail, lightweight **hover for title** and **click for full original Field Guide**. Its tooltip appearance and spacing were positively reviewed. No dropdown or persistent detail panel returns.
+
+**Only two additions:**
+
+1. **Mission availability as a separate second micro-mark:** a discrete ~4–5px neutral/bright dot **directly below the corresponding mission's existing medal segment** when that mission's marker is actually observed on the player's in-game map. Align one dot to the *center of each exact segment's column*. Empty columns have **no dot**. The dot is not a second mission list, a medal type, a completion mark, a progress step, nor an interactable secondary target. The parent segment's hover title and click→full Field Guide behavior remains unchanged.
+2. **Bronze is actually bronze visually:** the `Bronze` summary typography uses the already-proposed warm muted bronze `#B47D59` and any **best-recorded BRONZE** segment uses that hue. Current authoritative Chapter 2 **best medals** contain zero Bronze (the original Bronze earned on 021 was later superseded by Gold). Do not invent a Bronze segment just to demonstrate the color.
+
+### Evidence and states for dots
+
+| Map-marker evidence | Dot state | Legitimate meaning |
+|---|---|---|
+| Explicit currently observed Chapter 2 mission marker from current real player report / authoritative verified observation | **Visible light neutral dot** | That specific mission marker was observed available at the supplied checkpoint |
+| Explicit synthetic fixture marker, within clearly labelled **design/demo mode only** | **Visible light neutral dot** | Simulated availability, never actual current game |
+| No current marker observation / marker not checked | **No dots**, not a completed or unavailable verdict | Live map availability is **unknown** |
+| Historical completed mission or medal-only ledger record | No dot unless a distinct current observation exists | Past Gold/Silver/Bronze is **not** proof of a currently available Story marker |
+| Previously observed but outdated checkpoint | Do not automatically retain as currently visible | Must revalidate on relevant game-state change or new observation |
+
+**Visual geometry:** rail remains ~4px high, segmented with narrow 2–3px gap; dot row sits close beneath it (approx. 5–7px between centerlines/visual marks), no legend, instructions, dropdown or under-rail inspector. Both marks share a generously padded **one-button** hit area per mission. Dots should have a neutral ivory/light color (not gold), so Gold achievement and availability are not visually conflated.
+
+**Accessibility:** the segment's accessible label can state title and current marker observation **separately from best medal**. In contrast, the *visible hover tooltip remains title-only*, per owner instruction. No information can rely solely on hover or color: confirmed-marker mission rows in Mission Control provide text equivalents; unverified map status is explicitly explained in that container when needed.
+
+**Current medal record:** 007 Gold; 008 Gold; 010 Silver; 021 Gold; fourteen unknown. Summary **3 Gold / 1 Silver / 0 Bronze / 4 of 18 recorded** unchanged. Current mission markers have **not been read from the map**; design dot examples must be labelled fictional/illustrative outside the header rather than representing actual available missions.
+
+**Presentation goal:** the secondary marks are a quiet annotation of the rail, **not a new bulky information row**. Do not enlarge the header or insert more chrome. User-approved hover and action are preserved exactly.
+
+Status: DESIGN SPECIFIED; dot positioning, hover integration and mobile legibility require client click-through.
