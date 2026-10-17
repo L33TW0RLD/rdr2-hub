@@ -79,3 +79,98 @@
 **Train robbery:** a ticket grants travel, not crime. A passenger hold-up and actual interaction/robbed item matter more than the title `Train Robbery` in an unrelated Story mission. Leaving a train while Wanted or looting passengers may generate multiple legal events, but Wanted resolution is **D13**, not a criterion in the 100% category itself [E15][E09][R01].
 
 **Honour, mission Gold, Bandit:** A robbery may reduce Honor or trigger witnesses/law, but **those are separate observations**: moral judgment can arise without a personally identified Wanted flag; a persistent regional bounty may remain when search ends. `Good, Honest, Snake Oil` has **its own Gold objectives** (rescue at cliff, tie within **1:15**, return within **1:30**) as a **mission-specific** contract, not poster count or robbery criterion; original GameGuide owns that Field Guide and saved medal evidence [E05][R05]. **Bandit ranks are sequential**, and D27 defines the counts: rank 2/4 generic coaches/fence, rank 3 shop registers, rank 5 personal regional **$250 wanted bounty**, rank 10 five train robberies. One official robbery checkbox does not prove any active Bandit rank increment, and some ranks may be locked at that time [E14][R06].
+
+
+## 5. Gates, benefits, costs, repeatability and preservation
+
+### Bounty jobs are finite authored activities
+
+The **Story Mode** poster catalogue contains a finite pool of named characters rather than a procedural recurring job board [E07][E03]. Source counts differ: RDR2.org describes **fourteen** named opportunities [E03], while IGN calls Benedict the first of "ten bounty hunter missions" [E18] and Red Dead Wiki counts poster work, special scripted captures and PC-added posters separately [E07]. **Exact denominator depends on scope, edition, platform and whether scripted missions are counted.** There is no need to resolve that denominator for **OFFICIAL_100**, which requests **five credited** bounty events. Nor is "all five" a claim that the player's last poster vanished permanently.
+
+A source-verified subset is available in Chapter 2 *after* the sheriff introduction; posters can appear in Valentine, Strawberry and Saint Denis depending on active story status [E03][E06]. Some are alive-only, e.g. Ellie Anne Swan and Joshua Brown (check actual warrant); others explicitly allow dead or alive (e.g. Lindsey Wofford) [E03][E07][E19]. Individual catches are **not generally repeatable after completion**; a visible board icon reappearing must be examined before treating it as an unsolved new job. In contrast, **Red Dead Online** may regenerate bounty contracts, and **RDR1** has different repeatability, reward and Honor rules; both are out of scope [E07].
+
+**Benefits:** authorized bounty work can award a posted sum and sometimes positive Honor if the game's decision matches its terms; access to additional named poster content gives a path toward the five-bounty official counter. A job does not prove an outlaw chase was consequence-free, but its authorized delivery is not automatically a criminal robbery. Most precise target payout and any live/dead premium vary by job/source; inspect poster and actual sheriff reward [E03][E07][E19].
+
+**Costs and risk:** time spent traveling/locating target; ammunition/tonic/horse risk; escorts that attack; accidental target death (potential failure for **alive-only**), fall/hazard during chase, interference from a player's own Wanted state, and losing unique dialogue/scene choices. If a poster seems missing after story progression, verify whether it was previously completed, whether introduction/personal-law conditions are met, and chapter/edition scope before claiming a missable event. Exact restoration after an abandoned bounty is **UNKNOWN** without that target's own source/game feedback. No fixed "bounty expires after N in-game days" rule is supported.
+
+### Robbery classes have different cost/risk envelopes
+
+- **Coach:** tip price often listed as **$2**, fencing proceeds variable, transport/guard and fragile cargo may complicate the outcome. The task target may be a secured coach; ordinary theft is easier to find but not reliably the **special** category checkbox [E13].
+- **Home:** finite stash/owner encounter; possible personal exhaustive unique weapons, clues and dialogue. `Breaking and Entering` is four home stashes for **its separate achievement**, with eligibility disputes for exactly which visit counted. Do not force a one-time scene merely for the official **one** Home checkbox [E11].
+- **Shop:** ordinary till may provide money and satisfy **Bandit 3**, yet specialist guides say side-business robbery is safest for **official Shop**. Side rooms can contain unique items, and shop disruption may lock normal shopping until later [E10][E14].
+- **Train:** passenger robbery can be repeatable with different trains, but carries significant witness/law risk and can impose a regional fine greater than loot; it has separate **Bandit 10** sequential requirements. No guaranteed route, profit, or invisibility provided [E15][E09][R01].
+
+**High Honor and immersion:** these objectives can be deferred voluntarily. A player who wants minimal unlawful conduct may complete carefully selected category events later when a relevant story/social context makes them desirable. Completing official 100% does involve all four robbery types and Bandit challenges eventually, but does **not** mean a Chapter 2 first-arrival must immediately raid civilians or build a personal Wanted bounty. D13 controls law/Honor nuance [R01]; no robbery is automatically honor-neutral because the target is disliked.
+
+**Edition story access:** Edition-exclusive bank robbery/bonus content in later chapters exists [E23], but **BANK is NOT a fifth official 100% robbery type**. Some later poster targets or bonus posts differ by platform and updates; the default is not to declare all names/frequencies fixed across every edition. Platform-specific differences remain T2 and source-scoped. PC keyboard/controller contextual prompts must be read live, not inferred from 2018 console screenshots.
+
+## 6. Exact completion-universe crosswalk and proof
+
+| Goal family | Exact rule | Required observation | Explicit non-equivalence |
+|---|---|---|---|
+| `OFFICIAL_100` / Best in the West / Missions & Events | **5 Bounties** completed [E01][E02][E04] | `Pause > Progress > Total Completion > Missions and Events > Bounties` value/check | Merely seeing 5 posters; Arthur personally owing $5/$250; Gold medal on first sheriff mission; hunting request posters |
+| `OFFICIAL_100` / Miscellaneous | **1 each** `Coach Robbery`, `Home Robbery`, `Shop Robbery`, `Train Robbery` [E01][E02][E04] | Four individual tick boxes under **Total Completion > Miscellaneous > Robberies**, with screenshot/current in-game proof | Any 4 robberies of same type, 4 successful story heists, 4 Bandit tasks, 4 unverified wallet increases |
+| `ACHIEVEMENT` / Breaking and Entering | Recover **4 homestead stashes** [E11][E24] | Trophy/account result and named stash receipts; some platform trophy recognition **DISPUTED** | Just 1 official Home checkbox; 4 cabins explored; arbitrary unlocked drawers |
+| `ACHIEVEMENT` / Gold Rush | **70 Gold** story mission medals, separate from all-eligible personal goal [R05] | `Progress > Story` each medal / account achievement | `Good, Honest, Snake Oil` payout or poster credit; score of 4 robberies |
+| `ALL_GOLD` personal | Obtain Gold on every actually medal-eligible Story entry desired; individual Story mission objectives defined by GameGuide [R05] | Named Story mission medal readback, not only a completed planning checklist | Bounty side job automatically having a Gold result; random train theft having mission time requirements |
+| `CHALLENGE` / Bandit | Ten sequential ranks including coach/shops/train, personal $250 state bounty [E14][R06] | `Progress > Challenges > Bandit > active rank` **before and after** act | Official four-type checkbox magically advancing inactive Bandit rank; personal bounty counting as bounty-hunter work |
+| `OPTIONAL_EXHAUSTIVE` | Every edition-possible named poster, applicable side-business, home stash, distinctive coach raid/scene, scripted companion operation [E03][E11][E22] | Individual object/marker/player record independently confirmed | Required for official 100%; guaranteed all finite variants simultaneously possible |
+| `CONVENIENCE/IMMERSION` | Rob for loot, perform lawful apprehensions, spare targets/engage with optional scenes [E03][E09] | Actual in-game feedback only; no achievement inferred | A mask eliminating all witnesses, unobserved crime being Honor neutral, any Fence sale equal to Coach checkbox |
+
+**Poster confusion:** Hunting Requests from station posters require delivering **perfect animal carcasses**, and are a **different Collectibles task**, not 5 wanted criminal bounties [E01][E25]. D20 owns detailed collection hand-ins. The GameGuide must not combine `Bounty Poster` and `Hunting Request Poster` simply because both are paper notices on walls.
+
+**Mission-specific Gold:** Introductory `Good, Honest, Snake Oil` has three particular Gold objectives (protect cliff fall, hogtie within 1:15, deliver within 1:30); it is a replay/medal rule owned by original GameGuide/D24, not the rule for returning every free-roam wanted poster [E05][R05]. Do not use a Story-menu replay to claim original-world bounty cash or new poster credit, and do not assert all Story robberies qualify for miscellaneous type boxes. If progress uncertain, read exact **two menus** separately.
+
+## 7. Provisional taxonomy links and research-grade predicates
+
+These are **illustrative typed research edges**, not a change to the protected taxonomy or a runnable save-state classifier. D13 already references S20.M01–M05 for generic law/robbery effects; **D19 owns subtype counting and poster bounty criteria**. Shared leaf names need coordinator review before ADOPTED status. No unsupported hard `REQUIRES` relationship drives recommendations.
+
+| Proposed source | Typed relation | Target (read-only, provisional) | Evidence / caveat |
+|---|---|---|---|
+| `S19.M01` poster bounty access | `REQUIRES` candidate, not adopted | `EVENT(Good_Honest_Snake_Oil_completed)` | Standard story route to regular wanted posters [E03][E07] |
+| `S19.M02` locate target | `INTERACTS_WITH` | `S07.M01` map/travel D11 | Search zone/mission clue, not open-world compendium entry |
+| `S19.M03` alive delivery | `INTERACTS_WITH` | `S04.M04` lasso/restraint D13 | Lasso/hogtie standard, target-specific alive-only warrant [E03][R01] |
+| `S19.M04` bounty jobs | `CONTRIBUTES_TO` | `S29.M01` official `Bounties 5` | Must verify actual count; intro disputed [E01][E18] |
+| `S19.M01–M04` | `CONFLICTS_WITH` (semantic only) | `S05.M04` regional *personal* fine D13 | One is income/work, other legal liability; **not** mutually exclusive gameplay flags |
+| `S20.M01` shop holdup / special business | `CONTRIBUTES_TO` | `S29.M01` official shop category | Source-specific hidden-business requirement contested for arbitrary till [E10][R03] |
+| `S20.M03` homestead stash | `CONTRIBUTES_TO` | `S29.M01` official home category and separately `CACH.BREAKING_ENTERING` | Four stash trophy, one official Home; mission counting disputed [E11][E21] |
+| `S20.M02` coach/train | `CONTRIBUTES_TO` | `S29.M01` official coach/train categories | Tip-based coach strongest proof; ordinary train passenger interaction [E13][E15] |
+| `S20.M04` stolen vehicle sell | `INTERACTS_WITH` | `S17.M05` Fence and `S07.M03` coach travel | Fence sale ≠ coach-type credit; D11 vehicle role, D06 inventory |
+| `S20.M05` active Bandit challenge | `CONTRIBUTES_TO` | `S26.M01` D27 rank | Each stage sequential; no retroactive credit [E14][R06] |
+| `S05.M01–04` legal/moral | `INTERACTS_WITH` | `S19` target transport / `S20` theft | Authorized capture and criminal holdup have different witness/Honor mechanics [R01] |
+| `S30.M02/M03` mission Gold/replay | `INTERACTS_WITH` | Intro story optional mission and separate robbery story jobs | Score and original-world state separate; D24 primary [R05] |
+
+**Taxonomy integrity note:** Because `CONFLICTS_WITH` normally means mutually exclusive choices in the draft schema, the `S19` vs personal fine row above is **ONLY conceptual contrast**; consumers should encode it as `INTERACTS_WITH` or explicitly distinct record kinds if schema owner later ratifies. Do not promote the illustrated `CONFLICTS_WITH` edge mechanically. Provisional references to `S29.M01`, `S26.M01` and `CACH.*` are cross-dossier addresses, not implemented canonical criterion records.
+
+## 8. Claim-level source ledger (checked 2026-10-17)
+
+**Evidence statuses:** `CORROBORATED` = at least two independent credible specialist guides; `SINGLE_SOURCE` = one identifiable source; `DISPUTED` = competing source-specific rules; `UNKNOWN` = unavailable proof. **HIGH/MEDIUM/LOW** is independent source confidence, NOT whether the user did something. Guides from 2018–2024 reflect editions/patches covered by those articles; no direct Rockstar scripted condition, save decoding or tested user game UI was provided. Source class register follows in §8b.
+
+| Claim ID | Precise bounded proposition | Sources | Epistemic / confidence |
+|---|---|---|---|
+| D19-C01 | Official five bounty jobs vs four distinct robbery-class 100% rows | E01, E02, E04, R03 | **CORROBORATED / HIGH** |
+| D19-C02 | Intro `Good, Honest, Snake Oil` opens following `Polite Society` Ch2 | E05, E17, E06 | **CORROBORATED / HIGH** |
+| D19-C03 | Completing introductory job normally unlocks later named poster work | E03, E06, E07 | **CORROBORATED / HIGH** |
+| D19-C04 | Poster inspect → named target search → capture/transport/deliver | E03, E06, E07 | **CORROBORATED / HIGH** |
+| D19-C05 | Alive-only warrants require alive and can fail on target death | E03, E07, E19 | **CORROBORATED / HIGH** |
+| D19-C06 | For dead-or-alive targets, RDR2.org says alive more cash but Gamer Guides/Wiki same cash | E03 vs E07, E19 | **DISPUTED / HIGH** guide conflict, payout magnitude UNKNOWN |
+| D19-C07 | RDR2 Story named posters finite, not endless Online board | E07, E03 | **CORROBORATED / HIGH** for finitude; total target denominator DISPUTED |
+| D19-C08 | Exact poster pool `10` vs `14` vs extra scripted/PC versions | E18 vs E03, E07 | **DISPUTED / LOW exact denominator**; five threshold unaffected |
+| D19-C09 | Poster availability target-specific and possibly branch-dependent | E03, E06, E07 | **CORROBORATED / HIGH** broad; exact target last chance conditional |
+| D19-C10 | Arthur's state-specific personal bounty differs from lawful target poster | E08, E16, R01 | **CORROBORATED / HIGH** |
+| D19-C11 | Standard shop special side-business reliable for official Shop; ordinary till holdup not reliably qualifying | E10, E04, E22 | **CORROBORATED / HIGH** specialized route; **DISPUTED** broader eligibility |
+| D19-C12 | Coach clerk tip job post-`Friends in Very Low Places` is reliable official Coach route | E13, E04, E22 | **CORROBORATED / HIGH** |
+| D19-C13 | Fence sale/random coach theft can satisfy Bandit but not reliably official coach checkbox | E13 vs E14, E20 | **CORROBORATED / HIGH** distinction; edge cases untested |
+| D19-C14 | Home class via actual homestead stash; Breaking and Entering requires four stashes, some trophy recognition inconsistent | E11, E12, E21 | **CORROBORATED / HIGH** four-stash goal, tracker exceptions MEDIUM |
+| D19-C15 | Train passengers hold-up generally qualifies for official train class | E15, E04, E09 | **CORROBORATED / HIGH** |
+| D19-C16 | Some scripted coach robbery is called eligible by GameFAQs while Gamer Guides says mission robberies ineligible | E22 vs E04 | **DISPUTED / HIGH** sources conflict |
+| D19-C17 | Specific Chapter 2 Javier homestead camp invitation may serve different goal contracts, no universal triple count | E11, E21, R02 | **CORROBORATED** separate goal definitions / **DISPUTED** overlap |
+| D19-C18 | Bandit ranks sequential and have distinct shop/coach/own $250 fine/train targets | E14, R06 | **CORROBORATED / HIGH** |
+| D19-C19 | A story Gold result is not official robbery completion or original-world money credit | E05, E01, R05 | **CORROBORATED / HIGH** |
+| D19-C20 | `Good, Honest, Snake Oil` time cutoff Chapter 2 or later is source-disputed | R02, E06, E17 | **DISPUTED / MEDIUM** exact cutoff |
+| D19-C21 | One verified home, shop, coach, train class each; not all variants required | E01, E02, E22 | **CORROBORATED / HIGH** |
+| D19-C22 | Store crime, witness detection, Honor and wanted response are distinct event surfaces | R01, E09, E16 | **CORROBORATED / HIGH** |
+| D19-C23 | Specific poster payout and credit on target death cannot be assumed from RDR1 rule | E07, E03, E19 | **DISPUTED / HIGH** cross-game confusion |
+| D19-C24 | Hunting Request station notice is not wanted-criminal poster bounty | E25, E01 | **CORROBORATED / HIGH** |
+
+**Claim verification requirement:** Each row is a general Story Mode mechanics proposition; none has `CONFIRMED_IN_GAME_FOR_RULE` without independently reproduced game evidence. `R` references are **review-pending** repo research, not independent corroborating game tests.
