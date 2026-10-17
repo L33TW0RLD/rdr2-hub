@@ -400,3 +400,40 @@ Supersedes v0.8 casing and v0.7/v0.6 suggestions to hide future gameplay possibi
 **Presentation rule:** render `New Possibilities` in title case, not `New possibilities`, `Introduces`, or `Unlocked`. Any earlier opposite instructions are historical testing ideas, not current accepted design.
 
 **Source/action invariants:** click whole row to reload complete original Field Guide; never record save, medal, mission completion or mechanic ownership. No changes to the locked 18-slot Chapter II header, availability dots or Home.
+
+---
+
+## 18. Owner microtype lock + Adventure container routing v1.0
+
+**Mission Control typography supersession:** exact visible small bold uppercase caption `NEW POSSIBILITIES` beside a warm-gold sparkle. Text after the separator (e.g. `Fishing`, `Stables & horse care`) retains its ordinary font, case and visual weight. This replaces §17's title-case display detail. The compact mission-list layout, urgency label, full-Guide action, and Chapter II header remain **OWNER LOCKED**.
+
+### Adventure section after Mission Control — A/B pending
+
+Source contracts:
+- `free_roam/content/projects/camp_development_v0_1.md` is **conditional, DRAFT**, not a recorded chosen/active player project. `project_id=FR.PROJECT.CAMP`.
+- `free_roam/content/outings/heartlands_hunting_recon_v0_1.md` is **conditional, DRAFT**, not a player-confirmed outing or loot acquisition. `outing_id=FR.OUTING.HEARTLANDS_HUNT`.
+- `free_roam/content/intermissions/chapter_02_open_window_v0_1.md` controls conditional intermission framing, not a guaranteed safe free-roam window.
+- Original `L33TW0RLD/rdr2/campaign/current_state.md` exclusively anchors live player facts. Actual present control (free roaming, camp only, mission/chained, or unknown), active risk and exact location must be rechecked. Never invent tool, horse, horse brush, Ledger or money ownership.
+
+Proposed visible placement:
+```text
+[OWNER LOCKED HEADER + MISSION CONTROL]
+Adventure
+  Project / Outing candidate(s)
+  Discovery is permitted, not mapped in advance
+```
+
+**A:** Flat two-row section: PROJECT / `Develop the Gang's Camp` and OUTING / `Heartlands Hunting Reconnaissance`, with short conditional first-step text and full-area source-backed action. Equal visual weight; no fake project milestones/checkmarks.
+
+**B:** One subdued contextual focus (conditional project or outing based on explicit player interest), plus a single small alternative row; does not silently convert an example into "your active project."
+
+Actions must be real direct ChatGPT follow-up turns:
+- PROJECT row → reread current Hub Project document, latest original GameGuide campaign, gate-check actual Ledger and camp tools, present an optional smallest-next-step **only if relevant**.
+- OUTING row → reread current Hub Outing document and canonical GameGuide control/unlock sources; only plan a coherent ride if player currently has free-roam control; otherwise ask one essential observation.
+- "Explore a mechanic" uses the owning Systems Atlas dossier with review-pending provenance; it is **not** an automatic unlock.
+
+**Mode handling:** In a fictional free-roam rehearsal, both options may render as possible; in true UNKNOWN-control mode, explicitly qualify them and show one useful `Check roaming status` action; if a *specific evidenced active* skippable Story event is in progress, never foreground an optional outing above a mission-safety action.
+
+**Separate design-only toggles** may compare A/B and the fictional/unknown/urgent cases. They cannot grant gameplay capabilities, establish currently visible markers, or persist between ChatGPT turns. No extra global header tabs or a second campaign database.
+
+**State:** Adventure A/B **UNSELECTED** until user reaction. Header and Mission Control design locks preserved.
