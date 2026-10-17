@@ -349,3 +349,17 @@ A mission with a material source-backed upcoming gameplay mechanic may display o
 **Visual priority:** mission title first; understated character name; one warm-gold star + short New possibilities line. The gold star is *not a Gold medal*. The header medal rail alone owns medal results. No header adjustments.
 
 **Status:** design selected by owner. Client click and mobile acceptance still pending.
+
+
+---
+
+## 16. Owner LOCK v0.9 — title-case New Possibilities and simultaneous urgency (2026-10-18)
+
+The owner finalized the compact Mission Control A1 treatment with two corrections. This section **supersedes any earlier language recommending that active urgency suppress inline feature introductions**.
+
+1. **Exact displayed label: `New Possibilities`** (both words capitalized). Example: gold sparkles + `New Possibilities · Stables & horse care`. The warm-gold sparkles remain the only decorative accent; no detached spotlight, extra card or heavy badge.
+2. **Urgency and feature introductions coexist.** When John's oil-wagon assignment is actively time-sensitive, attach a concise `Time-sensitive` label to John's row; **retain** each other available mission's source-verified `New Possibilities` line (e.g., Hosea still previews stables). Risk presentation should not hide unrelated information about valid player choices.
+
+Neither indicator changes story prerequisites, in-game availability, medal state, mission ordering or priority. Future feature text is hidden **only for its own evidence reasons** (mission not observed, feature already accessible, unsupported source claim, or no substantive introduction)—never merely because a different row is urgent. Same full original Field Guide row-click action.
+
+**LOCKED:** Chapter II medal/header rail and dot lane, hover titles, Home, compact mission rows, gold stars, title-case `New Possibilities` and simultaneous inline urgency labels. No original GameGuide, real campaign, progress engine or source admission changes. Client device acceptance still pending.
