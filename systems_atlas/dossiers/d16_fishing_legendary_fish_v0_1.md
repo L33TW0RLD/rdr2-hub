@@ -204,6 +204,8 @@ External sources checked **2026-10-17**, unless explicitly stated otherwise; ori
 - **[R02] Legacy Chapter 2 unlock research**, *Chapter 2 Unlock & Dependency Map U06*, **RESEARCHED — REVIEW PENDING**, accessed 2026-10-17; not actual player proof. https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/unlock_and_dependency_map_v0_1.md
 - **[R03] Wave 2 owner integration review**, **2026-10-17**, source structure integrated without independent adoption of every claim; D15 caution retained. https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/reviews/2026-10-17_wave2_scope_resolution.md
 
+- **[E25] PowerPyx**, *The Veteran Stranger Mission Walkthrough*, published **2018** (exact date not independently verified), S-GUIDE; later quest alternate Special Lake Lure and separate Northern Pike story context. https://www.powerpyx.com/red-dead-redemption-2-the-veteran-stranger-mission-walkthrough/
+
 **Authoritative evidence hierarchy:** Rockstar update [E05] is primary **for one accessibility update only**; all other gameplay assertions are guide-level, despite agreement. A source checked today does not mean the game was patched today. Original GameGuide campaign and actual user screenshots outrank these sites for *what this player presently has/has done*. Do **not** claim tested player rod, fish, lure, Honor, completion or mail state.
 
 ## 9. Later-game gates and edition/quest exceptions (T2 — gated from Chapter 2 default response)
@@ -241,4 +243,3 @@ Observed: ordinary fishing rod appears, but no **Jeremy Gill offer**, special lu
 
 **Owner review requested:** specifically review D16-X02 exact special-lure equivalence, D16-X05 uncatchable catfish and 14/15 counting, D16-X06 whether mail or later scripted finale determines collectible checkbox, D16-X07 lost legendary recapture, and D16-X08 Survivalist tier activation. Keep status **RESEARCHED — REVIEW PENDING**, never auto-ADOPTED through a merge. The **task** stops after handoff at **DELIVERED_REVIEW_PENDING**; this conversation may receive future work only by separate registered assignment.
 
-- **[E25] PowerPyx**, *The Veteran Stranger Mission Walkthrough*, published **2018** (exact date not independently verified), S-GUIDE; later quest alternate Special Lake Lure and separate Northern Pike story context. https://www.powerpyx.com/red-dead-redemption-2-the-veteran-stranger-mission-walkthrough/
