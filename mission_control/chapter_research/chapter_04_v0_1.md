@@ -74,3 +74,299 @@ Conditional Special/Ultimate: High and Low Finance via Charles/Uncle (not standa
 4. **No health items** applies to consumable use for the whole mission, not "finish with a full Health core"; it is safer to avoid ambiguous **multi-core** tonics whose health effect could violate the medal even when taken for Dead Eye. Prepare before starting, and consult D09 consumables read-only [S01][S09].
 5. **Checkpoint restart, skip and replay** can affect timers/objective eligibility; never promise checkpoint replay refreshes failure flags. Mission replay changes performance record, **not automatically original-world inventory/Honor/optional choices**. Manual save presence, slot selection and reload persistence always need GameGuide/player verification [S01][S09].
 6. **A–final authoring** below consists of researched, ordered **transfer-ready phase outlines**, not adoption as full UI. Each phase has actionable rows and inline critical warnings. The eventual GameGuide Field Guide must present every phase, metric tiles and topic-specific optional Intel using approved [Field Guide v1.1](https://github.com/L33TW0RLD/rdr2/blob/main/protocol/walkthrough_presentation.md), not duplicate Old Friends' phase/checklist count.
+
+## 4. Medal-bearing Story missions — phase-by-phase source-backed transfer research (A → final)
+
+**Authoring rules for this research section:** phases are chronological within the named mission but **mission ordering is conditional**; checklist rows are intended future Field Guide authoring actions and are **not checked**. Bold inline warning is the point of risk; optional Intel may expand under it after original GameGuide writer ratifies. This entire Chapter 4 pack is T2 and must never auto-display to early-story user. Gold numbers below are double checked in [S01] and [S03], with RDR2.org scene context [S02a–d].
+
+### C4-01 — The Joys of Civilization — MAIN
+
+**Trigger (conditional):** Dutch in Saint Denis immediately after Chapter 3 camp move; local first marker.
+
+**Gold checklist (each in one attempt):**
+- [ ] Catch the street urchin **before he reaches the market**.
+- [ ] Complete mission within **5:30**.
+
+**Chronological transfer outline:**
+
+**A — Dutch and information search**
+1. Confirm the Dutch marker; enter the selected Saint Denis saloon together.
+2. Question the bartender as prompted; avoid voluntary diversions under the mission timer.
+**Inline warning/intel:** TIME · The 5:30 Gold window runs through the complete mission, including dialogue/cutscene time.
+
+**B — Street children and theft**
+1. Follow the information lead through the nearby alleys and church.
+2. Anticipate the street child's theft and immediately regain movement.
+**Inline warning/intel:** GOLD CRITICAL · A child reaching the market ends the early-catch Gold objective even though the mission may continue.
+
+**C — Pursuit and interception**
+1. Run/corner the thief before the market boundary; anticipate trolley and wagon obstacles.
+2. If the running line is blocked, use nearby horse only if a safe/quick intercept is actually feasible.
+3. Recover what was taken and listen to the Bronte lead.
+**Inline warning/intel:** Tactical alternative · A horse intercept appears in RDR2.org; exact ideal turn/cutoff is not frame-tested. Do not promise it guarantees Gold.
+
+**D — Return and debrief**
+1. Rejoin Dutch at indicated location without detour.
+2. Inspect the result screen for both early catch and overall 5:30.
+**Inline warning/intel:** PLAYER STATE · Recovering stolen goods in the story is not confirmed persistent inventory gain.
+
+**Source/transfer:** [S01][S02a][S03][S04]; numeric Gold sourced from PowerPyx and independently crosschecked against Hold To Reset; scene order/route corroborated by RDR2.org chapter walkthrough where present. `NEEDS_GAMEGUIDE_AUTHORING`, no confirmed original Chapter 4 dossier, no player result.
+
+
+### C4-02 — Angelo Bronte, a Man of Honor — MAIN
+
+**Trigger (conditional):** After The Joys of Civilization; Dutch and John Saint Denis.
+
+**Gold checklist (each in one attempt):**
+- [ ] Encounter **both the dog and the drunk** in cemetery.
+- [ ] Do not get spotted by the law.
+- [ ] Finish within **10:40**.
+- [ ] Score **4 headshots**.
+
+**Chronological transfer outline:**
+
+**A — Mansion parley**
+1. Start the named Dutch/John marker; follow the group to Bronte's mansion.
+2. Proceed through the parley to the graveyard task; skip noninteractive time only if actively pursuing first-run Gold.
+**Inline warning/intel:** TIME · 10:40 whole-mission requirement; opportunity for story viewing versus strict Gold should be an explicit player choice.
+
+**B — Cemetery observations**
+1. Enter cemetery and intentionally pass the barking dog encounter.
+2. Seek the drunken man by the gravestones before rushing to the robbers.
+3. Continue toward the grave robbers' hiding place.
+**Inline warning/intel:** GOLD CRITICAL · Dog **and** drunk are separate required encounters; blindly shortcutting to thieves can fail Gold.
+
+**C — Grave robbers and loot**
+1. Engage the robbers while prioritizing **4 deliberate headshots**.
+2. Collect the quest stash/body-related loot as directed, without delaying the exit.
+**Inline warning/intel:** Gold does not require an invented number of ordinary corpse pickups; quest stash is what progresses the mission.
+
+**D — Evade law, return**
+1. Follow John's stealth escape route away from lawmen; remain crouched/out of sight.
+2. Ride promptly back to mansion and complete marker.
+**Inline warning/intel:** GOLD CRITICAL · If a lawman visually spots Arthur, the no-detection criterion may already fail; don't assume later evasion repairs it.
+
+**Source/transfer:** [S01][S02a][S03][S04]; numeric Gold sourced from PowerPyx and independently crosschecked against Hold To Reset; scene order/route corroborated by RDR2.org chapter walkthrough where present. `NEEDS_GAMEGUIDE_AUTHORING`, no confirmed original Chapter 4 dossier, no player result.
+
+
+### C4-03 — No, No and Thrice, No — MAIN
+
+**Trigger (conditional):** After Angelo Bronte; Mary-Beth/Susan in Shady Belle.
+
+**Gold checklist (each in one attempt):**
+- [ ] Kill **both Foreman boys personally** in mounted chase.
+- [ ] Finish with at least **90% accuracy**.
+
+**Chronological transfer outline:**
+
+**A — Camp and wagon**
+1. Accept the Shady Belle conversation and join Susan's ride to Radley's House.
+2. Before gunfire, prepare to limit shots for the 90% accuracy target.
+**Inline warning/intel:** GOLD CRITICAL · Accuracy is unusually high (90%); avoid speculative suppressing fire.
+
+**B — House breach and rescue**
+1. Let Susan deal with entrance guard and enter when signaled.
+2. Dispatch the kitchen threat and go to the room where Tilly calls.
+3. Free Tilly; transition promptly to mounted chase.
+**Inline warning/intel:** Honor/safety · Do not confuse hostile guards with Anthony Foreman, whose final fate is a later choice.
+
+**C — Mounted chase**
+1. Mount, close distance and identify **both Foreman boys** separately.
+2. Deliver the two kills personally; do not leave them for Susan.
+3. Switch to lasso after the designated fleeing leader becomes the only capture target.
+**Inline warning/intel:** GOLD CRITICAL · Your own kills on both riders, not companion kills, are required.
+
+**D — Capture and choice**
+1. Lasso and hogtie Anthony, bring him to Susan/Tilly.
+2. At the explicit spare/kill choice, favor mercy if following High Honor and later possibility preservation.
+3. Review gold accuracy and two-person kill criteria.
+**Inline warning/intel:** PRESERVATION · Spared Anthony can be relevant to a later conditional poster; this is not a guarantee of automatic later content [S02a][S11].
+
+**Source/transfer:** [S01][S02a][S03][S04][S11]; numeric Gold sourced from PowerPyx and independently crosschecked against Hold To Reset; scene order/route corroborated by RDR2.org chapter walkthrough where present. `NEEDS_GAMEGUIDE_AUTHORING`, no confirmed original Chapter 4 dossier, no player result.
+
+
+### C4-04 — The Gilded Cage — MAIN
+
+**Trigger (conditional):** After Angelo Bronte, Hosea at Shady Belle.
+
+**Gold checklist (each in one attempt):**
+- [ ] During party, **pour drinks**, **compliment guest's attire**, **accept gift**, **save life** (four interactions).
+- [ ] Follow servant **without being detected**.
+
+**Chronological transfer outline:**
+
+**A — Travel and introductions**
+1. Join Hosea/Dutch and enter mayor's party without attempting unavailable combat actions.
+2. Wait until Arthur is free to mingle before advancing mandatory party conversations.
+**Inline warning/intel:** MISSABLE GOLD · The four optional party actions are available in a bounded mingling scene; do them **before** proceeding to mandatory mayor sequence.
+
+**B — Four party interactions**
+1. Pour champagne/drinks for guests at the table.
+2. Compliment the woman wearing striking feathered headwear.
+3. Accept the entertainment/theatre-ticket gift from a conversation group.
+4. Save the choking man by the stairs before triggering party progression.
+**Inline warning/intel:** GOLD CRITICAL · All **four** event subactions are necessary; gift is not equivalent to merely speaking with any guest.
+
+**C — Mayor's guest and letter**
+1. Approach mayor only after completing all four opportunities.
+2. Escort disruptive drunk guest to instructed location and return.
+3. Follow the servant discreetly toward a message.
+**Inline warning/intel:** One-time event timing: don't leave the party-mingling area before completing its optional Gold interactions.
+
+**D — Tail and exit**
+1. Trail servant without being detected, using distance/cover.
+2. Wait for servant to finish his office movement, access correspondence and rejoin gang.
+3. Verify all four party criteria and stealth criterion on Story result.
+**Inline warning/intel:** GOLD CRITICAL · Being seen by servant fails stealth even if Arthur eventually escapes.
+
+**Source/transfer:** [S01][S02b][S03][S04]; numeric Gold sourced from PowerPyx and independently crosschecked against Hold To Reset; scene order/route corroborated by RDR2.org chapter walkthrough where present. `NEEDS_GAMEGUIDE_AUTHORING`, no confirmed original Chapter 4 dossier, no player result.
+
+
+### C4-05 — A Fine Night of Debauchery — MAIN
+
+**Trigger (conditional):** After The Gilded Cage; Trelawny in Saint Denis.
+
+**Gold checklist (each in one attempt):**
+- [ ] Win poker **without Strauss's help**.
+- [ ] After cover blown, leave boat within **35 seconds**.
+- [ ] Score **5 headshots**.
+- [ ] Take **no health items**.
+
+**Chronological transfer outline:**
+
+**A — Formal preparation**
+1. Meet Trelawny, accompany him to tailor and barber; take the prescribed outfit and grooming sequence.
+2. Continue to the riverboat; recognize compulsory change of carried equipment on entry.
+**Inline warning/intel:** RESOURCE · Outfit is presented as mission-provided; don't assume ownership of the particular outfit after story. Hidden item use is not a Gold condition.
+
+**B — Poker without assistance**
+1. Sit for the scripted poker game and **do not use Strauss help prompt**.
+2. Follow game's visible tells/scripts to play, place bets and win the required hand sequence.
+3. Accompany pit boss to retrieve watch/prize.
+**Inline warning/intel:** GOLD CRITICAL · Prompting Strauss for help can invalidate poker Gold even if the table outcome is a win.
+
+**C — Safe and discovery**
+1. Enter safe area with escort, wait for scripted ally action.
+2. Loot the designated safe and respond to automatic threat; prepare for imminent timed escape.
+**Inline warning/intel:** SAVE/MISSABLE · The boat is not a generic repeatable loot area; do not promise you can revisit after the mission.
+
+**D — Boat firefight and escape**
+1. Once cover breaks, treat 35-second boat escape as **immediate** local timer.
+2. Use deliberate Dead Eye/headshots to reach five, then continue to exit without delay.
+3. Avoid all health-restoring consumables throughout mission and verify Gold.
+**Inline warning/intel:** GOLD CRITICAL · 5 headshots + 35s after exposure + no health items all must coexist; replay gear differs.
+
+**Source/transfer:** [S01][S02b][S03][S04]; numeric Gold sourced from PowerPyx and independently crosschecked against Hold To Reset; scene order/route corroborated by RDR2.org chapter walkthrough where present. `NEEDS_GAMEGUIDE_AUTHORING`, no confirmed original Chapter 4 dossier, no player result.
+
+
+### C4-06 — Horsemen, Apocalypse — MAIN
+
+**Trigger (conditional):** After The Gilded Cage + No, No and Thrice, No, Sadie at Shady Belle.
+
+**Gold checklist (each in one attempt):**
+- [ ] Shoot the O'Driscolls **in the boat before disembarkation**.
+- [ ] Use **sidearms only**.
+- [ ] At least **70% accuracy**.
+- [ ] Get **15 headshots**.
+- [ ] Use **no health items**.
+
+**Chronological transfer outline:**
+
+**A — Unexpected Shady Belle attack**
+1. Start Sadie/camp marker and transition to rooftop/balcony defense.
+2. Use a sidearm from the very first required kill; track accuracy/headshots.
+**Inline warning/intel:** GOLD CRITICAL · Sidearms **only** throughout combat; an accidentally equipped long gun can void restriction.
+
+**B — Perimeter battle**
+1. Engage balcony/front attackers with deliberate sidearm headshots.
+2. Go downstairs/outside as ordered; use cover while fighting.
+3. Fall back into house when instructed rather than stay exposed.
+**Inline warning/intel:** COMBAT · At least 15 headshots with ≥70% accuracy while never taking health items; prioritize controlled target acquisition.
+
+**C — Mansion windows and Sadie**
+1. Block doors/furniture as prompted and defend from windows with sidearm.
+2. Respond to Sadie's calls and follow the route toward the water.
+**Inline warning/intel:** Do not confuse taking **damage** with taking **health item**: Gold specifically forbids the consumable.
+
+**D — Boat intercept and resolution**
+1. Locate O'Driscoll boat approach and shoot occupants **before** they set foot on shore.
+2. Finish hostile pursuit with Sadie, returning to front of manor.
+3. Check boat, sidearm, 15 headshots, 70% accuracy and no-health medal rows.
+**Inline warning/intel:** GOLD CRITICAL · The boat interception is a limited once-per-attempt opportunity, unlike later ordinary gunfight.
+
+**Source/transfer:** [S01][S02c][S03][S04]; numeric Gold sourced from PowerPyx and independently crosschecked against Hold To Reset; scene order/route corroborated by RDR2.org chapter walkthrough where present. `NEEDS_GAMEGUIDE_AUTHORING`, no confirmed original Chapter 4 dossier, no player result.
+
+
+### C4-07 — Urban Pleasures — MAIN
+
+**Trigger (conditional):** After Horsemen, Apocalypse; Dutch in Saint Denis.
+
+**Gold checklist (each in one attempt):**
+- [ ] Rob **all** customers in trolley station.
+- [ ] Kill **10 lawmen while aboard trolley**.
+- [ ] Stop **any lawmen mounting the back of getaway wagon**.
+- [ ] Shoot **dynamite Lenny throws**.
+- [ ] Use **no health items**.
+
+**Chronological transfer outline:**
+
+**A — Trolley office**
+1. At the station, ensure each customer gets a valid robbery interaction before moving to safe.
+2. Follow cashier/safe scene to forced law response.
+**Inline warning/intel:** GOLD CRITICAL · Rob **all station customers** before plot moves; guide describes three present but check actual prompts.
+
+**B — Trolley firefight**
+1. On departing trolley, immediately target officers in surrounding streets/balconies.
+2. Secure at least **10 lawman kills before trolley segment ends**; prioritize rapid counted shots.
+3. Ride out the trolley incident as scripted.
+**Inline warning/intel:** GOLD CRITICAL · Later pursuit kills **do not substitute** for 10 while riding trolley.
+
+**C — Foot and wagon escape**
+1. Follow companions under cover through streets after trolley.
+2. When on wagon, target mounted pursuers reaching rear; prevent any boarders.
+**Inline warning/intel:** GOLD CRITICAL · Keep attention behind vehicle; ordinary kill count does not repair a lawman who already climbed on.
+
+**D — Barricade and finale**
+1. When Lenny throws dynamite, acquire and shoot it promptly.
+2. Reach mission end using no health-restoring item.
+3. Check all five Gold conditions individually.
+**Inline warning/intel:** One-time Gold · Detonation is a scripted window, not generic explosive challenge.
+
+**Source/transfer:** [S01][S02c][S03][S04]; numeric Gold sourced from PowerPyx and independently crosschecked against Hold To Reset; scene order/route corroborated by RDR2.org chapter walkthrough where present. `NEEDS_GAMEGUIDE_AUTHORING`, no confirmed original Chapter 4 dossier, no player result.
+
+
+### C4-08 — American Fathers — II — MAIN / WHITE-MARKER EXCEPTION
+
+**Trigger (conditional):** Evelyn Miller/Rain Falls/Eagle Flies introduction after Gilded Cage; follow-up Eagle Flies near Heartland Oil Field.
+
+**Gold checklist (each in one attempt):**
+- [ ] Infiltrate factory by **hiding in wagon**.
+- [ ] Reach Danbury office **undetected**.
+- [ ] Kill **all horseback pursuers** during escape.
+- [ ] At least **80% accuracy**.
+
+**Chronological transfer outline:**
+
+**A — Social/introduction stage**
+1. When Evelyn Miller/party connection opens meeting, speak to visitors; don't treat white marker as arbitrary Stranger.
+2. Meet Eagle Flies at factory vicinity when follow-up map marker exists.
+**Inline warning/intel:** IDENTITY · Intro Part I/meeting is NOT a second independent Gold entry; the factory Part II is medal eligible.
+
+**B — Wagon infiltration**
+1. As wagon approaches and pauses near tracks, hide inside for entry.
+2. Stay hidden until inside refinery, then disembark when safe.
+**Inline warning/intel:** GOLD CRITICAL · Entering on foot may progress story but fails the **wagon infiltration** criterion.
+
+**C — Office stealth**
+1. Wait for moving guards; sneak through building and upstairs without detection.
+2. Access Danbury office and collect required records.
+3. Exit by directed window after office confrontation.
+**Inline warning/intel:** GOLD CRITICAL · Discovery before reaching Danbury's office invalidates this specific stealth requirement.
+
+**D — Flight and pursuers**
+1. Follow Eagle Flies through factory escape, aim selectively to maintain ≥80% accuracy.
+2. During mounted retreat, personally kill **all horse-mounted pursuers**.
+3. Verify wagon/stealth/accuracy/horse riders in final medal screen.
+**Inline warning/intel:** TIMING · Chase pursuers are finite; if one is left for companion/environment, criterion may be missed.
+
+**Source/transfer:** [S01][S02c][S03][S04]; numeric Gold sourced from PowerPyx and independently crosschecked against Hold To Reset; scene order/route corroborated by RDR2.org chapter walkthrough where present. `NEEDS_GAMEGUIDE_AUTHORING`, no confirmed original Chapter 4 dossier, no player result.
