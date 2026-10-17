@@ -173,3 +173,20 @@ MISSION CONTROL
 **Resulting vertical hierarchy:** `Horseshoe Overlook` → `Chapter II` → `3 Gold · 1 Silver · 0 Bronze     4/18 recorded` → `18-slot precision rail` → **Mission Control**.
 
 This is a **design-only** amendment. Segment popover behavior and accessibility await owner click-through; no source authority or gameplay changes.
+
+
+---
+
+## 11. Owner feedback v0.4 — hover title, click opens source (2026-10-17)
+
+**Supersedes §10's click-toggle popover.** The current popover as rendered is visually intrusive; user asked for **mouseover to reveal mission title, click for action**.
+
+- Keep the visible **18 × 4px** rail, achievements and immediate Mission Control placement unchanged.
+- Hover a segment: display the mission title **only**, using the host's lightweight hover tooltip (no manually framed persistent popover, badge, extra inspector, operation number or medal-verification line).
+- Clicking a segment: **open the selected mission's original full GameGuide Field Guide**, as a reference/replay page, via a real user-invoked source-reload turn. Clicking an unobserved/neutral mission must NEVER imply that its map marker is currently available, its medal was earned, or that Gold replay is underway.
+- Keep the segment's hit area substantially taller than its 4px visible stroke; visible thickness is separate from input geometry. On touch devices with no hover, tapping invokes the primary guide action; accessible control names can carry mission title and medal provenance.
+- The design cannot control the host's native tooltip colors/shape. If these hover labels are still aesthetically wrong in the actual client, investigate a client-supported custom hover presentation later rather than rebuilding a click popover.
+- No action is hidden exclusively behind hover. The click action remains discoverable through short global context (e.g. the overall header purpose) and control accessibility; avoid replacing the removed under-rail UI with a new instruction band.
+- Mission Control remains the first main container; the slim medal rail is **a chapter-wide historical mission index**, not the list of currently available mission markers.
+
+**Unchanged:** Chapter II only, 3 Gold / 1 Silver / 0 Bronze / 4 of 18 recorded per original GameGuide, other fourteen neutral. No save or gameplay writes.
