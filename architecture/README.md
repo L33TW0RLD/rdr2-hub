@@ -20,3 +20,13 @@
 ## Open architectural gates
 
 Review the default Contextual Trailhead choice, Atlas 002 interface contract, optional project-focus persistence, ability to reconstruct the full Field Guide after mechanic detours, and actual mobile/desktop ChatGPT tests. See [Agent 001 handoff](../agents/handoffs/2026-10-16_hub_architect_001.md).
+
+
+## Unified Hub remaster (proposed 2026-10-17)
+
+- [Repository Remaster Blueprint v1](repository_remaster_blueprint_v1.md): product-first structure and ownership, non-destructive migration plan, first vertical slice and milestone order.
+- [Dashboard Interface Blueprint](../dashboard/interface_blueprint_v1.md): cohesive ChatGPT-native presentation, not three standalone dashboards.
+- [Companion Context Contract](../companion/context_contract_v1.md): live source and navigation boundaries.
+- [Knowledge & Legacy Crosswalk](../knowledge/source_crosswalk_v1.md): source authority stays in original `rdr2` until explicitly migrated.
+
+These newly authored contracts are remaster proposals; merging the scaffold does **not** ratify all old architecture choices or mechanics claims.
