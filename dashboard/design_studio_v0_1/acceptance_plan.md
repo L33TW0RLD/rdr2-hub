@@ -145,3 +145,20 @@ This replaces H12–H13's popover-on-click and H15's click-to-inspect expectatio
 | H20 | Tap on mobile / focus with keyboard | Accessible real action without relying on hover or a 4px hit area | UNTESTED |
 
 **Constraint:** This is a UI routing test only; hover/click and follow-up source read are not actual gameplay progress or save readback. The native tooltip's shape/appearance may still need client-level improvement; if host styling is insufficient, don't claim a custom rendered tooltip was implemented.
+
+
+---
+
+## Owner-approved map-dot and bronze design checks H21–H27 (2026-10-17)
+
+| ID | Test | Pass condition | Status |
+|---|---|---|---|
+| H21 | Inspect historical medals | Exactly 18 Chapter II 4px segments; Gold/ Silver unchanged; **0 Bronze count in bronze hue** | PENDING USER |
+| H22 | Supply two fictional visible mission markers in demo | **Two subtle dots** appear directly beneath exactly their aligned medal segments; entire header retains approved thin geometry | PENDING USER |
+| H23 | Switch to real-record / marker-not-checked mode | All dots disappear; Mission Control says markers not checked, **not** that zero missions are available | PENDING USER |
+| H24 | Hover one of the dotted segments | Native title-only tooltip still looks and behaves as approved; no medal/availability popover | PENDING USER |
+| H25 | Click a dotted or undotted segment | Exact original full Field Guide source request; **dot does not change click semantics or auto-start Story** | PENDING USER |
+| H26 | Check bronze semantics | Warm bronze used for any future best-Bronze and for the `0 Bronze` summary; no historical 021 Bronze misrepresented as current best | PENDING USER |
+| H27 | Check desktop/mobile clarity | Dots remain perceptible but subordinate, aligned under each slot; padded clickable controls; no horizontal overflow or legend band | DESKTOP PENDING; MOBILE UNTESTED |
+
+**Current marker authority:** no recently verified user map-marker observations were retrieved from the original mission medal ledger; no real dots may be displayed by default. An explicitly labelled *illustrative marker example* is allowed for visual testing. Real mission availability is NEVER inferred from medals or mission file order.
