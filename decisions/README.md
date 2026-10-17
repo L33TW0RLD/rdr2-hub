@@ -5,7 +5,7 @@
 - ChatGPT-only dashboard.
 - New `rdr2-hub` design workspace; old `rdr2` preserved.
 - Mission Control remains functional; Free Roam Control and Systems Atlas are the immediate design priorities.
-- Disposable specialist agents with GitHub handoffs.
+- Persistent specialist conversations with disposable, independently registered GitHub tasks ([owner decision, 2026-10-17](2026-10-17_persistent_specialist_threads.md)); old task handoffs remain valid.
 
 ## Open decisions
 
