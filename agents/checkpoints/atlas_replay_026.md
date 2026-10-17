@@ -1,25 +1,32 @@
-# Checkpoint — atlas-replay-026 (D24 research committed)
+# Checkpoint — atlas-replay-026 (final task closure)
 
-**Identity:** task atlas-replay-026 · Issue #32 · branch agent/atlas-replay-026 · specialist Wave 3 D24.
-**Registered baseline:** d3bc807c75633fec042f4a34af72515a24cc2696.
-**Latest main at initial check:** b578aec6f1edab1279f2f2c5989326d4e86231ed; branch initially one commit behind, no initial changed paths. No rebase/reset/force push.
-**Status at this checkpoint:** IN_PROGRESS — final handoff and terminal verification pending.
-**Allowed exactly:** systems_atlas/dossiers/d24_replay_saves_medals_v0_1.md; agents/checkpoints/atlas_replay_026.md; agents/handoffs/2026-10-17_atlas_replay_026.md.
-**Protected READ-ONLY:** all other Hub paths and agent branches, main, original L33TW0RLD/rdr2, and experimental Save Intelligence PR #24; no save decoding/execution.
+**Task:** atlas-replay-026 · **Issue:** #32 · **Branch:** agent/atlas-replay-026.
+**Task state:** **DELIVERED_REVIEW_PENDING** — stop all further specialist writes; no merge, ratification or campaign state change.
+**Research state:** **RESEARCHED — REVIEW PENDING**, NOT ADOPTED.
+**Registered branch baseline:** d3bc807c75633fec042f4a34af72515a24cc2696.
+**Main observed at startup/closure comparison:** b578aec6f1edab1279f2f2c5989326d4e86231ed (one main-only commit ahead of registration baseline); task branch preserved without rebase/reset.
+**Three leased paths only:**
+- systems_atlas/dossiers/d24_replay_saves_medals_v0_1.md
+- agents/checkpoints/atlas_replay_026.md
+- agents/handoffs/2026-10-17_atlas_replay_026.md
 
-## Verified durable milestones
-1. Initial checkpoint committed **11dc17968edee1a4b59c696981736395e75e4009** before substantive research.
-2. D24 dossier committed **040de5fec1780df78a89d703044bf4cc61ef4fd3**, explicit branch readback **blob a3f67115c11fe76ed5dcb72084b247fc3464bb3f**; 212 lines, 11 numbered sections, 24 claim ledger rows, 21 evidence IDs, 10 contradiction rows, 3 conditional T0/T1 Chapter 2 scenarios.
-3. Current branch/main compare after dossier shows **two files only** (D24 + checkpoint), branch 2 ahead/1 behind main. No overlapping changes; do not rebase.
-4. Independent sources include Rockstar 1.15/1.03/1.04/support, Steam achievement wording, PowerPyx, Push Square, GameFAQs, Gamer Guides, TrueAchievements, GTA Base, community edge-case reports, internally original GameGuide/save research read-only.
+## Durable verified history
+1. Initial checkpoint committed first: **11dc17968edee1a4b59c696981736395e75e4009**.
+2. D24 dossier committed: **040de5fec1780df78a89d703044bf4cc61ef4fd3**. Readback blob **a3f67115c11fe76ed5dcb72084b247fc3464bb3f** (212 lines, 11 sections, 24 claim rows, 21 sources, 10 contradiction rows, three Chapter 2 examples).
+3. Milestone checkpoint commit **cffdee310ce5b3ad10500d226fc9180611aee292**.
+4. Final handoff commit **404620286e6878f9f1d37b7aeb1d2877bf71b7af**. Readback handoff blob **d3052f8a26e964f94fffd2402ba0bc1c68bb0605**.
+5. Compare immediately after handoff: branch 4 commits ahead/1 behind main; only the three leased paths changed, no protected paths.
 
-## Research limits
-- D24 status RESEARCHED — REVIEW PENDING, NOT ADOPTED.
-- Patch 1.15 confirms current owned-weapon availability in Replay; consumables, specific mission weapons, horse and Dead Eye variations not field-tested.
-- Medal persistence across loading older manual slots and checkpoint scoring variants disputed.
-- No in-game platform field testing, automatic telemetry, save parser execution, mission progress mutation or campaign state claims.
+## Source and boundary evidence
+Independently checked Rockstar 1.15/1.03/1.04/support, Steam achievements, PowerPyx, Push Square, Gamer Guides, TrueAchievements, GameFAQs and other independent/community references. Original RDR2 GameGuide and experimental Save Intelligence PR #24 **READ ONLY**; **decoder not executed**. No device/play test, save changes, medal or Honor attribution.
+
+## Unresolved factual gates
+- Cross-slot medal persistence after loading older manual saves disputed/untested.
+- Post-1.15 consumable, horse and stat loadout unspecified by Rockstar weapon-only change.
+- Checkpoint restart treatment of specific Gold metrics disputed.
+- Optional Honor stage and rare item/Compendium replay recovery may have exceptions; defer to D08/D22 and actual GameGuide evidence.
 
 ## Exact next permitted action
-**Write final task handoff only** to agents/handoffs/2026-10-17_atlas_replay_026.md, then re-read all three leased files and branch-versus-main comparison. If all pass, optionally update this checkpoint to DELIVERED_REVIEW_PENDING (own leased file) and STOP; never self-merge or ratify.
+**STOP.** Coordinator performs independent source/lease review and may commission separate platform field-test task. No further action authorized on this closed task without formal coordinator reopen. Verify this final checkpoint readback and terminal branch SHA in final chat report.
 
-**Acceptance:** exactly 3 paths; explicit final branch SHA; source-aware 11-section dossier; limits, consumer handoff, no protected writes.
+**Protected:** latest main, shared indexes/registry, other agents, L33TW0RLD/rdr2, experimental Save Intelligence and private saves. No self-merge/ratification.
