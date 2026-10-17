@@ -95,7 +95,10 @@ export function composeProgressionView(graph,hierarchy,scenario,opts={}){
  const isUrgent=topAlert?.severity==="activated_urgent";
  const isBlocked=evaluated.outings_suppressed;
  const outingCandidates=evaluated.opportunities.filter(o=>o.project_id===project.project_ref);
- const preferred=outingCandidates[0]||evaluated.opportunities[0]||null;
+ // The current irreversible chapter-exit event outranks older, still generically applicable arrival windows.
+ const beforeExit=topAlert?.severity==="pre_exit_audit";
+ const exitAudit=evaluated.opportunities.find(o=>o.id==="chapter2_exit_audit");
+ const preferred=(beforeExit&&exitAudit)?exitAudit:(outingCandidates[0]||evaluated.opportunities[0]||null);
  const suggestedOuting=!isBlocked&&preferred?{source_window:preferred.id,activity_ref:preferred.outings[0],why_now:preferred.title,confidence:preferred.confidence}:null;
  const trailhead={
    source:"SYNTHETIC_SCENARIO_ONLY",
@@ -104,11 +107,12 @@ export function composeProgressionView(graph,hierarchy,scenario,opts={}){
    control:scenario.control,
    story_choices:missionChoices.slice(0,hierarchy.policy.max_visible_story_markers).map(m=>({id:m.id,title:m.title,status:"MARKER_OBSERVED_IN_FIXTURE",original_dossier:m.source_ref})),
    additional_observed_count:Math.max(0,missionChoices.length-hierarchy.policy.max_visible_story_markers),
-   unresolved_candidates:candidates.slice(0,hierarchy.policy.max_uncertain_candidates).map(m=>({id:m.id,title:m.title,status:m.status})),
-   featured_project:isUrgent?null:{id:project.id,title:project.title,stage:projectResult?.stage||"not_evaluated",next_action:projectResult?.next_action||"Explore this project when useful"},
+   unresolved_candidates:(missionChoices.length?[]:candidates.slice(0,hierarchy.policy.max_uncertain_candidates)).map(m=>({id:m.id,title:m.title,status:m.status})),
+   featured_project:isBlocked?null:{id:project.id,title:project.title,stage:projectResult?.stage||"not_evaluated",next_action:projectResult?.next_action||"Explore this project when useful"},
    outing:suggestedOuting,
    one_primary_alert:topAlert?{id:topAlert.id,severity:topAlert.severity,title:topAlert.title,action:topAlert.action}:null,
    other_warnings_count:Math.max(0,warnings.length-1),
+   marker_rule_conflicts:evaluated.missions.filter(m=>m.conflicts.length).map(m=>({id:m.id,issues:m.conflicts})),
    before_advancing:topAlert?topAlert.action:null,
    can_wait:isUrgent?"Optional projects and repeatable outings until the active time-sensitive Story stage is handled":topAlert?.severity==="pre_exit_audit"?"Repeatable hunting and convenience upgrades; verify any chapter-specific requests before leaving":"No mandatory repeatable-activity quota; confirm specific active or expiring offers rather than assuming safety",
    default_next:evaluated.priority_next
@@ -129,8 +133,8 @@ export function composeProgressionView(graph,hierarchy,scenario,opts={}){
    disclosure_level:(byId[domainRoot].type==="feature"?"L3":"L2")
  };
  const chapterBoard={
-   entries:evaluated.missions.filter(m=>m.status==="marker_observed_in_simulation").map(m=>({id:m.id,title:m.title,eligibility:"observed_in_fixture",source_ref:m.source_ref})),
-   may_require_observation:candidates.slice(0,hierarchy.policy.max_uncertain_candidates).map(m=>({id:m.id,title:m.title,reason:m.status})),
+   entries:evaluated.missions.filter(m=>["marker_observed_in_simulation","marker_observed_but_control_unavailable"].includes(m.status)).map(m=>({id:m.id,title:m.title,eligibility:m.status,source_ref:m.source_ref})),
+   may_require_observation:[...candidates].sort((a,b)=>Number(b.status==="necessary_conditions_met_marker_unconfirmed")-Number(a.status==="necessary_conditions_met_marker_unconfirmed")).slice(0,hierarchy.policy.max_uncertain_candidates).map(m=>({id:m.id,title:m.title,reason:m.status})),
    completed_in_simulation:evaluated.missions.filter(m=>m.status==="completed_in_simulation").map(m=>m.id),
    conflicts:evaluated.missions.filter(m=>m.conflicts.length).map(m=>({id:m.id,notes:m.conflicts})),
    never_infer_story_order_from_id:true
