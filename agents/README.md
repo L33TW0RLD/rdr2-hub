@@ -28,6 +28,6 @@ Completed existing branches `agent/hub-ux-001` and `agent/atlas-taxonomy-002` ha
 
 ## Product-first specialist production (remaster 2026-10-17)
 
-See [content and dashboard workstream map](content_workstream_plan_v1.md). Existing registered Atlas D01/D02/D04 tasks are **sequential work packages in a reusable specialist conversation**; Living Adventure Model B is task 010. Workers do not create independent mini-products. Deliver source-backed reusable records, then integrate through Companion/Dashboard after owner review.
+See [content and dashboard workstream map](content_workstream_plan_v1.md). The owner superseded the initial sequence: Atlas D01/D02/D04/D03/D05/D06 now form [six separately leased parallel research tasks](atlas_parallel_wave1_v1.md), each in a reusable specialist conversation; Living Adventure Model B is task 010. Workers do not create independent mini-products. Deliver source-backed reusable records, then integrate through Companion/Dashboard after owner review.
 
 Proposed content folders, new interface scaffolds and sample outings are **not** fresh automatic agent assignments. Existing exclusive leases and review gates remain controlling.
