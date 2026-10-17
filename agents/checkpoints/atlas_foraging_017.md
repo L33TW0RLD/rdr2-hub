@@ -7,7 +7,7 @@
 **Registration baseline:** `9931058e69ac3c6e7923841da87813de7f015f41`  
 **Latest main inspected:** `6f08f4ed60abde51831f8b72cf6c363aa49feb2d`  
 **Recorded:** 2026-10-17 UTC (no precise time claim)  
-**Task status:** `IN_PROGRESS` | **Content:** `DRAFT` (NOT ADOPTED).
+**Task status:** `IN_PROGRESS` (dossier committed, handoff outstanding) | **Content:** `RESEARCHED_REVIEW_PENDING` (NOT ADOPTED).
 
 ## Exclusive lease and constraints
 1. `systems_atlas/dossiers/d12_herbs_food_crafting_v0_1.md`
@@ -26,8 +26,16 @@ D12 herbs/plants, recognition and picking; differentiation of `study`/`pick`/`ob
 - The three exclusive branch-local files did not exist before this checkpoint (explicit branch-ref 404 on each).
 - Last verified branch commit **before** checkpoint: `9931058e69ac3c6e7923841da87813de7f015f41`. No substantive D12 research committed yet; no unseen work claimed.
 
-## Recovery / exact next action
-**Next permitted action:** independently verify D12 Story Mode source claims, read read-only Wave 1 dossier/review and legacy references, then author and commit `systems_atlas/dossiers/d12_herbs_food_crafting_v0_1.md` with bounded 11-section source-checked deliverable.
+## Verified substantive milestone — 2026-10-17
+- Initial checkpoint commit `8c279f515f3ef2977ca3d53cb100f908aba70fba` verified at blob `f0a5d63a18e65a6e4a89ca617af16500d4ccf081`.
+- D12 dossier committed `fed5ef3714655b014285d1e02847da68d9522aa0`; exact-ref readback blob `a5fbc57b262e37e184582a61d9a1652e142d4059`, 40,968 characters / 220 lines.
+- Validation: 11 sections, nine assigned S15/S16 leaves, six categories, C01–C20 ledger, D12-X01–X10 disputes, three organic examples, maturity and scope controls.
+- Branch compare after dossier: ahead 2 / behind 2 compared with updated main `1d956b5bb210f8ce57e17e29aab7d859d731ad80`; only checkpoint/dossier changed. **No rebase/merge.**
+- Disputes retained: Small Game Arrow components, Improved Throwing Knife feather count, Horse Meal, Herbalist 9 activity-local pick credit, fire/grill gate. No direct in-game tests.
+- Last verified branch commit before this checkpoint update: `fed5ef3714655b014285d1e02847da68d9522aa0`.
 
-Then explicit-ref readback; checkpoint update; commit final handoff; final checkpoint closure; branch compare and terminal SHA; **stop at `DELIVERED_REVIEW_PENDING`**. No successor task without coordinator registration.
+## Recovery / exact next action
+**Next permitted action:** write and commit final task handoff at `agents/handoffs/2026-10-17_atlas_foraging_017.md`, preserving source disputes and owner review questions.
+
+Then exact-ref handoff readback, final checkpoint closure, changed-path comparison, terminal SHA and **stop at `DELIVERED_REVIEW_PENDING`**. No successor task without coordinator registration.
 **Blockers:** none established. If a real same-file write conflict appears, fetch new branch HEAD and file SHA before a scoped retry; do not overwrite independent work.
