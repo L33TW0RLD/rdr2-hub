@@ -15,7 +15,7 @@
 
 ## 1. Mission-identity audit and eligibility counts
 
-**Chapter-six core:** Sixteen standard medal entries (Icarus; Visiting; Just a Social Call; A Rage Unleashed; Delights of Van Horn; Goodbye Dear Friend; Favored Sons; Bridge; Archeology; Honor Amongst Thieves; Fine Art of Conversation; Sadie Widow II; King's Son; My Last Boy; Our Best Selves; Red Dead Redemption) **plus 3 optional medal entries** (Do Not Seek Absolution I and II; Course of True Love V) = **19** listed by PowerPyx. **Caution:** Archeology and Honor are conditional story missions, not universally mandatory; Sadie II also requires a part-I offer, and the 16/3 grouping describes source list partition, not universal requiredness. For invariant accounting use **19 medal-bearing names** and **per-entry gate** rather than treating 16 as unconditionally required. [P][F][I]
+**Chapter-six medal identities:** Sixteen listed medal entries other than the Downes/Course trio — with conditional missions among them — (Icarus; Visiting; Just a Social Call; A Rage Unleashed; Delights of Van Horn; Goodbye Dear Friend; Favored Sons; Bridge; Archeology; Honor Amongst Thieves; Fine Art of Conversation; Sadie Widow II; King's Son; My Last Boy; Our Best Selves; Red Dead Redemption) **plus 3 further optional medal entries** (Do Not Seek Absolution I and II; Course of True Love V) = **19** listed by PowerPyx. **Caution:** Archeology and Honor are conditional story missions, not universally mandatory; Sadie II also requires a part-I offer. The 16/3 partition is purely bookkeeping, not a mandatory-versus-optional taxonomy. For invariant accounting use **19 medal-bearing names** and **per-entry gate** rather than treating 16 as unconditionally required. [P][F][I]
 
 **No-Gold component stages (6):** Of Men and Angels I+II (2), Money Lending and Other Sins VI+VII (2), Course of True Love IV (1 letter), Mrs. Sadie Adler, Widow I (1 invitation). These are narrative or mission setup/optional completion, not additional medals. `The Course of True Love IV & V` is one combined PowerPyx shelf entry but ONE Gold for V. The GameFAQs chapter page lists I and II of `Of Men and Angels` as side-stage N/A, even though their original-world completion can contribute to separate `Lending a Hand` trophy. [P][F][T]
 
@@ -627,3 +627,18 @@ Optional before chapter end: Do Not Seek Absolution I→II (Honor ≥ rank 4);
 6. **Owner review:** accept, dispute or request independent tests on claim ledger; this author **does not ADOPT, MERGE, REBASE, FORCE PUSH, reset branch, touch main or original GameGuide**. The original campaign is still the exclusive live progress store.
 
 **Deliverable end state:** chapter research + checkpoint + handoff on three exact leased paths. After GitHub readback and main/branch compare, worker MUST stop `DELIVERED_REVIEW_PENDING`.
+
+<!-- Explicit Markdown source references: every [ID] claim token links to an inspected source. -->
+[P]: https://www.powerpyx.com/red-dead-redemption-2-gold-medals-guide/
+[F]: https://gamefaqs.gamespot.com/xboxone/200180-red-dead-redemption-2/faqs/76594/chapter-6-beaver-hollow
+[I]: https://www.powerpyx.com/red-dead-redemption-2-full-walkthrough-all-story-missions/
+[T]: https://www.powerpyx.com/red-dead-redemption-2-trophy-guide-roadmap
+[G]: https://www.gamerguides.com/red-dead-redemption-2/guide/walkthrough/chapter-6/archaeology-for-beginners
+[ED]: https://www.powerpyx.com/red-dead-redemption-2-do-not-seek-absolution-i-walkthrough/
+[OWL]: https://reddead.fandom.com/wiki/Owl_Feather_Trinket
+[EQUIP]: https://gamefaqs.gamespot.com/xboxone/200180-red-dead-redemption-2/faqs/76594/equipment
+[A08]: https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d08_chapter2_limited_windows_v0_1.md
+[A18]: https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d18_stranger_strands_quests_v0_1.md
+[A22]: https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d22_unique_equipment_compendium_v0_1.md
+[A24]: https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d24_replay_saves_medals_v0_1.md
+[GG]: https://github.com/L33TW0RLD/rdr2/blob/main/missions/README.md
