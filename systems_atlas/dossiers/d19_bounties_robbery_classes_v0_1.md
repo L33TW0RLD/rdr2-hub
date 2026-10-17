@@ -131,7 +131,7 @@ These are **illustrative typed research edges**, not a change to the protected t
 | `S19.M02` locate target | `INTERACTS_WITH` | `S07.M01` map/travel D11 | Search zone/mission clue, not open-world compendium entry |
 | `S19.M03` alive delivery | `INTERACTS_WITH` | `S04.M04` lasso/restraint D13 | Lasso/hogtie standard, target-specific alive-only warrant [E03][R01] |
 | `S19.M04` bounty jobs | `CONTRIBUTES_TO` | `S29.M01` official `Bounties 5` | Must verify actual count; intro disputed [E01][E18] |
-| `S19.M01–M04` | `CONFLICTS_WITH` (semantic only) | `S05.M04` regional *personal* fine D13 | One is income/work, other legal liability; **not** mutually exclusive gameplay flags |
+| `S19.M01–M04` | `INTERACTS_WITH` | `S05.M04` regional *personal* fine D13 | Distinct lawful work and legal liability can coexist; not competing or mutually exclusive gameplay flags |
 | `S20.M01` shop holdup / special business | `CONTRIBUTES_TO` | `S29.M01` official shop category | Source-specific hidden-business requirement contested for arbitrary till [E10][R03] |
 | `S20.M03` homestead stash | `CONTRIBUTES_TO` | `S29.M01` official home category and separately `CACH.BREAKING_ENTERING` | Four stash trophy, one official Home; mission counting disputed [E11][E21] |
 | `S20.M02` coach/train | `CONTRIBUTES_TO` | `S29.M01` official coach/train categories | Tip-based coach strongest proof; ordinary train passenger interaction [E13][E15] |
@@ -140,7 +140,7 @@ These are **illustrative typed research edges**, not a change to the protected t
 | `S05.M01–04` legal/moral | `INTERACTS_WITH` | `S19` target transport / `S20` theft | Authorized capture and criminal holdup have different witness/Honor mechanics [R01] |
 | `S30.M02/M03` mission Gold/replay | `INTERACTS_WITH` | Intro story optional mission and separate robbery story jobs | Score and original-world state separate; D24 primary [R05] |
 
-**Taxonomy integrity note:** Because `CONFLICTS_WITH` normally means mutually exclusive choices in the draft schema, the `S19` vs personal fine row above is **ONLY conceptual contrast**; consumers should encode it as `INTERACTS_WITH` or explicitly distinct record kinds if schema owner later ratifies. Do not promote the illustrated `CONFLICTS_WITH` edge mechanically. Provisional references to `S29.M01`, `S26.M01` and `CACH.*` are cross-dossier addresses, not implemented canonical criterion records.
+**Taxonomy integrity note:** `S19` poster work and `S05.M04` personal debt are separate mechanics that may coexist. Their `INTERACTS_WITH` edge does not imply conversion, payment, prerequisite or mutual exclusion; final leaf labels remain unratified. Provisional references to `S29.M01`, `S26.M01` and `CACH.*` are cross-dossier addresses, not implemented canonical criterion records.
 
 ## 8. Claim-level source ledger (checked 2026-10-17)
 
@@ -246,3 +246,66 @@ These are **illustrative typed research edges**, not a change to the protected t
 - Later optional/bonus **bank robbery** content may depend on edition [E23]. The official completion four classes remain coach/home/shop/train: **bank is not a fifth row**. Do not route an early player to a later story region or use a version-exclusive mission as a universal prerequisite.
 
 **T3 narrative outcomes:** Deliberately omitted. D19 does not recount future story fates, captivity, death, law faction changes or epilogue finale details. Default player-facing answer remains at T0/T1.
+
+
+## 10. Three spoiler-light Chapter 2 situations
+
+### Example A — Valentine sheriff icon, job offered but bounty progress unknown (T0)
+
+**Hypothetical observed inputs:** Arthur has reached Chapter 2, finished the named town introduction and sees the **sheriff's bounty-work marker**, but has not shown a bounty poster, accepted an assignment or supplied a Total Completion screenshot.
+
+**Classification:** **AVAILABLE_CANDIDATE**, not completed bounty. The normal `Good, Honest, Snake Oil` story introduction is offered; if the player wants optional Story Honor/Gold preservation or later lawful hunter contracts, present the **full original GameGuide mission preflight**. The special Allbright **alive** condition matters. If the player is instead asking how the **five-bounty official 100%** counter works, explain this is a separate Total Completion row to inspect **after** actual resolution. Never infer `1/5` because a sheriff scene is planned or listed in a guide [E03][E05][E06][R02][R05].
+
+**High Honor recommendation:** capturing authorized targets alive when required is compatible with preservation-first decisions; the reward delta and any Honor tick remain target-specific/unverified. Do not turn a future mission into a current Wanted crime, or the three mission Gold timers into a universal rule for all poster jobs.
+
+### Example B — Ordinary wagon theft after Emerald Ranch fence introduction (T0/T1)
+
+**Hypothetical observed inputs:** The player reports Hosea's wagon Fence has opened and sees a **generic** coach traveling near Emerald Ranch. They want to know if stealing/selling it would satisfy one of the four official robbery classes; **no formal coach-tip mission observed**.
+
+**Classification:** **PHYSICALLY POSSIBLE / OFFICIAL CREDIT UNKNOWN.** A generic stolen coach can sometimes be sold at the Emerald Ranch wagon Fence and can be relevant to **active Bandit 2/4 ranks**, but PowerPyx explicitly excludes generic wagons from the **formal Coach Robbery 100% category** [E13][E14][E20]. The safe spoiler-light advice is *not* to initiate unlawful risk merely to assume it ticks one of four. Use `Progress > Total Completion > Miscellaneous > Robberies > Coach` after an actual independent attempt; if unchecked, the more reliable official path appears with later coach tips (details T2 opt-in). No false sale value, personal Wanted bounty or Bandit count is recorded.
+
+**D13 interaction:** If the player nevertheless acts and witnesses notice, potential Honor/Wanted outcomes are **separately observed** through HUD and state-specific law records; concealment is not guaranteed.
+
+### Example C — Javier offers a camp homestead outing (T1, preservation-first)
+
+**Hypothetical observed inputs:** In Chapter 2 the player reports an actual **white marked Javier home robbery activity** and says they want personal exhaustive camp experiences, `Friends With Benefits` and official 100%, but no relevant progress evidence is supplied.
+
+**Classification:** **CONDITIONAL / CHAPTER-SENSITIVE invitation**, D05/D08 primary. A real companion invite can matter to camp achievement goals **if confirmed eligible** and may lead to a **Chez Porter homestead stash**. But the counters for a camp companion event, `Breaking and Entering` four stashes and **one official Home Robbery** are **three separate tests**. Source uncertainty on mission-robbery category and trophy recognition means not all credits should be promised [E11][E21][E22][R02]. If the player wants this outing, protect actual active invitation before leaving camp and use D05 for contextual trigger, preserve any special stash/unique materials, then inspect the correct in-game trackers. **No exact current item, unique gun, loot dollar or success is invented.**
+
+**No pressure requirement:** If the player prioritizes High Honor and chooses to postpone stealing, do not repeatedly obstruct ordinary Chapter 2 play for the sake of eventual 100%: explain the **finite camp activity** opportunity separately from the widely deferrable official four robbery-category goals. D08 handles exact chapter-exit warnings, not D19.
+
+## 11. Read-only handoff, QA and owner review gate
+
+### D19 consumer contract for GameGuide / Free Roam / Adaptive Companion
+
+When the player asks about a bounty/robbery, first distinguish **poster-hunter contract** versus **Arthur's own legal Wanted bounty** versus **a separate robbery/achievement/challenge**. Resolve the exact object by observable evidence:
+
+1. **Current context if available:** Story Mode, chapter/region as confirmed by GameGuide, active story objective (including any timed Gold or D08 NOW risk), whether a named sheriff **poster** or named robbery clue exists, actual map/task-log.
+2. **Goal type:** official five bounty jobs, one of four robbery categories, original mission Gold, Bandit active rank, four homestead stash achievement, optional exhaustive/immersion or cash/Honor choice. Do **not** assume which goal user values most merely from word `robbery`.
+3. **Eligibility:** for posters verify the specific target's **alive-only vs dead-or-alive** wording and task activation; for robberies verify **ordinary vs special** shop/homestead/coach/train interaction; check chapter and edition gates without inventing a fixed-hour expiry.
+4. **Safe conditional action:** suggest a lawful bounty delivery or a named voluntary robbery **only when the player chooses it**. If a time-sensitive *observed* Story operation is active, yield to Mission Control's complete Field Guide rather than competing with it. Avoid needless high-cost wanted situations for a High Honor/immersive player.
+5. **Result evidence:** actual named target delivered/sheriff reward; relevant `Progress > Total Completion` *Bounties* count or **four individual robbery boxes**; separate `Progress > Challenges > Bandit` current rank/counter, `Progress > Story` medal, personal regional bounty HUD, platform achievement and save confirmation. Observe **before and after** when possible.
+6. **Handoff:** any player-specific observed facts are reviewed and persisted **only through original `L33TW0RLD/rdr2/campaign/` GameGuide processes**, never appended to general Atlas. A proposed Free Roam outing is only a plan, and an interactive checkbox in ChatGPT does not change game state.
+
+**Suggested short response templates for consumers (not player-state assertions):** "This is a sheriff bounty job; the named wanted poster tells you if the person must be alive. Complete the delivery and check `Progress > Total Completion > Bounties`. Any Wanted bounty on Arthur is separate." For robbery category: "Four unique categories are required; a regular till robbery or generic wagon sale may not tick the official box. Check `Miscellaneous > Robberies` after the actual action. Bandit rank, Honor and law consequences use separate indicators." If no relevant marker is currently observed, label availability **UNKNOWN**, not “missed.”
+
+### Structural and factual acceptance
+
+- [x] Story Mode named bounty capture, warrant terms, delivery and finite quest pool.
+- [x] Clear hunter reward **vs** Arthur legal regional bounty, and both **vs** Bandit 5 wanted-$250 objective.
+- [x] Exactly four official robbery types, comparative eligibility and control/feedback distinctions, no false fifth bank category.
+- [x] Conditional access for intro sheriff job, posters and later coach-tip contracts; no guaranteed earlier chapter mission result.
+- [x] Official five-bounty and four-one-each checklists distinct from **Breaking and Entering**, **Bandit**, Mission Gold, `Lending a Hand` and optional exhaustive goals.
+- [x] Per-claim ledger with scoped source IDs, URL/date register, source contradictions, T0/T1 vs T2 separation and three practical Chapter 2 examples.
+- [x] D13, D08, D15, D18, D24 and D27 read-only; **no** GameGuide/campaign/save/money/Gold writes.
+- [ ] Direct game validation on specific installed platform of bounty cash live-vs-dead and whether intro job increments five-bounty counter.
+- [ ] Direct Total Completion tests of ordinary shop cash-register and generic wagon sale, and whether a scripted coach mission counts the Coach checkbox.
+- [ ] Owner/coordinator review, integration and mechanic adoption — **NOT performed by specialist**.
+
+### Owner/coordinator decisions before formal adoption
+
+Prioritize **D19-X01** bounty live/dead monetary rule (two established specialist-guide interpretations), **D19-X03** intro mission bounty 100% credit, **D19-X04** scripted coach mission credit (GameFAQs vs Gamer Guides), **D19-X05/X06** normal wagon/till eligibility, **D19-X07** Javier companion-home crossover and **D19-X09** sheriff intro availability window. Review D19 vs D13's proposed S20 leaf division, ensuring D13 remains the authority on witnesses/Wanted/Honor and D19 on four official robbery class rules. Do not elevate the proposed `REQUIRES` edge or adopt any unverified target numerical rule.
+
+**Bounded possible future verification project (not self-assigned):** record voluntary *in-game* before/after Total Completion screenshots across one poster delivery and one each of tip coach/hidden shop/home stash/train holdup, with player authorization and platform version, resolve a target's alive/dead payout via original-game experiments if practical. No automated save telemetry is implied. A research dossier is not player progress.
+
+**Delivery rule:** Only the assigned dossier, task checkpoint and dated handoff can be changed on `agent/atlas-bounties-030`; final task stops at `DELIVERED_REVIEW_PENDING` with dossier `RESEARCHED — REVIEW PENDING`. No merge, ratification, protected-file change or future self-assignment.
