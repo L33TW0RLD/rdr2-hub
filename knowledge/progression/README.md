@@ -38,6 +38,21 @@ The initial graph (v0.1) and layered navigation (v0.2) now have a separate **syn
 
 **No actual player data connection:** `source:"SIMULATION_FIXTURE"` and `synthetic:true` are required. The presentation receipts record only which fictional advice was already displayed, never completed mission stages or owned items, and have no promised persistence.
 
+## Iteration v0.4 — opportunity lifecycle
+
+This iteration resolves a **distinct problem from notification timing**: the fictional *opportunity's current evidence state* (offered, observed, potentially eligible, not visible now, explicitly resolved, potentially chapter-closed but unverified) must stay separate from what the Companion *already recommended* or whether it should show an alert again.
+
+| v0.4 file | Purpose |
+|---|---|
+| [Opportunity policy](opportunity_policy_v0_4.json) | Twelve source-linked Chapter 2 opportunity references; typed world-state selectors, goal relevance and closure guardrails |
+| [Lifecycle evaluator](opportunity_lifecycle_v0_4.mjs) | Pure `composeOpportunityLifecycle`, `validateOpportunityPolicy` and `verifyOpportunityLifecycleSuite` |
+| [Lifecycle fixtures](opportunity_scenarios_v0_4.json) | 32 positive fictional transitions + seven deliberately invalid inputs |
+| [Opportunity design](opportunity_design_v0_4.md) | Plain-language evidence/status model and protection against falsely claiming optional content missed |
+
+**Review status:** still provisional. The source graph's disputed Story dependencies remain unsolved; no extra hard story prerequisites or invented optional chapter-expiry rules were added. All newly created IDs are internal opportunity references, NOT adopted Atlas mechanic IDs and NOT player progress records.
+
+**Regression readback (2026-10-17):** 10/10 v0.1 + 16/16 v0.2 + 37/37 v0.3 + 32/32 v0.4 positive synthetic checks passed; 9/9 v0.3 + 7/7 v0.4 deliberately invalid inputs rejected. Evaluator functions were executed from committed GitHub sources inside a JS sandbox. Node CLI **was not independently run** due to the repository not being present in the local runtime; this is not a live ChatGPT client or gameplay acceptance result.
+
 ## Files and boundaries
 
 | File | Content |
