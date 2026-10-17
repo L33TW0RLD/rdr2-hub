@@ -1,0 +1,16 @@
+# Checkpoint — atlas-replay-026 (initial)
+- **Task / issue:** `atlas-replay-026` / #32 (Wave 3 D24)
+- **Branch:** `agent/atlas-replay-026`
+- **Registered branch baseline:** `d3bc807c75633fec042f4a34af72515a24cc2696`
+- **Latest main at startup:** `b578aec6f1edab1279f2f2c5989326d4e86231ed`
+- **Starting comparison:** branch 0 commits ahead, 1 behind main; no branch changed paths; no rebase/reset authorized.
+- **Workflow status:** IN_PROGRESS (worker-side checkpoint only; registry coordinator-owned)
+- **Scope:** Story Mode mission replays, manual/automatic saves, checkpoints, original-world state persistence, Gold medals, 70 Gold Rush versus personal all-Gold, platform/version caveats; researched reference only.
+- **Exclusive lease:** `systems_atlas/dossiers/d24_replay_saves_medals_v0_1.md`; `agents/checkpoints/atlas_replay_026.md`; `agents/handoffs/2026-10-17_atlas_replay_026.md`.
+- **Read-only:** latest main registry/Wave 3 plan/Issue #32/agent workflow, taxonomy/schema and all existing dossiers; original `L33TW0RLD/rdr2` GameGuide/campaign; experimental `save_intelligence/`; all other agent branches and files.
+- **Research maturity:** DRAFT until independently sourced, then RESEARCHED — REVIEW PENDING; never ADOPTED.
+- **Verified durable progress:** Registration and empty branch task diff checked. This is the initial checkpoint; no dossier or gameplay results yet.
+- **Uncommitted work:** no research text yet.
+- **Exact next permitted action:** Read the original GameGuide and Save Intelligence *read-only*, independently verify Rockstar/achievement/replay/save sources, and author the 11-section D24 dossier only in leased path.
+- **Acceptance:** 11 dossier sections; dated claim-source ledger; contradictions, version exceptions, three T0/T1 Chapter 2 cases; independent saving/medal accounting; GameGuide consumer handoff; three-only changed-path compare; final verification/handoff.
+- **Stop:** DELIVERED_REVIEW_PENDING after committed dossier, updated checkpoint and final handoff; no merge/ratification.
