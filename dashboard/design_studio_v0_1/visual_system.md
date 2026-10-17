@@ -401,3 +401,18 @@ One source-linked suggested PROJECT occupies slightly more space for the next se
 Both candidate rows should route to their exact Hub source document in a new ChatGPT turn and query latest authoritative GameGuide for *availability only*. Clicking Project/Outing is **not a gameplay action or completion record**. Projects and outings are `DRAFT / NOT ADOPTED` content and should be labelled as planning help, not authoritative campaign state.
 
 **Acceptance:** user has not selected A or B. This study is the next iteration, preserving both locked components untouched.
+
+
+---
+
+## 18. Owner color lock v1.1 — darker Bronze, no layout changes (2026-10-18)
+
+Owner approved the combined current-chapter header and Mission Control view, requesting **only a darker, more distinguishable Bronze hue**.
+
+**Active palette:** Gold `#D6AC49`; Silver `#C2C9D1`; **Bronze `#A76D52`** (muted copper-brown, replaces lighter prior `#C28A60` and `#B47D59` proposals); Unverified `#454A52`.
+
+Apply Bronze consistently to **both the header's `Bronze` summary label and any Bronze best-medal segment**. The new Bronze is darker and redder than the gold rail; it retains approximately 4.95:1 contrast against black. Neither medal color is status proof by itself; text and tooltip/title access remain available.
+
+**NO other redesign:** 18 thin mission segments and separately sourced map-marker dots, current-chapter-only scope, hover-title/click-full-Guide, Home, and A1 compact Mission Control including small bold uppercase `NEW POSSIBILITIES` and independent Time-sensitive label all remain **LOCKED**. Actual Chapter II record presently has 0 best-Bronze medals; synthetic later-chapter-stage simulations can display Bronze for visual verification but must remain unmistakably fictional.
+
+Adventure/system categorization below Mission Control remains **UNSELECTED**. This color adjustment is the only newly locked visual change. Client color validation still pending.
