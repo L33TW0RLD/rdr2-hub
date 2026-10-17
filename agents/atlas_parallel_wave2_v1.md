@@ -4,6 +4,8 @@
 
 **Owner-directed resolution:** [Wave 2 five-dossier scope decision](../systems_atlas/reviews/2026-10-17_wave2_scope_resolution.md) · [Waves 3 and 4, 9 + 8](atlas_waves3_4_plan_v1.md). Current merge comprises **D08, D11, D12, D13, D15**. `atlas-deadeye-016` was not delivered and must **not** be marked merged, recreated, or silently substituted. Research content is still `RESEARCHED — REVIEW PENDING`.
 
+**Final postresearch status (2026-10-17):** This is a **historical Wave 2 registration**, not a live work queue. D08/D11/D12/D13/D15 merged in Wave 2. D09 was deferred **then** but successfully delivered under the exact existing Issue #19 and merged in Wave 3. Wave 3 (9) and Wave 4 (8) subsequently merged as research, giving **28/28 RESEARCHED — REVIEW PENDING**; do not restart these agents. [Closeout audit](../quality/2026-10-17_atlas_postresearch_closeout.md).
+
 ## Purpose
 
 Complete the next six **useful Chapter 2 and evergreen gameplay systems** with six **existing, reusable specialist conversations**, not six disposable chats. The Wave 1 tasks (D01–D06) are already `MERGED`; their content is `RESEARCHED — REVIEW PENDING`, not mechanically ADOPTED. Each worker fetches latest `main`, then switches to its **separate Wave 2 branch and new checkpoint**.
@@ -39,6 +41,6 @@ Use the published [Wave 1 cross-dossier review](../systems_atlas/reviews/2026-10
 
 **Registration baseline:** `9931058e69ac3c6e7923841da87813de7f015f41` for all six new branches. Current main may advance after registration: compare, do not force-reset or rebase prior completed work.
 
-## Later topics (not registered)
+## Later topics (historical registration snapshot — ALL RESEARCHED BY WAVE 4)
 
 D07 proposed contextual controls/S31 gate, D10 clothing/weather/witness outfit, D14 town services/games, D16 fishing, D17 legendary animals, D18 strangers, D20 collections, and D24 replay/saves, plus remaining Dxx backlog. Choose next wave based on Chapter 2 player value and actual reviewed gaps, not only article counts.
