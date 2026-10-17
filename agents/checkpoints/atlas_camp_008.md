@@ -22,19 +22,20 @@
 |---|---|---|---|
 | Authority recovery | `agents/registry.md`, issue #6, Wave 1, workflow/agent contracts on `main` | VERIFIED READ | Registered lease exactly matches the issue |
 | Startup branch baseline | `agent/atlas-camp-008` compared with main | VERIFIED READ | Branch exists; zero ahead, four behind; no checkpoint originally present |
-| Initial checkpoint | This file (verify after commit) | NEEDS_RECHECK | No substantive D02 research was written before this checkpoint |
+| Initial checkpoint | `f9966b4ffe34cd30f4baa510363ebeec2dc8e1d4` | VERIFIED | Read back explicit branch checkpoint before research |
+| D02 research dossier | `systems_atlas/dossiers/d02_camp_ledger_upgrades_v0_1.md` @ `b2b86a935e55a74fb6e42dfd57fbc2137bb9f297` | VERIFIED | 13 sections (11 mandatory + decision guide/interface), 23 claims/22 sources, all leaves/gates, checked 2026-10-17; readback blob `cbb104f6c7010396aa5af11b856ca22f3afbf3a9` |
 
-- **Last verified commit before checkpoint:** `a46b504eed4dbe397c64cf2e33672802163654ef` (assigned branch baseline).
+- **Last verified commit before this checkpoint update:** `b2b86a935e55a74fb6e42dfd57fbc2137bb9f297` (D02 dossier source-ID correction, explicit branch readback).
 - **Uncommitted/recoverable work:** none asserted.
 - **Files intentionally untouched:** registry, Atlas schema/index, Free Roam, campaign and mission guides, all other agents' paths.
 
 ## Exact resumption instruction
-1. **Current phase:** Startup checkpoint and evidence research pending.
-2. **Exact next permitted action:** Verify this checkpoint commit on the assigned branch, then collect independently verified D02 camp economy sources and scoped read-only Atlas/legacy references for the leased dossier.
-3. **Afterward:** Author dossier; commit and read back; refresh checkpoint; commit handoff; compare against latest main; verify all branch files.
+1. **Current phase:** Research and D02 dossier committed/verified; final handoff and branch comparison pending.
+2. **Exact next permitted action:** Commit the final task handoff `agents/handoffs/2026-10-17_atlas_camp_008.md` on this branch, then verify explicit readback and compare all changed paths against current main.
+3. **Afterward:** Set this checkpoint to `DELIVERED_REVIEW_PENDING` following successful handoff readback and final branch comparison; then stop writes.
 4. **Blockers/owner decisions:** None to initial source gathering; owner review required before adoption. Main being newer than assigned branch is disclosed, not reason to rewrite the lease.
-5. **Uncertainties:** Actual player Ledger, current debt status, cash, tools, upgrades, satchels and camp stocks are UNKNOWN; no in-game menu personally inspected.
+5. **Uncertainties:** Actual player Ledger, debt, funds, tools, upgrades, satchels and stocks UNKNOWN; menu not directly inspected. Documented disagreements include wallet shortfall treatment and edition/guide prices.
 6. **Handoff:** `agents/handoffs/2026-10-17_atlas_camp_008.md`.
-7. **Required verification:** source URLs/check dates, 11-section backlog contract, first eligible Strauss return+deposit vs full chain, money routing, D02/D03 ownership, three examples, no unauthorized paths, latest main comparison.
+7. **Required verification:** final handoff ref, 23 source-backed claims, all 11 backlog sections, precise one-debt gate, payment/edition disputes, three examples, only three leased paths in compare, latest main.
 
 **Evidence boundary:** Research documents general Story Mode mechanics, not player-specific results. Task and content status are separate.
