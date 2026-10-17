@@ -25,15 +25,22 @@ Research D17 `S13.M01–M04` (provisional): discovering/recognizing legendary an
 |---|---|---|
 | Task registration | Issue #29, main registry and Wave 3 plan | VERIFIED READ; all three paths match |
 | Branch | `main...agent/atlas-legendary-022` | VERIFIED READ; branch exists, behind 1, ahead 0, no changed paths at startup |
-| Assigned checkpoint | This file | PENDING COMMIT READBACK; research not started |
+| Initial checkpoint | `a87141f6cc3c884b1ee012022bde8c18e9990df1` | VERIFIED via explicit branch readback blob `5e2c0226e8fc9ebd620ad8c7f5a5fb2565ae89f0` |
+| Full D17 dossier | `systems_atlas/dossiers/d17_legendary_animals_rewards_v0_1.md` @ `9ea9c44dac75214ddc258bbc39f83af3a24b952f` | VERIFIED by explicit branch readback blob `30afeb5b47d3698e975654cdccc9c82743621f0f`: 11 sections, 24 claims, 16 sources, 3 Chapter 2 scenarios |
 
 **Last verified starting commit:** `d3bc807c75633fec042f4a34af72515a24cc2696`.  
-**Uncommitted durable work:** none claimed. **Blockers:** none to initial source investigation.
+**Last verified milestone commit before this checkpoint update:** `9ea9c44dac75214ddc258bbc39f83af3a24b952f`. **Uncommitted durable work:** none claimed. **Blockers:** none to final handoff. **Live menu observation:** not performed; item/goal statuses still unknown.
 
 ## Exact next action
-1. **NEXT PERMITTED ACTION:** Verify this initial checkpoint on the assigned branch by SHA/readback, then read D17 taxonomy and relevant existing read-only dossiers and independently verify official Rockstar and specialist sources.
-2. Draft and commit the sole D17 dossier with all 11 sections, source claim ledger, genuine contradictions, precise optional access gates, three practical examples and safe item-handling rules.
-3. Verify dossier readback and amend checkpoint with exact research SHA; commit final handoff; close checkpoint to `DELIVERED_REVIEW_PENDING`.
+1. **NEXT PERMITTED ACTION:** Commit the final handoff at `agents/handoffs/2026-10-17_atlas_legendary_022.md`, then read it back by explicit assigned branch ref.
+2. **Completed:** authored 11-section D17 dossier, 24 source claims, 16 sources, official Rockstar lost-pelt exception, precise optional gates, 3 Chapter 2 examples, conditional recipient decision flow.
+3. **Next closure:** after handoff readback, update checkpoint to `DELIVERED_REVIEW_PENDING`; do not repeat dossier research or reopen finished task.
 4. Fetch latest main; verify final branch head, all three files and exact changed-path lease. Report terminal SHA and stop task. Coordinator alone reviews/integrates.
 
 **Authority boundary:** Atlas research cannot infer save state, resurrect material in the player's inventory, or award 100%/Compendium progression.
+## D17 research completion evidence (2026-10-17)
+
+- **24 claim rows** D17-C01–C24 tied to 16 documented source IDs, including narrow first-party Rockstar lost/unskinnable carcass/pelt rule, independent specialist guides and explicitly anecdotal one-pelt/multiple-garment reports.
+- **All four provisional owned leaves:** S13.M01–M04. Exact 11 numbered sections verified; 3 Chapter 2 examples; spoiler T2 future gates isolated; Trapper material vs cash/Fence part separated.
+- **Unresolved for owner:** extra named trophy part availability if unable to skin; sale proceeds (not first-party promised); same legendary material's internal multi-use allocation; fixed local-activity cooldown; special edition categories; full Compendium vs trophies.
+- **Scope audit (before handoff):** branch ahead 2, main one ahead of registration, only checkpoint and D17 dossier changed; third leased handoff expected. No peer or Save Intelligence files changed.
