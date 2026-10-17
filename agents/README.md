@@ -28,7 +28,7 @@ Completed early branches `agent/hub-ux-001` and `agent/atlas-taxonomy-002` have 
 
 ## Completed research routing — Wave 3 delivered and integrated
 
-Nine task lanes completed delivery in **nine isolated specialist task branches**: D09 original [Issue #19](https://github.com/L33TW0RLD/rdr2-hub/issues/19) and D10/D16/D17/D18/D20/D22/D24/D27 with new issues/branches. Recover the exact [Wave 3 routing and file leases](atlas_parallel_wave3_v1.md) and [registry](registry.md) before any writer starts. Research dossiers were integrated to main with a [cross-review](../systems_atlas/reviews/2026-10-17_wave3_cross_dossier_review.md) and content remains `RESEARCHED — REVIEW PENDING`, not adopted. D09's terminal task-local ownership handoff is recorded in the review. Wave 4 (eight dossiers) remains planned, unregistered.
+Nine task lanes completed delivery in **nine isolated specialist task branches**: D09 original [Issue #19](https://github.com/L33TW0RLD/rdr2-hub/issues/19) and D10/D16/D17/D18/D20/D22/D24/D27 with new issues/branches. Recover the exact [Wave 3 routing and file leases](atlas_parallel_wave3_v1.md) and [registry](registry.md) before any writer starts. Research dossiers were integrated to main with a [cross-review](../systems_atlas/reviews/2026-10-17_wave3_cross_dossier_review.md) and content remains `RESEARCHED — REVIEW PENDING`, not adopted. D09's terminal task-local ownership handoff is recorded in the review. Wave 4 (eight dossiers) is now [registered with exact independent issues and file leases](atlas_parallel_wave4_v1.md), but specialist chats must be explicitly dispatched and are not automatically running.
 
 ## Wave 2 completed / 9+8 research roadmap
 
