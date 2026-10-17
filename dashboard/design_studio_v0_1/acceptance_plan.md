@@ -112,3 +112,19 @@ Do not ask all five as a form. Let real feedback identify which one to refine fi
 | H09 | Compare hierarchy | Chapter hero + achievement line + rail + first Mission Control fit without creating a large KPI dashboard |
 
 **Current state:** DESIGN PROPOSED; actual client click acceptance **PENDING USER**. No production implementation or new game-state read/write. Below-the-fold Adventure/Atlas presentation is deferred.
+
+
+---
+
+## Owner-directed cleanup checks H10–H15 (2026-10-17)
+
+| ID | Test | Expected result | Status |
+|---|---|---|---|
+| H10 | Inspect chapter subtitle | Exactly `Chapter II`; no `Mission medals` suffix | PENDING USER |
+| H11 | Look immediately below rail | **No dropdown, no instruction/legend, no persistent panel**. Mission Control is next | PENDING USER |
+| H12 | Hover a completed or neutral segment | Tooltip displays **mission heading only** | PENDING USER |
+| H13 | Click/tap a segment | Tiny anchored popover displays **mission heading only**; it can be dismissed without scrolling | PENDING USER |
+| H14 | Test 18-slot line on mobile | Visible 4px rail, larger interaction zone, no horizontal overflow | UNTESTED |
+| H15 | Keyboard/screen reader inspection | Semantics allow discovering identity/status without a cluttered visible dropdown | UNTESTED |
+
+**Supersession:** H05's previous Operation/status inspection and H06's `accessible selector` alternative are replaced by title-only popover and accessible padded segment controls. Do not show a visible select or extra below-rail detail. No mission availability/Gold/campaign mutation; this is a local design rehearsal.
