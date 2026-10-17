@@ -289,3 +289,42 @@ Status: DESIGN SPECIFIED; dot positioning, hover integration and mobile legibili
 Hypothesis: **A (list)** as scalable default, with **C's top featured exception only for a truly active risk**. Compare to B because the owner values a more immersive presentation. In particular test 2 vs 4 vs 0 observed markers, and one urgent story marker. Pick based on real screenshot/interaction feedback, not preference claimed by the design author.
 
 **Design-only scope:** no changing medal colors/segments, no fake chapter progress, no new Story gates, no original GameGuide edits. The historical v0.1 always-visible four-button header is superseded by the locked owner design.
+
+
+---
+
+## 14. Owner preference v0.7 — compact list, urgency label, system unlock spotlight (2026-10-18)
+
+**Owner feedback:** Chose **A (compact mission list) over B (editorial mission cards)**. Reject C as a separate always-featured mission layout; its *visual emphasis capability* may instead be applied to significant **gameplay-system introductions unlocked by completing a mission**. An active optional skippable Story opportunity should receive a **small meaningful inline "Time-sensitive" label**, not automatically a giant featured card.
+
+This supersedes the provisional A/B/C choice in §13. It does **not** change the owner-LOCKED medal header, dots, hover title, full-Guide click or Home.
+
+### Baseline: list always remains a list
+
+Mission Control rows have one readable mission title, one optional character identifier, and a coherent whole-row source action. Avoid repeating chapter/operation numbers, medal results, Gold-count badges, difficulty stars or generic location in each row. Use thin row separators, no individual heavy nested card per mission.
+
+An **urgency label** must be an evidence-backed annotation *on the affected row*, not a ranking algorithm or a global red panel. Example label: `[clock icon] Time-sensitive` with a short truly actionable explanation only if a specific skippable stage is **actually observed active**. No claimed expiry timer. Screen readers must receive urgency text, not color alone.
+
+### Distinguish "system introduction" from "already owned"
+
+A source-linked mission may **introduce a mechanic on/after completion**, but the preview must not state the player already owns a horse brush, fishing rod or Fence access. Three bounded Chapter 2 examples from the existing progression research:
+
+| Mission | Source-grounded normal route | Preview-safe language |
+|---|---|---|
+| *Exit Pursued by a Bruised Ego* (Hosea) | The normal story route introduces stables and horse-brush care. | `Introduces: Stables & horse care` |
+| *A Fisher of Men* (Abigail) | The normal story route introduces fishing. | `Introduces: Fishing` |
+| *The Spines of America* (Hosea) | Completing this mission introduces **Seamus's wagon Fence** at Emerald Ranch, not every Fence in the game. | `Introduces: Emerald Ranch wagon Fence` |
+
+All are **normal-route progression research, not confirmed owned abilities**. Check mission-source corroboration/Atlas research maturity when displaying. No universal game-mode unlock guarantees.
+
+### Two next design alternatives — A1 / A2
+
+**A1 — Inline system note:** Keep one-line `[sparkles/compass] Introduces: Fishing` **under the relevant mission row** when it is a material new system; other rows remain single-line. Upside: immediately connects the mechanic to its mission. Downside: multiple such rows can create clutter.
+
+**A2 — One supporting "New possibilities" spotlight below the list:** Keep **all rows equally compact**. Below the list, one quiet, source-grounded feature strip/card reads `NEW POSSIBILITY / Fishing / Introduced through A Fisher of Men` with a genuine `Learn fishing` action that opens the owning Atlas research. Upside: a positive, more atmospheric feature emphasis without making that Story mission artificially dominant. Downside: one extra object under the list; it must be absent when there's no genuinely relevant upcoming mechanic or during activated Story urgency. The feature box must never be mistaken for newly *unlocked* content in the player's current save.
+
+**Selection policy:** Show one spotlight at most, chosen by explicit user goal/project or a clearly materially relevant and high-confidence upcoming source-bound system introduction. Without that, show no spotlight rather than arbitrarily choosing the earliest numbered mission. Optional feature focus is not a mission recommendation/order. Avoid repeating a spotlight already explained unless status changes or the user asks.
+
+**Active urgent scenario:** Inline `Time-sensitive` label on the exact oil-wagon mission row and a very short immediate consequence if supported. Suppress unrelated feature spotlight for that moment; keep all other observed missions selectable. Distinguish urgent actionable Gold/skippability from an optional "new possibility".
+
+**Owner review pending:** Compare A1 vs A2 in native client with two/four observed fictional missions, a new feature that matters, a no-feature state, and a specific active wagon-risk state. Do not self-ratify A1/A2. Current best hypothesis A2 for truly major introductions, A1 for minor contextual notes, but only one visual emphasis at a time.
