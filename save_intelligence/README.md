@@ -2,7 +2,7 @@
 
 **Status:** EXPERIMENTAL / REVIEW PENDING. This is not an adopted feature, a background watcher, an authorized campaign writer, or live game telemetry.
 
-This directory holds a **read-only** RDR2 PC Story Mode save-inspection experiment. It can inspect individual \`SRDR...\` saves or ZIPs containing them without editing, extracting or overwriting the source files. The prototype decrypts the PC save envelope, validates \`CHKS\` records, reads certain inventory-like quantity records and a cash candidate, and separately reports some *uninterpreted* structural deltas.
+This directory holds a **read-only** RDR2 PC Story Mode save-inspection experiment. It can inspect individual `SRDR...` saves or ZIPs containing them without editing, extracting or overwriting the source files. The prototype decrypts the PC save envelope, validates `CHKS` records, reads certain inventory-like quantity records and a cash candidate, and separately reports some *uninterpreted* structural deltas.
 
 ## Contents
 
@@ -11,14 +11,14 @@ This directory holds a **read-only** RDR2 PC Story Mode save-inspection experime
 - [Offline save observer](tools/rdr2_save_observer.py)
 - [Experimental structural probe](tools/rdr2_structural_probe.py)
 
-**Prerequisite:** Python 3.10+ with \`cryptography\` installed (\`python -m pip install cryptography\`). Run on **copies**, preferably with the game closed. Reading an exported ZIP is preferable to touching a live, cloud-synced profile directory.
+**Prerequisite:** Python 3.10+ with `cryptography` installed (`python -m pip install cryptography`). Run on **copies**, preferably with the game closed. Reading an exported ZIP is preferable to touching a live, cloud-synced profile directory.
 
-\`\`\`powershell
+```powershell
 python .\save_intelligence\tools\rdr2_save_observer.py .\copies\saves.zip --output .\local_reports\save_summary.json
 python .\save_intelligence\tools\rdr2_structural_probe.py .\copies\saves.zip --output .\local_reports\structural_report.json
-\`\`\`
+```
 
-Reports are created exclusively; existing output files are never overwritten. **Do not commit reports, save exports, original \`SRDR...\` files, \`.bak\` files, profile folders or screenshots** to this public repository. JSON output can include private in-game state, original save labels, content hashes, data identifiers and coordinate candidates.
+Reports are created exclusively; existing output files are never overwritten. **Do not commit reports, save exports, original `SRDR...` files, `.bak` files, profile folders or screenshots** to this public repository. JSON output can include private in-game state, original save labels, content hashes, data identifiers and coordinate candidates.
 
 ### Evidence model
 
