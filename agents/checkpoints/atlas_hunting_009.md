@@ -1,42 +1,45 @@
-# Agent 009 — Hunting & Field Transport Checkpoint
+# Agent 009 — D04 Hunting Specialist Final Checkpoint
 
-**Task:** `atlas-hunting-009` · **lane:** Systems Atlas D04 hunting ecology specialist  
-**Branch:** `agent/atlas-hunting-009` · **assignment:** [Issue #7](https://github.com/L33TW0RLD/rdr2-hub/issues/7)  
-**Recorded:** 2026-10-17 UTC · **workflow status:** IN_PROGRESS (initial checkpoint)
-**Starting branch SHA:** `a46b504eed4dbe397c64cf2e33672802163654ef` (coordinator-created branch, verified against GitHub branch read).  
-**Latest main observed at startup:** `6246ab38eede37d64b29e6a259238d65efc48006`; branch was four commits behind main, zero ahead at initial inspection.  
-**Content status:** NOT STARTED; no research dossier yet. These statuses do not imply player progress.
+**Task ID:** `atlas-hunting-009` · **lane:** Systems Atlas hunting/field-transport specialist  
+**Working branch:** `agent/atlas-hunting-009`  
+**Issue:** [#7 — Agent 009 D04](https://github.com/L33TW0RLD/rdr2-hub/issues/7)  
+**Date:** 2026-10-17 UTC  
+**Task workflow status:** **DELIVERED_REVIEW_PENDING — STOP WRITING THIS TASK**  
+**Content status:** **RESEARCHED — REVIEW PENDING**, never automatically ADOPTED.
 
-## Mandate, scope, lease
-Produce one source-checked **Story Mode** D04 hunting clean-kill / quality / field-cargo dossier, including S12.M01–M05; S06.M04 and S04.M01 crosslinks; S10/S13/S17 read-only references. T0/T1 by default. Distinguish in-game observations, rules, recommendations, uncertainty, and recipient material paths.
+## Identity, provenance and lease
 
-**Exclusive writable files:**
-1. `agents/checkpoints/atlas_hunting_009.md` (this file)
-2. `systems_atlas/dossiers/d04_hunting_transport_v0_1.md`
-3. `agents/handoffs/2026-10-17_atlas_hunting_009.md`
-
-**Protected/read-only:** ALL other `rdr2-hub` paths, including `agents/registry.md`, shared indexes and taxonomy, concurrent specialists' files, and the entire original `L33TW0RLD/rdr2` repository.
-
-**Dependencies:** Adopted registry and workflow on main; proposed Atlas schema, backlog and record contract (NOT ratified); historical `rdr2/guides/hunting` research (REVIEW PENDING); other unpublished agent branches read-only/provisional.
-
-**Research acceptance:** Show 3-star starting animal + appropriate weapon/ammo + clean kill + verify resulting quality; retain whole carcass where objective requires; Show Info as primary situational check; distinct bait/tracking limitations; carcass/pelt, cargo and decay caveats; recipient/crafting separation; ordinary/legendary and Buck Antler Trinket exceptions; claim-specific primary/secondary evidence, contradiction ledger, three Chapter 2 outings, consumer handoff. Do not claim inventory/unlocks/saves/results.
+- **Branch starting SHA:** `a46b504eed4dbe397c64cf2e33672802163654ef` (verified).
+- **Latest main observed before final readback:** `6246ab38eede37d64b29e6a259238d65efc48006`; main changed four commits after base; no rebase/merge.
+- **Initial checkpoint commit:** `69823f11920b74f64cf4268f5481adeee266c980` (verified by explicit branch read).
+- **Dossier commit:** `11897036d09333870c37fc728ba35f1537467679` (verified content blob `2853322e51e57fcc8ef4c59d775a83cbb520df5c`, 327 lines).
+- **Handoff commit:** `303e72f16aedb6fda5ffe252b28ef7a58bddb78e` (verified content blob `55d87dd57744657a03b2dc043b97a339f17f29b6`).
+- **Final checkpoint commit SHA:** not self-referentially available; fetch branch head after this update and report externally.
+- **Exclusive writable paths only:** `systems_atlas/dossiers/d04_hunting_transport_v0_1.md`, `agents/checkpoints/atlas_hunting_009.md`, `agents/handoffs/2026-10-17_atlas_hunting_009.md`.
+- **Protected read-only:** every other Hub path, especially shared registry/README/taxonomy/manifests and parallel agents; the entire original `L33TW0RLD/rdr2` repo.
+- **Source dependencies:** latest main governance; unratified Atlas schema, backlog and record contract; three legacy hunting guides (RESEARCHED — REVIEW PENDING); other Wave 1 branches provisional.
+- **Review/stop:** owner/coordinator assesses evidence and adoption; no worker main writes, merge, ratification, or player-state update.
 
 ## Durable progress
-| Milestone | Verified evidence | State |
+
+| Milestone | Verified committed artifact | Status |
 |---|---|---|
-| Scope/lease recovered | `main:agents/registry.md` + issue #7 + wave plan; task branch `a46b504` | VERIFIED before initial checkpoint |
-| Initial checkpoint | This file, branch commit/readback still to verify | PENDING VERIFICATION |
-| D04 research dossier | Not authored | NOT STARTED |
-| Final handoff | Not authored | NOT STARTED |
+| Registry, issue and lease recovered | `main:agents/registry.md`; #7; branch `a46b504` | **VERIFIED** |
+| Mandatory initial checkpoint before research | `69823f11920b74f64cf4268f5481adeee266c980` | **VERIFIED** |
+| Legacy/independent primary and secondary source-check | D04 §11 citations E01–E17, claims H01–H17 | **VERIFIED WRITTEN**, no hands-on game experiment claimed |
+| Substantial D04 dossier and acceptance cases | `systems_atlas/dossiers/d04_hunting_transport_v0_1.md` @ `1189703` | **VERIFIED READBACK** |
+| Full handoff | `agents/handoffs/2026-10-17_atlas_hunting_009.md` @ `303e72f` | **VERIFIED READBACK** |
+| Final branch diff and terminal SHA | Complete AFTER this checkpoint commit via exact branch ref | **REQUIRES FINAL READBACK** |
 
-- **Last verified commit before this checkpoint:** `a46b504eed4dbe397c64cf2e33672802163654ef`.
-- **Assumptions:** Game mechanic claims require fresh independent source-check; no player state is supplied or inferred.
-- **Blockers/owner decisions:** None in this lease; proposed taxonomy remains unratified.
-- **Untouched:** Registry, taxonomy, indexes, original game repository and other agents' branches.
+**Acceptance verification:** all S12.M01–M05; field decision tree; three-star starting quality + appropriate tool/ammo + clean fatal hit + actual outcome; bait and scent limits; carcass/pelt protection; delivery route separation; Rockstar narrow legendary recovery; disputed Trinket edge; no guessed horse capacity/decay; criteria scoped to official 100% subsets; three Chapter 2 examples; contradictions and URLs. All included in reviewed branch content.
 
-## Exact recovery / next action
-1. **Current phase:** INITIAL CHECKPOINT.
-2. **Next permitted action:** Verify this checkpoint's actual committed contents by fetching `agents/checkpoints/atlas_hunting_009.md` with `ref=agent/atlas-hunting-009`; **only then** begin substantive read-only source research and draft D04 inside leased dossier path.
-3. Thereafter: research sources, commit dossier, verify readback, update checkpoint with true milestones, commit handoff, compare to current main and report terminal SHA; stop at `DELIVERED_REVIEW_PENDING`.
-4. **Verification before handoff:** explicit branch ref file readback; claim/evidence and scope audit; compare actual modified paths against lease and latest main.
-5. **Final handoff path:** `agents/handoffs/2026-10-17_atlas_hunting_009.md`.
+## Recovery / exact next permitted action
+
+1. **Phase:** FINAL DELIVERY / terminal verification.
+2. **Exact next permitted action (verification only, NO edits):** fetch the assigned branch's `main...agent/atlas-hunting-009` compare and the three leased files by explicit branch ref, ensuring the diff includes **only the three leased paths** and obtaining the **terminal branch SHA**.
+3. **After verification:** stop. The next **write** is for owner/coordinator review or a separately activated registered task with a new branch/lease. This task is closed to autonomous authoring.
+4. **Blockers:** none preventing D04 delivery. Disputed Buck Trinket 2★ effects, precise cargo/decay and recipe/Dead Eye edges remain explicit research follow-ups, not resolved facts.
+5. **Assumptions:** all live player inventory/unlocks/hunt/mission/save outcomes are UNKNOWN; classification does not confer them.
+6. **Shared index change request:** coordinator may index D04 **only after review**, separate authorization; this agent made no shared index change.
+
+**No extra task self-assigned; reusable specialist conversation remains available upon a future coordinator assignment.**
