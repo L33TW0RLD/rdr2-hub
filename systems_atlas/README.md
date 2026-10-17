@@ -1,6 +1,6 @@
 # Systems Atlas
 
-**Status:** TAXONOMY DRAFT / UNRATIFIED · **Six source-checked dossiers integrated as RESEARCHED — REVIEW PENDING** · **Updated:** 2026-10-17.
+**Status:** TAXONOMY DRAFT / UNRATIFIED · **Eleven source-checked dossiers integrated as RESEARCHED — REVIEW PENDING** · **Updated:** 2026-10-17.
 
 The Atlas documents gameplay mechanics and dependencies for RDR2 Story Mode. It is a **reference**, not a live campaign commander, compulsory checklist or proof of the player's progress.
 
@@ -18,6 +18,20 @@ Six parallel specialists delivered complete source-checked Story Mode references
 | [D06 Inventory](dossiers/d06_inventory_items_v0_1.md) | Item classes, unique components, safe disposition, limits | REVIEW PENDING — storage/rare-item recovery limitations |
 
 **Read the [Wave 1 cross-dossier integration review](reviews/2026-10-17_wave1_cross_dossier_review.md) before recommending an irreversible sale, donation, rare material consumption, horse/cargo transition or chapter-sensitive activity.** One dossier owns each general rule; related dossiers link it read-only. Taxonomy Sxx.Mnn leaf IDs and S31 remain provisional.
+
+## Wave 2 — five integrated research references (NOT ADOPTED)
+
+The owner approved integration of **five** verified Wave 2 specialists while rescheduling D09 Dead Eye into Wave 3. These are **research references** (`RESEARCHED — REVIEW PENDING`) and contain no player-owned items, completed missions or automatically observed save state.
+
+| Dossier | Primary topic | Critical review caveat |
+|---|---|---|
+| [D08 Chapter 2 opportunities](dossiers/d08_chapter2_limited_windows_v0_1.md) | Optional story windows, urgency and chapter closing | Conditional observed triggers; some expiry claims contested |
+| [D11 Travel and wilderness camps](dossiers/d11_travel_wilderness_camps_v0_1.md) | Travel modes, field camps, fast-travel unlock | Price, cargo and edition/patch limits; coordinator fixed escaped Markdown markup only |
+| [D12 Herbs, food and cooking](dossiers/d12_herbs_food_crafting_v0_1.md) | Gathering, personal recipes, six crafting categories | Recipe components and category-credit conflicts remain |
+| [D13 Law and Honor](dossiers/d13_law_honor_robbery_v0_1.md) | Witnesses, wanted/bounty, Honor and robbery distinctions | Disguise/reidentification and specific mission credit disputed |
+| [D15 Compendium and trackers](dossiers/d15_compendium_trackers_v0_1.md) | Study/collect/use semantics and official 100% subsets | Entry credit and trophy/full-catalog criteria differ |
+
+See the [Wave 2 partial fact check](reviews/2026-10-17_wave2_partial_cross_review.md), [integration review](reviews/2026-10-17_wave2_integration_gate.md) and [owner-directed five-dossier resolution](reviews/2026-10-17_wave2_scope_resolution.md). **D09 is still open and unresearched**: [Issue #19](https://github.com/L33TW0RLD/rdr2-hub/issues/19) carries forward to [Wave 3](../agents/atlas_waves3_4_plan_v1.md), alongside eight other planned dossiers. Wave 4 covers eight more. Neither future wave has been launched.
 
 ## Taxonomy Architect 002 — review-only additions
 
@@ -59,4 +73,4 @@ The Atlas is **one shared mechanics knowledge foundation** for Mission Control, 
 - [Free Roam examples](../free_roam/content/README.md) — link Atlas mechanic rules without inventing acquired gear or completed tasks.
 - [Companion routing](../companion/context_contract_v1.md) — explanatory detours and return context.
 
-**Dossier production:** [Atlas Parallel Wave 1](../agents/atlas_parallel_wave1_v1.md) delivered D01–D06 references for coordinator integration; each remains **RESEARCHED — REVIEW PENDING**. Continue the broader D07–D28 research backlog with separate tasks and leave the original S01–S30/proposed S31 unchanged. Merged research does **not** mean owner/gameplay adoption.
+**Dossier production:** [Atlas Parallel Wave 1](../agents/atlas_parallel_wave1_v1.md) delivered D01–D06 references for coordinator integration; each remains **RESEARCHED — REVIEW PENDING**. Continue the 17 remaining dossier tasks according to [Wave 3/4 plan](../agents/atlas_waves3_4_plan_v1.md) and leave the original S01–S30/proposed S31 unchanged. Merged research does **not** mean owner/gameplay adoption.
