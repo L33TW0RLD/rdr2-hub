@@ -57,7 +57,7 @@ Prices below are **standard base references**, sourced primarily from [E04], cro
 | Other | `Leather Working Tools` | **$225** | Pearson crafting equipment, **not** an instantly granted satchel |
 | Other · later-context T2 | `Camp Boat` | **$450 base reference** | Location/chapter-gated water access; see price exception below, not a default Chapter 2 recommendation |
 
-**Price anomaly / edition rule:** [E05] and [E15] show alternate **$180** Tools and **$360** Boat, matching 80% of $225/$450; [E15] also shows Dutch $176 (80% of $220) and Arthur $260 (80% of $325). [E16] attributes 20%-off Ledger displays to Special/Ultimate Edition benefits. **Do not silently splice discounted values into base-price tables** or assume the player's entitlement: present in-game quoted price, potentially edition/promotion modified. [E04][E05][E15][E16]. A 2018–2019 [E07] table conflicts on the last ammo tier ($100 vs $110): use $110 corroborated by [E04]/[E06] and explicitly retain the exception below.
+**Price anomaly / edition rule:** [E05] and [E15] show alternate **$180** Tools and **$360** Boat, matching 80% of $225/$450; [E15] also shows Dutch $176 (80% of $220) and Arthur $260 (80% of $325). [E16] attributes 20%-off Ledger displays to Special/Ultimate Edition benefits. **Do not silently splice discounted values into base-price tables** or assume the player's entitlement: present in-game quoted price, potentially edition/promotion modified. [E04][E05][E15][E16]. A Shacknews price table [E22] conflicts on the last ammo tier ($100 vs $110): use $110 corroborated by [E04]/[E06]/[E07], and explicitly retain the exception below.
 
 ### 3B. Restock is *not* an upgrade (separate recurring fee)
 
@@ -152,7 +152,7 @@ The bibliography links are the **exact sources accessed on 2026-10-17**, unless 
 | D02-C05 | Automatic wallet coverage of camp-fund shortfall vs mandatory predeposit | E01 E03 **vs** E11 E17 | 2026-10-17 | **DISPUTED**; MEDIUM for shortfall possibility; inspect game UI |
 | D02-C06 | Medical upgrade tiers cost 30 / 50 / 75 base | E04 E06 E07 | 2026-10-17 | CORROBORATED; HIGH |
 | D02-C07 | Provisions tiers cost 30 / 45 / 55 base | E04 E06 E07 | 2026-10-17 | CORROBORATED; HIGH |
-| D02-C08 | Ammo tiers cost 60 / 90 / 110 base | E04 E06; E07 exception | 2026-10-17 | CORROBORATED; MEDIUM–HIGH; last tier 100 in E07 |
+| D02-C08 | Ammo tiers cost 60 / 90 / 110 base | E04 E06 E07; E22 exception | 2026-10-17 | CORROBORATED; MEDIUM–HIGH; last tier 100 in E07 |
 | D02-C09 | Dutch lodging first 220, then Arthur 325; map 545 total base | E02 E03 E04 E06 | 2026-10-17 | CORROBORATED; HIGH |
 | D02-C10 | Third lodging tier 300; morale/donations/stock consumption benefits | E04 E06 | 2026-10-17 | CORROBORATED; MEDIUM for precise behavior |
 | D02-C11 | Tools are distinct Ledger purchase, standard listed $225 | E04 E06 E08 | 2026-10-17 | CORROBORATED; HIGH base, edition-dependent |
@@ -192,6 +192,7 @@ The bibliography links are the **exact sources accessed on 2026-10-17**, unless 
 - **[E19]** Push Square, *How to Give to the Poor*, 2025; checked 2026-10-17: https://www.pushsquare.com/guides/red-dead-redemption-2-how-to-give-to-the-poor
 - **[E20]** GTA Base, *100% Completion Guide & Checklist*, accessed 2026-10-17, section `Tasks NOT Required for 100% Completion`: https://www.gtabase.com/red-dead-redemption-2/guides/red-dead-redemption-2-100-completion-guide-checklist
 - **[E21]** PowerPyx, *100% Checklist*, 2018, checked 2026-10-17, five official categories: https://www.powerpyx.com/red-dead-redemption-2-100-guide-checklist/
+- **[E22]** Shacknews, *All Van der Linde camp upgrades*, 2018; checked 2026-10-17; isolated final-ammo-price contradiction: https://www.shacknews.com/article/108122/all-van-der-linde-camp-upgrades-red-dead-redemption-2
 
 **Local read-only context:** `rdr2-hub/main` `systems_atlas/mechanics_taxonomy_v0_2.md`, `taxonomy_schema_v0_1.md`, `unlock_and_dependency_map_v0_1.md`, `knowledge/record_contract_v1.md`, `free_roam/content/projects/camp_development_v0_1.md`; original `L33TW0RLD/rdr2/main` `guides/completion/chapter_02_trigger_map.md` and `guides/hunting/pearson_vs_trapper.md` (**RESEARCHED — REVIEW PENDING, not adopted**). These give architectural compatibility, not direct evidence that any current player bought anything.
 
@@ -201,7 +202,7 @@ The bibliography links are the **exact sources accessed on 2026-10-17**, unless 
 |---|---|---|
 | **Cash source at purchase** | E01/E03/E05 present “must donate first,” while E11 and E17 describe automatic Arthur-wallet shortfall funding | **DISPUTED**, likely camp balance first with wallet supplement; avoid hard-blocked advice, check visible two balances/confirmation. No current player balance presumed. |
 | **Tools $225 vs $180; boat $450 vs $360** | E04/E06 give base prices; E05/E08/E15 show exactly 80% values for several entries; E16 reports edition discounts | Edition/guide display difference plausible, **not independently verified for this install**; quote base/reference and instruct actual Ledger readback. |
-| **Final ammo tier $110 vs $100** | E04/E06 give $110; E07 (Shacknews as mentioned in price review) gives $100 | Standard reference $110 with higher-source corroboration; in-game visible amount wins. **Editorial note:** E07 source register is Xaine's, which agrees with $110; divergent **Shacknews** article is https://www.shacknews.com/article/108122/all-van-der-linde-camp-upgrades-red-dead-redemption-2 and should be used only as secondary dispute lead. |
+| **Final ammo tier $110 vs $100** | E04/E06/E07 give $110; **E22 Shacknews** gives $100 | Standard reference $110 is better corroborated; actual in-game visible amount wins. Preserve E22 as a discrete secondary disagreement. |
 | **Fast-travel limits over time** | E02 2018 camp map/one-way only vs E13 Rockstar 1.15 explicit wilderness-camp travel | Version-dependent change, not simultaneous contradiction: updated Story Mode lets the player depart temporary camp *after* buying the upgrade. Do not claim every destination/circumstance available. |
 | **Pearson cosmetics require Tools?** | Some cosmetic items may have individual tool or ingredient exceptions; E05 makes blanket claim | D03 owns exact item-level prerequisites; only general principle claimed here. |
 | **Chores/Honor exact points and schedule** | E09 wiki and E10 forum support broad mechanic; hours and amount vary | Don't automate daypart/honor increments; follow actual chore prompt and Honor display. |
