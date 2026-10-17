@@ -1,6 +1,6 @@
 # Systems Atlas — Wave 3: Nine Independent Research Lanes
 
-**Registered:** 2026-10-17 · **Status:** 9 tasks REGISTERED / workers NOT automatically launched.
+**Registered:** 2026-10-17 · **Final status:** all 9 task dossiers/checkpoints/handoffs verified and delivered, integrated as **RESEARCHED — REVIEW PENDING / NOT ADOPTED**. Historical registration below is preserved. No automatic agent launch was implied.
 **Repository:** `L33TW0RLD/rdr2-hub` · **Source baseline:** `d3bc807c75633fec042f4a34af72515a24cc2696`
 **Owner scope:** Wave 3 covers **9 dossiers**. Wave 4 remains 8 planned dossiers. All existing Wave 1/2 research is `RESEARCHED — REVIEW PENDING`, NOT `ADOPTED`.
 
@@ -31,7 +31,7 @@ Read **the exact issue** for the explicit paths. No shared index, `agents/regist
 
 ## Handoff and safety rules
 
-1. Assign **exactly one conversation to each issue**; nine concurrent writer lanes need nine distinct chats. Existing specialist chats may be reused only if they are not simultaneously working on another issue. Never paste D18 into the D20 chat and never have two chats start D09. The old Agent 009 chat is the originally designated D09 owner; if another chat takes over, coordinator must explicitly record a single new owner before any writes.
+1. Assign **exactly one conversation to each issue**; nine concurrent writer lanes need nine distinct chats. Existing specialist chats may be reused only if they are not simultaneously working on another issue. Never paste D18 into the D20 chat and never have two chats start D09. **Post-delivery audit:** D09 handoff reports owner explicitly approved a task-local thread transfer, while the exact Issue #19 branch and lease remained exclusive. Coordinator recorded this in the [Wave 3 review](../systems_atlas/reviews/2026-10-17_wave3_cross_dossier_review.md); do not infer Agent 009 authored that dossier.
 2. In each chat: read current `main` registry, THIS plan, matching issue and agent contract. **Switch to assigned task branch**. Branch may be behind newer `main`; that is expected. Do not rebase/reset or force-push. If task checkpoint already exists, inspect its content and current SHA before attempting an update, instead of creating a duplicate and getting HTTP 422.
 3. Commit a distinct **initial task checkpoint**, then complete an 11-section source-backed dossier with typed provisional taxonomy links, conditional gates, item/progress evidence boundaries, 3 spoiler-light Chapter 2 examples, claim-by-claim sources/checked dates, disputed facts and read-only consumer handoff.
 4. Author only the task's three leased paths. **No worker may modify this table or Registry.** An actual conflicting task owner or write error is a stop-and-report, not a reason to overwrite.
@@ -41,6 +41,6 @@ Read **the exact issue** for the explicit paths. No shared index, `agents/regist
 
 ## Completion and coordinator check
 
-Deliveries are not automatic. Coordinator checks each dossier, source provenance, cross-dossier contradiction and file lease before any `main` merge. Then publish a review-gated Wave 3 integration. Wave 4 eight topics are [reserved here](atlas_waves3_4_plan_v1.md), not registered or launched by this wave.
+All nine verified deliveries were cross-reviewed for source boundaries, exact task path leases and unresolved contradictions in the [Wave 3 review](../systems_atlas/reviews/2026-10-17_wave3_cross_dossier_review.md). The integration is research-reference-only; no mechanic becomes ADOPTED through merging. Wave 4 eight topics are [reserved here](atlas_waves3_4_plan_v1.md), not registered or launched by this wave.
 
 **Key separation:** Agent task `MERGED` = source docs integrated; research `RESEARCHED — REVIEW PENDING` = unratified; player mission/Gold/Honor/inventory achievements = original GameGuide-only, not inferred from Atlas.

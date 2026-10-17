@@ -1,6 +1,6 @@
 # Systems Atlas
 
-**Status:** TAXONOMY DRAFT / UNRATIFIED · **Eleven source-checked dossiers integrated as RESEARCHED — REVIEW PENDING** · **Updated:** 2026-10-17.
+**Status:** TAXONOMY DRAFT / UNRATIFIED · **Twenty source-checked dossiers integrated as RESEARCHED — REVIEW PENDING** · **Updated:** 2026-10-17.
 
 The Atlas documents gameplay mechanics and dependencies for RDR2 Story Mode. It is a **reference**, not a live campaign commander, compulsory checklist or proof of the player's progress.
 
@@ -31,7 +31,25 @@ The owner approved integration of **five** verified Wave 2 specialists while res
 | [D13 Law and Honor](dossiers/d13_law_honor_robbery_v0_1.md) | Witnesses, wanted/bounty, Honor and robbery distinctions | Disguise/reidentification and specific mission credit disputed |
 | [D15 Compendium and trackers](dossiers/d15_compendium_trackers_v0_1.md) | Study/collect/use semantics and official 100% subsets | Entry credit and trophy/full-catalog criteria differ |
 
-See the [Wave 2 partial fact check](reviews/2026-10-17_wave2_partial_cross_review.md), [integration review](reviews/2026-10-17_wave2_integration_gate.md) and [owner-directed five-dossier resolution](reviews/2026-10-17_wave2_scope_resolution.md). **D09 is still open and unresearched**: [Issue #19](https://github.com/L33TW0RLD/rdr2-hub/issues/19) carries forward to [Wave 3](../agents/atlas_waves3_4_plan_v1.md), alongside eight other planned dossiers. Wave 4 covers eight more. Neither future wave has been launched.
+See the [Wave 2 partial fact check](reviews/2026-10-17_wave2_partial_cross_review.md), [integration review](reviews/2026-10-17_wave2_integration_gate.md) and [owner-directed five-dossier resolution](reviews/2026-10-17_wave2_scope_resolution.md). **Historical context:** D09 was deferred at the Wave 2 integration boundary, then completed for Wave 3. See Wave 3 below. Wave 4 still holds eight planned topics.
+
+## Wave 3 — nine researched dossiers (NOT ADOPTED)
+
+All nine Wave 3 specialist branches supplied an independently scoped dossier/checkpoint/final handoff. Content is **RESEARCHED — REVIEW PENDING**, not universal gameplay certification or confirmed player unlocks.
+
+| Dossier | Research owner/topic | Unresolved question / consumer rule |
+|---|---|---|
+| [D09 Cores and Dead Eye](dossiers/d09_cores_deadeye_growth_v0_1.md) | Health, Stamina, Dead Eye bars/cores, XP and ability stages | Story-learned abilities ≠ capacity; D09 import formatting-only repair |
+| [D10 Clothing](dossiers/d10_clothing_temperature_disguise_v0_1.md) | Wardrobe, temperature, grooming, masks | Actual capacity/temperature and law identification are conditional |
+| [D16 Fishing](dossiers/d16_fishing_legendary_fish_v0_1.md) | Rod, controls, bait, lure, catch/release, legendary fish | Quest access and 13 mailed fish separate from catching |
+| [D17 Legendary animal rewards](dossiers/d17_legendary_animals_rewards_v0_1.md) | Hunt/clues, Trapper/Fence, Rockstar pelt exception | Lost material availability ≠ sale revenue or recovered rare Fence part |
+| [D18 Stranger strands](dossiers/d18_stranger_strands_quests_v0_1.md) | Multi-stage optional Stranger missions/expiry | Not every white ? is missable; distinguish stage/reward/strand |
+| [D20 Collection hand-ins](dossiers/d20_completion_collections_v0_1.md) | Cards, bones, carvings, fish, hunting requests, exotics | Collection, mailing, completion and personal-all are different |
+| [D22 Unique equipment](dossiers/d22_unique_equipment_compendium_v0_1.md) | Rare weapons, pickups, personally exhaustive Compendium | Missing a rare record ≠ failure of official 100% |
+| [D24 Replay and saves](dossiers/d24_replay_saves_medals_v0_1.md) | Manual/auto saves, mission replay, 70 Gold Rush | Replay medal ≠ original-world restore; GameGuide campaign authority |
+| [D27 Challenges](dossiers/d27_nine_challenge_strands_v0_1.md) | Nine strands × ten ordered ranks, equipment rewards | Rank-local credit and purchase/equip gates must be checked |
+
+**Read [Wave 3 cross-dossier review](reviews/2026-10-17_wave3_cross_dossier_review.md) before presenting a disputed irreversible choice.** Two coordinator-only presentation repairs are documented in the review: D09 escaped Markdown was fixed; D20's three sibling-dossier relative links were corrected. All other dossier source blobs are unchanged. Wave 4's **eight** dossiers [remain planned](../agents/atlas_waves3_4_plan_v1.md), not automatically researched/merged.
 
 ## Taxonomy Architect 002 — review-only additions
 
@@ -73,4 +91,4 @@ The Atlas is **one shared mechanics knowledge foundation** for Mission Control, 
 - [Free Roam examples](../free_roam/content/README.md) — link Atlas mechanic rules without inventing acquired gear or completed tasks.
 - [Companion routing](../companion/context_contract_v1.md) — explanatory detours and return context.
 
-**Dossier production:** [Atlas Parallel Wave 1](../agents/atlas_parallel_wave1_v1.md) delivered D01–D06 references for coordinator integration; each remains **RESEARCHED — REVIEW PENDING**. Continue the 17 remaining dossier tasks according to [Wave 3/4 plan](../agents/atlas_waves3_4_plan_v1.md) and leave the original S01–S30/proposed S31 unchanged. Merged research does **not** mean owner/gameplay adoption.
+**Dossier production:** [Atlas Parallel Wave 1](../agents/atlas_parallel_wave1_v1.md) delivered D01–D06 references for coordinator integration; each remains **RESEARCHED — REVIEW PENDING**. Continue the eight remaining Wave 4 dossier tasks according to [Wave 3/4 plan](../agents/atlas_waves3_4_plan_v1.md) and leave the original S01–S30/proposed S31 unchanged. Merged research does **not** mean owner/gameplay adoption.
