@@ -1,6 +1,6 @@
-# Mission Control — GameGuide Production Wave 1 Registration v1.0
+# Mission Control — GameGuide Production Wave 1 Registration v1.1
 
-**Registered:** 2026-10-17 · **Status:** SEVEN AGENTS REGISTERED / NOT LAUNCHED · **Coordinator authority:** owner instruction to merge Wave 1 research and register guide-production agents.
+**Registered:** 2026-10-17 · **Status:** SEVEN AUTHORING LANES + ONE CHAPTER 1 QA LANE REGISTERED (agent work tracked separately) · **Coordinator authority:** owner instruction to merge Wave 1 research and register guide-production agents.
 **Original authoring repository:** `L33TW0RLD/rdr2` · **All branch starting SHA:** `9112e163a1251dd7c15117361e7b8760bf5b8a9a` (2026-10-17 17:48:45 UTC).
 **Hub research baseline:** `061e51d842286a50363bf8e2c8b71e4dcd5b62b1` — [research-only PR #58 MERGED](https://github.com/L33TW0RLD/rdr2-hub/pull/58).
 **Research status:** eight chapters source-documented and integrated as **RESEARCHED — REVIEW PENDING / NOT ADOPTED**, standard-game 104 Gold identities **PROVISIONAL**.
@@ -8,10 +8,14 @@
 
 ## Authoritative producer registry
 
-All tasks use unique registered original-repo branches created at the SAME exact starting commit. A row's directory wildcard authorizes **only NEW individual mission .md files** inside that directory, and expressly excludes README/index updates. A mission's proposed shelf ID is not a medal count or a fixed gameplay order. All other paths protected.
+**Coverage correction (2026-10-17):** Chapter 1 is **not absent**. The original GameGuide contains SIX existing Chapter 1 mission dossiers (Operations 001–006) and the merged Hub includes Chapter 1 research. Their existing content needs a dedicated independent Field Guide v1.1 QA check, **not** seven-chapter bulk re-authoring. Issue [rdr2 #8](https://github.com/L33TW0RLD/rdr2/issues/8) and branch `agent/gameguide-chapter1-qa-051` now cover that audit with three exclusive NEW output files, none under the existing Chapter 1 source folder.
+
+
+All eight lanes use unique registered original-repo branches created at the SAME exact starting commit. A row's directory wildcard authorizes **only NEW individual mission .md files** inside that directory, and expressly excludes README/index updates. A mission's proposed shelf ID is not a medal count or a fixed gameplay order. All other paths protected.
 
 | Lane | Original-repo issue | Task and branch | Exclusive mission write path | Exclusive checkpoint | Exclusive handoff | Status |
 |---|---|---|---|---|---|---|
+| 0 · Chapter 1 QA | [#8](https://github.com/L33TW0RLD/rdr2/issues/8) | `gameguide-chapter1-qa-051` · `agent/gameguide-chapter1-qa-051` | `missions/reviews/chapter_01_field_guide_v1_1_audit.md` NEW ONLY; six original `missions/chapter_01/*.md` READ ONLY | `agents/checkpoints/gameguide_chapter1_qa_051.md` | `agents/handoffs/2026-10-17_gameguide_chapter1_qa_051.md` | REGISTERED_NOT_LAUNCHED · SIX EXISTING GUIDES / QA PENDING |
 | 1 · Chapter 2 gap | [#1](https://github.com/L33TW0RLD/rdr2/issues/1) | `gameguide-strange-kindness-044` · `agent/gameguide-strange-kindness-044` | `missions/chapter_02/24_a_strange_kindness.md` only | `agents/checkpoints/gameguide_strange_kindness_044.md` | `agents/handoffs/2026-10-17_gameguide_strange_kindness_044.md` | REGISTERED_NOT_LAUNCHED |
 | 2 · Chapter 3 | [#2](https://github.com/L33TW0RLD/rdr2/issues/2) | `gameguide-chapter3-045` · `agent/gameguide-chapter3-045` | `missions/chapter_03/*.md` new only | `agents/checkpoints/gameguide_chapter3_045.md` | `agents/handoffs/2026-10-17_gameguide_chapter3_045.md` | REGISTERED_NOT_LAUNCHED |
 | 3 · Chapter 4 | [#3](https://github.com/L33TW0RLD/rdr2/issues/3) | `gameguide-chapter4-046` · `agent/gameguide-chapter4-046` | `missions/chapter_04/*.md` new only | `agents/checkpoints/gameguide_chapter4_046.md` | `agents/handoffs/2026-10-17_gameguide_chapter4_046.md` | REGISTERED_NOT_LAUNCHED |
@@ -22,6 +26,8 @@ All tasks use unique registered original-repo branches created at the SAME exact
 
 ### Editorial workload (research estimate, not actual gameplay)
 
+- **Chapter 1: 6 existing source dossiers, 0 new authoring dossiers assigned**; independently audit all six against Field Guide v1.1 before any claim of production QA completeness. Record P0/P1/P2 issues without editing existing authored files. QA is a separate EIGHTH lane, not one of seven new-dossier production agents.
+
 - Chapter 2: one newly missing Gold dossier **A Strange Kindness**, Operation 024; four source-reported Gold objectives.
 - Chapter 3: **17** distinct base-game Gold identities, including source-described no-medal setup as appropriate.
 - Chapter 4: **14** base-game Gold identities, plus separately conditional Special/Ultimate-only `High and Low Finance` (not in standard 104 count).
@@ -30,7 +36,7 @@ All tasks use unique registered original-repo branches created at the SAME exact
 - Epilogue I: **10** Gold identities; `Gainful Employment` cross-chapter, `The Landowning Classes` no extra Gold identity.
 - Epilogue II: **11** Gold identities; `The Best of Women` no extra Gold identity.
 - **Total producer targets:** one missing current chapter guide + 80 later-chapter base-game Gold entries = **81** source-index target dossiers, conditional on in-game identity verification. Nothing authorizes all 81 as user-visible, currently playable missions.
-- Chapter 1 and existing Chapter 2 Operation 007–023 guides are protected and not scheduled for mass rewriting.
+- Chapter 1 six authored mission guides and existing Chapter 2 Operation 007–023 guides are protected and not scheduled for mass rewriting; only the new separate Chapter 1 QA audit report is permitted.
 
 ## Standard work contract (applies to EACH agent)
 
@@ -44,7 +50,7 @@ All tasks use unique registered original-repo branches created at the SAME exact
 
 ## Individual reusable launch instruction
 
-In the **assigned** independent ChatGPT thread (not seven agents in one chat), send:
+In the **assigned** independent ChatGPT thread (not eight agents in one chat), send:
 
 > RDR2 GAMEGUIDE — MISSION GUIDE PRODUCTION WAVE 1. Execute the registered original GameGuide GitHub Issue #N on `L33TW0RLD/rdr2` using its exact `agent/gameguide-...-NNN` branch and exclusive write paths. Recover the current Hub coordinator plan and merged review-only chapter research, then all original GameGuide contracts. Commit initial checkpoint before authoring. Work autonomously on this chapter, source-verify each complete v1.1 mission guide, preserve all protected sources and player state, maintain sequential checkpoint batches if too large, and finish with handoff and exact branch scope/terminal SHA at `DELIVERED_REVIEW_PENDING`. No self-merge, no live authority or progress mutation.
 
@@ -52,4 +58,6 @@ Replace #N and branch with the corresponding registered row; the GitHub issue is
 
 ## Coordinator review gates and next step
 
-Owner/coordination decides when to start seven specialists. After delivery, independently compare each branch against its starting SHA; check all mission guide Gold sources, phase completeness, spoiled-future limits, one-time opportunities, claim confidence, exact 104 denominator and filenames/operation IDs. Integration into original GameGuide occurs ONLY via separate review/merge approval after source validation, with original campaign and existing missions protected. Research merge PR #58 alone grants **no gameplay adoption**.
+Owner/coordination decides when to start seven authoring specialists plus the separate Chapter 1 QA specialist. After delivery, independently compare each branch against its starting SHA; check all mission guide Gold sources, phase completeness, spoiled-future limits, one-time opportunities, claim confidence, exact 104 denominator and filenames/operation IDs. Integration into original GameGuide occurs ONLY via separate review/merge approval after source validation, with original campaign and existing missions protected. Research merge PR #58 alone grants **no gameplay adoption**.
+
+**Dedicated Chapter 1 QA kickoff (Issue #8):** In a separate specialist conversation, recover `L33TW0RLD/rdr2` Issue #8 and exact `agent/gameguide-chapter1-qa-051` branch; checkpoint first; inspect all six existing Chapter 1 dossiers and approved Field Guide v1.1 against the Hub merged Chapter 1 research; produce ONLY the read-only audit in `missions/reviews/chapter_01_field_guide_v1_1_audit.md`, own checkpoint and handoff, and stop at `DELIVERED_REVIEW_PENDING`. Do not edit any six existing source guide, canonical campaign, indexes, or other branches.
