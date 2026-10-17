@@ -1,0 +1,136 @@
+{
+  "version": "0.5.0",
+  "status": "PROVISIONAL_ROUTE_SIMULATION_NOT_UI_IMPLEMENTATION",
+  "scope": "SYNTHETIC_SCENARIO_ONLY",
+  "result_contract": "A source request/pointer is not content fetched, successfully rendered, or a player state update.",
+  "authority": {
+    "story": {
+      "repository": "L33TW0RLD/rdr2",
+      "file_namespace": "missions/chapter_02/",
+      "protocol": "protocol/walkthrough_presentation.md",
+      "full_guide_requirement": "FULL_ORIGINAL_A_TO_FINAL_WITH_GOLD_AND_INLINE_WARNINGS",
+      "must_reload_on_return": true
+    },
+    "atlas": {
+      "repository": "L33TW0RLD/rdr2-hub",
+      "file_namespace": "systems_atlas/",
+      "research_maturity": "RESEARCHED_REVIEW_PENDING",
+      "must_fetch_real_dossier_before_answer": true
+    },
+    "free_roam": {
+      "repository": "L33TW0RLD/rdr2-hub",
+      "file_namespace": "free_roam/",
+      "is_recommendation_not_progress": true
+    },
+    "gameplay": {
+      "owner": "L33TW0RLD/rdr2/campaign/**",
+      "read_in_this_prototype": false,
+      "write_in_this_prototype": false
+    }
+  },
+  "scenario_guard": {
+    "synthetic": true,
+    "source": "SIMULATION_FIXTURE",
+    "session_kind": "SYNTHETIC_NAV_SESSION",
+    "max_depth": 8,
+    "default_spoiler_budget": "T1_CHAPTER_2",
+    "forbid_automatic_story_write": true
+  },
+  "actions": [
+    {
+      "id": "show_home",
+      "description": "Home contextual trailhead with only observed scenario markers"
+    },
+    {
+      "id": "show_story",
+      "description": "Open Story choices (no forced shelf order)"
+    },
+    {
+      "id": "open_project",
+      "description": "Expand an existing project node with source-grounded stages"
+    },
+    {
+      "id": "open_track",
+      "description": "Open a child track or feature of the current project only"
+    },
+    {
+      "id": "open_atlas",
+      "description": "Detour into a source-linked Atlas group (actual lesson must be fetched by consumer)"
+    },
+    {
+      "id": "select_mission",
+      "description": "Select a story marker observed in the specific synthetic scenario"
+    },
+    {
+      "id": "open_mission_reference",
+      "description": "Open an unobserved dossier for research/replay only, explicitly NOT currently available"
+    },
+    {
+      "id": "return",
+      "description": "Return to immediate previous surface; restore selected source semantics but not ephemeral checkboxes"
+    }
+  ],
+  "source_requests": {
+    "mission": {
+      "status": "NEEDS_EXTERNAL_SOURCE_READ",
+      "role": "original_full_field_guide",
+      "repository": "L33TW0RLD/rdr2",
+      "render_after": "source_file_and_approved_presentation_loaded",
+      "never": "short_card_as_full_guide"
+    },
+    "atlas": {
+      "status": "NEEDS_EXTERNAL_SOURCE_READ",
+      "role": "atlas_research_explanation",
+      "repository": "L33TW0RLD/rdr2-hub",
+      "render_after": "source_dossier_loaded_and_claim_status_checked",
+      "never": "unapproved_leaf_claim_as_fact"
+    }
+  },
+  "route_rules": [
+    "Start on home with named observed choices; unobserved published prerequisites remain candidates, not marker observations.",
+    "Open only known direct children of a project/track, not arbitrary cross-graph jump.",
+    "Atlas requests only known atlas family IDs; a route link must be an EXPLAINED_BY edge or an explicit user-requested known Atlas group.",
+    "Select_mission requires an observed marker in the explicit synthetic scenario; open_mission_reference may bypass availability but must label REFERENCE_ONLY.",
+    "A full mission view is only a source request requiring actual original A-to-final reload. No pseudo-briefing or generated Gold tiles.",
+    "Return from Atlas to a selected mission issues the SAME full-source reload request; never claim checklist or UI drawer state persisted.",
+    "Any critical activated warning appears in navigation metadata even when looking at an Atlas topic.",
+    "Return never asserts completed, visited, unlocked, crafted, acquired, Gold or saved.",
+    "State changes are scenario fixture replacements, not implicit side effects of clicking.",
+    "Do not follow a different agent's foreign path for a state write."
+  ],
+  "view_types": [
+    "home",
+    "story_board",
+    "project",
+    "track",
+    "atlas_reference",
+    "mission_reference"
+  ],
+  "return_semantics": {
+    "stack": "transient in-memory sequence of semantic surfaces",
+    "source_reload_mandatory_on": [
+      "atlas_reference",
+      "mission_reference"
+    ],
+    "checklist_persistence": false,
+    "full_guide_on_return": true,
+    "depth_limit": 8
+  },
+  "atlas_crosslinks": {
+    "camp.pearson": "atlas.hunting",
+    "camp.pearson.satchels": "atlas.hunting",
+    "camp.pearson.decor": "atlas.hunting",
+    "camp.economy": "atlas.camp",
+    "camp.life": "atlas.camp",
+    "project.horse": "atlas.horses",
+    "horse.basics": "atlas.horses",
+    "horse.training": "atlas.horses",
+    "camp.facilities": "atlas.camp"
+  },
+  "source_limitations": [
+    "This router does not fetch the original GameGuide or Atlas contents; a request must be executed by a separately authorized reader.",
+    "GameGuide source dossiers may contain historical player progress text; do not import those facts into a fictional scenario.",
+    "An observed marker in a fixture is not a real-time in-game scan.",
+    "Native ChatGPT UI interaction acceptance requires a separate real-client run; tests cover plain data envelopes only."
+  ]
+}
