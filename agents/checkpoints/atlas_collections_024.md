@@ -1,48 +1,42 @@
-# Atlas Collections 024 — Initial Recovery Checkpoint
+# Atlas Collections 024 — Terminal Task Checkpoint
 
-**Task ID:** `atlas-collections-024` · [Issue #34](https://github.com/L33TW0RLD/rdr2-hub/issues/34)  
-**Work lane:** D20, Story Mode collectible families, progress/turn-in/completion evidence  
-**Working branch:** `agent/atlas-collections-024`  
+**Task:** `atlas-collections-024` · **Issue:** [#34](https://github.com/L33TW0RLD/rdr2-hub/issues/34)  
+**Lane:** Wave 3 D20 collecting / hand-ins · **Branch:** `agent/atlas-collections-024`  
 **Checkpoint date:** 2026-10-17 UTC  
-**Workflow:** `IN_PROGRESS` — INITIAL CHECKPOINT, **created before researching**  
-**Content status:** `NOT_STARTED`; expected final `RESEARCHED — REVIEW PENDING`, not adopted
+**Workflow:** **DELIVERED_REVIEW_PENDING** — STOP AFTER FINAL GITHUB READBACK  
+**Research status:** **RESEARCHED — REVIEW PENDING**, NOT adopted or owner-ratified.
 
-## Exact authority, branch and lease
+## Branch, lease and source authority
 
-- **Registered branch baseline/head:** `d3bc807c75633fec042f4a34af72515a24cc2696`.
-- **Latest main at startup:** `b578aec6f1edab1279f2f2c5989326d4e86231ed`; branch **behind 1 / ahead 0** (normal Wave 3 baseline; no rebase/reset).
-- **Recovered:** current `main` registry, `agents/atlas_parallel_wave3_v1.md`, agent contract v0.3, parallel workflow v0.2, source authority, backlog/schema/record contract, Issue #34. Issue/registry/branch and three-file lease match. Wave 3 requires single writer on this task; user explicitly assigned this conversation only the D20 task.
-- **Exclusive write paths:**
+- **Registered branch base:** `d3bc807c75633fec042f4a34af72515a24cc2696`.
+- **Latest main observed at task startup:** `b578aec6f1edab1279f2f2c5989326d4e86231ed` (branch one commit behind, normal and expected).
+- **Exact three writable files, no others:**
   1. `systems_atlas/dossiers/d20_completion_collections_v0_1.md`
   2. `agents/checkpoints/atlas_collections_024.md`
   3. `agents/handoffs/2026-10-17_atlas_collections_024.md`
-- **Protected:** all other `rdr2-hub` paths, `agents/registry.md`, indexes, sibling worker files/branches, Wave 1/2 files, `save_intelligence/`, and original `L33TW0RLD/rdr2` gameplay/campaign authority. No direct-main writes.
-- **Read-only dependencies:** D15 Compendium tracker `systems_atlas/dossiers/d15_compendium_trackers_v0_1.md` on main (**RESEARCHED — REVIEW PENDING**); D16 fishing on separate `agent/atlas-fishing-021`, potentially unmerged; D08 Chapter 2 windows read-only on main; original game's evidence only as guides, not player completion proof.
-- **Research scope:** proposed `S18.M01–M04` and `S27.M01–M05`; cards, bones, carvings, dreamcatchers, treasure, legendary fish, hunting requests, exotics, hand-in proof, normal/later unlocks, 100% vs exhaustive.
+- **Protected:** all sibling Wave 3 branches, Wave 1/2 dossiers, registry, taxonomy/coverage index, main, original RDR2 GameGuide campaign/mission evidence, `save_intelligence/`, PRs. None changed by this agent.
+- **Dependencies, all READ ONLY:** D15 tracker on main `8891889a2ca27f0b100244eb62a6f6f487b74198`; D08 windows on main `ad9ff4a6698f21dfb4d59e9595df147794d5109a`; D16 fishing `agent/atlas-fishing-021` checkpoint present but **no completed dossier at the time of this handoff**; D04 quality and D06 inventory, REVIEW PENDING. Atlas schema/provisional leaf IDs not ratified.
 
-## Required acceptance
+## Durable milestones and verification
 
-Complete independently source-checked **11-section** D20 Story Mode dossier, default T0/T1 with T2/T3 separated, exact families and meaningful item/hand-in stages, confidence/source URL and checked date per consequential claim, contradictions/missability/edition and chapter gates, completion matrix, 3 spoiler-light Chapter 2 examples, typed provisional links, precise GameGuide / Free Roam handoff. No claims of actual player discoveries or delivery. Commit dossier/handoff, update this checkpoint, verify exact three-file diff and branch readbacks, stop `DELIVERED_REVIEW_PENDING`; no merge/ratification.
-
-## Durable progress
-
-| Milestone | Artifact | State |
+| Milestone | Commit / blob evidence | State |
 |---|---|---|
-| Startup GitHub authority and issue | `main` `b578aec6...`; branch `d3bc807...`; Issue #34 | **VERIFIED** |
-| New task branch initial lease | All three paths absent at startup; diff empty | **VERIFIED** |
-| Initial checkpoint | This file | **COMMIT PENDING** |
-| External source research | No claims yet | **NOT STARTED** |
-| Complete D20 & terminal handoff | None | **NOT STARTED** |
+| Main, registry, Wave 3 plan, Issue #34, branch lease recovered | Main `b578aec...`, branch `d3bc807...`; all three paths absent, initial diff empty | VERIFIED |
+| **Initial checkpoint committed BEFORE research** | Commit `537f4b57a55f96498f31181fd8688d96fc35d7ba` · original blob `c2bd1aae6b4474d1b3a2f88a32e6decc909e8f26` | VERIFIED |
+| Complete **11-section** source-checked D20 dossier | Commit `8c852bec6c8ba5d2c5050ba666bdc72a63b9ee86` · blob `521451250ece161f746f4c8a3589cbbb06ba3e64` · 316 lines | VERIFIED |
+| Final detailed handoff | Commit `f6ccf7c659e4682df1b4e1d5f55dba08d79f8b0a` · blob `8d55b9c69fd0f139501255d5e824e0d9e0d05b88` | VERIFIED |
+| Terminal checkpoint | **This file**, validate its new blob after update | VERIFICATION PENDING |
+| Three-file diff and actual latest branch head | Compare `main...agent/atlas-collections-024` **after this commit** | FINAL VERIFY ONLY |
 
-- **Last verified commit before checkpoint:** `d3bc807c75633fec042f4a34af72515a24cc2696`.
-- **Uncommitted research:** none claimed durable.
-- **Actual player state:** items, activity triggers, deliveries, mail, saves, trophies and completion UNKNOWN.
+**Completed acceptance:** Collectible family matrix with precise mailing/hand-in channels for 10 official rows; exact one 12-card set (vs 144), 30 dinosaur bones, 10 carvings, 20 Dreamcatchers, one claimed treasure chain, 13 mailed legendary fish, 5 intact carcass batches (19 specified animals), 5 Algernon exotic lists (182 item quantities), nine late graves, one POI; conditional Chapter 2/future gates; 11 sections; C01–C17 direct source claim ledger (checked 2026-10-17), contradictions, three Chapter 2 examples, typed provisional links, D15/D16 read-only guidance. No assumed user items, quest stages, mail, save, medal, achievement or 100%.
 
-## Exact next permitted action
+**Known factual disputes requiring coordinator review:** cards one set vs 144 summary; Geology Chapter 2 vs Chapter 3 source, hunting fifth post vs statue row timing and `It's Art`; perfect 2★ carcass folklore and advanced Dead Eye; treasure single chain vs Explorer challenge; 13 vs 14 fish; optional orchid pre-list spawn gate and historical carcass bugs. The 11-section dossier keeps them conditional without inventing a player result.
 
-1. Read back **this checkpoint on exact branch**; verify successful initial commit.
-2. Research collectible families from official Total Completion/game evidence plus independent detailed sources; inspect D15/D16/D08 as read-only with adoption caveats.
-3. Commit complete eleven-section D20; verify branch readback and scope; write handoff, terminal checkpoint, compare to current main.
-4. Stop `DELIVERED_REVIEW_PENDING`; send coordinator exact terminal branch SHA and outstanding contradictions. Future tasks require separate explicit activation.
+## Exact next permitted action / stop
 
-**Blockers:** none at startup. Branch one commit behind main is expected, not write collision; if another writer appears on this exact branch, stop and report.
+1. **FINAL VERIFICATION ONLY:** fetch dossier, this checkpoint and handoff at explicit `ref=agent/atlas-collections-024`; compare branch with newest `main` and confirm **exactly the three leased paths**. Report terminal SHA separately; commit cannot contain its own SHA.
+2. **Then STOP task:** `DELIVERED_REVIEW_PENDING`. Do not merge, rebase, force push, reset, revise shared files, ratify or alter GameGuide campaign.
+3. **Coordinator review gate:** evidence/scope/compatibility/contradictions; consider D16 and D27 read-only review when their separate dossiers arrive. New task requires explicit independent assignment; none self-assigned.
+
+**Last verified commit before writing this checkpoint:** `f6ccf7c659e4682df1b4e1d5f55dba08d79f8b0a`.  
+**Handoff destination:** `agents/handoffs/2026-10-17_atlas_collections_024.md`.
