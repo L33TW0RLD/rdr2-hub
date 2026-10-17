@@ -370,3 +370,248 @@ Conditional Special/Ultimate: High and Low Finance via Charles/Uncle (not standa
 **Inline warning/intel:** TIMING · Chase pursuers are finite; if one is left for companion/environment, criterion may be missed.
 
 **Source/transfer:** [S01][S02c][S03][S04]; numeric Gold sourced from PowerPyx and independently crosschecked against Hold To Reset; scene order/route corroborated by RDR2.org chapter walkthrough where present. `NEEDS_GAMEGUIDE_AUTHORING`, no confirmed original Chapter 4 dossier, no player result.
+
+
+### C4-09 — Country Pursuits — MAIN
+
+**Trigger (conditional):** Following Urban Pleasures; Dutch at Shady Belle, meet Thomas at Lagras.
+
+**Gold checklist (each same attempt):**
+- [ ] Return **Jules** to skiff within **1:40**.
+- [ ] Shoot **Bullgator 5 times**.
+
+**Chronological transfer outline:**
+
+**A — Meet Thomas and boat lesson**
+1. Travel with Dutch to Thomas in Lagras and listen to the crawfish-trap plan.
+2. Check the designated traps and move through swamp as instructed, avoiding unnecessary alligator contact.
+**Inline warning/intel:** WORLD · Encounter is scripted; do not confuse the Bullgator sequence with a verified legendary animal hunt/skinning opportunity.
+
+**B — Find Jules and free skiff**
+1. Use prompted calls in marked search zone until Jules responds.
+2. Locate him at the tree, secure the skiff from the fallen obstruction.
+3. Row skiff back as requested.
+**Inline warning/intel:** This search is prerequisite to the timer but no fixed general stopwatch for trap scouting is claimed.
+
+**C — Recover Jules**
+1. When Jules is pulled into the water, follow sound/location and get to him immediately.
+2. Lift him and return directly to skiff **within 1 minute 40 seconds**.
+**Inline warning/intel:** GOLD CRITICAL · 1:40 local recovery window; don't waste time chasing other fauna.
+
+**D — Bullgator attack and departure**
+1. With Jules returned, track the scripted alligator as it surfaces.
+2. Land at least **five registered hits** with equipped weapon when available.
+3. Treat Jules's wounds using mission prompts and finish after threat subsides.
+**Inline warning/intel:** GOLD CRITICAL · The five **hits** count is distinct from a kill; do not promise the story animal can be killed/harvested now.
+
+**Source/transfer:** [S01][S02d][S03][S04]; exact Gold criteria corroborated by [S01] PowerPyx and [S03] Hold To Reset for standard missions, [S07] for edition-only. Field sequence checked against RDR2.org Chapter 4 where applicable. `NEEDS_GAMEGUIDE_AUTHORING`; research only, not verified campaign completion.
+
+
+### C4-10 — Revenge is a Dish Best Eaten — MAIN
+
+**Trigger (conditional):** After Country Pursuits; Dutch at Thomas's Lagras dock.
+
+**Gold checklist (each same attempt):**
+- [ ] Search **every room in Bronte's mansion**.
+- [ ] Carry Bronte to skiff within **1:30**.
+- [ ] Score **20 headshots**.
+- [ ] Use **no health items**.
+
+**Chronological transfer outline:**
+
+**A — Boat approach and courtyard**
+1. Join Dutch group aboard Thomas's boat and land at mansion.
+2. Follow John silently to outer guards, use selected first engagements for headshots.
+3. Fight through courtyard while banking deliberate headshots.
+**Inline warning/intel:** GOLD CRITICAL · Plan 20 headshots **before** the 1:30 exit; don't postpone most kills until carry phase.
+
+**B — Mansion interior sweep**
+1. Enter mansion with group; inspect side rooms on ground floor/upper floor.
+2. On upper corridor, search **left and right rooms first** before center/target room.
+**Inline warning/intel:** GOLD CRITICAL · Center/target room can advance scene; search all other accessible designated rooms first.
+
+**C — Bronte capture**
+1. Reach target room once exploration criterion is satisfied.
+2. Pick up Bronte when prompt appears; local **1:30** clock for carrying to skiff starts.
+3. Run direct route to boat, ignoring optional combat unless strictly needed.
+**Inline warning/intel:** GOLD CRITICAL · Don't linger to loot or force extra headshots after shouldering Bronte.
+
+**D — Skiff and mission debrief**
+1. Deliver Bronte to skiff inside 1:30.
+2. Check room sweep, 20 headshots, health-item abstinence and timed carry after mission.
+**Inline warning/intel:** PLOT/HONOR · Scripted character outcome is not the player's optional Honor decision; don't invent reversible alternate route.
+
+**Source/transfer:** [S01][S02d][S03][S04]; exact Gold criteria corroborated by [S01] PowerPyx and [S03] Hold To Reset for standard missions, [S07] for edition-only. Field sequence checked against RDR2.org Chapter 4 where applicable. `NEEDS_GAMEGUIDE_AUTHORING`; research only, not verified campaign completion.
+
+
+### C4-11 — Banking, the Old American Art — MAIN — CHAPTER EXIT
+
+**Trigger (conditional):** Dutch/Hosea plan at Shady Belle after Revenge and pertinent story branches; accepting initiates forced major transition.
+
+**Gold checklist (each same attempt):**
+- [ ] Crack vault safe **without any mistakes**.
+- [ ] Complete using **sidearms only**.
+- [ ] Get **25 headshots**.
+- [ ] Use **no health items**.
+
+**Chronological transfer outline:**
+
+**A — Pre-mission irreversible audit**
+1. Before activating Dutch's room marker, verify Chapter 4 optional Honor Story branches, Strauss V and actual camp activity/request priorities.
+2. Check **$250 personally donated** camp-box achievement only if pursued and confirm an existing manual save if protection desired.
+3. Equip suitable sidearms/consumables **before** the mission; no unsupported claim that user already owns any specific weapon.
+**Inline warning/intel:** CHAPTER EXIT · Starting this bank job closes Shady Belle Chapter 4; do **not** promise a post-cutscene return to Chapter 4's camp box, optional missions or companion windows [S06][S08].
+
+**B — Bank entry and combination**
+1. Ride with gang into Saint Denis and wait for diversion.
+2. Enter bank as directed, lead manager to vault and listen to combination.
+3. Use precise correct safe-dial sequence without mistakes (guides report **19–72–54**, verify local HUD and dial direction).
+**Inline warning/intel:** GOLD CRITICAL · Single safe error invalidates Gold; avoid rushing dial merely for speed—no overall timer objective.
+
+**C — Bank defense and breach**
+1. Use **sidearms only** from first combat engagement; prioritize 25 headshots across encountered enemies.
+2. Remain in cover, avoid any health items, respond to dynamite/wall escape cue.
+3. Take directed roof route; if handed a rifle, **do not use it** for Gold-restricted combat.
+**Inline warning/intel:** GOLD CRITICAL · Later prompted long gun is a trap for the **sidearms-only** criterion. Gold has no scripted override automatically granting weapon exceptions.
+
+**D — Rooftops and evacuation**
+1. Continue rooftop gunfight and keep headshot count progressing; respect scripted transitions.
+2. Follow Dutch/remaining companions during stealth exit from city to transport.
+3. Review Gold only after actual Story outcome, report game save separately from earned medal.
+**Inline warning/intel:** SAVE/PROGRESSION · The mission triggers major forced story transition, not a safe free-roam checkpoint. Later chapter details beyond scope.
+
+**Source/transfer:** [S01][S02d][S03][S05][S06]; exact Gold criteria corroborated by [S01] PowerPyx and [S03] Hold To Reset for standard missions, [S07] for edition-only. Field sequence checked against RDR2.org Chapter 4 where applicable. `NEEDS_GAMEGUIDE_AUTHORING`; research only, not verified campaign completion.
+
+
+### C4-O1 — Help a Brother Out — OPTIONAL HONOR STORY — CHAPTER-LIMITED
+
+**Trigger (conditional):** Brother Dorkins in Saint Denis after Joys; white Stranger-looking marker; required for Lending a Hand.
+
+**Gold checklist (each same attempt):**
+- [ ] Find the captives **without threatening shop owner**.
+- [ ] Complete within **2:45**.
+
+**Chronological transfer outline:**
+
+**A — Brother Dorkins invitation**
+1. Inspect actual Dorkins mission icon and interact to accept task.
+2. Donation is a separate optional High Honor choice; do not wait if attempting strict Gold timer.
+**Inline warning/intel:** MISSABLE · This apparently Stranger-styled white mission contributes to optional **Honor Story**, not ordinary deferrable Stranger tally; clear before Chapter 4 exit.
+
+**B — Find the hidden captives**
+1. Go to the Saint Denis Fence/store as directed.
+2. Inspect the **red book on bookshelf** to reveal concealed basement without threatening proprietor.
+**Inline warning/intel:** GOLD CRITICAL · Threatening storekeeper can fail Gold; book interaction is a guide-supported fast alternative.
+
+**C — Release and return**
+1. Descend to reveal enslaved captives and free both.
+2. Return promptly to Dorkins, ensure mission completes within 2:45.
+**Inline warning/intel:** HONOR · Rescue normally positive Honor; do not invent precise numeric change.
+
+**D — Proof and follow-up**
+1. Inspect medal checklist for no-threat and 2:45.
+2. Watch for subsequent optional **Brothers and Sisters, One and All** white marker.
+**Inline warning/intel:** CHAPTER RISK · Completing O1 opens O2; simply rescuing captives does not prove O2 completed.
+
+**Source/transfer:** [S01][S02b][S03][S06]; exact Gold criteria corroborated by [S01] PowerPyx and [S03] Hold To Reset for standard missions, [S07] for edition-only. Field sequence checked against RDR2.org Chapter 4 where applicable. `NEEDS_GAMEGUIDE_AUTHORING`; research only, not verified campaign completion.
+
+
+### C4-O2 — Brothers and Sisters, One and All — OPTIONAL HONOR STORY — CHAPTER-LIMITED
+
+**Trigger (conditional):** After Help a Brother Out, Sister Calderón and Brother Dorkins in Saint Denis.
+
+**Gold checklist (each same attempt):**
+- [ ] Find the thief child within **19 seconds**.
+
+**Chronological transfer outline:**
+
+**A — Church teaching encounter**
+1. Approach mission marker for Sister Calderón/Brother Dorkins.
+2. Observe child's theft of crucifix; immediately prepare to sprint when control resumes.
+**Inline warning/intel:** GOLD CRITICAL · **19 seconds** begins during child chase; no other invented full-mission timer.
+
+**B — Locate child**
+1. Move to end of street, turn toward child's path (guide route: left then right).
+2. Find the child intercepted by another adult and intervene promptly.
+**Inline warning/intel:** A correct street route is a tactical recommendation, not an adopted deterministic speedrun; verify directional map with actual camera.
+
+**C — Escape law attention**
+1. Recover crucifix and respond to scripted law attention.
+2. Break line of sight and stay out of search cones; avoid unnecessary escalation.
+**Inline warning/intel:** LAW/HONOR · Scripted accusations can put Arthur under pursuit even when acting to help; don't equate search outcome with personal crime record or persistent fine.
+
+**D — Return to church**
+1. Return to Sister Calderón when approach is safe.
+2. Return crucifix and inspect Story Gold criterion after mission.
+**Inline warning/intel:** MISSABLE · The original Chapter 4 optional Honor branch may close on camp departure; replay is not guaranteed to backfill original-world Lending a Hand credit.
+
+**Source/transfer:** [S01][S02b][S03][S06][S09]; exact Gold criteria corroborated by [S01] PowerPyx and [S03] Hold To Reset for standard missions, [S07] for edition-only. Field sequence checked against RDR2.org Chapter 4 where applicable. `NEEDS_GAMEGUIDE_AUTHORING`; research only, not verified campaign completion.
+
+
+### C4-O3 — Fatherhood and Other Dreams — II — OPTIONAL HONOR STORY — CHAPTER-LIMITED
+
+**Trigger (conditional):** After Angelo Bronte, Mary's letter at Arthur's room in Shady Belle; agree to help, then Saint Denis.
+
+**Gold checklist (each same attempt):**
+- [ ] Catch wagon and drive it to secluded spot within **1:45**.
+- [ ] Take Mary to **the theater**.
+
+**Chronological transfer outline:**
+
+**A — Read Mary letter, accept**
+1. Read actual letter in Arthur's Shady Belle room when available; no universal arrival hour assumed.
+2. Meet Mary in Saint Denis; choose to help if retaining optional Honor Story / all-eligible Gold goals.
+**Inline warning/intel:** MISSABLE · Ignoring/declining can forfeit this Chapter 4 optional Story strand; letter setup Part I is not a standalone extra medal.
+
+**B — Follow father and brooch sale**
+1. Walk with Mary while keeping required distance from her father.
+2. When brooch is sold, prepare for immediate wagon takeover chase.
+**Inline warning/intel:** GOLD CRITICAL · Getting too close during stalking may fail the mission; choose story beat observation without straying.
+
+**C — Wagon chase / choice**
+1. Mount nearby horse, catch wagon and take control.
+2. Drive to marked secluded spot within **1 minute 45 seconds**.
+3. Choose nonviolent payment (guide cites **$100**) if emphasizing High Honor, or follow player choice without assuming funds.
+**Inline warning/intel:** HONOR/ECONOMY · Source says paying rather than violence improves Honor; check actual wallet and prompt, do not invent payment success.
+
+**D — Return to Mary / theater**
+1. Rejoin Mary and **accept invitation to theater**.
+2. Watch or exit as permitted; gold source says acceptance is essential, full show not.
+3. Inspect timed wagon/theater requirement and distinguish mission saved vs played.
+**Inline warning/intel:** GOLD CRITICAL · Refusing theater forfeits a separate medal objective even if brooch recovered.
+
+**Source/transfer:** [S01][S02b][S03][S06]; exact Gold criteria corroborated by [S01] PowerPyx and [S03] Hold To Reset for standard missions, [S07] for edition-only. Field sequence checked against RDR2.org Chapter 4 where applicable. `NEEDS_GAMEGUIDE_AUTHORING`; research only, not verified campaign completion.
+
+
+### C4-ED — High and Low Finance — SPECIAL/ULTIMATE EDITION ONLY — CONDITIONAL MEDAL
+
+**Trigger (conditional):** Only if installed Story entitlement and late-Ch4 Charles/Uncle camp offer visibly exists.
+
+**Gold checklist (each same attempt):**
+- [ ] Finish within **5:45**.
+- [ ] Take **no damage during escape** after bank loot.
+
+**Chronological transfer outline:**
+
+**A — Entitlement and meeting**
+1. Check installed Special/Ultimate entitlement and actually visible Charles/Uncle mission marker.
+2. Read Charles's Rhodes bank plans; follow gang to town.
+**Inline warning/intel:** EDITION · Not a standard edition missable, not part of 14 standard Chapter 4 medals; do not claim every copy has mission.
+
+**B — Quiet approach and explosives**
+1. Enter after patrol timing and silently handle mission-required sentry.
+2. Follow Charles's placement, carry fuse/spool to safe detonation point.
+**Inline warning/intel:** GOLD CRITICAL · The **5:45** is a whole-mission timer; use direct prompts and don't linger for optional looting.
+
+**C — Vault and valuables**
+1. Detonate on Charles's cue, enter bank and open damaged safes.
+2. Collect instructed robbery reward, then immediately move toward escape vehicle.
+**Inline warning/intel:** SOURCE CAVEAT · Exact amounts/retained cash and any unique safe pickup must be checked with mission menu; no unverified reward amount included.
+
+**D — Escape riders**
+1. Mount and flee promptly; avoid firefight where escape and no damage are both goals.
+2. Avoid **all damage during escape** and finish before 5:45.
+3. Verify Gold only if mission actually appears in player's Story log.
+**Inline warning/intel:** EDITION/REPLAY · This mission may not exist on account/platform despite guides listing it; never count unowned edition entry as Gold failure.
+
+**Source/transfer:** [S03][S02d][S07]; exact Gold criteria corroborated by [S01] PowerPyx and [S03] Hold To Reset for standard missions, [S07] for edition-only. Field sequence checked against RDR2.org Chapter 4 where applicable. `NEEDS_GAMEGUIDE_AUTHORING`; research only, not verified campaign completion.
