@@ -448,3 +448,61 @@ Actions must be real direct ChatGPT follow-up turns:
 Do not infer Bronze from an unverified result. The actual Chapter II best-medal ledger currently has no Bronze; 021's historical Bronze was superseded by best Gold. In the explicitly fictional mid/late chapter-stage demonstrations, treat the darker hue as a visual scenario test only.
 
 Owner has declared the combined header + compact Mission Control design **perfect apart from this correction**. Preserve all interactions, 18 mission identities, independent marker-dot overlay, action/source contracts and small bold uppercase `NEW POSSIBILITIES` microtype exactly. Do not change the under-Mission-Control Adventure proposal or mark system categorization ratified.
+
+---
+
+## 20. Living Systems UX routing v1.2 — adaptive prominence, no new game authority
+
+This is a *presentation and navigation grouping* over the indexed S01–S30 Atlas families, plus S31 (still PROPOSED ONLY). It does not ratify taxonomy or research, does not transfer content ownership, and cannot change live player unlocks. The approved Chapter II header and Mission Control remain locked.
+
+### Domain routes and grounded read targets
+
+| Route | UI domain | Taxonomy families | Initial Hub source reads |
+|---|---|---|---|
+| domain.camp | Camp & Crafting | S08–S11 | free_roam/content/projects/camp_development_v0_1.md, systems_atlas/dossiers/d02_camp_ledger_upgrades_v0_1.md, d03_satchels_crafting_v0_1.md, d05_camp_life_opportunities_v0_1.md |
+| domain.horse | Horse & Travel | S06–S07 | systems_atlas/dossiers/d01_horse_lifecycle_v0_1.md, d11_travel_wilderness_camps_v0_1.md |
+| domain.wilderness | Wilderness | S12–S16 | d04_hunting_transport_v0_1.md, d16_fishing_legendary_fish_v0_1.md, d17_legendary_animals_rewards_v0_1.md, d12_herbs_food_crafting_v0_1.md |
+| domain.world | World & Activities | S18–S25 | d18_stranger_strands_quests_v0_1.md, d19_bounties_robbery_classes_v0_1.md, d21_finite_encounters_outcomes_v0_1.md, d26_world_lore_secrets_inspection_v0_1.md |
+| domain.progress | Progress & Collections | S26–S29 | d27_nine_challenge_strands_v0_1.md, d20_completion_collections_v0_1.md, d15_compendium_trackers_v0_1.md |
+| support.resources | Resources & Gear | S17 | d06_inventory_items_v0_1.md |
+| support.skills | Skills & Combat | S04 | d09_cores_deadeye_growth_v0_1.md, original GameGuide selected mission for Gold technique |
+| support.style | Life & Style | S03 | d10_clothing_temperature_disguise_v0_1.md, d28_cosmetics_photography_v0_1.md |
+| context.companion | Vitals, Honor, Controls | S01, S02, S05, S31-PROPOSED | d09_cores_deadeye_growth_v0_1.md, d13_law_honor_robbery_v0_1.md, d07_context_controls_prompts_v0_1.md |
+| story.mission | Mission Control | S30 | original L33TW0RLD/rdr2 campaign and complete Field Guide v1.1 |
+
+Use exact full source paths relative to systems_atlas/dossiers/ when only dossier basenames are shown. The UX grouping does not duplicate claims and may surface cross-links into neighboring domains.
+
+### Focus model
+
+Determine selected domain only from: explicit player interest, confirmed active project/milestone, observed newly introduced relevant gameplay system, or **clearly labelled fictional design fixture**. Unknown focus must stay unknown.
+
+Track current control separately: free roam, camp-only, mission/chained or unknown. A read-only mechanics lesson can open even when roaming is unavailable; a real trip cannot be promised without suitable control/access evidence. Read original rdr2/campaign/current_state.md before actionable recommendations. Neither navigation selection nor an Atlas research statement proves inventory, Gold, ownership, progress or a new save.
+
+### Candidate A — stable department shelves
+
+Offer five equally weighted compact destinations after Mission Control. All have a genuine source-opening action. Smaller support references can be reachable via a compact secondary row. No forced major focus when user intent is unknown.
+
+### Candidate B — living focus
+
+One domain can grow to nearly Mission Control scale **only when supported by interest or meaningful real activity**; add 2–4 small related system rows for browsing. Without a grounded focus, show a compact domain index and no artificial spotlight. A user may switch interest without recording or failing a previously selected project.
+
+Examples for synthetic testing:
+- Camp satchels: major Camp & Crafting; compact Wilderness, Resources, Horse; no assumed Ledger/tools purchase.
+- Horse care: major Horse & Travel; compact Camp, Wilderness, Progress; player-reported Level 4 does not establish brush/stable access.
+- Deliberate perfect-pelt trip: major Wilderness; compact Horse cargo, Camp crafting, Resources; no invented pelt or owned tools.
+- Completion planning: major Progress & Collections; compact World, Wilderness, Camp; do not mix Gold/official 100%/achievements/personal exhaustive.
+- No focus: all discoverable without a fabricated featured goal.
+
+### Cross-system interactions and safety
+
+- Project / Outing / Discovery describe ways of engaging in systems, **not new Atlas taxonomy families**. One outing may advance one camp project, practice horse handling, and include unscripted discovery.
+- An incidental encounter has no pre-authored guaranteed spawn or map pin; do not promise it as an available mission.
+- Action-critical Honor/rare-item/wanted/horse danger appears contextually at the actual decision point. It does not consume permanent Home slots.
+- Exact mission Gold techniques remain inside the full original GameGuide Field Guide.
+- Confirmed active skippable Story windows retain Mission Control priority; do not recommend unrelated long outings ahead of them. Do not hide otherwise valid supporting links from the player.
+- Direct conversation ("teach me horse care") opens a focused relevant source even when no Home card is expanded.
+- Unadopted Atlas research retains RESEARCHED — REVIEW PENDING and disputed claim qualifiers.
+
+### Open design selection
+
+A/B remains **unselected** pending the owner's interactive comparison. The eventual title of the section (Adventure, Your World, etc.) is likewise unsettled. Preserve all previously locked header/mission decisions; no new global navigation tabs, live source writes or automatic sync claims.
