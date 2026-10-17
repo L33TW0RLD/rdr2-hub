@@ -162,3 +162,31 @@ This replaces H12–H13's popover-on-click and H15's click-to-inspect expectatio
 | H27 | Check desktop/mobile clarity | Dots remain perceptible but subordinate, aligned under each slot; padded clickable controls; no horizontal overflow or legend band | DESKTOP PENDING; MOBILE UNTESTED |
 
 **Current marker authority:** no recently verified user map-marker observations were retrieved from the original mission medal ledger; no real dots may be displayed by default. An explicitly labelled *illustrative marker example* is allowed for visual testing. Real mission availability is NEVER inferred from medals or mission file order.
+
+
+---
+
+## Mission Control container A/B/C acceptance plan M01–M14 (2026-10-17)
+
+**Header remains LOCKED.** Current three options are **design study candidates, not ratified winners**. Desktop render/click feedback is pending.
+
+| ID | Test | Acceptance | Status |
+|---|---|---|---|
+| M01 | Inspect A with two fictional observed markers | Clean rows, both genuinely accessible, no forced operation order | PENDING USER |
+| M02 | Inspect B with two markers | Quiet cards communicate personality through source-backed spoiler-safe one-line premise | PENDING USER |
+| M03 | Inspect C without an urgent risk or explicit priority | All options visible; "featured" is demonstrably editorial, not a forced Story gate | PENDING USER |
+| M04 | Switch to four fictional markers | No marker vanishes; A stays compact, B remains readable, C keeps alternatives accessible | PENDING USER |
+| M05 | Switch to marker-not-checked | Honest blank state rather than a false \`0 available\` or mission shelf | PENDING USER |
+| M06 | Switch to activated optional wagon stage | Skippable story risk is prominent, no fabricated ticking deadline | PENDING USER |
+| M07 | Click mission entry | Requests **entire original Field Guide** in a new turn; not a fake local briefing screen | PENDING USER |
+| M08 | Compare with medal rail | Mission rows do not repeat medals or operation numbers; dots and observed marker rows would use same IDs | PENDING USER |
+| M09 | Mobile scan | Title and action remain legible, no forced multi-column cards or horizontal scroll | UNTESTED |
+| M10 | Desktop scan | Title, available choices, and action are visible quickly with minimal chrome | PENDING USER |
+| M11 | Historical completed Gold mission | It is absent from *available markers* unless a separate current marker observation exists | PENDING USER |
+| M12 | Open unobserved mission by direct request | A reference-only full-guide lookup, not a claimed active mission | UNTESTED |
+| M13 | Preserved header | Home, chapter medal rail and dot design unchanged in the design study | PENDING USER |
+| M14 | Record A/B/C owner selection | Winner picked based on real visible variant, not presumed by assistant | NOT SELECTED |
+
+**Decision questions:** Is a list enough personality? Are quiet cards too tall? Should C's spotlight be reserved for an active Story risk only? Keep owner feedback conversational, not a large mandatory form.
+
+No self-merging, no source-admission changes, no game state inferred or written.
