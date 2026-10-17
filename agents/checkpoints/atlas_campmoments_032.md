@@ -4,7 +4,7 @@
 **Working branch:** `agent/atlas-campmoments-032` · **Registration baseline:** `0021c319d0232c3a303aeadbe899055260120d54`  
 **Main inspected:** `b3b902398eac80fffc798c5967486e5df1427270`  
 **Checkpoint date:** 2026-10-17 UTC, no fabricated wall-clock  
-**Status:** `IN_PROGRESS` · DRAFT (not adopted).
+**Status:** `IN_PROGRESS` · substantive D23 committed and verified; final handoff pending. Research `RESEARCHED — REVIEW PENDING` (not adopted).
 
 ## Scope & exclusive file lease
 
@@ -22,8 +22,18 @@ Read latest `main` registry, Wave 4 plan, exact Issue #41, operating contract, p
 
 **Protected:** `main`, shared registries/indexes/taxonomy, original `L33TW0RLD/rdr2` campaign/mission/Gold/saves, all other workers' branches and files, `save_intelligence/` and earlier Specialist 011 tasks. No rights to ratify, merge or create player progress. Chat reuse doesn't imply extra task ownership.
 
+## Verified source research milestone — 2026-10-17
+
+- Initial checkpoint commit `028e8d8dfe18c05c14b16bc3c633f9eb78323f21`; exact-ref readback blob `fa6bf7f7e6ab544c4a774f1df03270159fa3cc86`.
+- D23 dossier committed `2bc5412a7befe361e1d6cd316e804d9b82efdbcf`; exact branch readback blob `5347dffd228417875246110e446d49ddfb164223`, **45,718 characters / 228 lines**.
+- Validated all **11 numbered sections**, **C01–C22 evidence claims**, **D23-X01–X12 contradictions**, all three early-chapter scenarios, proper D05/D08/D18/D22 read-only reference and T2+ isolation.
+- Branch compared against latest visible main: ahead **2**, behind **1**, exactly two leased paths (checkpoint and D23); no collisions/other changes, no rebase.
+- Official primary-source exception: Rockstar support 2024-03-29 early Chapter 2 Retry Checkpoint companion-absence bug, not asserted in the player's save.
+- Disputed specifics retained: Sean party exact start hour, Pearson Scout Jacket chapter/core/RNG/form, overlap/replay of specific lines, camp decor dialogue rate, chore XP amount.
+- Last independently verified substantive branch commit before this checkpoint update: `2bc5412a7befe361e1d6cd316e804d9b82efdbcf`.
+
 ## Exactly next authorized action
 
-Verify checkpoint commit/readback on **this** branch, then independently research camp moments through external sources and read-only D05/D08/D18/D22; draft and commit **only** D23 dossier. Report every consequential uncertainty; no fabricated triggering or witnessed result.
+Write the **final handoff** in leased `agents/handoffs/2026-10-17_atlas_campmoments_032.md` only, retaining source limitations and review requests, then read it back.
 
-Then checkpoint milestone, final handoff, final checkpoint closure and exact three-path diff/terminal SHA verification. Stop task `DELIVERED_REVIEW_PENDING`, content `RESEARCHED — REVIEW PENDING`; no autonomous successor task.
+Then close this checkpoint, verify exact three-path diff and terminal branch SHA. Stop task `DELIVERED_REVIEW_PENDING`, content `RESEARCHED — REVIEW PENDING`; no autonomous successor task.
