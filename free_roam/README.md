@@ -2,32 +2,30 @@
 
 **Status:** DESIGN DRAFT / NOT RATIFIED · 2026-10-16
 
-Free Roam Control is a **ChatGPT-native**, spoiler-aware guide to *meaningful between-mission life* in Red Dead Redemption 2 Story Mode. It is not a fixed mission alternation schedule, completion checklist, map of every surprise or second campaign ledger.
+Free Roam Control is a **ChatGPT-native**, spoiler-aware guide to meaningful between-mission life in RDR2 Story Mode. It is not a forced after-mission checklist, a map of every surprise or a second campaign ledger.
 
-## Current design deliverables
+## Core decisions already proposed (not owner-approved)
 
-- [Organic Decision Model v0.1](decision_model_v0_1.md): one ongoing project, one suggested outing, emergent discoveries, and conditional now-or-never safeguards. Describes triggers, eligibility, evidence boundaries, and return/debrief logic.
-- [Chapter 2 Paper Pilot v0.1](chapter_02_pilot_v0_1.md): simulated examples against the verified 2026-10-16 Chapter 2 campaign snapshot, with ten desk acceptance tests and known unknowns.
-- [Atlas dependency map](../systems_atlas/unlock_and_dependency_map_v0_1.md): companion research, especially Ledger/tools, stables/horse brush, fishing, and time-sensitive optional stages.
-- [Free Roam Designer 001 handoff](../agents/handoffs/2026-10-16_free_roam_designer_001.md): task summary and next boundary.
+- [Organic Decision Model v0.1](decision_model_v0_1.md) — **Project → Outing → Discovery** with guardrails, evidence boundaries and report/adaptation.
+- [Chapter 2 Paper Pilot v0.1](chapter_02_pilot_v0_1.md) — initial simulated circumstances and unlock-gating tests.
 
-## Working experience (proposed)
+## Agent 001 interface exploration (also not ratified)
 
-- **PROJECT:** a meaningful multi-session improvement (camp, satchel, horse mastery), resumed when the player chooses.
-- **OUTING:** one enjoyable nearby expedition or discovery lead, with one mechanics lesson when useful.
-- **DISCOVERY:** natural, unpredictable player-led interruptions; never 'fail' a recommended outing because of them.
-- **GUARDRAIL:** credible time-sensitive Gold/missable/honor risks interrupt when necessary.
-- **RETURN TO STORY:** always available when the actual marker and safety rules permit.
+- [ChatGPT Interface Spec v0.1](chatgpt_interface_spec_v0_1.md) — three alternative concepts; **Contextual Trailhead** recommended, with compact default and mechanics depth on demand, mobile-first text fallback.
+- [Ten UX Scenarios v0.1](ux_scenarios_v0_1.md) — full paper navigation/source-of-truth walkthrough for opening play, mission, post-Gold, camp, mechanic help, changed interests, urgent risk, comprehensive horses, Atlas browsing and new-thread recovery.
+- [Unified Hub Experience](../architecture/hub_experience_v0_1.md), [Module Integration](../architecture/module_integration_v0_1.md) and [Navigation State Flow](../architecture/navigation_and_state_flow_v0_1.md) define routing to the other capabilities.
+- [Agent 001 handoff](../agents/handoffs/2026-10-16_hub_architect_001.md) describes owner choices and test plan.
 
-Before presenting choices, resolve actual control and unlocked mechanics. A source guide is not evidence the player owns an item or completed a prerequisite. Reported gameplay state still lives in [the existing campaign repository](https://github.com/L33TW0RLD/rdr2/blob/main/campaign/current_state.md).
+## Example Free Roam interaction
 
-## Decisions pending owner review
+**Project:** develop camp, conditional on actual Ledger/debt access.  
+**Outing:** one short local adventure or player-chosen treasure lead.  
+**Discovery:** allow chance encounters to change plans.  
+**Safeguard:** surface only credible activated Gold/chapter-limited risks.  
+**Story:** return to a player-selected *actually available* mission marker and the complete existing Field Guide.
 
-1. Confirm or revise project + outing + discovery as the default planning grammar.
-2. Choose response density and whether a browseable catalogue is needed alongside the small default view.
-3. Then design and test a ChatGPT-native interactive surface **without changing** approved Mission Control Field Guide v1.1.
-4. Only after explicit source-authority approval consider durable progress projection or migration.
+Mechanics and Chapter 2 availability come from the [Systems Atlas](../systems_atlas/README.md) and are only research until adopted and player unlocks are evidenced. The original [campaign record](https://github.com/L33TW0RLD/rdr2/blob/main/campaign/current_state.md) remains authoritative.
 
-## Explicit non-goals
+## Pending owner decisions
 
-No standalone PC dashboard, software implementation, automatic live-game reading, persistent widget promises, new in-Hub gameplay authority, forced grind schedule or future-plot spoilers. These files are **draft proposals**, not approved live instructions.
+Select the default interaction pattern, decide how much progress to show initially, what UI interactions merit native buttons vs text, whether a durable project focus is worth proposing later, and validate the design in live ChatGPT mobile and desktop before implementation. No new gameplay writer, permanent UI state, background synchronization or standalone app is proposed.
