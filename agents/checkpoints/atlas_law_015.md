@@ -6,7 +6,7 @@
 **Branch registration baseline:** `9931058e69ac3c6e7923841da87813de7f015f41`  
 **Latest main observed:** `6f08f4ed60abde51831f8b72cf6c363aa49feb2d` (branch behind one coordinator commit; expected)  
 **Recorded:** 2026-10-17, UTC date  
-**Workflow status:** `IN_PROGRESS` — initial checkpoint committed before research; D13 dossier delivered on same branch and final handoff in progress.  
+**Workflow status:** `DELIVERED_REVIEW_PENDING` — D13 and final handoff committed, independently read back; no more author writes on this task.  
 **Scoped lane:** D13 law/Honor/witness/bounties/restraint/robbery Story Mode evidence. The owner has explicitly reissued Issue #18 to this conversation, superseding a prior chat-routing concern; this does not authorize any other path.
 
 ## Exclusive writable paths — exact file lease
@@ -31,9 +31,9 @@ Produce one full D13 dossier covering `S05.M01–M04`, `S04.M04`, `S20.M01–M05
 
 ## Recovery and next exact action
 
-1. **Current phase:** D13 sourced dossier committed and verified; final handoff and closure pending.
-2. **Next permitted action:** Write and commit only `agents/handoffs/2026-10-17_atlas_law_015.md`; independently read it back and compare all changes against latest main.
-3. Then finalize checkpoint as `DELIVERED_REVIEW_PENDING` and stop writes. Owner/coordinator controls merge/adoption.
+1. **Current phase:** Delivered for coordinator/owner review; specialist task complete, no gameplay or design adoption.
+2. **Next permitted action:** **STOP author writes.** Coordinator reviews Issue #18 dossier and final handoff; only separately authorized reviewer may integrate/ratify.
+3. New specialist work requires a distinct coordinator-assigned task ID, branch, and lease; do not reopen Wave 1 D02 or this closed D13 task.
 4. **Stop:** after three-path compare/readback, `DELIVERED_REVIEW_PENDING`; owner/coordinator handles PR/merge/adoption and any registry edit.
 
 **Last verified commit before this checkpoint:** `9931058e69ac3c6e7923841da87813de7f015f41`.  
@@ -50,3 +50,12 @@ Produce one full D13 dossier covering `S05.M01–M04`, `S04.M04`, `S20.M01–M05
 
 **Unresolved research disputes:** mission robberies counted toward official coach 100% (GameFAQs vs Gamer Guides), exact Honor point increments, civilian/official identification details, jail financial outcome, unintended crimes/self-defense. All classified in D13 claim and contradiction ledgers, not silently resolved.
 **Main comparison at milestone:** main `6f08f4ed60abde51831f8b72cf6c363aa49feb2d`, branch ahead two / behind one, changed files limited to D13 dossier and checkpoint. Neither other worker branches nor `save_intelligence/` touched.
+
+## Final verification, closure (2026-10-17)
+
+- **D13 dossier:** research commit `d916dd0227b574aa81e0e1883e7b14b8b2ba1419`, readback blob `a762a65f65b835f908137484a98919628bcd73d8`; 11 required sections, 20 claim records, 17 named external sources, three Chapter 2 examples.
+- **Final handoff:** `agents/handoffs/2026-10-17_atlas_law_015.md` committed at `bcbafbd6bb79b21f01e637885a52d85df739c1e1`; explicit readback blob `8c16cf05b5ae1d3341b3b4ba02bfcea6e45b7716`.
+- **Latest checked branch compare (before closure update):** main `6f08f4ed60abde51831f8b72cf6c363aa49feb2d`; branch ahead 4 and behind 1; changed files are **exactly** D13 dossier, this checkpoint and final handoff. All other paths including `save_intelligence/` untouched.
+- **Last verified commit before final checkpoint:** `bcbafbd6bb79b21f01e637885a52d85df739c1e1`. Final checkpoint commit SHA to be reported separately in chat after readback.
+- **Unresolved items:** mission-linked coach robbery credit, exact Honor increments, law recognition subconditions, jail costs/rescue, accidental/self-defense charge classifications. Do not silently resolve. Owner review required before any adoption.
+- **Research status:** `RESEARCHED — REVIEW PENDING`; **task workflow:** `DELIVERED_REVIEW_PENDING`. No merge performed.
