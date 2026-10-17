@@ -1,11 +1,11 @@
 # Mission Control — Epilogue Part I: Pronghorn Ranch · Chapter Research / Transfer Pack v0.1
 
 > **RESEARCHED — REVIEW PENDING · NOT ADOPTED · NOT A LIVE FIELD GUIDE.**  
-> **Task:** \`mission-epilogue1-042\` · [Issue #56](https://github.com/L33TW0RLD/rdr2-hub/issues/56) · **Branch:** \`agent/mission-epilogue1-042\` · **Checked:** 2026-10-17.  
+> **Task:** `mission-epilogue1-042` · [Issue #56](https://github.com/L33TW0RLD/rdr2-hub/issues/56) · **Branch:** `agent/mission-epilogue1-042` · **Checked:** 2026-10-17.  
 > **Spoilers:** **T3 — complete later-story spoilers including Chapter 6 ending, John, Abigail, Jack, Sadie, ranch attack, Beecher's Hope and Epilogue progression.** Do **not** render as a default Chapter 2 player briefing. Consult only for approved future research/adaptation or explicit later-story request.
 > **Applies to:** RDR2 **Story Mode**, original console versions and updated PC/console play where shared. Text descriptions are device-agnostic; contextual PC/controller prompts, cutscene handling and replay loadouts require confirmation in the actual client. Not Red Dead Online.
 > **Evidence boundary:** all mission availability/Gold requirements are general game knowledge. **Nothing below says the player has reached the Epilogue, earned any medal, saved, picked up a weapon, chosen violence or obtained an item.** The original [GameGuide campaign](https://github.com/L33TW0RLD/rdr2/blob/main/campaign/current_state.md) remains sole actual-play authority. This Hub file is **research/transfer preparation**, not a competing mission shelf, 104-denominator ledger, or active checklist.
-> **Status of original GameGuide:** No \`rdr2/missions/epilogue_01/\` directory exists as of the 2026-10-17 source check; all ten eligible mission dossiers therefore require **NEEDS_GAMEGUIDE_AUTHORING** after separate owner authorization. Existing [approved Field Guide v1.1](https://github.com/L33TW0RLD/rdr2/blob/main/protocol/walkthrough_presentation.md) and [mission preflight](https://github.com/L33TW0RLD/rdr2/blob/main/protocol/mission_preflight.md) must remain intact.
+> **Status of original GameGuide:** No `rdr2/missions/epilogue_01/` directory exists as of the 2026-10-17 source check; all ten eligible mission dossiers therefore require **NEEDS_GAMEGUIDE_AUTHORING** after separate owner authorization. Existing [approved Field Guide v1.1](https://github.com/L33TW0RLD/rdr2/blob/main/protocol/walkthrough_presentation.md) and [mission preflight](https://github.com/L33TW0RLD/rdr2/blob/main/protocol/mission_preflight.md) must remain intact.
 
 ## 0. Executive chapter reconciliation — ten medals, eleven named stages
 
@@ -32,7 +32,7 @@
 
 ### Branch graph — not a forced single order
 
-\`\`\`text
+```text
 Chapter 6 final story (Red Dead Redemption)
               |
             The Wheel [G]
@@ -51,7 +51,7 @@ Chapter 6 final story (Red Dead Redemption)
          [NO MEDAL]            (possible in Epilogue II)
                 |
       Home of the Gentry? [G] → Epilogue II transition
-\`\`\`
+```
 
 *If the story transitions before Gainful Employment is played, its Gold opportunity remains associated with the named Story entry, not automatically lost or awarded in Epilogue I. A live GameGuide must follow the player's actual in-game Story menu.* [E02,E10,E11]
 
@@ -64,7 +64,7 @@ Chapter 6 final story (Red Dead Redemption)
 
 ## 1. EP1-01 — The Wheel
 
-**Identity:** \`The Wheel\` · **MANDATORY**, **1 medal** · auto-start immediately after Chapter 6 final mission; John, Abigail and Jack relocate, seeking work in Strawberry/Pronghorn Ranch. **Location:** Strawberry → Pronghorn Ranch, West Elizabeth. **No optional opening marker assumed.** [P01,E02,E04,G01]
+**Identity:** `The Wheel` · **MANDATORY**, **1 medal** · auto-start immediately after Chapter 6 final mission; John, Abigail and Jack relocate, seeking work in Strawberry/Pronghorn Ranch. **Location:** Strawberry → Pronghorn Ranch, West Elizabeth. **No optional opening marker assumed.** [P01,E02,E04,G01]
 
 **Gold contract:**
 1. **Reach Pronghorn Ranch without dropping any supplies.** Qualitative **zero supply drops**, not “finish drive in X minutes.”
@@ -95,11 +95,11 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 
 **Missables and choices:** **No uniquely identified collectible required by these two Gold criteria.** Do not claim a generic mission-scene pickup exists. **Forced handoff** from Chapter 6 is genuine; GameGuide must protect actual pre-Epilogue save/status *before* initiating the previous chapter's finale, not manufacture an intermission during The Wheel. **Honor:** don't invent a mercy decision tied to wagon pursuers. **Intel seeds:** Wagon inertia / defensive boarding; auto-chain save semantics. [P01,E02,G01]
 
-**Source confidence and authoring note:** HIGH two criteria and phase order; exact timing start for 1:00 should be verified against Story checklist if mission replay differs. **GameGuide path:** **NONE** (\`rdr2/missions/epilogue_01/\` absent). **Transfer:** create dedicated \`the_wheel\` Field Guide v1.1 with all phases after authorized migration, not from this document directly.
+**Source confidence and authoring note:** HIGH two criteria and phase order; exact timing start for 1:00 should be verified against Story checklist if mission replay differs. **GameGuide path:** **NONE** (`rdr2/missions/epilogue_01/` absent). **Transfer:** create dedicated `the_wheel` Field Guide v1.1 with all phases after authorized migration, not from this document directly.
 
 ## 2. EP1-02 — Simple Pleasures
 
-**Identity:** \`Simple Pleasures\` · **MANDATORY, 1 medal** · **requires The Wheel**, activation by **Tom Dickens** at Pronghorn Ranch, John uses “Jim Milton.” [P02,E02,E04,G01]
+**Identity:** `Simple Pleasures` · **MANDATORY, 1 medal** · **requires The Wheel**, activation by **Tom Dickens** at Pronghorn Ranch, John uses “Jim Milton.” [P02,E02,E04,G01]
 
 **Gold contract (HIGH):**
 1. **Fill a bucket within 10 seconds when milking.** Timed activity segment; RDR2.org and Gamer Guides describe **multiple bucket attempts**. Do not assume first failed milking run irreparably ruins the objective until game feedback/checklist confirms.
@@ -131,7 +131,7 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 
 ## 3. EP1-03 — Farming, for Beginners
 
-**Identity:** \`Farming, for Beginners\` · **MANDATORY, 1 medal** · unlocked after Simple Pleasures, **parallel** to Fatherhood, for Beginners; **Tom Dickens**. [P03,E02,E04,G01]
+**Identity:** `Farming, for Beginners` · **MANDATORY, 1 medal** · unlocked after Simple Pleasures, **parallel** to Fatherhood, for Beginners; **Tom Dickens**. [P03,E02,E04,G01]
 
 **Gold contract (HIGH):**
 1. **Fix the first section of fence within 1 minute 30 seconds.** Clock applies to first repair section, not whole ranch construction.
@@ -160,7 +160,7 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 
 ## 4. EP1-04 — Fatherhood, for Beginners
 
-**Identity:** \`Fatherhood, for Beginners\` · **MANDATORY, 1 medal** · unlocked after Simple Pleasures; **David Geddes** at Pronghorn Ranch; parallel with Farming. [P04,E02,E04,G01]
+**Identity:** `Fatherhood, for Beginners` · **MANDATORY, 1 medal** · unlocked after Simple Pleasures; **David Geddes** at Pronghorn Ranch; parallel with Farming. [P04,E02,E04,G01]
 
 **Gold contract (HIGH):**
 1. **Tire out Jeremiah within 45 seconds.**
@@ -194,7 +194,7 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 
 ## 5. EP1-05 — Old Habits
 
-**Identity:** \`Old Habits\` · **MANDATORY, 1 medal**, **automatically triggers immediately after BOTH** Farming and Fatherhood for Beginners; fight at Pronghorn. No ordinary player-selected new marker guaranteed. [P05,E02,E04]
+**Identity:** `Old Habits` · **MANDATORY, 1 medal**, **automatically triggers immediately after BOTH** Farming and Fatherhood for Beginners; fight at Pronghorn. No ordinary player-selected new marker guaranteed. [P05,E02,E04]
 
 **Gold contract (HIGH):**
 1. **Defeat the Laramie without taking a hit.**
@@ -218,7 +218,7 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 
 ## 6. EP1-06 — Jim Milton Rides, Again?
 
-**Identity:** \`Jim Milton Rides, Again?\` · **MANDATORY, 1 medal** · after Old Habits, start via David Geddes; sibling Fatherhood, for Idiots can be done in either order. **Story:** Laramie ranch assault and raid on Hanging Dog Ranch. [P06,E02,G01]
+**Identity:** `Jim Milton Rides, Again?` · **MANDATORY, 1 medal** · after Old Habits, start via David Geddes; sibling Fatherhood, for Idiots can be done in either order. **Story:** Laramie ranch assault and raid on Hanging Dog Ranch. [P06,E02,G01]
 
 **Gold contract (HIGH):**
 1. **Get 10 kills while dual wielding sidearms.**
@@ -256,7 +256,7 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 
 ## 7. EP1-07 — Fatherhood, for Idiots
 
-**Identity:** \`Fatherhood, for Idiots\` · **MANDATORY, 1 medal** · after Old Habits, starts at Abigail; sibling Jim Milton can be completed in either order. Drive with Jack to Strawberry for mail, then hostile confrontation and return. [P07,E02,G01]
+**Identity:** `Fatherhood, for Idiots` · **MANDATORY, 1 medal** · after Old Habits, starts at Abigail; sibling Jim Milton can be completed in either order. Drive with Jack to Strawberry for mail, then hostile confrontation and return. [P07,E02,G01]
 
 **Gold contract (HIGH):**
 1. **Kill all 3 enemies in Dead Eye.** Some guides recommend **one activation**, but literal Gold source says “all 3 in Dead Eye,” not a separate “one activation” metric; do not invent a stronger criterion.
@@ -288,7 +288,7 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 
 ## 8. EP1-08 — Motherhood
 
-**Identity:** \`Motherhood\` · **MANDATORY, 1 medal**, **auto-start after BOTH** Fatherhood for Idiots and Jim Milton Rides Again. Sadie's telegram, family separation and ranch-work time jump. [P08,E02,E04,G01]
+**Identity:** `Motherhood` · **MANDATORY, 1 medal**, **auto-start after BOTH** Fatherhood for Idiots and Jim Milton Rides Again. Sadie's telegram, family separation and ranch-work time jump. [P08,E02,E04,G01]
 
 **Gold contract (HIGH):** **Complete within 1 minute 30 seconds (90 s)**. Only **one** listed medal condition; this is a mission-wide timed objective despite story duration/time montage. [P08,E01,E02,G01]
 
@@ -313,7 +313,7 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 
 ## 9. EP1-09A — The Landowning Classes (supporting stage, NO medal)
 
-**Identity:** \`The Landowning Classes\` · story setup after Motherhood, bank/loan introduction with **Ansel Atherton** in Blackwater. GameFAQs and Red Dead Wiki treat it as separate narrative interaction that **does not show as a Gold-eligible Story medal entry**; GTA Base groups it with Home of the Gentry. [E02,E03,E16]
+**Identity:** `The Landowning Classes` · story setup after Motherhood, bank/loan introduction with **Ansel Atherton** in Blackwater. GameFAQs and Red Dead Wiki treat it as separate narrative interaction that **does not show as a Gold-eligible Story medal entry**; GTA Base groups it with Home of the Gentry. [E02,E03,E16]
 
 **Gold eligibility:** **NONE / 0**. **DO NOT** attach the subsequent **2:30** time criterion to this opening cutscene unless in-game mission replay log explicitly combines them; GameFAQs clearly distinguishes stage names.
 
@@ -334,7 +334,7 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 
 ## 10. EP1-09B — Home of the Gentry?
 
-**Identity:** \`Home of the Gentry?\` · **MANDATORY, 1 medal** · starts at Beecher's Hope after the Landowning Classes bank scene. Some directories call composite **The Landowning Classes / Home of the Gentry?**; that composite still carries **one medal**. [P09,E02,E03,E16]
+**Identity:** `Home of the Gentry?` · **MANDATORY, 1 medal** · starts at Beecher's Hope after the Landowning Classes bank scene. Some directories call composite **The Landowning Classes / Home of the Gentry?**; that composite still carries **one medal**. [P09,E02,E03,E16]
 
 **Gold contract (HIGH):** **Complete within 2 minutes 30 seconds (150 s).** Do not add cash spent, squatters killed or honor choices as extra Gold requirements. [P09,E01,E02,E03,G01]
 
@@ -360,7 +360,7 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 
 ## 11. EP1-10 — Gainful Employment
 
-**Identity:** \`Gainful Employment\` · **MANDATORY Story entry / 1 Gold**, **after Motherhood**, can be taken **before or after Home of the Gentry? chapter transition**. Begins by speaking with **Sadie Adler in Valentine saloon**, travels to Strawberry for fugitive **Nathan Kirk**. PowerPyx's visible “Quest Giver: Ansel Atherton” conflicts with its **own** description of Sadie; GameFAQs, GTA Base and RDR2.org explicitly support **Sadie**. **Do not copy Atherton as giver.** [P10,E02,E03,E04,G01]
+**Identity:** `Gainful Employment` · **MANDATORY Story entry / 1 Gold**, **after Motherhood**, can be taken **before or after Home of the Gentry? chapter transition**. Begins by speaking with **Sadie Adler in Valentine saloon**, travels to Strawberry for fugitive **Nathan Kirk**. PowerPyx's visible “Quest Giver: Ansel Atherton” conflicts with its **own** description of Sadie; GameFAQs, GTA Base and RDR2.org explicitly support **Sadie**. **Do not copy Atherton as giver.** [P10,E02,E03,E04,G01]
 
 **Gold contract (HIGH):**
 1. **After arriving in Strawberry, locate bounty within 30 seconds.** It's a local arrival/search clock.
@@ -453,7 +453,7 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 | **M42-X01** | GameFAQs + Wiki separate **The Landowning Classes (no medal)**, GTA Base groups with **Home** and PowerPyx primarily names Home | **11 story-stage titles / 10 Gold entries**, one composite identity if actual Story menu combines. Never invent a medal for bank scene. |
 | **M42-X02** | Guide-specific ordinal: PowerPyx calls The Wheel “88th,” RDR2.org “83rd,” GTA Base “90th” | Numbers are author ordering conventions, not persistent mission IDs. Use exact names + in-game Story menu. |
 | **M42-X03** | Gainful Employment described as final Epilogue I mission, yet GameFAQs confirms it can occur Epilogue II | Label **epilogue cross-boundary**; potential chapter-migration of quest doesn't remove Gold eligibility. |
-| **M42-X04** | PowerPyx \`Gainful Employment\` heading says **Quest Giver: Ansel Atherton** while quest/body/story is **Sadie** | **Metadata typo**; corroborate Sadie through actual Valentine marker/independent GameFAQs/GTA Base. |
+| **M42-X04** | PowerPyx `Gainful Employment` heading says **Quest Giver: Ansel Atherton** while quest/body/story is **Sadie** | **Metadata typo**; corroborate Sadie through actual Valentine marker/independent GameFAQs/GTA Base. |
 | **M42-X05** | Jeremiah treat advised **before Duncan** in PowerPyx, **after foaling lesson** in GameFAQs | **TIMING CONDITION:** feed when safely accessible; prefer **before return to Duncan** if treat wheel works. If missing, check horse near corral after Duncan; don't guarantee either window for every replay. |
 | **M42-X06** | “Skip all cutscenes” speed tactic vs player's first-play immersion and some user reports about timers | Offer **first-view narrative / replay for time Gold** option. Do not imply cutscene skipping is mandatory for story or identical across clients. |
 | **M42-X07** | GameFAQs recommends stopping wagon by threatening pursuer; PowerPyx/Gamer Guides emphasize leap onto wagon | Both are guide routes; **reclaim within 1:00** is the fixed criterion. Choose on-screen boarding/threaten prompt as available. |
@@ -486,19 +486,19 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 
 ### 12E. GameGuide transfer queue — no double records, no migration by this worker
 
-**Current source check:** [Original mission directory](https://github.com/L33TW0RLD/rdr2/tree/main/missions) contains \`chapter_01\`, \`chapter_02\`, \`templates\`, **no epilogue directory**. Every Gold-bearing entry above has status \`NEEDS_GAMEGUIDE_AUTHORING\`, NOT “missing from a player's save” or “failed medal.”
+**Current source check:** [Original mission directory](https://github.com/L33TW0RLD/rdr2/tree/main/missions) contains `chapter_01`, `chapter_02`, `templates`, **no epilogue directory**. Every Gold-bearing entry above has status `NEEDS_GAMEGUIDE_AUTHORING`, NOT “missing from a player's save” or “failed medal.”
 
 **Proposed future authoring paths** (names intentionally **not** official operation IDs and **not created here**):
-- \`rdr2/missions/epilogue_01/<the_wheel>.md\`
-- \`rdr2/missions/epilogue_01/<simple_pleasures>.md\`
-- \`rdr2/missions/epilogue_01/<farming_for_beginners>.md\`
-- \`rdr2/missions/epilogue_01/<fatherhood_for_beginners>.md\`
-- \`rdr2/missions/epilogue_01/<old_habits>.md\`
-- \`rdr2/missions/epilogue_01/<jim_milton_rides_again>.md\`
-- \`rdr2/missions/epilogue_01/<fatherhood_for_idiots>.md\`
-- \`rdr2/missions/epilogue_01/<motherhood>.md\`
-- \`rdr2/missions/epilogue_01/<landowning_classes_setup_and_home_of_gentry>.md\` (**one medal-bearing Home; bank no-medal step**)
-- \`rdr2/missions/epilogue_01/<gainful_employment>.md\` (actual completion may happen in Epilogue II).
+- `rdr2/missions/epilogue_01/<the_wheel>.md`
+- `rdr2/missions/epilogue_01/<simple_pleasures>.md`
+- `rdr2/missions/epilogue_01/<farming_for_beginners>.md`
+- `rdr2/missions/epilogue_01/<fatherhood_for_beginners>.md`
+- `rdr2/missions/epilogue_01/<old_habits>.md`
+- `rdr2/missions/epilogue_01/<jim_milton_rides_again>.md`
+- `rdr2/missions/epilogue_01/<fatherhood_for_idiots>.md`
+- `rdr2/missions/epilogue_01/<motherhood>.md`
+- `rdr2/missions/epilogue_01/<landowning_classes_setup_and_home_of_gentry>.md` (**one medal-bearing Home; bank no-medal step**)
+- `rdr2/missions/epilogue_01/<gainful_employment>.md` (actual completion may happen in Epilogue II).
 
 **No filenames/operation IDs ratified.** Decide final shelf names only after checking GameGuide naming conventions, actual mission Story display and Epilogue II specialist crosslinks. The next owner-authorized GameGuide writer must:
 1. Run approved preflight on each named mission against future live campaign evidence.
@@ -523,4 +523,4 @@ Both separately supported by [P01][E01][E02][E04][G01]. **HIGH**.
 - Whether a character's unique letter becomes a Documents inventory item after Motherhood.
 - Epilogue I→II edge when Gainful still pending and which mission card appears in player's Story record.
 
-**Source disagreements are not ratified gameplay instructions.** All claims are \`RESEARCHED — REVIEW PENDING\`; no owner decision recorded, no GameGuide file edited, no player progress inferred. **Coordinator next action:** verify exact 3-file lease, independent source checklist, reconcile Epilogue II overlap, then review for research integration, not direct game-authority migration.
+**Source disagreements are not ratified gameplay instructions.** All claims are `RESEARCHED — REVIEW PENDING`; no owner decision recorded, no GameGuide file edited, no player progress inferred. **Coordinator next action:** verify exact 3-file lease, independent source checklist, reconcile Epilogue II overlap, then review for research integration, not direct game-authority migration.
