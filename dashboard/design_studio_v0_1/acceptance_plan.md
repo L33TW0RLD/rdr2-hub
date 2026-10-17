@@ -91,3 +91,24 @@ Do not ask all five as a form. Let real feedback identify which one to refine fi
 **Delivered:** exclusive four files drafted, issue #61 and isolated branch, in-chat interactive prototype, source alignment.  
 **Not yet delivered:** user-verified desktop/mobile clickthrough, polished multi-device acceptance, production adapter and actual fully rendered guide integration.  
 **Next state:** `DELIVERED_REVIEW_PENDING` after branch, PR and allowed-path diff readback. **No self-merge**.
+
+
+---
+
+## Owner-directed refinement test H01–H09 (2026-10-17)
+
+**Selected variant:** Placement A + Precision Rail A + Medal Emphasis B. This small header/first-container test supersedes prior four-button shell navigation.
+
+| ID | Specific user test | Acceptance |
+|---|---|---|
+| H01 | Open Chapter 2 header | Home is the **only** header nav button; Mission Control is the first body container |
+| H02 | Inspect visual rail | Exactly 18 equally sized Chapter 2 mission slots; thin ~4px rail is visually noticeable but elegant |
+| H03 | Inspect colors | 007 and 008 Gold; 010 Silver; 021 Gold; other 14 neutral by current canonical GameGuide ledger |
+| H04 | Inspect title/count | `3 Gold · 1 Silver · 0 Bronze`, `4/18 recorded`; no misleading 4/18 Gold |
+| H05 | Inspect unknown segment | Shows name/Operation and `No verified medal`, NOT Bronze/failed/unplayed |
+| H06 | Inspect on mobile | No mandatory 4px tap target: padded hit area and/or labelled selector; no scroll/clipping |
+| H07 | Inspect Mission Control | If latest current map markers aren't observed, no mission is incorrectly labelled available |
+| H08 | Activate source read / Home | Controls perform the described action and no campaign/medal state changes |
+| H09 | Compare hierarchy | Chapter hero + achievement line + rail + first Mission Control fit without creating a large KPI dashboard |
+
+**Current state:** DESIGN PROPOSED; actual client click acceptance **PENDING USER**. No production implementation or new game-state read/write. Below-the-fold Adventure/Atlas presentation is deferred.
