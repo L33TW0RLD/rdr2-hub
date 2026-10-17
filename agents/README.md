@@ -23,7 +23,7 @@ Given an assigned `task_id` and the repo, in an existing or new chat:
 
 Agent lanes are reusable conversations, not continuously executing bots that can be detected as online. Never depend on prior chat memory, graphical checkbox, background execution or hidden state as evidence of work. The original `L33TW0RLD/rdr2` remains the only gameplay-progress authority.
 
-Completed existing branches `agent/hub-ux-001` and `agent/atlas-taxonomy-002` have final handoffs but **no mid-task checkpoints** because they predate this workflow. Do not retroactively alter those branches. The existing Atlas specialist conversation can instead handle separately registered tasks 007, 008 and 009 sequentially.
+Completed early branches `agent/hub-ux-001` and `agent/atlas-taxonomy-002` have final handoffs but **no mid-task checkpoints** because they predate this workflow. Do not retroactively alter those branches. The owner's subsequent [parallel research Wave 1](atlas_parallel_wave1_v1.md) superseded the 007→008→009 sequential routing: six distinct reusable specialist threads delivered D01–D06 and retain separate terminal handoffs. No new assignments are automatic.
 
 
 ## Product-first specialist production (remaster 2026-10-17)
