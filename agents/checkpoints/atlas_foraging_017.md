@@ -7,7 +7,7 @@
 **Registration baseline:** `9931058e69ac3c6e7923841da87813de7f015f41`  
 **Latest main inspected:** `6f08f4ed60abde51831f8b72cf6c363aa49feb2d`  
 **Recorded:** 2026-10-17 UTC (no precise time claim)  
-**Task status:** `IN_PROGRESS` (dossier committed, handoff outstanding) | **Content:** `RESEARCHED_REVIEW_PENDING` (NOT ADOPTED).
+**Task status:** `DELIVERED_REVIEW_PENDING` — closed to specialist edits | **Content:** `RESEARCHED_REVIEW_PENDING` (NOT ADOPTED).
 
 ## Exclusive lease and constraints
 1. `systems_atlas/dossiers/d12_herbs_food_crafting_v0_1.md`
@@ -34,8 +34,14 @@ D12 herbs/plants, recognition and picking; differentiation of `study`/`pick`/`ob
 - Disputes retained: Small Game Arrow components, Improved Throwing Knife feather count, Horse Meal, Herbalist 9 activity-local pick credit, fire/grill gate. No direct in-game tests.
 - Last verified branch commit before this checkpoint update: `fed5ef3714655b014285d1e02847da68d9522aa0`.
 
-## Recovery / exact next action
-**Next permitted action:** write and commit final task handoff at `agents/handoffs/2026-10-17_atlas_foraging_017.md`, preserving source disputes and owner review questions.
+## Final verified delivery — 2026-10-17
+- Final handoff committed `f0a6a7cecf17a1c608d75bdc5b9b3ca4b04a5b29`; explicit-ref readback confirmed blob `3ea9b1e08534144ef8cccf9ac223c3ba9214740d`, 8,683 characters.
+- Comparison after handoff: ahead **4**, behind **2** versus main `1d956b5bb210f8ce57e17e29aab7d859d731ad80`, exactly three changed files: `systems_atlas/dossiers/d12_herbs_food_crafting_v0_1.md`, `agents/checkpoints/atlas_foraging_017.md`, `agents/handoffs/2026-10-17_atlas_foraging_017.md`. No rebase or merge performed.
+- Last verified branch commit before this closure checkpoint: `f0a6a7cecf17a1c608d75bdc5b9b3ca4b04a5b29`. This file cannot contain its own commit SHA; final terminal SHA is to be reported in the chat after readback.
+- **No gameplay campaign, ledger, mission, inventory or save change**. Cross-dossier research remains REVIEW PENDING.
 
-Then exact-ref handoff readback, final checkpoint closure, changed-path comparison, terminal SHA and **stop at `DELIVERED_REVIEW_PENDING`**. No successor task without coordinator registration.
+## Recovery / exact next action
+**Next permitted action:** **NONE for this closed worker task.** Coordinator/owner reviews D12 sources, disputes and optional integration; a new task demands separate coordinator activation, ID, branch, lease.
+
+Closure is **DELIVERED_REVIEW_PENDING**; only terminal SHA readback/reporting remains, **no further file writes**. No successor task without coordinator registration.
 **Blockers:** none established. If a real same-file write conflict appears, fetch new branch HEAD and file SHA before a scoped retry; do not overwrite independent work.
