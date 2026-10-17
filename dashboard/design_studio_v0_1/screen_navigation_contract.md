@@ -365,3 +365,20 @@ Use `Introduces`, `Becomes available through` (only when corroborated), `After c
 ### Synthetic test case truths
 
 The current graph references these normal introductions: `completed:m009 → stable_brush`, `completed:m013 → emerald_wagon_fence`, `completed:m018 → ordinary_fishing`; separately `john_wagon_task_active → urgent_john_wagon` on `m017`. These are research-level *mechanics* contracts, not chapter opening order guarantees. A fictional scenario may show m009/m018/m013 as simultaneously observed markers solely to compare layout, never as assertion of actual current game markers or proven story prerequisite path.
+
+
+---
+
+## 16. Owner-selected Mission Control row contract v0.8
+
+The selected display is **A1 only**: compact selectable mission rows, with a source-grounded inline feature introduction. Remove any separate A2 feature spotlight.
+
+- **Mission heading:** source-identified, only if current map marker is actually observed (or clearly synthetic in a design demonstration).
+- **Optional subline:** warm-gold star icon followed by **New possibilities · [mechanic name]**. This previews a normal-route mechanic available through completing the mission; it must never assert present ownership.
+- **Relevant source mappings:** m009 to horse stable/brush; m018 to ordinary fishing; m013 to Emerald Ranch wagon Fence (specific vendor).
+- **Optional urgency:** small **Time-sensitive** label next to the affected row only when a named skippable stage is explicitly active. No invented countdown.
+- **Action:** one clickable whole row requests the COMPLETE original GameGuide Field Guide v1.1; gold star and urgency label are not separate action buttons.
+- **Suppress feature annotation** when the mission marker is unobserved, research insufficient, mechanic already clearly available, or the text would create misleading completion claims.
+- No redundant medal values, operation numbering, or Gold progress in list entries.
+
+The medal header and map-dot rail remain **owner locked** and unchanged. The star accent is warm gold but does not indicate that a Gold medal was earned. This is a read-only presentation proposal; implementation and client acceptance remain separate.
