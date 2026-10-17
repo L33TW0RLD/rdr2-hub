@@ -25,6 +25,44 @@
         "leather_working_tools_purchased"
       ],
       "observed_capabilities": []
+    },
+    "after_chapter_two_departure": {
+      "scenario_id": "fictional_chapter2_completed",
+      "source": "SIMULATION_FIXTURE",
+      "synthetic": true,
+      "chapter": "02",
+      "control": "free_roam",
+      "completed": [
+        "m007",
+        "m008",
+        "m009",
+        "m010",
+        "m013",
+        "m017",
+        "m018",
+        "m019",
+        "m023",
+        "m024"
+      ],
+      "observed_markers": [],
+      "flags_true": [
+        "chapter2_open",
+        "strauss_debt_returned",
+        "strauss_debt_deposited",
+        "leather_working_tools_purchased"
+      ],
+      "flags_false": [
+        "camp_companion_activity_observed",
+        "john_wagon_task_active",
+        "chapter2_exit_imminent"
+      ],
+      "observed_capabilities": [
+        "camp_ledger",
+        "stable_brush",
+        "leather_tools",
+        "emerald_wagon_fence",
+        "ordinary_fishing"
+      ]
     }
   },
   "journeys": [
@@ -637,6 +675,25 @@
           }
         }
       ]
+    },
+    {
+      "id": "chapter_relocation_does_not_fake_current_camp",
+      "state": "after_chapter_two_departure",
+      "steps": [
+        {
+          "action": {
+            "type": "show_home"
+          },
+          "expect": {
+            "screen": "home",
+            "depth": 0,
+            "header_chapter": "Chapter 2 reference (fictional finale completed)",
+            "known_area": "Previous camp: Horseshoe Overlook; present area unknown",
+            "home_prompt_id": null,
+            "home_outing": null
+          }
+        }
+      ]
     }
   ],
   "invalid_actions": [
@@ -806,7 +863,8 @@
     "Global activated risk persists while navigating a project or Atlas.",
     "No gameplay result writes, Gold, saves, owned items, funds or horse status from UI navigation.",
     "Project milestone may change when a synthetic fixture changes, but selection alone does not advance it.",
-    "Every screen is a bounded model and source-read placeholder, not proof of real UI rendering."
+    "Every screen is a bounded model and source-read placeholder, not proof of real UI rendering.",
+    "After the fictional Chapter 2 finale, do not continue to promote a stale Horseshoe Overlook arrival outing or assert Horseshoe as the current camp."
   ],
   "design_limitations": [
     "No real provider source fetch performed by the router",
