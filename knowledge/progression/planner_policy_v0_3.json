@@ -84,7 +84,8 @@
     "active_critical": "remain pinned while active; after first prompt show pinned-only unless a risky advance is explicitly requested",
     "chapter_exit": "immediately prioritize before-advance check, but never assume optional content exists",
     "milestone_change": "project recommendations evolve only with explicit source-backed gate/observation change; receipts do not update project stage",
-    "no_cooldown_seconds": "No time-based random windows or fabricated in-game timer"
+    "no_cooldown_seconds": "No time-based random windows or fabricated in-game timer",
+    "event_specific_outing": "Use a source-linked opportunity corresponding to the introduced system; do not reuse an unrelated featured project outing for a Fence/Fishing introduction."
   },
   "render_caps": {
     "headline_prompts": 1,
@@ -112,7 +113,8 @@
       "source_refs": [
         "G_TRIGGER",
         "H_UNLOCK"
-      ]
+      ],
+      "opportunity_ref": "arrival_camp_orientation"
     },
     {
       "id": "event.ledger_introduction",
@@ -131,7 +133,8 @@
       "source_refs": [
         "H_UNLOCK",
         "H_D02"
-      ]
+      ],
+      "opportunity_ref": "camp_ledger_open"
     },
     {
       "id": "event.pearson_tools_milestone",
@@ -150,7 +153,8 @@
       "source_refs": [
         "H_D03",
         "H_D02"
-      ]
+      ],
+      "opportunity_ref": "camp_ledger_open"
     },
     {
       "id": "event.horse_system_introduction",
@@ -168,7 +172,8 @@
       "evidence_note": "Normal horse-brush/stable introduction after Hosea lesson, not proof of owned horse",
       "source_refs": [
         "H_UNLOCK"
-      ]
+      ],
+      "opportunity_ref": "horse_tutorial_done"
     },
     {
       "id": "event.wagon_fence_introduction",
@@ -185,7 +190,8 @@
       "evidence_note": "Seamus wagon Fence introduction; no global 'all fences locked' inference",
       "source_refs": [
         "H_UNLOCK"
-      ]
+      ],
+      "opportunity_ref": "fence_introduction"
     },
     {
       "id": "event.fishing_introduction",
@@ -202,7 +208,8 @@
       "evidence_note": "Normal rod/tutorial after A Fisher of Men; no legendary quest automatically unlocked",
       "source_refs": [
         "H_UNLOCK"
-      ]
+      ],
+      "opportunity_ref": "fishing_tutorial_done"
     }
   ],
   "suppression_rules": [
