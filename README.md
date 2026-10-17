@@ -79,6 +79,8 @@ We are building **complete researched content before claiming complete game cove
 - [Readiness/acceptance matrix](quality/acceptance_matrix_v1.md)
 - [Repository remaster blueprint](architecture/repository_remaster_blueprint_v1.md)
 
+**Atlas Wave 2 queued:** Six NEW research tasks [registered for the existing specialist conversations](agents/atlas_parallel_wave2_v1.md): D08 Chapter 2 windows, D09 Dead Eye/cores, D11 travel, D12 herbs/cooking, D13 Honor/law and D15 Compendium. These have separate branches and are **PLANNED** until their initial checkpoints are committed. Wave 1 remains merged as review-pending research.
+
 **Systems Atlas Wave 1 delivery:** D01 Horses, D02 Camp, D03 Satchels, D04 Hunting, D05 Camp Life and D06 Inventory are [six substantive source-checked dossiers](systems_atlas/README.md), with [cross-dossier review](systems_atlas/reviews/2026-10-17_wave1_cross_dossier_review.md). All retain **RESEARCHED — REVIEW PENDING**, not ADOPTED. Specialist threads remain reusable; their branches and handoffs remain available. [Wave 1 production history](agents/atlas_parallel_wave1_v1.md). Adaptive Companion 010 remains separately planned.
 
 ## Remaster implementation boundaries
