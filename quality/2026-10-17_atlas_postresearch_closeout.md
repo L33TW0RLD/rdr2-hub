@@ -39,7 +39,7 @@
 
 - [x] 28 research dossiers and four integration reviews present on `main` at the audited commit.
 - [x] No active Atlas research issue left outstanding from final Wave 4.
-- [x] Current developer-facing status documentation scheduled for correction in postresearch housekeeping PR.
+- [x] Current developer-facing status documentation corrected in a separate coordinator-owned housekeeping branch/PR, with historical registration tables preserved.
 - [x] Separate open Companion and Save Intelligence work explicitly retained.
 - [x] No branch deletion, no worker lease modification, no Save Intelligence merge or original campaign mutation.
 - [ ] Source claim-level ratification / targeted in-game tests — **NOT PERFORMED**.
