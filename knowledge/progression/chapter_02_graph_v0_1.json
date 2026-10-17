@@ -1,0 +1,1164 @@
+{
+  "schema_version": "0.1.0",
+  "content_status": "DESIGN_RESEARCH_REVIEW_PENDING",
+  "chapter": "02",
+  "title": "Chapter 2 · Horseshoe Overlook — branching progression graph",
+  "as_of": "2026-10-17",
+  "scope": "GENERAL_GAME_RULES_AND_SYNTHETIC_SIMULATION_ONLY",
+  "sources": {
+    "G_MISSIONS": {
+      "url": "https://github.com/L33TW0RLD/rdr2/blob/main/missions/README.md",
+      "class": "original_gameguide_source",
+      "note": "Full prepared mission identity/guide index; shelf numbering not play order"
+    },
+    "G_TRIGGER": {
+      "url": "https://github.com/L33TW0RLD/rdr2/blob/main/guides/completion/chapter_02_trigger_map.md",
+      "class": "researched_review_pending",
+      "note": "Stage-window triggers; source conflicts explicitly tracked"
+    },
+    "H_RESEARCH": {
+      "url": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/mission_control/chapter_research/chapter_02_v0_1.md",
+      "class": "researched_review_pending",
+      "note": "18-Gold identity ledger and cross-mission risk matrix"
+    },
+    "H_UNLOCK": {
+      "url": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/unlock_and_dependency_map_v0_1.md",
+      "class": "researched_review_pending",
+      "note": "Chapter 2 general game-system gates"
+    },
+    "H_D02": {
+      "url": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d02_camp_ledger_upgrades_v0_1.md",
+      "class": "researched_review_pending"
+    },
+    "H_D03": {
+      "url": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d03_satchels_crafting_v0_1.md",
+      "class": "researched_review_pending"
+    },
+    "H_D08": {
+      "url": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d08_chapter2_limited_windows_v0_1.md",
+      "class": "researched_review_pending"
+    },
+    "W_WIKI_GRAPH": {
+      "url": "https://reddead.fandom.com/wiki/Missions_in_Redemption_2",
+      "class": "community_reference",
+      "note": "Rich dependency hypothesis, may not reflect all patches/routes"
+    },
+    "W_WIKI_DISCUSSION": {
+      "url": "https://reddead.fandom.com/wiki/Talk:Missions_in_Redemption_2",
+      "class": "editorial_discussion",
+      "note": "Unverified candidate edges, never hard adoption"
+    },
+    "W_GAMEFAQS": {
+      "url": "https://gamefaqs.gamespot.com/xboxone/200180-red-dead-redemption-2/faqs/76594/chapter-2-horseshoe-overlook",
+      "class": "published_guide",
+      "note": "Describes quiet time as requiring Social Call + debt part II"
+    },
+    "W_PP_CALL": {
+      "url": "https://www.powerpyx.com/red-dead-redemption-2-paying-a-social-call-walkthrough/",
+      "class": "published_guide",
+      "note": "Claims Polite Society unlock"
+    },
+    "W_WIKI_CALL": {
+      "url": "https://reddead.fandom.com/wiki/Paying_a_Social_Call",
+      "class": "community_reference",
+      "note": "Claims Americans at Rest unlock"
+    },
+    "W_PP_QUIET": {
+      "url": "https://www.powerpyx.com/red-dead-redemption-2-a-quiet-time-walkthrough/",
+      "class": "published_guide",
+      "note": "Lists Social Call only"
+    },
+    "W_PP_BEAR": {
+      "url": "https://www.powerpyx.com/red-dead-redemption-2-exit-pursued-by-a-bruised-ego-walkthrough/",
+      "class": "published_guide",
+      "note": "Lists Polite Society unlock"
+    },
+    "W_PP_FISH": {
+      "url": "https://www.powerpyx.com/red-dead-redemption-2-a-fisher-of-men-walkthrough/",
+      "class": "published_guide",
+      "note": "Lists Paying a Social Call"
+    },
+    "W_PP_SPINES": {
+      "url": "https://www.powerpyx.com/red-dead-redemption-2-the-spines-of-america-walkthrough/",
+      "class": "published_guide",
+      "note": "Lists Paying a Social Call"
+    },
+    "W_PP_OIL": {
+      "url": "https://www.powerpyx.com/red-dead-redemption-2-pouring-forth-oil-ii-walkthrough/",
+      "class": "published_guide"
+    },
+    "W_PP_SHEEP": {
+      "url": "https://www.powerpyx.com/red-dead-redemption-2-the-sheep-and-the-goats-walkthrough/",
+      "class": "published_guide",
+      "note": "Requires Oil IV"
+    },
+    "W_PP_EXIT": {
+      "url": "https://www.powerpyx.com/red-dead-redemption-2-a-strange-kindness-walkthrough/",
+      "class": "published_guide",
+      "note": "Requires Sheep and Goats"
+    },
+    "W_PP_CAMP": {
+      "url": "https://www.powerpyx.com/red-dead-redemption-2-how-to-upgrade-camp/",
+      "class": "published_guide",
+      "note": "One returned debt deposited unlocks ledger"
+    }
+  },
+  "rules": {
+    "facts": [
+      "completed:mNNN",
+      "flag:chapter2_open",
+      "flag:strauss_debt_returned",
+      "flag:strauss_debt_deposited",
+      "flag:john_wagon_task_active",
+      "flag:oil_part_iii_complete",
+      "flag:mary_help_accepted",
+      "flag:sheriff_bounty_offer",
+      "flag:pastoral_scene_marker",
+      "flag:camp_companion_activity_observed",
+      "flag:chapter2_exit_imminent",
+      "flag:leather_working_tools_purchased",
+      "flag:lodging_fast_travel_purchased"
+    ],
+    "fact_separation": "completed indicates simulated story entry completion; it does not confer Gold or inventory. marker_observations are separately supplied. Unmentioned facts UNKNOWN, never false.",
+    "logic": "Kleene 3-valued AND/OR; observed actual marker overrides inferred eligibility while recording inconsistencies; candidate prerequisite edge NEVER treated as a hard condition.",
+    "deny_writes": [
+      "L33TW0RLD/rdr2/campaign/**",
+      "saved_games",
+      "horse_inventory",
+      "live_player_state"
+    ]
+  },
+  "missions": [
+    {
+      "id": "m007",
+      "shelf_operation": 7,
+      "title": "Polite Society, Valentine Style",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/07_polite_society_valentine_style.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 2,
+      "classification": "story_opening",
+      "necessary_all": [],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "partial",
+      "candidate_edges": [
+        {
+          "predicate": "flag:chapter2_open",
+          "claim": "Chapter 2 opening offer; marker must be observed",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "G_TRIGGER",
+            "H_RESEARCH"
+          ]
+        }
+      ],
+      "marker_observation_key": "m007",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m008",
+      "shelf_operation": 8,
+      "title": "Americans at Rest",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/08_americans_at_rest.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 2,
+      "classification": "story_opening",
+      "necessary_all": [],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "partial",
+      "candidate_edges": [
+        {
+          "predicate": "flag:chapter2_open",
+          "claim": "Chapter 2 opening alternative; marker must be observed",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "G_TRIGGER",
+            "H_RESEARCH"
+          ]
+        }
+      ],
+      "marker_observation_key": "m008",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m009",
+      "shelf_operation": 9,
+      "title": "Exit Pursued by a Bruised Ego",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/09_exit_pursued_by_a_bruised_ego.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 3,
+      "classification": "story",
+      "necessary_all": [],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "disputed",
+      "candidate_edges": [
+        {
+          "predicate": "completed:m007",
+          "claim": "PowerPyx says Polite Society; Hub trigger map permits an early-opening-mission rule, exact route unresolved",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_PP_BEAR",
+            "G_TRIGGER"
+          ]
+        }
+      ],
+      "marker_observation_key": "m009",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m010",
+      "shelf_operation": 10,
+      "title": "Paying a Social Call",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/10_paying_a_social_call.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 4,
+      "classification": "story",
+      "necessary_all": [],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "disputed",
+      "candidate_edges": [
+        {
+          "predicate": "completed:m007",
+          "claim": "PowerPyx says Polite Society",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_PP_CALL"
+          ]
+        },
+        {
+          "predicate": "completed:m008",
+          "claim": "Wiki says Americans at Rest",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_WIKI_CALL"
+          ]
+        }
+      ],
+      "marker_observation_key": "m010",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m011",
+      "shelf_operation": 11,
+      "title": "A Quiet Time",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/11_a_quiet_time.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 3,
+      "classification": "story",
+      "necessary_all": [
+        "completed:m010"
+      ],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "partial",
+      "candidate_edges": [
+        {
+          "predicate": "flag:strauss_debt_returned",
+          "claim": "GameFAQs adds Strauss debt II as an extra condition; PowerPyx lists only Social Call",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_GAMEFAQS",
+            "W_PP_QUIET"
+          ]
+        }
+      ],
+      "marker_observation_key": "m011",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m012",
+      "shelf_operation": 12,
+      "title": "Who Is Not Without Sin",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/12_who_is_not_without_sin.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 2,
+      "classification": "story",
+      "necessary_all": [],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "unresolved",
+      "candidate_edges": [],
+      "marker_observation_key": "m012",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m013",
+      "shelf_operation": 13,
+      "title": "The Spines of America",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/13_the_spines_of_america.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 3,
+      "classification": "story",
+      "necessary_all": [],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "disputed",
+      "candidate_edges": [
+        {
+          "predicate": "completed:m009",
+          "claim": "Community graph says Hosea bear mission",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_WIKI_DISCUSSION"
+          ]
+        },
+        {
+          "predicate": "completed:m010",
+          "claim": "PowerPyx says Paying a Social Call",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_PP_SPINES"
+          ]
+        }
+      ],
+      "marker_observation_key": "m013",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m014",
+      "shelf_operation": 14,
+      "title": "Money Lending and Other Sins — III",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/14_money_lending_and_other_sins_i_ii_iii.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 1,
+      "classification": "story_multistage",
+      "necessary_all": [],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "partial",
+      "candidate_edges": [
+        {
+          "predicate": "flag:strauss_debt_returned",
+          "claim": "Normal Strauss debt/Downes chain; exact Stage III marker also needs confirmation",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "G_TRIGGER",
+            "H_RESEARCH"
+          ]
+        }
+      ],
+      "marker_observation_key": "m014",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m015",
+      "shelf_operation": 15,
+      "title": "Blessed Are the Meek?",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/15_blessed_are_the_meek.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 4,
+      "classification": "story",
+      "necessary_all": [
+        "completed:m011"
+      ],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "partial",
+      "candidate_edges": [
+        {
+          "predicate": "completed:m011",
+          "claim": "A Quiet Time precedes Micah rescue in the researched dependency chain",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_WIKI_DISCUSSION",
+            "W_PP_QUIET"
+          ]
+        }
+      ],
+      "marker_observation_key": "m015",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m016",
+      "shelf_operation": 16,
+      "title": "The First Shall Be Last",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/16_the_first_shall_be_last.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 4,
+      "classification": "story",
+      "necessary_all": [],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "unresolved",
+      "candidate_edges": [
+        {
+          "predicate": "completed:m008",
+          "claim": "Community mission graph suggests saloon brawl as prerequisite; needs independent verification",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_WIKI_DISCUSSION"
+          ]
+        }
+      ],
+      "marker_observation_key": "m016",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m017",
+      "shelf_operation": 17,
+      "title": "Pouring Forth Oil — II",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/17_pouring_forth_oil_i_ii_iii.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 1,
+      "classification": "optional_skippable_medal",
+      "necessary_all": [
+        "flag:john_wagon_task_active"
+      ],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "partial",
+      "candidate_edges": [
+        {
+          "predicate": "completed:m010",
+          "claim": "Potential earlier story prerequisite; does not by itself mean the wagon task is active",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_PP_OIL",
+            "G_TRIGGER"
+          ]
+        }
+      ],
+      "marker_observation_key": "m017",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m018",
+      "shelf_operation": 18,
+      "title": "A Fisher of Men",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/18_a_fisher_of_men.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 2,
+      "classification": "story",
+      "necessary_all": [],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "disputed",
+      "candidate_edges": [
+        {
+          "predicate": "completed:m010",
+          "claim": "PowerPyx says Paying a Social Call",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_PP_FISH"
+          ]
+        },
+        {
+          "predicate": "completed:m011",
+          "claim": "GameFAQs/mission dependency materials also require A Quiet Time",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_GAMEFAQS",
+            "W_WIKI_DISCUSSION"
+          ]
+        },
+        {
+          "predicate": "flag:oil_part_iii_complete",
+          "claim": "Wiki graph includes Oil III; timing/prereqs conflict with other guide",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_WIKI_DISCUSSION"
+          ]
+        }
+      ],
+      "marker_observation_key": "m018",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m019",
+      "shelf_operation": 19,
+      "title": "Pouring Forth Oil — IV",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/19_pouring_forth_oil_iv.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 5,
+      "classification": "story_multistage",
+      "necessary_all": [
+        "flag:oil_part_iii_complete"
+      ],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "partial",
+      "candidate_edges": [
+        {
+          "predicate": "flag:oil_part_iii_complete",
+          "claim": "Part III setup precedes robbery; Part III is NOT another Gold entry",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "H_RESEARCH",
+            "W_WIKI_DISCUSSION"
+          ]
+        }
+      ],
+      "marker_observation_key": "m019",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m020",
+      "shelf_operation": 20,
+      "title": "We Loved Once and True — III",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/20_we_loved_once_and_true_i_ii_iii.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 2,
+      "classification": "optional_honor_medal",
+      "necessary_all": [
+        "flag:mary_help_accepted"
+      ],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "partial",
+      "candidate_edges": [
+        {
+          "predicate": "flag:mary_help_accepted",
+          "claim": "Prior letter/help choice is a condition, not separate medal credit",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "H_RESEARCH",
+            "H_D08"
+          ]
+        }
+      ],
+      "marker_observation_key": "m020",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m021",
+      "shelf_operation": 21,
+      "title": "Good, Honest, Snake Oil",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/21_good_honest_snake_oil.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 3,
+      "classification": "optional_bounty_medal",
+      "necessary_all": [],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "unresolved",
+      "candidate_edges": [
+        {
+          "predicate": "flag:sheriff_bounty_offer",
+          "claim": "Actual Valentine sheriff offer governs availability; expiry across chapters disputed",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "G_TRIGGER",
+            "H_D08"
+          ]
+        }
+      ],
+      "marker_observation_key": "m021",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m022",
+      "shelf_operation": 22,
+      "title": "An American Pastoral Scene",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/22_an_american_pastoral_scene.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 4,
+      "classification": "story_cross_chapter_possible",
+      "necessary_all": [],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "unresolved",
+      "candidate_edges": [
+        {
+          "predicate": "flag:pastoral_scene_marker",
+          "claim": "Chapter 2 or deferred later; do not treat Chapter 2 exit as proved forfeiture",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "H_RESEARCH"
+          ]
+        }
+      ],
+      "marker_observation_key": "m022",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m023",
+      "shelf_operation": 23,
+      "title": "The Sheep and the Goats",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/23_the_sheep_and_the_goats.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 4,
+      "classification": "story_exit_chain",
+      "necessary_all": [
+        "completed:m019"
+      ],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "partial",
+      "candidate_edges": [
+        {
+          "predicate": "completed:m019",
+          "claim": "PowerPyx: Oil IV completed; other preceding story requirements may apply",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_PP_SHEEP",
+            "G_TRIGGER"
+          ]
+        }
+      ],
+      "marker_observation_key": "m023",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    },
+    {
+      "id": "m024",
+      "shelf_operation": 24,
+      "title": "A Strange Kindness",
+      "canonical_dossier": "L33TW0RLD/rdr2/missions/chapter_02/24_a_strange_kindness.md",
+      "gold_identity": 1,
+      "gold_objectives_count": 4,
+      "classification": "chapter_exit",
+      "necessary_all": [
+        "completed:m023"
+      ],
+      "necessary_sufficiency": "NOT_ESTABLISHED_UNLESS_MARKER_OBSERVED",
+      "prerequisite_confidence": "partial",
+      "candidate_edges": [
+        {
+          "predicate": "completed:m023",
+          "claim": "PowerPyx: Sheep and the Goats precedes camp relocation",
+          "adoption": "NOT_HARD_EDGE",
+          "sources": [
+            "W_PP_EXIT",
+            "H_RESEARCH"
+          ]
+        }
+      ],
+      "marker_observation_key": "m024",
+      "source_refs": [
+        "G_MISSIONS",
+        "H_RESEARCH"
+      ],
+      "spoiler_tier": "T1",
+      "status": "PREPARED_SOURCE_NOT_LIVE_VALIDATED"
+    }
+  ],
+  "non_medal_stages": [
+    {
+      "id": "n.debt_i_ii",
+      "title": "Strauss debt introductions and collections",
+      "gold_identity": 0,
+      "when_all": [],
+      "related_dossier": "m014",
+      "result_facts": [
+        "flag:strauss_debt_returned",
+        "flag:strauss_debt_deposited"
+      ],
+      "source_refs": [
+        "G_TRIGGER",
+        "W_PP_CAMP"
+      ]
+    },
+    {
+      "id": "n.oil_i",
+      "title": "Pouring Forth Oil I — John assignment",
+      "gold_identity": 0,
+      "when_all": [],
+      "related_dossier": "m017",
+      "result_facts": [
+        "flag:john_wagon_task_active"
+      ],
+      "source_refs": [
+        "G_TRIGGER",
+        "H_RESEARCH"
+      ]
+    },
+    {
+      "id": "n.oil_iii",
+      "title": "Pouring Forth Oil III — follow-up setup",
+      "gold_identity": 0,
+      "when_all": [],
+      "related_dossier": "m017",
+      "result_facts": [
+        "flag:oil_part_iii_complete"
+      ],
+      "source_refs": [
+        "H_RESEARCH"
+      ]
+    },
+    {
+      "id": "n.mary_i_ii",
+      "title": "Mary's letter and help choice",
+      "gold_identity": 0,
+      "when_all": [],
+      "related_dossier": "m020",
+      "result_facts": [
+        "flag:mary_help_accepted"
+      ],
+      "source_refs": [
+        "H_RESEARCH"
+      ]
+    },
+    {
+      "id": "n.camp_invitation",
+      "title": "Chapter-limited camp companion activity",
+      "gold_identity": 0,
+      "when_all": [],
+      "result_facts": [
+        "flag:camp_companion_activity_observed"
+      ],
+      "source_refs": [
+        "G_TRIGGER",
+        "H_D08"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "camp_ledger",
+      "label": "Camp Ledger upgrade interface",
+      "requires_all": [
+        "flag:strauss_debt_deposited"
+      ],
+      "source_refs": [
+        "H_UNLOCK",
+        "H_D02",
+        "W_PP_CAMP"
+      ],
+      "confidence": "corroborated_general_rule"
+    },
+    {
+      "id": "leather_tools",
+      "label": "Pearson Leather Working Tools purchased",
+      "requires_all": [
+        "flag:strauss_debt_deposited",
+        "flag:leather_working_tools_purchased"
+      ],
+      "source_refs": [
+        "H_D02",
+        "H_D03"
+      ],
+      "confidence": "corroborated_general_rule"
+    },
+    {
+      "id": "camp_fast_travel",
+      "label": "Camp fast travel from lodging upgrade route",
+      "requires_all": [
+        "flag:strauss_debt_deposited",
+        "flag:lodging_fast_travel_purchased"
+      ],
+      "source_refs": [
+        "H_D02",
+        "H_UNLOCK"
+      ],
+      "confidence": "conditional_menu_rule"
+    },
+    {
+      "id": "stable_brush",
+      "label": "Horse stable and brush tutorial access",
+      "requires_all": [
+        "completed:m009"
+      ],
+      "source_refs": [
+        "H_UNLOCK",
+        "W_PP_BEAR"
+      ],
+      "confidence": "corroborated_general_rule"
+    },
+    {
+      "id": "emerald_wagon_fence",
+      "label": "Emerald Ranch Seamus wagon Fence",
+      "requires_all": [
+        "completed:m013"
+      ],
+      "source_refs": [
+        "H_UNLOCK",
+        "W_PP_SPINES"
+      ],
+      "confidence": "corroborated_general_rule",
+      "scope_limit": "Does not mean every fence elsewhere was locked"
+    },
+    {
+      "id": "ordinary_fishing",
+      "label": "Fishing rod/taught fishing activity",
+      "requires_all": [
+        "completed:m018"
+      ],
+      "source_refs": [
+        "H_UNLOCK",
+        "H_RESEARCH"
+      ],
+      "confidence": "corroborated_normal_story_route",
+      "scope_limit": "Edge-case rod acquisition may differ"
+    }
+  ],
+  "warnings": [
+    {
+      "id": "urgent_john_wagon",
+      "severity": "activated_urgent",
+      "when_all": [
+        "flag:john_wagon_task_active"
+      ],
+      "unless_any": [
+        "completed:m017"
+      ],
+      "title": "John's wagon job can be skipped",
+      "action": "Prioritize the actual oil wagon delivery mission; defer unrelated outings. Exact skip timing disputed.",
+      "source_refs": [
+        "G_TRIGGER",
+        "H_RESEARCH"
+      ],
+      "claim_confidence": "high_for_skippability_low_for_exact_clock"
+    },
+    {
+      "id": "before_chapter_exit",
+      "severity": "pre_exit_audit",
+      "when_any": [
+        "flag:chapter2_exit_imminent",
+        "observed_marker:m024"
+      ],
+      "unless_any": [
+        "completed:m024"
+      ],
+      "title": "Horseshoe Overlook departure window",
+      "action": "Before selecting the actual Chapter 2 finale, review observed optional story strands, active camp opportunities and save feasibility. Do not assert all unobserved events exist.",
+      "source_refs": [
+        "G_TRIGGER",
+        "H_RESEARCH",
+        "W_PP_EXIT"
+      ],
+      "claim_confidence": "high_chapter_transition"
+    },
+    {
+      "id": "camp_activity_window",
+      "severity": "observed_optional_window",
+      "when_all": [
+        "flag:camp_companion_activity_observed"
+      ],
+      "unless_any": [
+        "completed:m024"
+      ],
+      "title": "Chapter-sensitive companion activity observed",
+      "action": "Offer the actual named activity as optional; verify whether it qualifies for the separate achievement, not for main Gold.",
+      "source_refs": [
+        "G_TRIGGER",
+        "H_D08"
+      ],
+      "claim_confidence": "conditional"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "arrival_camp_orientation",
+      "title": "First meaningful Horseshoe Overlook freedom",
+      "when_all": [
+        "flag:chapter2_open"
+      ],
+      "when_none": [
+        "flag:strauss_debt_deposited"
+      ],
+      "intent": [
+        "camp",
+        "explore"
+      ],
+      "project_id": "camp_development",
+      "outings": [
+        "camp_orientation",
+        "heartlands_recon"
+      ],
+      "source_refs": [
+        "G_TRIGGER",
+        "H_UNLOCK"
+      ]
+    },
+    {
+      "id": "camp_ledger_open",
+      "title": "New camp upgrade choices",
+      "when_all": [
+        "flag:strauss_debt_deposited"
+      ],
+      "intent": [
+        "camp",
+        "crafting"
+      ],
+      "project_id": "camp_development",
+      "outings": [
+        "inspect_upgrade_ledger",
+        "heartlands_recon"
+      ],
+      "source_refs": [
+        "H_D02",
+        "W_PP_CAMP"
+      ]
+    },
+    {
+      "id": "horse_tutorial_done",
+      "title": "Horse care and hunting become easier to explore",
+      "when_all": [
+        "completed:m009"
+      ],
+      "intent": [
+        "horses",
+        "hunting"
+      ],
+      "project_id": "horse_care",
+      "outings": [
+        "horse_practice",
+        "heartlands_recon"
+      ],
+      "source_refs": [
+        "H_UNLOCK"
+      ]
+    },
+    {
+      "id": "fence_introduction",
+      "title": "Emerald Ranch wagon Fence available via ordinary story",
+      "when_all": [
+        "completed:m013"
+      ],
+      "intent": [
+        "commerce"
+      ],
+      "project_id": null,
+      "outings": [
+        "valuables_triage"
+      ],
+      "source_refs": [
+        "H_UNLOCK"
+      ]
+    },
+    {
+      "id": "fishing_tutorial_done",
+      "title": "Fishing outing introduced",
+      "when_all": [
+        "completed:m018"
+      ],
+      "intent": [
+        "fishing"
+      ],
+      "project_id": null,
+      "outings": [
+        "river_fishing"
+      ],
+      "source_refs": [
+        "H_UNLOCK"
+      ]
+    },
+    {
+      "id": "chapter2_exit_audit",
+      "title": "Before the camp relocation",
+      "when_any": [
+        "flag:chapter2_exit_imminent",
+        "observed_marker:m024"
+      ],
+      "intent": [
+        "completion",
+        "camp"
+      ],
+      "project_id": "chapter_exit_review",
+      "outings": [
+        "observed_camp_opportunity_review"
+      ],
+      "source_refs": [
+        "G_TRIGGER",
+        "H_RESEARCH"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "camp_development",
+      "priority": "optional_long_term",
+      "source_ref": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/free_roam/content/projects/camp_development_v0_1.md",
+      "milestones": [
+        {
+          "id": "understand_camp",
+          "requires_all": [
+            "flag:chapter2_open"
+          ],
+          "next": "Inspect camp donation and Pearson facilities, no assumed Ledger."
+        },
+        {
+          "id": "ledger_gate",
+          "requires_all": [
+            "flag:strauss_debt_deposited"
+          ],
+          "next": "Inspect unlocked Ledger and available prices; do not assume purchased."
+        },
+        {
+          "id": "satchel_tools",
+          "requires_all": [
+            "flag:strauss_debt_deposited",
+            "flag:leather_working_tools_purchased"
+          ],
+          "next": "Select one Pearson satchel recipe and plan specific materials; donated pelt is not crafted satchel."
+        }
+      ]
+    },
+    {
+      "id": "horse_care",
+      "priority": "optional_skill",
+      "source_ref": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d01_horse_lifecycle_v0_1.md",
+      "milestones": [
+        {
+          "id": "after_hosea",
+          "requires_all": [
+            "completed:m009"
+          ],
+          "next": "Explore stable, brush and bonding mechanics; specific horse owned remains unknown."
+        }
+      ]
+    },
+    {
+      "id": "chapter_exit_review",
+      "priority": "safety_optional_targets",
+      "source_ref": "https://github.com/L33TW0RLD/rdr2/blob/main/guides/completion/chapter_02_exit_audit.md",
+      "milestones": [
+        {
+          "id": "before_leave",
+          "requires_all": [
+            "flag:chapter2_exit_imminent"
+          ],
+          "next": "Review actual optional marker/requests and save, not all generic checklists."
+        }
+      ]
+    }
+  ],
+  "source_conflicts": [
+    {
+      "id": "C2-CONFLICT-01",
+      "about": "m010 prerequisites",
+      "claims": [
+        "m007 from PowerPyx",
+        "m008 from Wiki"
+      ],
+      "handling": "No hard mission edge; rely on actual marker and investigate independent evidence",
+      "source_refs": [
+        "W_PP_CALL",
+        "W_WIKI_CALL"
+      ]
+    },
+    {
+      "id": "C2-CONFLICT-02",
+      "about": "m011 prerequisites",
+      "claims": [
+        "m010 only per PowerPyx",
+        "m010 plus Strauss II per GameFAQs"
+      ],
+      "handling": "m010 necessary, sufficiency unknown; debt is candidate only",
+      "source_refs": [
+        "W_PP_QUIET",
+        "W_GAMEFAQS"
+      ]
+    },
+    {
+      "id": "C2-CONFLICT-03",
+      "about": "m013 prerequisites",
+      "claims": [
+        "m010 per PowerPyx",
+        "m009 per Wiki graph discussion"
+      ],
+      "handling": "No hard extra edge",
+      "source_refs": [
+        "W_PP_SPINES",
+        "W_WIKI_DISCUSSION"
+      ]
+    },
+    {
+      "id": "C2-CONFLICT-04",
+      "about": "m018 prerequisites",
+      "claims": [
+        "m010 per PowerPyx",
+        "m011 and Oil III per Wiki discussion"
+      ],
+      "handling": "No hard extra edge",
+      "source_refs": [
+        "W_PP_FISH",
+        "W_WIKI_DISCUSSION"
+      ]
+    },
+    {
+      "id": "C2-CONFLICT-05",
+      "about": "m017 optional skip",
+      "claims": [
+        "wagon delivery can be bypassed if John arranges it"
+      ],
+      "handling": "Urgency only when assignment actively accepted; no invented universal countdown",
+      "source_refs": [
+        "G_TRIGGER",
+        "H_RESEARCH"
+      ]
+    }
+  ],
+  "invariants": [
+    "18 distinct base-game Gold identity nodes, each references canonical original mission dossier",
+    "Gold identities count independently of non-medal setup stages",
+    "Shelf ID does not imply story order or live marker presence",
+    "All unprovided scenario flags are UNKNOWN",
+    "Generic capability rule never implies purchase unless purchase flag is explicitly supplied",
+    "Disputed edges never create false LOCKED status",
+    "No source record stores live player campaign state or writes GameGuide",
+    "When an urgent observed wagon task is active, leisure outings are suppressed",
+    "Edition/cross-chapter claims remain conditional",
+    "Full Field Guide v1.1 is always supplied by original GameGuide, not duplicated"
+  ]
+}
