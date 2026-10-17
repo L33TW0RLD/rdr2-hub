@@ -1,0 +1,665 @@
+{
+  "version": "0.2.0",
+  "status": "PROVISIONAL_NAVIGATION_AND_READONLY_RULE_MAPPING",
+  "scope": "SYNTHETIC_DESIGN_ONLY_NO_PLAYER_STATE",
+  "source_catalog": {
+    "camp_project": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/free_roam/content/projects/camp_development_v0_1.md",
+    "free_roam": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/free_roam/decision_model_v0_1.md",
+    "atlas_taxonomy": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/mechanics_taxonomy_v0_2.md",
+    "atlas_camp": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d02_camp_ledger_upgrades_v0_1.md",
+    "atlas_satchels": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d03_satchels_crafting_v0_1.md",
+    "atlas_camp_life": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d05_camp_life_opportunities_v0_1.md",
+    "atlas_horses": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d01_horse_lifecycle_v0_1.md",
+    "atlas_hunting": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d04_hunting_transport_v0_1.md",
+    "atlas_fishing": "https://github.com/L33TW0RLD/rdr2-hub/blob/main/systems_atlas/dossiers/d16_fishing_legendary_fish_v0_1.md",
+    "guide": "https://github.com/L33TW0RLD/rdr2/blob/main/protocol/walkthrough_presentation.md",
+    "trigger": "https://github.com/L33TW0RLD/rdr2/blob/main/guides/completion/chapter_02_trigger_map.md",
+    "chapter2_index": "https://github.com/L33TW0RLD/rdr2/blob/main/missions/chapter_02/README.md"
+  },
+  "ownership_contract": {
+    "navigation_nodes": "Hub hierarchy; one parent per node; no mechanic facts duplicated",
+    "mission_sources": "L33TW0RLD/rdr2/missions/**; named original Field Guide v1.1",
+    "mechanics": "L33TW0RLD/rdr2-hub/systems_atlas/**; S01–S30 existing family addresses; leaf IDs provisional",
+    "projects": "L33TW0RLD/rdr2-hub/free_roam/content/projects/**; optional milestones, no progress claims",
+    "source_of_general_gates": "knowledge/progression/chapter_02_graph_v0_1.json, crosschecked against research",
+    "actual_campaign": "L33TW0RLD/rdr2/campaign/**; NOT USED HERE"
+  },
+  "policy": {
+    "navigation_depth_max": 4,
+    "default_surface": "trailhead",
+    "max_visible_story_markers": 3,
+    "max_uncertain_candidates": 2,
+    "max_primary_project": 1,
+    "max_suggested_outing": 1,
+    "max_alternatives": 2,
+    "max_top_alerts": 1,
+    "project_tracks_visible_on_open": 5,
+    "expand_mechanic_on_demand": true,
+    "per_mission_content": "FULL ORIGINAL FIELD GUIDE ONLY",
+    "no_forced_view_switch": true,
+    "no_dummy_live_status": true,
+    "mode_if_urgent": "suppress leisurely outings and show relevant mission; retain project as deferred breadcrumb",
+    "chapter_exit_mode": "one evidenced warning + concise opt-in camp/mission exit checklist",
+    "disclosure_levels": [
+      {
+        "id": "L0",
+        "name": "Contextual header",
+        "scope": "chapter, requested mode, truth/source age, one evidenced active risk"
+      },
+      {
+        "id": "L1",
+        "name": "Trailhead",
+        "scope": "observed story choices + one featured project/outing; avoid full category tree"
+      },
+      {
+        "id": "L2",
+        "name": "Domain project",
+        "scope": "four Camp tracks OR Horse tracks and truthful gate status; keep active task foreground"
+      },
+      {
+        "id": "L3",
+        "name": "Specific track",
+        "scope": "exact prerequisite, next optional milestone, related Atlas and one candidate outing"
+      },
+      {
+        "id": "L4",
+        "name": "Specialist detail",
+        "scope": "original Field Guide A→final OR source-linked Atlas detail; return to L1–L3 target"
+      }
+    ]
+  },
+  "node_types": [
+    "root",
+    "surface",
+    "collection",
+    "view",
+    "external_view",
+    "project",
+    "track",
+    "feature",
+    "atlas_group"
+  ],
+  "relationship_types": [
+    "OPENS_SELECTED_REFERENCE",
+    "CAN_RETURN_TO",
+    "CAN_ROUTE_TO",
+    "ENABLES_OPTIONAL_PATH",
+    "EXPLAINED_BY",
+    "MAY_ADVANCE_PROJECT",
+    "BEFORE_EXIT_ADVICE"
+  ],
+  "nodes": [
+    {
+      "id": "companion",
+      "parent": null,
+      "type": "root",
+      "title": "Living Adventure Companion",
+      "description": "One contextual experience; this navigation tree is not itself a progression rule.",
+      "spoiler_tier": "T0/T1",
+      "owner": "Hub companion",
+      "source_refs": [
+        "free_roam"
+      ]
+    },
+    {
+      "id": "mission",
+      "parent": "companion",
+      "type": "surface",
+      "title": "Mission Control",
+      "description": "Multiple observed story choices and complete original Gold briefings.",
+      "spoiler_tier": "T0/T1",
+      "owner": "Original GameGuide",
+      "source_refs": [
+        "guide",
+        "chapter2_index"
+      ]
+    },
+    {
+      "id": "mission.board",
+      "parent": "mission",
+      "type": "view",
+      "title": "Story choices",
+      "description": "Show scenario-observed markers first; uncertain candidates separately; never sort as a forced numbered route.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "chapter2_index",
+        "trigger"
+      ]
+    },
+    {
+      "id": "mission.full_guide",
+      "parent": "mission",
+      "type": "external_view",
+      "title": "Field Guide v1.1",
+      "description": "Reconstruct selected original A-to-final mission dossier, Gold metrics and critical inline warnings. Never shrink into a mini-guide.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "guide"
+      ]
+    },
+    {
+      "id": "free_roam",
+      "parent": "companion",
+      "type": "surface",
+      "title": "Free Roam Control",
+      "description": "One featured PROJECT, one meaningful OUTING, optional DISCOVERY.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "free_roam"
+      ]
+    },
+    {
+      "id": "free_roam.projects",
+      "parent": "free_roam",
+      "type": "collection",
+      "title": "Projects",
+      "description": "Long-term optional improvements with staged milestones; not progress trophies.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "free_roam"
+      ]
+    },
+    {
+      "id": "free_roam.outings",
+      "parent": "free_roam",
+      "type": "collection",
+      "title": "Outings",
+      "description": "Short, meaningful adventures which are deferrable when Story pressure is real.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "free_roam"
+      ]
+    },
+    {
+      "id": "free_roam.discoveries",
+      "parent": "free_roam",
+      "type": "collection",
+      "title": "Discoveries",
+      "description": "Player-observed opportunities, not pre-revealed spoilers or scripted pins.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "free_roam"
+      ]
+    },
+    {
+      "id": "project.camp",
+      "parent": "free_roam.projects",
+      "type": "project",
+      "title": "Develop the Camp",
+      "description": "A continuing optional project linked to four domain tracks: economy, facilities, Pearson, camp life.",
+      "spoiler_tier": "T0/T1",
+      "project_ref": "camp_development",
+      "source_refs": [
+        "camp_project",
+        "atlas_camp",
+        "atlas_camp_life"
+      ]
+    },
+    {
+      "id": "camp.economy",
+      "parent": "project.camp",
+      "type": "track",
+      "title": "Camp Economy",
+      "description": "Contributions, debt returns and the Ledger; unlocking the Ledger does not purchase an upgrade.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_camp"
+      ],
+      "atlas_refs": [
+        "S08.M01",
+        "S09.M01"
+      ],
+      "primary_capability": "camp_ledger",
+      "facet": "ledger",
+      "summary_by_stage": {
+        "unconfirmed": "Inspect the donation box and available Strauss task; do not assume Ledger access.",
+        "unmet": "The Ledger follows a qualifying debt return and deposit in the normal Story route.",
+        "eligible": "Ledger prerequisites appear met; verify the actual interface.",
+        "observed": "Ledger visible in the synthetic scenario; inspect choices, prices and funds separately."
+      }
+    },
+    {
+      "id": "camp.economy.donations",
+      "parent": "camp.economy",
+      "type": "feature",
+      "title": "Contributions and Debt Returns",
+      "description": "The gang contribution box, individual donations and Strauss debt stages are distinct.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_camp"
+      ],
+      "atlas_refs": [
+        "S08.M01",
+        "S09.M01"
+      ],
+      "flag_ref": "flag:chapter2_open"
+    },
+    {
+      "id": "camp.economy.ledger",
+      "parent": "camp.economy",
+      "type": "feature",
+      "title": "Camp Ledger",
+      "description": "The camp-upgrade interface follows a qualifying deposited debt; it does not guarantee a purchase.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_camp"
+      ],
+      "atlas_refs": [
+        "S09.M01"
+      ],
+      "capability_ref": "camp_ledger"
+    },
+    {
+      "id": "camp.facilities",
+      "parent": "project.camp",
+      "type": "track",
+      "title": "Facilities & Travel",
+      "description": "Optional camp supplies, lodging benefits and a conditional fast-travel upgrade path.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_camp"
+      ],
+      "atlas_refs": [
+        "S08.M02",
+        "S09.M02",
+        "S09.M03"
+      ],
+      "primary_capability": "camp_fast_travel",
+      "facet": "lodging",
+      "summary_by_stage": {
+        "unconfirmed": "Camp upgrade options and purchases have not been inspected.",
+        "unmet": "Lodging/fast travel purchases cannot be inferred from a Ledger alone.",
+        "eligible": "Normal prerequisites for the lodging route are met; confirm actual upgrade menu.",
+        "observed": "Lodging/fast travel state was explicitly supplied by the synthetic scenario."
+      }
+    },
+    {
+      "id": "camp.facilities.provisions",
+      "parent": "camp.facilities",
+      "type": "feature",
+      "title": "Supplies & Provisions",
+      "description": "Use observed camp stock, not invented permanent upgrade status.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_camp"
+      ],
+      "atlas_refs": [
+        "S08.M02",
+        "S08.M03"
+      ]
+    },
+    {
+      "id": "camp.facilities.lodging",
+      "parent": "camp.facilities",
+      "type": "feature",
+      "title": "Lodging & Fast Travel",
+      "description": "Optional lodging-dependent convenience; menu price and payment not assumed.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_camp"
+      ],
+      "atlas_refs": [
+        "S09.M03"
+      ],
+      "capability_ref": "camp_fast_travel"
+    },
+    {
+      "id": "camp.pearson",
+      "parent": "project.camp",
+      "type": "track",
+      "title": "Pearson Crafting",
+      "description": "Tool purchase, satchel recipes and resource routing; preserve whole-carcass versus pelt distinctions.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_satchels",
+        "atlas_hunting"
+      ],
+      "atlas_refs": [
+        "S10.M01",
+        "S10.M02",
+        "S10.M03",
+        "S12.M04"
+      ],
+      "primary_capability": "leather_tools",
+      "facet": "tools",
+      "summary_by_stage": {
+        "unconfirmed": "Learn Pearson's donation/crafting menus; tools or materials cannot be assumed.",
+        "unmet": "Satchel crafting needs the separately purchased Leather Working Tools, plus recipe conditions.",
+        "eligible": "The normal tool prerequisites are met but the purchase is not observed.",
+        "observed": "Tools explicitly purchased in this synthetic scenario. Choose one exact satchel recipe; do not infer any satchel crafted."
+      }
+    },
+    {
+      "id": "camp.pearson.satchels",
+      "parent": "camp.pearson",
+      "type": "feature",
+      "title": "Satchels",
+      "description": "Per-item crafting requires its own unlock task and specified perfect materials.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_satchels"
+      ],
+      "atlas_refs": [
+        "S10.M02"
+      ],
+      "capability_ref": "leather_tools"
+    },
+    {
+      "id": "camp.pearson.decor",
+      "parent": "camp.pearson",
+      "type": "feature",
+      "title": "Camp Decorations",
+      "description": "Decoration recipes can have distinct material forms and eligibility; not all are tool-locked.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_satchels"
+      ],
+      "atlas_refs": [
+        "S10.M04"
+      ]
+    },
+    {
+      "id": "camp.life",
+      "parent": "project.camp",
+      "type": "track",
+      "title": "Camp Life & Requests",
+      "description": "Chapter-sensitive camp conversations, invitations and item requests; an observed marker matters more than an encyclopedic schedule.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_camp_life",
+        "trigger"
+      ],
+      "atlas_refs": [
+        "S11.M01",
+        "S11.M02"
+      ],
+      "primary_flag": "flag:camp_companion_activity_observed",
+      "facet": "camp_offer",
+      "summary_by_stage": {
+        "unconfirmed": "Check actual camp people, invitations and item requests; none is presumed active.",
+        "observed": "A chapter-sensitive companion activity is explicitly observed in the synthetic scenario; check its actual eligibility before proceeding."
+      }
+    },
+    {
+      "id": "camp.life.activities",
+      "parent": "camp.life",
+      "type": "feature",
+      "title": "Companion Activities",
+      "description": "Only actually marked/observed qualifying outings receive a before-exit priority.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_camp_life"
+      ],
+      "atlas_refs": [
+        "S11.M01"
+      ],
+      "flag_ref": "flag:camp_companion_activity_observed"
+    },
+    {
+      "id": "camp.life.requests",
+      "parent": "camp.life",
+      "type": "feature",
+      "title": "Item Requests",
+      "description": "Character/time-dependent errands; do not invent a generated marker or item hand-in.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_camp_life"
+      ],
+      "atlas_refs": [
+        "S11.M02"
+      ]
+    },
+    {
+      "id": "project.horse",
+      "parent": "free_roam.projects",
+      "type": "project",
+      "title": "Horse Care",
+      "description": "A skill-oriented project introduced through the normal Hosea story tutorial.",
+      "spoiler_tier": "T0/T1",
+      "project_ref": "horse_care",
+      "source_refs": [
+        "atlas_horses"
+      ]
+    },
+    {
+      "id": "horse.basics",
+      "parent": "project.horse",
+      "type": "track",
+      "title": "Horse Care Basics",
+      "description": "Learn brushing, feeding and bonding; no owned horse or brush inferred.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_horses"
+      ],
+      "atlas_refs": [
+        "S06.M02"
+      ],
+      "primary_capability": "stable_brush",
+      "facet": "stable",
+      "summary_by_stage": {
+        "unconfirmed": "Hosea's tutorial/horse-care options unconfirmed.",
+        "unmet": "Normal stable/brush introduction is not complete in this synthetic route.",
+        "eligible": "General prerequisite appears met; verify tutorial and equipment.",
+        "observed": "Horse-care system is explicitly observed in the fictional scenario."
+      }
+    },
+    {
+      "id": "horse.training",
+      "parent": "project.horse",
+      "type": "track",
+      "title": "Bonding & Travel",
+      "description": "Practise bonding and horse safety alongside other outings.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_horses"
+      ],
+      "atlas_refs": [
+        "S06.M03"
+      ],
+      "primary_capability": "stable_brush",
+      "facet": "stable"
+    },
+    {
+      "id": "atlas",
+      "parent": "companion",
+      "type": "surface",
+      "title": "Systems Atlas",
+      "description": "Mechanics owned by S01–S30 Atlas families; no duplicate game mechanics stored in project cards.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_taxonomy"
+      ]
+    },
+    {
+      "id": "atlas.camp",
+      "parent": "atlas",
+      "type": "atlas_group",
+      "title": "Camp Systems",
+      "description": "S08 provisions, S09 ledger, S10 Pearson, S11 camp life.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_taxonomy",
+        "atlas_camp"
+      ],
+      "atlas_refs": [
+        "S08",
+        "S09",
+        "S10",
+        "S11"
+      ],
+      "source_maturity": "INDEXED_FAMILIES_RESEARCH_DOSSIERS_REVIEW_PENDING"
+    },
+    {
+      "id": "atlas.horses",
+      "parent": "atlas",
+      "type": "atlas_group",
+      "title": "Horse Systems",
+      "description": "S06 horse lifecycle, access, bonding and transport.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_taxonomy",
+        "atlas_horses"
+      ],
+      "atlas_refs": [
+        "S06"
+      ],
+      "source_maturity": "INDEXED_FAMILY_RESEARCH_DOSSIER_REVIEW_PENDING"
+    },
+    {
+      "id": "atlas.hunting",
+      "parent": "atlas",
+      "type": "atlas_group",
+      "title": "Hunting & Wildlife",
+      "description": "S12 ordinary hunting, clean kills and transport.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_taxonomy",
+        "atlas_hunting"
+      ],
+      "atlas_refs": [
+        "S12"
+      ],
+      "source_maturity": "INDEXED_FAMILY_RESEARCH_DOSSIER_REVIEW_PENDING"
+    },
+    {
+      "id": "atlas.fishing",
+      "parent": "atlas",
+      "type": "atlas_group",
+      "title": "Fishing",
+      "description": "S14 fishing and later specialist requirements.",
+      "spoiler_tier": "T0/T1",
+      "source_refs": [
+        "atlas_taxonomy",
+        "atlas_fishing"
+      ],
+      "atlas_refs": [
+        "S14"
+      ],
+      "source_maturity": "INDEXED_FAMILY_RESEARCH_DOSSIER_REVIEW_PENDING"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "mission.board",
+      "to": "mission.full_guide",
+      "type": "OPENS_SELECTED_REFERENCE",
+      "condition": "explicit named mission + user intent; full original approved guide",
+      "source_refs": [
+        "guide"
+      ]
+    },
+    {
+      "from": "camp.economy.ledger",
+      "to": "camp.facilities.lodging",
+      "type": "ENABLES_OPTIONAL_PATH",
+      "condition": "normal Ledger access; actual lodging purchase still separate",
+      "source_refs": [
+        "atlas_camp"
+      ]
+    },
+    {
+      "from": "camp.economy.ledger",
+      "to": "camp.pearson.satchels",
+      "type": "ENABLES_OPTIONAL_PATH",
+      "condition": "Ledger permits possible tools purchase, tools still required",
+      "source_refs": [
+        "atlas_camp",
+        "atlas_satchels"
+      ]
+    },
+    {
+      "from": "camp.pearson.satchels",
+      "to": "atlas.hunting",
+      "type": "EXPLAINED_BY",
+      "condition": "player wants to hunt exact recipe materials",
+      "source_refs": [
+        "atlas_satchels",
+        "atlas_hunting"
+      ]
+    },
+    {
+      "from": "camp.pearson.decor",
+      "to": "atlas.hunting",
+      "type": "EXPLAINED_BY",
+      "condition": "carcass versus pelt and clean-kill mechanics",
+      "source_refs": [
+        "atlas_satchels",
+        "atlas_hunting"
+      ]
+    },
+    {
+      "from": "camp.economy",
+      "to": "atlas.camp",
+      "type": "EXPLAINED_BY",
+      "condition": "player asks for ledger/camp rule",
+      "source_refs": [
+        "atlas_camp"
+      ]
+    },
+    {
+      "from": "camp.life",
+      "to": "atlas.camp",
+      "type": "EXPLAINED_BY",
+      "condition": "player asks about requests and chapter-sensitive windows",
+      "source_refs": [
+        "atlas_camp_life"
+      ]
+    },
+    {
+      "from": "project.horse",
+      "to": "atlas.horses",
+      "type": "EXPLAINED_BY",
+      "condition": "horse-care deep dive",
+      "source_refs": [
+        "atlas_horses"
+      ]
+    },
+    {
+      "from": "mission.board",
+      "to": "free_roam",
+      "type": "CAN_RETURN_TO",
+      "condition": "actual free-roam control, never assume post-mission intermission",
+      "source_refs": [
+        "free_roam"
+      ]
+    },
+    {
+      "from": "free_roam",
+      "to": "mission.board",
+      "type": "CAN_ROUTE_TO",
+      "condition": "player selects observed named Story marker",
+      "source_refs": [
+        "trigger"
+      ]
+    },
+    {
+      "from": "free_roam.outings",
+      "to": "camp.pearson",
+      "type": "MAY_ADVANCE_PROJECT",
+      "condition": "hunting materials from observed outcomes, not an automatic collection update",
+      "source_refs": [
+        "atlas_satchels",
+        "free_roam"
+      ]
+    },
+    {
+      "from": "camp.life.activities",
+      "to": "mission.board",
+      "type": "BEFORE_EXIT_ADVICE",
+      "condition": "qualifying activity visibly offered; Chapter 2 departure imminent",
+      "source_refs": [
+        "atlas_camp_life",
+        "trigger"
+      ]
+    }
+  ],
+  "non_goals": [
+    "no real game telemetry",
+    "no save parser",
+    "no automatic player-state update",
+    "no artificial completed-project flags",
+    "no duplicate mission walkthroughs",
+    "no invented parent S31",
+    "no permanent dashboard backend"
+  ]
+}
