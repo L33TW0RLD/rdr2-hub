@@ -267,3 +267,58 @@ Bronze tint is `#B47D59` for the achievement count and future actual best-Bronze
 This does not add another visible header tab, selector or inspector. Interaction remains `hover: mission heading` / `click: complete original guide request` / `dot: observational availability only`.
 
 Pending client validation: alignment of tiny dots across 18 segments, distinction from medal colors, padding on mobile and tooltip usability.
+
+
+---
+
+## 14. Mission Control first-container design study v0.6 (header locked)
+
+**Boundary:** the owner locked the current-chapter medal rail, Home, hover/click, and map-marker dots. This specification **does not alter** those. It defines a proposed body immediately below the rail.
+
+### Input contract
+
+- \`chapter_id='02'\`; existing 18 canonical mission identities from the original GameGuide.
+- \`observed_current_markers\`: list of mission IDs from a **current player map report**, or \`null\` meaning **not checked**. For the UI simulator, pass explicit \`SIMULATION_FIXTURE\` list and label it outside the locked header.
+- \`activated_story_risk\`: optional typed evidence from shared progression policy, never invented by presentation code.
+- \`preferred_focus\`: optional explicit player interest, never a secret forced Story route.
+- \`owner_source\`: exact mapped original complete \`rdr2/missions/chapter_02/*.md\` dossier; never filename synthesized from a human display name.
+- \`history_best_medal\`: already owned by header; Mission Control must not independently render medal KPI/mini-rail.
+
+### Common UI envelope
+
+\`\`\`text
+MISSION CONTROL
+  [once-only: current marker observation context; e.g. '2 markers observed']
+
+  A) compact list — each observed mission is one navigable row
+  B) quiet cards — source-grounded brief premise, one clear action per card
+  C) spotlight — one featured mission ONLY with explicit why-now evidence;
+      otherwise no artificial priority, compact peers remain available
+\`\`\`
+
+The chosen item invokes a real direct-turn action to **fetch/reload current full original Field Guide v1.1**: all A→final phases, source Gold objectives and inline Gold/Honor/Missable/Save warnings. The action must not mark the mission playable if the segment was merely inspected historically.
+
+### Source/click state matrix
+
+| Mode | Mission Control choices | Click semantics |
+|---|---|---|
+| Current real markers *not checked* | Honesty card, no fictional row | Ask user for map marker observations; never auto-set status |
+| Real marker observed | Exactly reported marker ID(s) | Request original full Guide, identified as *observed* at report checkpoint |
+| Simulated marker example | Exactly specified fictional marker IDs | Request original full Guide as a **fictional demo**, do not mutate campaign |
+| Medal rail slot, irrespective of dot | Historical Chapter II mission reference | Request original full Guide as a reference; no current map availability assumption |
+| Gold replay explicitly requested | Dedicated replay review/read pathway | Load original full Guide; separate Medal from current map status |
+
+### Urgency rule
+
+A source-backed **active** skippable window outranks unurgent choices. Show one concise **inline** warning (not a repetitive warning card after each row), and expose the corresponding mission with a direct Field Guide action. Do not invent time estimates or require an unrelated project before the task.
+
+### A/B/C selection is local only
+
+In-chat prototype mode selectors (\`A/B/C\`) and \`two/four/unknown/urgent\` scenario selectors are explicitly *not* canonical UI destinations. A user choice can be logged as design feedback only after user confirmation. Changing the fake scenario changes fictional marker dots in a full-system demo if the header is also rendered, but cannot change historical medal results.
+
+### Practical gates
+
+- A single mission row must not be clickable if its exact current original dossier path cannot be verified; explain source-read failure instead.
+- Direct request such as \`"load Paying a Social Call"\` bypasses Mission Control list regardless of whether marker is observed, with reference-only labeling if applicable.
+- Header and Mission Control should use the **same** data identity IDs for dot alignment and row content.
+- Actual Mission Control source-of-truth read/update integration remains a separate implementation phase. This is a design for a consumable response envelope, not a new tracking authority.
