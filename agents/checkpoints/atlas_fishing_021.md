@@ -1,46 +1,51 @@
-# Atlas Fishing 021 — Initial task checkpoint
+# Atlas Fishing 021 — Verified research checkpoint
 
-**Task ID:** `atlas-fishing-021`  
-**Issue:** https://github.com/L33TW0RLD/rdr2-hub/issues/28  
-**Specialist assignment:** Wave 3 D16 fishing, tackle and legendary fish  
-**Branch:** `agent/atlas-fishing-021`  
-**Registered baseline:** `d3bc807c75633fec042f4a34af72515a24cc2696`  
-**Latest main inspected:** `b578aec6f1edab1279f2f2c5989326d4e86231ed`  
-**Date recorded:** 2026-10-17 (UTC date, no unverified time)  
-**Task workflow state:** `IN_PROGRESS` — checkpoint created BEFORE substantive fishing research.
+**Task:** atlas-fishing-021 · [Issue #28](https://github.com/L33TW0RLD/rdr2-hub/issues/28)  
+**Branch:** agent/atlas-fishing-021  
+**Registration baseline:** d3bc807c75633fec042f4a34af72515a24cc2696  
+**Main at registration read:** b578aec6f1edab1279f2f2c5989326d4e86231ed (branch originally behind one coordinator commit)  
+**Date:** 2026-10-17  
+**Workflow status:** IN_PROGRESS — complete dossier committed and verified; final handoff remains.
 
-## Confirmed exclusive write lease
+## Exclusive path lease
 
-1. `systems_atlas/dossiers/d16_fishing_legendary_fish_v0_1.md`
-2. `agents/checkpoints/atlas_fishing_021.md`
-3. `agents/handoffs/2026-10-17_atlas_fishing_021.md`
+- systems_atlas/dossiers/d16_fishing_legendary_fish_v0_1.md
+- agents/checkpoints/atlas_fishing_021.md
+- agents/handoffs/2026-10-17_atlas_fishing_021.md
 
-**Protected/read-only:** main, registry, Wave 3 plan, Atlas indexes/taxonomy, original `L33TW0RLD/rdr2` campaign/mission guides, every other branch and agent task, Save Intelligence, Wave 1/2 dossier references (including D15), future D20 hand-in framework. No rebase/reset/force-push/merge/ratification.
+**Read-only/protected:** Main, registry, all other specialist files/branches, original rdr2 game campaign/missions, save_intelligence, D15 and Wave 2 integration review, future D20 collection framework. No rebases, resets, force-pushes or merges.
 
-## Startup facts and acceptance
+## Durable commit/research record
 
-- Issue #28 and latest main registry/plan identify this *same* task, branch and lease. Branch exists at the registered baseline, with **zero task commits** and **one expected newer main commit**. All three leased files were absent before this checkpoint.
-- D16 scope: S14.M01–M04, S27.M03, conditional U06 (all provisional). Normal rod teaching/acquisition and exceptions; context controls, bait versus lure; regional species/general fishing; keep/release decisions; legendary identification, story access and special lures; mailing and exact proof; official 100% versus exhaustive requirements.
-- Exact 11 sections and three spoiler-light Chapter 2 cases, independently checked URLs/checked dates, per-claim epistemic levels and disputes, T2+ later-game details segregated, read-only D15/D20 links.
-- Source categories before independent checking: developer/official if found, specialty guides, in-game observations as *future inputs*, old GameGuide research as REVIEW PENDING only. No assumption player owns rod/lure or has fished/mailed.
+| Milestone | GitHub receipt / verification |
+|---|---|
+| Registry/issue/branch and 3-path lease recovered | Issue #28 + registry/main + exact branch diff 0 ahead/1 behind verified |
+| **Pre-research new checkpoint** | commit **7fa5ebfa8185c65f55be686b54952c7b6f9d6af8**, readback blob **5a38bc925e868b658f767fe77d958338a32fb3d2** |
+| Initial dossier mechanics/gate core | **a30aebc590f725222cad87f22332f533e210bfbe** |
+| Legendary/total completion, dispute analysis | **07e7f57b2bbc0057e17a0349886439c0eff4d1cf** |
+| Full source ledger/T2 boundary/3 examples + 11 sections | **1a8c996378c11804baced594cccdd83fe974fa3d** |
+| Evidence register formatting | **7b8821ff04e20842738b2df1bd8f077336d7c87a**; dossier blob **31977a4e3187673b5cab063f0554fec78c6a8fc6** |
 
-## Durable milestones
+**Content acceptance:** 11 mandatory sections, 22 numbered fish claims, 12 explicit contradictions, 25 external source records, 3 T0/T1 Chapter 2 examples, distinct normal/legendary gates, no player progress or item assertion. Actual player rod/legendary mail/challenge/achievement unknown.  
+**External source check:** 2026-10-17; Rockstar 1.15 update primary for Hold to Reel only; fishing/completion sources independently checked, older guides treated as source-specific claims rather than live game proof.  
+**Dependency ownership:** D15 read-only REVIEW PENDING for tracker verb/100%; D20 owner handles broader collection mailing framework, no duplication; D09/D12/D01/D06/D27 other owners read-only.
 
-| Step | Reference | State |
-|---|---|---|
-| Recover latest main, exact issue/registry/plan | Main `b578aec6...`; issue #28; branch `d3bc807c...` | VERIFIED prewrite |
-| Initial checkpoint | This file | COMMIT / READBACK PENDING |
+## Review-sensitive disputed items
 
-**Last verified commit BEFORE this checkpoint:** branch baseline `d3bc807c75633fec042f4a34af72515a24cc2696`.  
-**Uncommitted research:** none; source claims not yet independently checked.  
-**Dependencies:** D15 completion and future D20 collections owner read-only. Older D04 hunting, D06 inventory, D12 cooking and D11 travel remain REVIEW PENDING, never adopted.  
-**Blockers:** no conflicting ownership observed; one-behind main expected.
+- Wrong/any special habitat lure equivalence versus recommended matching (D16-X02).
+- Bonus Channel Catfish appearing as "14th to catch" in early guides even though not normally catchable (X05).
+- 13 posted versus additional mission finale for checked Total Completion (X06).
+- Large legendary lost on horse/re-catch and misleading crossed map icon (X07).
+- Early rod acquisition and Survivalist opening after fishing tutorial (X01/X08).
+- Exact bait availability and Hold to Reel prompt on installed platform (X03/X04/X09).
+
+No permanent live progress/saves/items/trophies/Gold are stored. No direct game screenshot or Rockstar gameplay telemetry verified by this task.
 
 ## Exact next permitted action
 
-1. Read back this newly committed checkpoint at exact branch ref.
-2. Independently research D16 rules and contradictions through reputable external sources, inspect relevant internal D15, gate U06 and Wave 1/2 reviews **read-only**.
-3. Write complete dossier only in assigned path and verify; update checkpoint, commit final handoff, set `DELIVERED_REVIEW_PENDING`; compare branch against current main and baseline, verify all 3 files.
-4. Stop this task; no self-merge or next task assignment. If genuine concurrent write conflict occurs, refresh exact branch/target blob SHA and retry safely only if ownership verified.
+1. Fetch D16 and this milestone checkpoint on **explicit assigned branch ref** to verify completed contents.
+2. Commit final handoff ONLY at agents/handoffs/2026-10-17_atlas_fishing_021.md, with link to dossier, evidence limits, source disputes and acceptance.
+3. Change this checkpoint status to **DELIVERED_REVIEW_PENDING** and stop writing.
+4. Verify all three leased files from branch and diff against current main and registered baseline; report **terminal SHA**. No self-merge or ratification.
 
-**No player game data, achievement, save, inventory or unlock claim recorded here.**
+**Known blockers:** none that prevent review-pending research delivery. Owner/coordinator must review contradictory claims before source adoption.
