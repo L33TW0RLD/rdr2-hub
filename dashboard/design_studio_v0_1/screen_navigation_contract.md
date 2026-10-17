@@ -240,3 +240,30 @@ When implementing click use an **exact verified per-mission source path** from `
 Mobile has no guaranteed hover: clicking a segment proceeds to the mission reference, with native hit area ≥ the visible stroke and accessible name supplied. Keyboard focus, if available, can reveal the same heading; not confirmed until device testing.
 
 **UI verification pending:** source reload after actual click, hover placement/shape and mobile hit target.
+
+
+---
+
+## 13. Owner decision v0.5 — independent map availability lane beneath rail
+
+Extend the *existing* 18 Chapter 2 medal segments with an independent availability dot lane:
+
+```text
+top:       [ Gold | Gold | Unknown | Silver | ... ]  (4px segmented best-medal rail)
+beneath:   [      ·     ·          ·       ... ]    (dots ONLY on confirmed visible marker IDs)
+```
+
+The dot for a mission is aligned to the precise same horizontal indexed position as its bar segment, shares its **hover title tooltip**, and is *not* clickable separately. The entire mission column is one padded pressable: activating it still opens the **full original Field Guide as a historical reference**, even when no currently visible map marker is known. The dot is informational; it does not change what clicking means.
+
+**Two independent source contracts:**
+
+- `best_medal_by_mission` comes from latest canonical `L33TW0RLD/rdr2/campaign/mission_ledger.md` (Chapter II: 3 Gold, 1 Silver, 0 Bronze, 14 no verified medal).
+- `currently_observed_story_markers` must come from a separate and fresh actual player map-marker report/approved observation source. The medal ledger alone **does not contain** this data. Absence of a dot with unknown observation means `NOT_CHECKED`, not `NOT_AVAILABLE`.
+
+For a design-only test, allow `simulation_mode=true` with explicit `SIMULATION_FIXTURE` markers (e.g. `m009`, `m011`). The fiction label must be visible **outside** the polished header, so the header's approved geometry remains clean. The Mission Control container may show only those simulated rows in demo mode; in actual-evidence mode it must honestly state `Available missions not checked`. No current mission marker may be inferred from chapter mission prerequisite research, mission completion, save history or best medal.
+
+Bronze tint is `#B47D59` for the achievement count and future actual best-Bronze segments; original 021 Bronze is superseded by best-Gold and must remain Gold in the rail.
+
+This does not add another visible header tab, selector or inspector. Interaction remains `hover: mission heading` / `click: complete original guide request` / `dot: observational availability only`.
+
+Pending client validation: alignment of tiny dots across 18 segments, distinction from medal colors, padding on mobile and tooltip usability.
