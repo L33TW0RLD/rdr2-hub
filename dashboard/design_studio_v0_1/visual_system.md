@@ -106,3 +106,51 @@ No persistent full-screen app, React website, independently styled native fonts,
 Try **Contextual Field Desk** before a permanent console. Keep navigation visually accessible, while primary content remains purpose-specific and collapses back to one focused action. The design succeeds if a player can answer `what next?` on Home, find a project, ask a mechanic question, and get the entire original mission guide with **at most two deliberate navigation actions** for each path.
 
 This is a design proposal for owner critique, not an adopted universal standard.
+
+
+---
+
+## 9. Owner-selected refinement v0.2 — Current Chapter medal rail (2026-10-17)
+
+**Owner A/B preference:** **Placement A + Style A + Emphasis B**. This section supersedes the provisional top-level four-button header in §§3–4; the broader hierarchy of screens survives, but navigation is exposed contextually instead of as fixed Story/Adventure/Atlas header buttons.
+
+### Exact visual structure
+
+```text
+RDR2 HUB / FIELD DESK                         [Home]
+HORSESHOE OVERLOOK
+Chapter II
+
+  3 GOLD     1 SILVER   ·   4 / 18 recorded
+  ━━━ ━━━ ━━━ ━━━ ━━━ ━━━ ... 18 thin medal segments
+  (best reported medal by fixed Chapter 2 mission identity)
+
+MISSION CONTROL
+  Available mission markers (ONLY currently confirmed)
+  When no current marker evidence: say "Not checked"
+  No fictional mission listed as actually available
+
+  [one observed mission row, if known]   → original FULL Field Guide
+```
+
+**Rail:** exactly **18 equally sized mission segments**, Chapter 2 Operation **007–024**, reference order only. Nominal line height **4px** (selected mark may rise to 5–6px); narrow consistent ~2–3px separation; flat/subtle corners, no chunky progress fill, no equal-width-looking continuous generic completion line. Keep generous vertical breathing room and a compact achievement line so the fine rail remains an intentional focal object.
+
+**Color semantics:** Gold = warm muted gold (`#D6AC49`), Silver = quiet cool silver (`#C2C9D1`), Bronze = muted bronze (`#B47D59`), Unverified = neutral dim slate (`#424750`). These are **proposed design colors**, not permanent implementation tokens or accessibility-tested semantic colors. Text labels provide equivalent meaning; never require color vision alone.
+
+**Evidence-backed demonstration readback (2026-10-17, original GameGuide `main`):** 007 Gold, 008 Gold, 010 Silver, 021 Gold, remaining fourteen chapter mission identities unverified; **3 Gold, 1 Silver, 0 Bronze, 14 without recorded medals**. The ledger has ten completed medal-bearing entries across all chapters, including six Chapter 1 Gold, but **the displayed bar is Chapter 2 only**. Source: `L33TW0RLD/rdr2/campaign/mission_ledger.md`; current medal statements are user-reported except 021 Gold with in-game screenshot evidence. Do not infer save persistence, current map marker presence or a medal for any unknown slot. Best medal recorded is not equivalent to independently reloaded save state.
+
+**Heading emphasis:** achievement-focused **3 Gold** first, with **1 Silver · 0 Bronze**, then **4/18 recorded** as secondary numerics. Avoid a large KPI hero that steals attention from Mission Control. This is not a percentage-of-game completion bar.
+
+**Interaction:** the visible line is deliberately slim, so do **not** require tapping a 4px target. Either use padded/invisible semantic segment pressable hit zones, plus a labelled accessible mission selector, or the mission selector alone. Selecting a slot reveals Operation ID, title and truthful medal status in a compact detail line, not a full modal.
+
+### Header/navigation redesign
+
+- **Home** remains the *only* visible universal header action.
+- **Mission Control is the first primary container immediately beneath the rail.**
+- Do **not** show Story / Adventure / Atlas as three header buttons. These are valid internal destinations exposed via conversational intent, related-content links or subordinate section navigation **below** Mission Control.
+- Mission Control lists **ONLY observed/confirmed current mission markers**, never completed historical operations as if they were presently available. `Unknown markers` is an explicit, useful empty state: invite observation and do not populate a fake mission shelf.
+- Gold **replay cleanup** is a distinct action from live Story markers; Operation 010 Silver should not appear in `Available missions` merely because it is replayable. A separate replay context may be shown when requested.
+- Keep user-selected full original Guide v1.1 as a different detailed content mode.
+- Under Mission Control, projects/Atlas can be represented later as meaningful secondary containers; **do not design below-the-fold layouts in this header-specific checkpoint**.
+
+**Current acceptance gate:** look at the thin 18-slot line on both desktop and phone, confirm the type hierarchy and check inspectability. Only then finalize colors, density and below-Mission-Control containers.
