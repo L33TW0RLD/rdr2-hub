@@ -232,3 +232,22 @@ No self-merging, no source-admission changes, no game state inferred or written.
 | Responsive | Short subline wraps legibly on phone without altering locked header | Mobile untested |
 
 These criteria supersede the earlier A1/A2 selection test. Do not mark actual click-through PASS until the owner has tried it.
+
+
+---
+
+## Owner LOCK v0.9 — final Mission Control checks
+
+The owner selected A1 permanently for this design iteration and approved the final two corrections. These checks supersede conflicting earlier provisional S-series cases (especially S08, which previously suppressed an unrelated A2 spotlight).
+
+| Check | Expected behavior | Status |
+|---|---|---|
+| C01 · Casing | Inline label reads **`New Possibilities`**, with both words capitalized | OWNER APPROVED; CLIENT PENDING |
+| C02 · Accent | Small sparkles use the existing warm-gold highlight; no separate feature spotlight | OWNER APPROVED; CLIENT PENDING |
+| C03 · Urgency and features | In **Urgent** mode, John shows **Time-sensitive** while Hosea *still* shows **New Possibilities · Stables & horse care** | OWNER APPROVED; CLIENT PENDING |
+| C04 · Ordinary rows | Dutch has no invented feature annotation | CLIENT PENDING |
+| C05 · Full guide | Clicking a mission requests exact original full Field Guide and does not change campaign status | CLIENT PENDING |
+| C06 · Header preservation | Current Chapter II rail, dots, medal colors, hover title and Home are unchanged | OWNER LOCKED |
+| C07 · Mobile | Text wraps without turning urgency or feature annotation into large cards | UNTESTED |
+
+**Locked decision:** no more A1/A2 layout comparison needed; no automatic suppression of feature lines when another mission is urgent. Keep actual source and client behavior as separately verified gates. No self-merge.
