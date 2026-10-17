@@ -272,3 +272,19 @@ The owner selected A1 permanently for this design iteration and approved the fin
 | A08 | Compare two-device layouts | No horizontal scroll or over-stacked cards; entire option is a comfortable hit area | MOBILE UNTESTED |
 
 **A/B are only design options, not ratified.** Projects/Outings remain conditional DRAFT content; no gameplay status writes or self-merge.
+
+
+---
+
+## v1.1 Bronze-color owner-lock acceptance (2026-10-18)
+
+| Check | Expected | Status |
+|---|---|---|
+| BC1 | Bronze uses darker copper-brown `#A76D52` in both summary and rail, visibly separated from Gold `#D6AC49` | Owner requested; visual device validation pending |
+| BC2 | Silver and neutral colors unchanged | Contract locked |
+| BC3 | Actual medal ledger remains 3 Gold / 1 Silver / 0 Bronze / 14 unverified in Chapter II | Source-backed, unchanged |
+| BC4 | Mid/late chapter A/B demonstration can show the new Bronze but is explicitly fictional | Visual verification pending |
+| BC5 | Current-chapter header and Mission Control layout, hover/click, dots, uppercase `NEW POSSIBILITIES` remain unchanged | Owner locked |
+| BC6 | Adventure/system prominence taxonomy beneath Mission Control remains unselected | Pending separate design |
+
+**No gameplay writes, no self-merge, no implementation claim.** This is a narrow design-token correction.
