@@ -1,6 +1,6 @@
 # Systems Atlas — Research Queue v0.1
 
-**State:** DRAFT / PRIORITIZED PROPOSAL · 2026-10-16 · No guides adopted.
+**Historical state:** DRAFT / PRIORITIZED PROPOSAL · 2026-10-16. **Current closeout (2026-10-17):** all 28 indexed dossiers were later researched and integrated but remain `RESEARCHED — REVIEW PENDING`, none automatically ADOPTED. This queue is an archived design artifact, **not a live worklist**. [Production closeout](../quality/2026-10-17_atlas_postresearch_closeout.md).
 
 ## Objectives of research
 

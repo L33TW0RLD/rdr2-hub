@@ -4,15 +4,17 @@
 
 | Layer | Minimum acceptance | Evidence required | Current observation |
 |---|---|---|---|
-| Repository architecture | One authoritative owner per fact; zero overlapping writable agent paths; discoverable content contracts | Tree inspection + exact branch diff + coordinator lease audit | Scaffold under development on remaster branch |
-| Mechanics research | Claim-level sources, correct Story Mode applicability, uncertainty, gate/owned separation, spoiler scope | Sourced dossier + independent review + exact ref readback | Broad taxonomy INDEXED; specialist D01/D02/D04 tasks registered but not delivered |
+| Repository architecture | One authoritative owner per fact; zero overlapping writable agent paths; discoverable content contracts | Tree inspection + exact branch diff + coordinator lease audit | One owner/source contract per Atlas dossier and exact 3-path branch diffs verified across four research waves; full product integration still untested |
+| Mechanics research | Claim-level sources, correct Story Mode applicability, uncertainty, gate/owned separation, spoiler scope | Sourced dossier + independent review + exact ref readback | 28/28 source-backed dossiers merged; four coordinator cross-reviews. **Claims remain REVIEW PENDING**, individual mechanic adoption/game tests not independently passed |
 | Free Roam content | Meaningful optional PROJECT, locally feasible OUTING, organic DISCOVERY, can-wait distinction | At least one sourced/conditional project+outing package + content review | Conditional Camp / Heartlands examples on remaster branch, not player progress |
 | Mission Control | Correct mission, all Gold metrics, complete A→final approved guide, chronological risks, multi-open Intel | Original mission preflight + real client report | October 17 desktop user-reported full Old Friends guide restoration: 5/5 UI checks; other missions and clients not verified |
 | Companion | Player intent recognized, plausible optional next step, credible warnings only, source-aware return packet | Scenario and actual chat examples; negative unknown-gate tests | Model B behavior being designed by task 010; no autonomous background system |
 | ChatGPT dashboard | Compact contextual header, coherent primary view, readable mobile flow, functional controls and text fallback | User-run desktop+mobile click-through evidence | Chat-native interactions possible; no packaged/persistent application proven |
 | State reconciliation | Player report separated from verified/save/readback; only GameGuide writes original campaign | Controlled write-authority test with verifiable readback | Existing GameGuide protocol; Hub writing not authorized |
 | Continuity | Mission→Atlas→complete mission, Free Roam→Atlas→original project; no checkbox persistence claim | Actual multi-turn user interaction and source readback | October 17 conversational routing and desktop full-guide restoration user-observed; not cross-thread guarantee |
-| Coverage | Progressively documented mechanics and missions, gaps explicit | Manifest vs real files + source IDs | Taxonomy is an index; no claims of complete mechanical dossiers or 104 complete Gold guides |
+| Coverage | Progressively documented mechanics and missions, gaps explicit | Manifest vs real files + source IDs | 28/28 Systems Atlas research dossiers exist on main (source coverage complete); **original GameGuide's full-mission Gold coverage and UI/product acceptance remain separate, unverified** |
+
+**Research-production checkpoint:** [Atlas postresearch closeout audit](2026-10-17_atlas_postresearch_closeout.md) records exact scope and remaining gates. The mechanics-research row is **content coverage, not a PASS verdict on game mechanics**. Keep player-state tests and UX functionality in their own acceptance rows.
 
 ## Regression scenarios (minimum)
 

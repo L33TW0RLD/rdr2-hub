@@ -2,7 +2,7 @@
 
 **Registered:** 2026-10-17 · **Final status:** all 9 task dossiers/checkpoints/handoffs verified and delivered, integrated as **RESEARCHED — REVIEW PENDING / NOT ADOPTED**. Historical registration below is preserved. No automatic agent launch was implied.
 **Repository:** `L33TW0RLD/rdr2-hub` · **Source baseline:** `d3bc807c75633fec042f4a34af72515a24cc2696`
-**Owner scope:** Wave 3 covers **9 dossiers**. Wave 4 remains 8 planned dossiers. All existing Wave 1/2 research is `RESEARCHED — REVIEW PENDING`, NOT `ADOPTED`.
+**Owner scope:** Wave 3 delivered **9 dossiers**. Wave 4 subsequently delivered the remaining 8; **28/28** dossiers are now integrated as review-pending research. All existing Wave 1/2 research is `RESEARCHED — REVIEW PENDING`, NOT `ADOPTED`.
 
 ## Authoritative exact routing — one unique task per specialist conversation
 
@@ -41,6 +41,6 @@ Read **the exact issue** for the explicit paths. No shared index, `agents/regist
 
 ## Completion and coordinator check
 
-All nine verified deliveries were cross-reviewed for source boundaries, exact task path leases and unresolved contradictions in the [Wave 3 review](../systems_atlas/reviews/2026-10-17_wave3_cross_dossier_review.md). The integration is research-reference-only; no mechanic becomes ADOPTED through merging. Wave 4 eight topics are [reserved here](atlas_waves3_4_plan_v1.md), not registered or launched by this wave.
+All nine verified deliveries were cross-reviewed for source boundaries, exact task path leases and unresolved contradictions in the [Wave 3 review](../systems_atlas/reviews/2026-10-17_wave3_cross_dossier_review.md). The integration is research-reference-only; no mechanic becomes ADOPTED through merging. Wave 4 eight tasks subsequently [delivered and integrated](../systems_atlas/reviews/2026-10-17_wave4_final_cross_dossier_review.md); this file is historical routing, not a live queue.
 
 **Key separation:** Agent task `MERGED` = source docs integrated; research `RESEARCHED — REVIEW PENDING` = unratified; player mission/Gold/Honor/inventory achievements = original GameGuide-only, not inferred from Atlas.

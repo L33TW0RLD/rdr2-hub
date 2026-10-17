@@ -1,6 +1,6 @@
 # Systems Atlas — Taxonomy Research Backlog v0.1
 
-**Status:** PROPOSED / DRAFT; NO SPECIALIST AGENTS AUTHORIZED OR LAUNCHED  
+**Historical status when authored (2026-10-16):** PROPOSED / DRAFT; no specialists authorized at that snapshot. **Current status (2026-10-17):** all D01–D28 research dossiers subsequently assigned, delivered and integrated as **RESEARCHED — REVIEW PENDING**, not ADOPTED. This original backlog is retained for provenance; do not reactivate its tasks. See [closeout audit](../quality/2026-10-17_atlas_postresearch_closeout.md).  
 **Date:** 2026-10-16 · **Scope:** Story Mode mechanics verification and reusable deep-dive dossiers.  
 **Parent:** [Taxonomy v0.2](mechanics_taxonomy_v0_2.md) · [Schema](taxonomy_schema_v0_1.md) · [Coverage audit](taxonomy_coverage_audit_v0_1.md).  
 **Prior queue retained:** [Research Queue v0.1](research_queue_v0_1.md) remains as historical design input. This backlog reorganizes research tasks without superseding its approval status.

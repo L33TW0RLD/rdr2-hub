@@ -1,7 +1,7 @@
 # RDR2 HUB — Living Adventure Companion
 
 **Remaster v1 · unified ChatGPT-native RDR2 Story Mode companion**  
-**Stage:** R1 structured product foundation. The published gameplay remains in the original GameGuide repository; Hub research, content and UI proposals remain subject to evidence/review. No standalone app, automatic save-sync or full-game content coverage is claimed.
+**Stage:** R1 structured product foundation. The published gameplay remains in the original GameGuide repository; Hub research, content and UI proposals remain subject to evidence/review. The **28-dossier Systems Atlas research library is now complete at REVIEW PENDING maturity**, but no standalone application, automatic save-sync, full mission-Gold catalog or universal verified gameplay guide is claimed.
 
 > **One adventure. One companion.** Mission guides, meaningful free roam, systems mastery and an elegant contextual dashboard should reinforce each other while the player actually plays.
 
@@ -70,7 +70,7 @@ The first concrete, **not-yet-adopted** Free Roam slice is [Chapter 2 conditiona
 
 ## Production system
 
-We are building **complete researched content before claiming complete game coverage**. Agents produce substantive, source-backed mechanic dossiers; content authors connect them to optional Free Roam projects/outings; dashboard specialists build the polished ChatGPT-native experience; QA checks both factual claims and actual interaction behavior.
+The **28 Systems Atlas research dossiers are published**, with claim/source disputes deliberately retained. The remaining work is to turn them into **useful, source-aware gameplay guidance**: finish the Adaptive Companion/Model B behavior and contextual header, review one real Free Roam → Atlas → full Mission Control return path, and test the ChatGPT-native presentation without inventing current game state.
 
 - [Current content coverage manifest](knowledge/content_manifest_v1.md)
 - [Knowledge record contract](knowledge/record_contract_v1.md)
@@ -88,6 +88,6 @@ We are building **complete researched content before claiming complete game cove
 - Existing `architecture/`, `free_roam/`, `systems_atlas/` and `agents/` histories have been **preserved**, not deleted or silently ratified.
 - Original `L33TW0RLD/rdr2` remains the campaign and mission authority unless the owner later authorizes a tested migration.
 - No game-state monitoring, save decoding backend, external dashboard application, game plugin or unattended agents are claimed.
-- **Next milestone:** integrate actual D01/D02/D04 research with one reviewed Free Roam vertical slice and Model B decision contract; then build and user-test the cohesive dashboard experience.
+- **Next product milestone:** finish the [Adaptive Companion task #8](https://github.com/L33TW0RLD/rdr2-hub/issues/8) and test one end-to-end conditional Chapter 2 experience using reviewed Atlas references. Keep [Save Intelligence research #24](https://github.com/L33TW0RLD/rdr2-hub/issues/24) strictly separate. [Atlas research closeout and remaining acceptance gates](quality/2026-10-17_atlas_postresearch_closeout.md).
 
 **Guiding principle:** the player should enjoy Red Dead Redemption 2, not spend the session operating three different document libraries.

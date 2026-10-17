@@ -2,6 +2,8 @@
 
 **Status:** TAXONOMY DRAFT / UNRATIFIED · **Twenty-eight source-checked dossiers integrated as RESEARCHED — REVIEW PENDING** · **Updated:** 2026-10-17.
 
+**Current research closeout:** [28/28 dossier production audit](../quality/2026-10-17_atlas_postresearch_closeout.md). Preserve `RESEARCHED — REVIEW PENDING` status and all dispute registers; do not claim `ADOPTED` from coverage.
+
 The Atlas documents gameplay mechanics and dependencies for RDR2 Story Mode. It is a **reference**, not a live campaign commander, compulsory checklist or proof of the player's progress.
 
 ## Wave 1 — researched dossiers (NOT ADOPTED)
@@ -31,7 +33,7 @@ The owner approved integration of **five** verified Wave 2 specialists while res
 | [D13 Law and Honor](dossiers/d13_law_honor_robbery_v0_1.md) | Witnesses, wanted/bounty, Honor and robbery distinctions | Disguise/reidentification and specific mission credit disputed |
 | [D15 Compendium and trackers](dossiers/d15_compendium_trackers_v0_1.md) | Study/collect/use semantics and official 100% subsets | Entry credit and trophy/full-catalog criteria differ |
 
-See the [Wave 2 partial fact check](reviews/2026-10-17_wave2_partial_cross_review.md), [integration review](reviews/2026-10-17_wave2_integration_gate.md) and [owner-directed five-dossier resolution](reviews/2026-10-17_wave2_scope_resolution.md). **Historical context:** D09 was deferred at the Wave 2 integration boundary, then completed for Wave 3. See Wave 3 below. Wave 4 still holds eight planned topics.
+See the [Wave 2 partial fact check](reviews/2026-10-17_wave2_partial_cross_review.md), [integration review](reviews/2026-10-17_wave2_integration_gate.md) and [owner-directed five-dossier resolution](reviews/2026-10-17_wave2_scope_resolution.md). **Historical context:** D09 was deferred at the Wave 2 integration boundary, then completed for Wave 3. See Wave 3 below. Wave 4's eight dossiers subsequently merged; see the final section below.
 
 ## Wave 3 — nine researched dossiers (NOT ADOPTED)
 
@@ -49,7 +51,7 @@ All nine Wave 3 specialist branches supplied an independently scoped dossier/che
 | [D24 Replay and saves](dossiers/d24_replay_saves_medals_v0_1.md) | Manual/auto saves, mission replay, 70 Gold Rush | Replay medal ≠ original-world restore; GameGuide campaign authority |
 | [D27 Challenges](dossiers/d27_nine_challenge_strands_v0_1.md) | Nine strands × ten ordered ranks, equipment rewards | Rank-local credit and purchase/equip gates must be checked |
 
-**Read [Wave 3 cross-dossier review](reviews/2026-10-17_wave3_cross_dossier_review.md) before presenting a disputed irreversible choice.** Two coordinator-only presentation repairs are documented in the review: D09 escaped Markdown was fixed; D20's three sibling-dossier relative links were corrected. All other dossier source blobs are unchanged. Wave 4's **eight** dossiers are [registered for independent research](../agents/atlas_parallel_wave4_v1.md), not automatically launched, researched or merged.
+**Read [Wave 3 cross-dossier review](reviews/2026-10-17_wave3_cross_dossier_review.md) before presenting a disputed irreversible choice.** Two coordinator-only presentation repairs are documented in the review: D09 escaped Markdown was fixed; D20's three sibling-dossier relative links were corrected. All other dossier source blobs are unchanged. Wave 4's **eight** dossiers subsequently [delivered and merged](reviews/2026-10-17_wave4_final_cross_dossier_review.md), completing the D01–D28 research library.
 
 ## Wave 4 — final eight researched dossiers (NOT ADOPTED)
 

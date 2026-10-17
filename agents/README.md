@@ -1,5 +1,8 @@
 # Persistent specialists, disposable tasks — GitHub-first coordination
 
+**2026-10-17 closeout:** All 28 Atlas D01–D28 specialist **research** tasks have delivered and their dossiers are merged; old wave task prompts and branches are historical. The specialist branches still hold checkpoint/handoff evidence and are **retained**, not automatically pruned. See [closeout audit](../quality/2026-10-17_atlas_postresearch_closeout.md). The independently open Adaptive Companion design task [#8](https://github.com/L33TW0RLD/rdr2-hub/issues/8) and Save Intelligence research [#24](https://github.com/L33TW0RLD/rdr2-hub/issues/24) are not closed by Atlas delivery.
+
+
 **Status:** ACTIVE COORDINATION WORKFLOW · governance PR #1 merged on 2026-10-16. Read the current `main` registry for assignments and exclusive leases. Neither Agent 001's UX nor Agent 002's taxonomy was ratified by this merge.
 
 - [Registry](registry.md) — coordinator-owned task-to-branch routing index, status, write leases, dependencies and review gate.

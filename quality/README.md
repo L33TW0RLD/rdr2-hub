@@ -1,5 +1,7 @@
 # Product Verification & Readiness
 
+**Latest Atlas content milestone:** [28/28 research dossier closeout audit](2026-10-17_atlas_postresearch_closeout.md) with retained claims and explicit separation from product acceptance and real player progress. This is evidence of **coverage**, not an automatic PASS for UI, GameGuide mission completeness, save decoding or mechanics ratification.
+
 **Status:** QUALITY CONTRACT / PROPOSAL · 2026-10-17
 
 The Hub must be correct **and** pleasant to use. Both qualities have independent verification gates.
