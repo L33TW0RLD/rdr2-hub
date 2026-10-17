@@ -99,7 +99,12 @@ export function composeProgressionView(graph,hierarchy,scenario,opts={}){
  const beforeExit=topAlert?.severity==="pre_exit_audit";
  const exitAudit=evaluated.opportunities.find(o=>o.id==="chapter2_exit_audit");
  const preferred=(beforeExit&&exitAudit)?exitAudit:(outingCandidates[0]||evaluated.opportunities[0]||null);
- const suggestedOuting=!isBlocked&&preferred?{source_window:preferred.id,activity_ref:preferred.outings[0],why_now:preferred.title,confidence:preferred.confidence}:null;
+ // When a player has hypothetically purchased Pearson's tools, move from repeatedly inspecting the Ledger to planning a specific recipe-related hunt.
+ // This remains an optional existing Heartlands outing reference: no newly crafted satchel or specific owned weapon is inferred.
+ const targetedMaterials=project.id==="project.camp"&&projectResult?.stage==="satchel_tools";
+ const chosenOuting=targetedMaterials?(preferred?.outings.find(a=>a==="heartlands_recon")||preferred?.outings[0]):preferred?.outings[0];
+ const chosenRationale=targetedMaterials?"Choose one Pearson recipe first; then use a suitable Heartlands reconnaissance outing to learn and gather only relevant materials.":preferred?.title;
+ const suggestedOuting=!isBlocked&&preferred?{source_window:preferred.id,activity_ref:chosenOuting,why_now:chosenRationale,confidence:preferred.confidence}:null;
  const trailhead={
    source:"SYNTHETIC_SCENARIO_ONLY",
    chapter_label:"Chapter 2 · Horseshoe Overlook",
