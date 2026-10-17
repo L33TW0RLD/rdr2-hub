@@ -25,7 +25,8 @@ Owner gave this persistent conversation Issue #17 explicitly, then reiterated co
 | Initial **pre-research** checkpoint | \`ab5e643f174aab2c20a9ec62a0f82d813150b14e\` | VERIFIED explicit branch readback |
 | D11 complete evidence dossier | \`057a449afb2b5b341dd5b8b736962ef3390a4d2b\` | VERIFIED readback blob \`52db99a9ce1d5bf892f23a27be20e336ceed030d\`, 289 lines |
 | D11 scope/content checks | 11 numbered sections, S07.M01–M05, 24 claim IDs, 23 source IDs, 3 Chapter 2 examples, primary Rockstar 1.15 link and RDR1/Online negative proof | PASSED programmatic readback |
-| Allowed-path compare before this checkpoint update | ahead 2 / behind 1, only checkpoint + dossier changed | VERIFIED |
+| Final handoff | `29c52e466d8fc0f62feac0eaa8bab12903398db1` | VERIFIED by exact-branch content readback before this final update |
+| Allowed-path compare before handoff | ahead 2 / behind 1, only checkpoint + dossier changed | VERIFIED |
 
 **Last verified commit BEFORE this update:** \`057a449afb2b5b341dd5b8b736962ef3390a4d2b\`.
 
@@ -37,7 +38,7 @@ Owner gave this persistent conversation Issue #17 explicitly, then reiterated co
 - Base lodging prices $220 + $325 subject to actual Ledger/edition/discount; D02 owns spending.
 
 ## Exact successor action
-1. **Current phase:** dossier written, committed, read back; final handoff not yet written.
+1. **Current phase:** D11 dossier, initial checkpoint, progress checkpoint and final handoff committed/read back; final three-path verification pending this update.
 2. **Exact next permitted action:** Create **only** \`agents/handoffs/2026-10-17_atlas_travel_014.md\` on this branch, including main baseline, two verified commits, source disputes, owner review choices, scoped comparison and later exact verification requirement.
 3. **Then:** read handoff, dossier and checkpoint by explicit \`ref=agent/atlas-travel-014\`, compare to freshest main, update this checkpoint to \`DELIVERED_REVIEW_PENDING\`, verify three-path lease, report terminal SHA in chat.
 4. **Blockers:** no GitHub write conflict or gameplay hard dependency encountered; routing label discrepancy is disclosed, not silently fixed.
