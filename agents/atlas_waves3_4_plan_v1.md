@@ -1,6 +1,6 @@
 # Systems Atlas — Final Two Research Waves (Planning Only)
 
-**Owner decision:** 2026-10-17 · **Status:** PLANNED / **NO SPECIALISTS LAUNCHED**
+**Owner decision:** 2026-10-17 · **Status:** Wave 3 REGISTERED (9 issues/branches) / **NO SPECIALISTS AUTOMATICALLY LAUNCHED**; Wave 4 remains PLANNED
 **Repository:** `L33TW0RLD/rdr2-hub`
 **Purpose:** Complete the indexed **D01–D28** Systems Atlas dossier research backlog without inflating the unratified taxonomy or creating false player-state authority.
 
@@ -10,9 +10,11 @@
 |---|---|---:|---|
 | Wave 1 | D01–D06 | **6** | MERGED research, content `RESEARCHED — REVIEW PENDING` |
 | Wave 2 | D08, D11, D12, D13, D15 | **5** | Approved for coordinator reference integration; original six-task assignment amended |
-| **Wave 3** | **D09**, D10, D16, D17, D18, D20, D22, D24, D27 | **9** | Planned, not launched |
+| **Wave 3** | **D09**, D10, D16, D17, D18, D20, D22, D24, D27 | **9** | **Registered**: 9 task issues/branches; not automatically running |
 | **Wave 4** | D07, D14, D19, D21, D23, D25, D26, D28 | **8** | Planned, not launched |
 | **Total** | **D01–D28** | **28** | Research-production coverage target, not universal mechanic certification |
+
+**Wave 3 exact task IDs, issue numbers, branch names and exclusive leases are now authoritative in [Wave 3 coordination](atlas_parallel_wave3_v1.md).** Wave 4 remains unregistered. The D09 task is unchanged from Issue #19.
 
 ## Wave 3 — Nine dossiers
 
@@ -49,7 +51,7 @@
 
 ## No premature registration / research authority
 
-This file reserves a planning **slot** for 17 remaining dossiers; it **does not** create or activate 17 agent tasks, branches or issues. Coordinator registers assignments after reviewing present specialist availability, source conflicts and exact independent file leases. Nine concurrent tasks require nine **distinct concurrent writer lanes** (new conversations or explicit specialist reassignment) with no duplicated task ownership; reuse completed specialist conversations where practical.
+This document originally reserved all 17 remaining dossiers. **Wave 3's nine lanes (D09 retained + eight new) are now registered in [Wave 3 coordination](atlas_parallel_wave3_v1.md), but have not been automatically launched by GitHub.** Wave 4's eight remain a planning reservation with no new assignments. Coordinator registers assignments after reviewing present specialist availability, source conflicts and exact independent file leases. Nine concurrent tasks require nine **distinct concurrent writer lanes** (new conversations or explicit specialist reassignment) with no duplicated task ownership; reuse completed specialist conversations where practical.
 
 Each task needs its own issue, unique ID, branch, initial checkpoint, one dossier, final handoff and branch comparison. No agent changes shared indexes, `main`, the other agent's files, or original `L33TW0RLD/rdr2`. Source-checked dossiers remain `RESEARCHED — REVIEW PENDING`, not `ADOPTED`. No claims of 28 complete until both subsequent waves are actually delivered and independently merged.
 
