@@ -8,8 +8,11 @@
 | **Campaign facts** | Original `rdr2/campaign/`: current state, medals, resources, saves and missables | Only actual canonical live snapshot; **Hub has no second ledger** | GameGuide after player evidence |
 | **Systems taxonomy** | `systems_atlas/mechanics_taxonomy_v0_1.md` S01–S30; v0.2 indexed leaf proposals, S31 still provisional | **INDEXED / UNRATIFIED**, not mechanic guide adoption | Specialist Atlas researcher |
 | **Horse lifecycle** | D01 research task `atlas-horses-007` / Issue #5 | **PLANNED**; dossier file not on merged main | Atlas specialist |
-| **Camp Ledger and upgrades** | D02 `atlas-camp-008` / Issue #6 | **PLANNED**; no adoption | Atlas specialist after D01 |
-| **Hunting clean kills and transport** | D04 `atlas-hunting-009` / Issue #7; old hunting research | **PLANNED**; legacy guides REVIEW PENDING | Atlas specialist after D02 |
+| **Camp Ledger and upgrades** | D02 `atlas-camp-008` / Issue #6 | **PLANNED**; now parallel Wave 1, no adoption | Dedicated camp specialist |
+| **Hunting clean kills and transport** | D04 `atlas-hunting-009` / Issue #7; old hunting research | **PLANNED**; legacy guides REVIEW PENDING | Dedicated hunting specialist |
+| **Pearson satchels and crafting** | D03 `atlas-satchels-011` / Issue #11 | **PLANNED**; no crafted items or player tools presumed | Dedicated crafting specialist |
+| **Camp social life and requests** | D05 `atlas-camplife-012` / Issue #12 | **PLANNED**; chapter windows and achievements need source checks | Dedicated camp-life specialist |
+| **Inventory, unique items and disposition** | D06 `atlas-inventory-013` / Issue #13 | **PLANNED**; recipe overlap delegated to D03 | Dedicated inventory specialist |
 | **Other mechanics** | D03, D05–D28 in `taxonomy_research_backlog_v0_1.md` | **UNASSIGNED**, not dozens of completed dossiers | Future tasks after prioritization |
 | **Free Roam PROJECTS** | `free_roam/content/projects/camp_development_v0_1.md` | **CONDITIONAL DRAFT EXAMPLE**, not confirmed player focus | Free Roam content producer |
 | **Free Roam OUTINGS** | `free_roam/content/outings/heartlands_hunting_recon_v0_1.md` | **CONDITIONAL DRAFT EXAMPLE**, no actual loot | Free Roam content producer |

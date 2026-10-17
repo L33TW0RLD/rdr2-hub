@@ -24,7 +24,7 @@
 
 | Reusable specialist conversation | Task sequence | Rule |
 |---|---|---|
-| Systems Atlas Researcher, optionally the existing Agent 002 conversation | `atlas-horses-007` (#5), then `atlas-camp-008` (#6), then `atlas-hunting-009` (#7) | These tasks use existing independent branches, **sequentially in one thread**, with coordinator activation at each transition. Do not reopen completed `atlas-taxonomy-002`. |
+| Systems Atlas Researcher, optionally the existing Agent 002 conversation | `atlas-horses-007` (#5), then `atlas-camp-008` (#6), then `atlas-hunting-009` (#7) | **Superseded 2026-10-17:** the owner now directs [six parallel Atlas specialists](atlas_parallel_wave1_v1.md), rather than the initial sequential allocation. The tasks still retain independent branches and task checkpoints; each specialist conversation may take new coordinator-assigned work later. Do not reopen `atlas-taxonomy-002`. |
 | Living Adventure Architect, optionally existing architecture thread | `adaptive-companion-010` (#8) | Reuse its conversation for future *separately assigned* tasks, not automatically. |
 | Hub Integrator / Quality Auditor | No new tasks registered | Can later reuse their own threads once explicit task registration exists. |
 

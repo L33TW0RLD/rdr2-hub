@@ -56,7 +56,7 @@ Build and validate this path with real sources and honest UNKNOWN gates. The exi
 
 ## Agent production lanes
 
-1. Systems Atlas specialist thread delivers D01 Horses (task 007) then D02 Camp (008) then D04 Hunting (009), each separate branch and handoff. Other D03/D05–D28 packages require new assigned scopes.
+1. The owner's latest [Atlas parallel Wave 1 allocation](../agents/atlas_parallel_wave1_v1.md) supersedes the original sequential suggestion. Six reusable specialist conversations research D01 Horses (007), D02 Camp (008), D04 Hunting (009), D03 Satchels (011), D05 Camp Life (012), D06 Inventory (013), each with independent leased files and handoff. Other unassigned Dxx packages need new scopes.
 2. Living Adventure specialist delivers Model B and contextual header behavior (task 010); don't overlap `companion/` scaffold edits with its own leased `free_roam/adaptive_companion/`.
 3. Free Roam content production packages: validate initial project/outing example, then author additional *source-backed* meaningful intermission records; avoid creating 100 placeholder files.
 4. Dashboard/integration agent: present a complete connected ChatGPT view and test honest continuity. It does not research individual weapon/horse facts from scratch.
