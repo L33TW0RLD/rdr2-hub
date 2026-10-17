@@ -251,3 +251,24 @@ The owner selected A1 permanently for this design iteration and approved the fin
 | C07 · Mobile | Text wraps without turning urgency or feature annotation into large cards | UNTESTED |
 
 **Locked decision:** no more A1/A2 layout comparison needed; no automatic suppression of feature lines when another mission is urgent. Keep actual source and client behavior as separately verified gates. No self-merge.
+
+---
+
+## Owner typography LOCK and Adventure A/B acceptance v1.0 (2026-10-18)
+
+**Mission Control typography:** gold star + **small bold uppercase `NEW POSSIBILITIES`** + normal text for the mechanic name. Owner explicitly rejected equal-font label and rest-of-description. Both standard and urgent views keep the New Possibilities line when individually warranted. Header and Mission Control layout are **LOCKED**; client implementation status remains separate.
+
+| ID | Test | Acceptance condition | State |
+|---|---|---|---|
+| T01 | View Mission Control feature row | Exact uppercase `NEW POSSIBILITIES` smaller and bolder; warm-gold star; unchanged normal feature typography | OWNER LOCK; CLIENT PENDING |
+| T02 | View urgent Story and future system together | John's Time-sensitive label and Hosea's NEW POSSIBILITIES both remain independently visible | OWNER LOCK; CLIENT PENDING |
+| A01 | Adventure design A after Mission Control | Flat Project and Outing rows, no extra permanent nav or giant cards | PENDING OWNER |
+| A02 | Adventure design B after Mission Control | One conditional focus, one compact alternative; no artificial mission-style priority | PENDING OWNER |
+| A03 | Compare unknown control state | No claim that Arthur can roam; options conditional, useful check action | PENDING OWNER |
+| A04 | Compare fictional safe roaming | Both Project and Outing actions remain optional, discovery spontaneous | PENDING OWNER |
+| A05 | Compare activated wagon risk | Mission safety remains primary; optional ride not foregrounded | PENDING OWNER |
+| A06 | Click Project | Fetches current Hub project and canonical campaign evidence; no fake Ledger/tools/currency/project activation | PENDING CLIENT |
+| A07 | Click Outing | Fetches source outing and checks actual free-roam window; no invented position, pelt or event | PENDING CLIENT |
+| A08 | Compare two-device layouts | No horizontal scroll or over-stacked cards; entire option is a comfortable hit area | MOBILE UNTESTED |
+
+**A/B are only design options, not ratified.** Projects/Outings remain conditional DRAFT content; no gameplay status writes or self-merge.
