@@ -2,6 +2,9 @@
 // Only synthetic Story Mode scenarios. NO reads from the user's campaign, saves or network.
 import { evaluateScenario } from "./evaluate_v0_1.mjs";
 import { composeProgressionView } from "./view_model_v0_2.mjs";
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const EMPTY_RECEIPTS = {kind:"SYNTHETIC_PRESENTATION_RECEIPTS",displayed_prompt_keys:[],displayed_alert_keys:[]};
 function includesOne(haystack, needles){return (needles||[]).some(v=>(haystack||[]).includes(v));}
@@ -225,4 +228,98 @@ export function planProgressionWindow(graph,hierarchy,policy,scenario,options={}
    next_receipts:nextReceipts,
    game_progress_changed:false,actual_game_state_connected:false,writes_performed:0
  };
+}
+
+
+// Reproducible deterministic regression runner, still synthetic-only.
+export function verifyPlannerScenarioSuite(graph,hierarchy,policy,suite){
+ const failures=[],passing=[],results={};
+ const observedValue=(r,key)=>{
+   switch(key){
+     case "mode":return r.mode;
+     case "primary_id":return r.primary?.id??null;
+     case "project_id":return r.featured_project?.id??null;
+     case "project_stage":return r.featured_project?.stage??null;
+     case "outing":return r.suggested_outing?.activity_ref??null;
+     case "alert_id":return r.alert?.id??null;
+     case "alert_presentation":return r.alert?.presentation??null;
+     case "story_ids":return r.story_choices.map(x=>x.id);
+     case "new_receipt":return r.next_receipts.displayed_prompt_keys.at(-1)||null;
+     case "detected_kind":return r.primary?.detected_kind??null;
+     default:throw Error("Unknown expectation field "+key);
+   }
+ };
+ for(const test of suite.cases||[]){
+   const state=suite.states?.[test.state];
+   if(!state){failures.push({id:test.id,reason:"missing test state"});continue;}
+   const opts={...test.options};
+   if(test.previous_state)opts.previous_scenario=suite.states[test.previous_state];
+   if(test.receipts_from){
+     const previous=results[test.receipts_from];
+     if(!previous){failures.push({id:test.id,reason:"unknown previous receipts case"});continue;}
+     opts.receipts=previous.next_receipts;
+   }
+   let result;
+   try{result=planProgressionWindow(graph,hierarchy,policy,state,opts);}
+   catch(e){failures.push({id:test.id,reason:String(e)});continue;}
+   results[test.id]=result;
+   const errors=[];
+   for(const [key,expected] of Object.entries(test.expect||{})){
+     let value;
+     try{value=observedValue(result,key);}
+     catch(e){errors.push(String(e));continue;}
+     if(JSON.stringify(value)!==JSON.stringify(expected))errors.push(key+": expected "+JSON.stringify(expected)+" got "+JSON.stringify(value));
+   }
+   if(result.writes_performed!==0||result.actual_game_state_connected!==false||result.game_progress_changed!==false)errors.push("No-campaign-authority invariant failed");
+   if(result.story_choices.length>policy.render_caps.story_choices)errors.push("Story list exceeds display bound");
+   if(result.mode==="urgent_story"&&result.suggested_outing!==null)errors.push("Active urgent Story allows an outing");
+   if(new Set(result.next_receipts.displayed_prompt_keys).size!==result.next_receipts.displayed_prompt_keys.length)errors.push("Duplicate prompt receipt");
+   if(new Set(result.next_receipts.displayed_alert_keys).size!==result.next_receipts.displayed_alert_keys.length)errors.push("Duplicate alert receipt");
+   if(errors.length)failures.push({id:test.id,reason:errors});
+   else passing.push(test.id);
+ }
+ const guardPassing=[],guardFailures=[];
+ for(const test of suite.negative_tests||[]){
+   const original=suite.states?.[test.state];
+   if(!original){guardFailures.push({id:test.id,reason:"unknown state"});continue;}
+   const state=JSON.parse(JSON.stringify(original)),options={verbosity:"adaptive",goals:["all_gold"],intent:"passive"};
+   switch(test.mutation){
+     case "synthetic_false":state.synthetic=false;break;
+     case "source_wrong":state.source="REAL_GAME";break;
+     case "goal_bad":options.goals=["not_an_approved_goal"];break;
+     case "focus_bad":options.requested_focus="fake.camp.tree";break;
+     case "verbosity_bad":options.verbosity="infinite";break;
+     case "receipts_kind_bad":options.receipts={kind:"REAL_PLAYER_PROGRESS",displayed_prompt_keys:[],displayed_alert_keys:[]};break;
+     case "receipts_array_bad":options.receipts={kind:"SYNTHETIC_PRESENTATION_RECEIPTS",displayed_prompt_keys:"not an array",displayed_alert_keys:[]};break;
+     case "contradiction":state.flags_false=[...(state.flags_false||[]),"chapter2_open"];break;
+     case "previous_source_wrong":options.previous_scenario={...state,source:"REAL_GAME"};break;
+     default:guardFailures.push({id:test.id,reason:"unrecognized mutation"});continue;
+   }
+   try{
+     planProgressionWindow(graph,hierarchy,policy,state,options);
+     guardFailures.push({id:test.id,reason:"invalid input was incorrectly accepted"});
+   }catch(e){
+     if(String(e).includes(test.message_contains))guardPassing.push(test.id);
+     else guardFailures.push({id:test.id,reason:"wrong failure: "+String(e)});
+   }
+ }
+ return {passed:!failures.length&&!guardFailures.length,
+  scenarios:(suite.cases||[]).length,passing_scenarios:passing.length,
+  rejected_invalid_inputs:guardPassing.length,negative_tests:(suite.negative_tests||[]).length,
+  failures,guard_failures:guardFailures,
+  source:"SYNTHETIC_ONLY",writes_performed:0};
+}
+
+// CLI reads ONLY four explicitly named repository-local fixture/contract files.
+if(process.argv[1]&&fileURLToPath(import.meta.url)===process.argv[1]){
+ const dir=dirname(fileURLToPath(import.meta.url));
+ const load=name=>JSON.parse(readFileSync(join(dir,name),"utf8"));
+ const graph=load("chapter_02_graph_v0_1.json");
+ const hierarchy=load("hierarchy_v0_2.json");
+ const policy=load("planner_policy_v0_3.json");
+ const fixtures=load("planner_scenarios_v0_3.json");
+ const structure=validateWindowPlannerPolicy(graph,policy);
+ const tests=verifyPlannerScenarioSuite(graph,hierarchy,policy,fixtures);
+ console.log(JSON.stringify({structure,tests},null,2));
+ if(!structure.passed||!tests.passed)process.exitCode=1;
 }
