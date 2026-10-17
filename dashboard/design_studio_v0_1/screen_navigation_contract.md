@@ -212,3 +212,31 @@ Supersedes §10's line saying to reveal a full Operation/medal status detail lin
 **Behavioral boundary:** selecting medal history does NOT open a mission, assert it is currently available, or change the GameGuide ledger. No Story/Adventure/Atlas header buttons or expanded medal selector are reintroduced.
 
 **Test status:** real click/touch/keyboard popover acceptance PENDING USER.
+
+
+---
+
+## 12. Owner decision v0.4 — two distinct actions at the same medal segment
+
+Supersedes §11's click-toggle title popover.
+
+```text
+HOVER/FOCUS on segment
+  -> lightweight native tooltip, canonical mission heading ONLY
+  -> no new route, no selection state, no source-read or gameplay write
+
+CLICK/KEYBOARD ACTIVATE/TAP segment
+  -> real ChatGPT follow-up to fetch from L33TW0RLD/rdr2/main
+     the exact original source dossier mapped to that mission's 18-slot ID
+  -> render FULL approved GameGuide Field Guide v1.1
+  -> label as reference/replay lookup; not a confirmed current map marker
+  -> no invented mission completion, Gold, auto-start or save writes
+```
+
+Use `pressable.tooltip` with the exact heading (or a future host-equivalent accessible label) and a real `pressable.onClick` action. Do not use `popover.open` on click. Hover state is short-lived and never mutates selected Story mission or a persistent inspector.
+
+When implementing click use an **exact verified per-mission source path** from `knowledge/progression/chapter_02_graph_v0_1.json` / original GameGuide, NOT a synthesized filename from the title. Any source-read failure must be reported openly. A mission medal-rail click *never* claims the mission is currently selectable on the game's map.
+
+Mobile has no guaranteed hover: clicking a segment proceeds to the mission reference, with native hit area ≥ the visible stroke and accessible name supplied. Keyboard focus, if available, can reveal the same heading; not confirmed until device testing.
+
+**UI verification pending:** source reload after actual click, hover placement/shape and mobile hit target.
