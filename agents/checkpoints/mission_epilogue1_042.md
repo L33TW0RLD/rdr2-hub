@@ -1,48 +1,53 @@
-# Mission Control — Epilogue Part I Specialist Mid-Task Checkpoint
+# Mission Control — Epilogue Part I Specialist Terminal Checkpoint
 
-**Task:** `mission-epilogue1-042` · [Issue #56](https://github.com/L33TW0RLD/rdr2-hub/issues/56)
-**Branch:** `agent/mission-epilogue1-042`
-**Registered baseline:** `8f0e9e64cfb0bff79fbb0ebe2f6dc0ada8e2131d`
-**Starting main observed:** `613193b9b1790cf7b6cba7ae4056e3a6d8f02a7b`
-**Checked:** 2026-10-17 · **Workflow:** `IN_PROGRESS`, final handoff pending
-**Content status:** `RESEARCHED — REVIEW PENDING` · **NOT ADOPTED**.
-**Scope:** Complete source-backed Epilogue Part I mission transfer research; no live player progression.
+## Identity / branch authority
 
-## Exclusive three-file write lease
+- **Task:** `mission-epilogue1-042` · [Issue #56](https://github.com/L33TW0RLD/rdr2-hub/issues/56)
+- **Chapter:** Epilogue Part I — Pronghorn Ranch
+- **Branch:** `agent/mission-epilogue1-042`
+- **Registered baseline:** `8f0e9e64cfb0bff79fbb0ebe2f6dc0ada8e2131d`
+- **Main at startup:** `613193b9b1790cf7b6cba7ae4056e3a6d8f02a7b`
+- **Recorded date:** 2026-10-17
+- **Workflow status:** **`DELIVERED_REVIEW_PENDING`**
+- **Research maturity:** **`RESEARCHED — REVIEW PENDING` / NOT ADOPTED**
+- **Stop:** do not self-merge, rebase, reset, force push, ratify, modify original GameGuide or generate player progress.
+
+## Exclusive three-file lease
 
 1. `mission_control/chapter_research/epilogue_01_v0_1.md`
 2. `agents/checkpoints/mission_epilogue1_042.md`
 3. `agents/handoffs/2026-10-17_mission_epilogue1_042.md`
 
-**Protected/read-only:** shared Agent registry, Wave plan, adapter, indexes, `main`, original `L33TW0RLD/rdr2`, mission sibling branches, Atlas/saves/campaign and all other leases. No resets/rebases/force-push/merges.
+**Protected:** all shared indexes, Mission Control adapter, parallel-wave plan, agent registry, other chapter files/branches, `main`, `L33TW0RLD/rdr2` entire original repo, player campaign/Gold/save records and Save Intelligence.
 
-## Durable verified milestones
+## Durable results (confirmed by explicit branch readback)
 
-| Stage | Repository commit/artifact | Verified readback |
+| Stage | Committed SHA | Readback |
 |---|---|---|
-| Initial checkpoint committed first | `6ae2abd7a1a0abc5445e7c28eb54206881abcd1d`, this path | Original blob `be0047bd94bf24a66bb51db669a790a681980a47` |
-| Complete chapter pack first commit | `7ff94d08c6f47157225688161b926350fb028500`, `mission_control/chapter_research/epilogue_01_v0_1.md` | Read back complete 10 Gold-bearing missions + no-medal Landowning scene |
-| Markdown backtick repair | `0bb9deaf50cf527bf61131e019b5da1d7d1fb57e`, same dossier | VERIFIED blob `274699fcfef3cf693c7641f6d47f7c68a1389ebf`; no remaining escaped backticks |
+| Initial checkpoint **before research** | `6ae2abd7a1a0abc5445e7c28eb54206881abcd1d` | VERIFIED old blob `be0047bd94bf24a66bb51db669a790a681980a47` |
+| Full Epilogue I mission research | `7ff94d08c6f47157225688161b926350fb028500` | COMPLETE, 10 Gold missions, 1 no-medal setup, 21 Gold criteria |
+| Markdown syntax repair, research pack final | `0bb9deaf50cf527bf61131e019b5da1d7d1fb57e` | VERIFIED blob `274699fcfef3cf693c7641f6d47f7c68a1389ebf` |
+| Mid-task checkpoint | `8aa4f22bad8966f5bbd0c004dd3817c73088be33` | VERIFIED blob `82439d4c6da190cb134d314ce306a6fa8241bb77` |
+| Final handoff | `3e89cdd324521ae9540c837df16f9dd89540fdef` | VERIFIED blob `97f03cdeb0fc0cfb0be35ea4cda75d4d371f79be` |
 
-**Pack coverage:** one chapter reconciliation / source ledger, 10 complete eligible Gold sets totaling **21 individual criteria**, 11 named stages including the nonmedal The Landowning Classes, 10 per-mission Field Guide-ready A→final outlines plus one supporting non-medal outline, gated order, two auto-chains, Gainful cross-boundary possibility, mission-specific opportunities and conflict/transfer ledgers. High Honor and storyline/spoiler separation enforced.
+**Last verified commit before this terminal checkpoint:** `3e89cdd324521ae9540c837df16f9dd89540fdef`  
+**Uncommitted / not recoverable:** none known.  
+**No other files touched.**
 
-**Last verified commit before this checkpoint:** `0bb9deaf50cf527bf61131e019b5da1d7d1fb57e`.
-**Uncommitted / not recoverable:** none before final handoff.
-**Research source independence:** PowerPyx master and 10 individual guides, GameFAQs Epilogue I, RDR2.org both Epilogue pages, GTA Base, Gamer Guides and specific reference on no-medal bank scene. Access date 2026-10-17, mostly published 2018–2019. No in-game testing simulated.
+## Deliverable summary
 
-## Exact next permitted action
+- **10 medal-eligible** Epilogue I entries and **21 Gold objectives** (numeric and qualitative thresholds independently cross-checked).
+- **11 narrative stages**, distinguishing `The Landowning Classes` **NO MEDAL** and `Home of the Gentry?` **ONE MEDAL**, sometimes composite in other catalogs.
+- Source-backed A→final phase research for every eligible mission and a separate no-medal setup outline; branching dependency graph, auto-chained mission hazards and a **Gainful Employment** Epilogue I/II crossover.
+- High Honor choices, optional in-mission loot status and historical/unique-pickup limitations; no invented player state.
+- Research citations/dated source register, 20 narrow claim rows, 15 conflicts, suggested GameGuide transfer paths/QA.
+- **Original `L33TW0RLD/rdr2/missions/epilogue_01/` not yet authored**; this is proposed source research, NOT approved live Field Guide v1.1 adoption.
 
-1. **Create only** `agents/handoffs/2026-10-17_mission_epilogue1_042.md` from the dossier's verified contents. Include baseline/head evidence, source caveats, branch staging status, potential Epilogue II overlap, transfer queue, owner decisions and stop gate.
-2. Verify handoff by exact branch ref; **update this checkpoint to `DELIVERED_REVIEW_PENDING`** as final task write.
-3. Verify **exact three-file** branch diff against registered baseline and latest main, all three file reads and terminal commit SHA; report.
-4. **STOP; no further content changes**, no merge/adoption or campaign edits.
+## Exact next permitted action: VERIFY AND STOP
 
-## Unresolved owner/coordinator review
+1. Read back all three exclusive paths from `agent/mission-epilogue1-042` and compare against original baseline and current `main`.
+2. Confirm **exact 3-path** diff, final branch SHA, mission coverage and `DELIVERED_REVIEW_PENDING` handoff/checkpoint; record in terminal response.
+3. **NO MORE EDITS** after this checkpoint; integration/ratification and later original GameGuide dossier writing belong to coordinator/owner-authorized tasks.
+4. Coordinator may cross-check Issue #57 Epilogue II for duplicate counting of `Gainful Employment`, verify non-medal bank scene with in-game Story menu, and review Gold timers before research integration.
 
-- Original Story menu composite Landowning/Home name and no-medal identification; don't count stage twice.
-- Gainful Employment may be completed in Epilogue II; ensure Epilogue II specialist doesn't duplicate medal.
-- Treat timing for cutscenes/checkpoint retry, Jeremiah treat window, exact pre-mission save transitions as field QA.
-- Check bounty target/horse nonlethal capture path for High Honor; no mandated animal harm.
-- This document is not a playable adopted Field Guide or evidence of any current player Gold.
-
-**Recovery/stop:** if final handoff or checkpoint reports Delivered at next startup, do not resume task. Coordinator owns subsequent integration.
+**Reader warning:** sources are independent published game guides examined 2026-10-17, **not** actual fieldplay or current-save evidence. Player is not asserted to have reached these missions. Research contains full T3 spoilers and must not be shown during ordinary Chapter 2 gameplay.
