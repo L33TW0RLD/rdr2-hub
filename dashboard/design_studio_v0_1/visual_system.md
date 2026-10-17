@@ -328,3 +328,24 @@ All are **normal-route progression research, not confirmed owned abilities**. Ch
 **Active urgent scenario:** Inline `Time-sensitive` label on the exact oil-wagon mission row and a very short immediate consequence if supported. Suppress unrelated feature spotlight for that moment; keep all other observed missions selectable. Distinguish urgent actionable Gold/skippability from an optional "new possibility".
 
 **Owner review pending:** Compare A1 vs A2 in native client with two/four observed fictional missions, a new feature that matters, a no-feature state, and a specific active wagon-risk state. Do not self-ratify A1/A2. Current best hypothesis A2 for truly major introductions, A1 for minor contextual notes, but only one visual emphasis at a time.
+
+
+---
+
+## 15. Owner-selected Mission Control v0.8 — inline golden New possibilities
+
+**Selected:** Compact list A with inline feature hints A1. **Not selected:** separate A2 feature spotlight, full-featured C card or editorial cards B. Header stays **LOCKED**.
+
+A mission with a material source-backed upcoming gameplay mechanic may display one compact second line:
+
+- Warm-gold sparkles icon (`#D6AC49`) as the highlighted accent, rather than grey stars.
+- Label: **New possibilities · Fishing**, **New possibilities · Stables & horse care**, or **New possibilities · Emerald Ranch wagon Fence**.
+- The line is an *upcoming system preview tied to completing the mission*, NOT a claim the feature or equipment is already unlocked or owned. Gate on evidence, observed mission marker and current capability status; do not show it for every mission.
+- The normal-route mappings are `m009 → stable_brush`, `m018 → ordinary_fishing`, `m013 → emerald_wagon_fence` (Seamus's wagon Fence only). Atlas adoption remains provisional.
+- Activated John oil wagon task receives a small **Time-sensitive** label on the matching mission row, not a big featured mission card or invented timer.
+- The entire row still opens the original full GameGuide Field Guide. Stars and urgency text are visual annotations, not independent buttons.
+- If no relevant future mechanic is confirmed, show an ordinary minimal row. No external spotlight container under the list.
+
+**Visual priority:** mission title first; understated character name; one warm-gold star + short New possibilities line. The gold star is *not a Gold medal*. The header medal rail alone owns medal results. No header adjustments.
+
+**Status:** design selected by owner. Client click and mobile acceptance still pending.
