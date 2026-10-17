@@ -54,7 +54,7 @@ Folders labelled planned may be introduced by their designated agent; a diagram 
 
 **Example: "I earned Gold and saved."** Only GameGuide reviews the player evidence and updates the canonical campaign. Chat buttons and planning checklist ticks cannot confer medals or save outcomes.
 
-The first concrete, **not-yet-adopted** Free Roam slice is [Camp Development](free_roam/content/projects/camp_development_v0_1.md) → [Heartlands Hunting Reconnaissance](free_roam/content/outings/heartlands_hunting_recon_v0_1.md) → Atlas mechanic reference → return.
+The first concrete, **not-yet-adopted** Free Roam slice is [Chapter 2 conditional intermission](free_roam/content/intermissions/chapter_02_open_window_v0_1.md) → [Camp Development](free_roam/content/projects/camp_development_v0_1.md) → [Heartlands Hunting Reconnaissance](free_roam/content/outings/heartlands_hunting_recon_v0_1.md) → Atlas mechanic reference → return.
 
 ## Where game truth lives
 
@@ -72,6 +72,7 @@ The first concrete, **not-yet-adopted** Free Roam slice is [Camp Development](fr
 
 We are building **complete researched content before claiming complete game coverage**. Agents produce substantive, source-backed mechanic dossiers; content authors connect them to optional Free Roam projects/outings; dashboard specialists build the polished ChatGPT-native experience; QA checks both factual claims and actual interaction behavior.
 
+- [Current content coverage manifest](knowledge/content_manifest_v1.md)
 - [Knowledge record contract](knowledge/record_contract_v1.md)
 - [Original Atlas D01–D28 research backlog](systems_atlas/taxonomy_research_backlog_v0_1.md)
 - [Specialist workstreams](agents/content_workstream_plan_v1.md) and [task registry](agents/registry.md)
