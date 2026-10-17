@@ -152,3 +152,42 @@ No observed map markers, unclear free-roam control
 The visual product should be implemented through a **presentation adapter** that consumes *resolved* view envelopes from the Companion; it should not reimplement Chapter 2 mission prerequisites or project milestones. UI rendering ≠ rule evaluator. Research ingestion and original Guide source-loading belong to their respective authorities.
 
 **Pending real-client test:** submit the prototype with working in-message Back, top wayfinder, project drill-down, Atlas return and full-source-reload action. The user's observed behavior is the acceptance evidence, not the existence of a control.
+
+
+---
+
+## 10. Owner-selected Header v0.2 — Mission Control first, not tab-driven (2026-10-17)
+
+**Explicit supersession:** any examples above with permanent `[Home][Story][Adventure][Atlas]` header wayfinding are *historical v0.1 proposals*, **not the current selected layout**. Owner selected **Home as sole top navigation control**, followed by the 18-segment Chapter 2 medal rail and a full-width **Mission Control** first content container. Story content is already in front of the user; avoid a redundant Story button.
+
+### Header content contract
+
+```text
+chapter_id: '02'                                // known from original GameGuide campaign
+chapter_label: 'Horseshoe Overlook'             // chapter identity; not current GPS
+mission_medal_slots: ordered identities m007..m024 // exactly 18 in Chapter 2
+slot_status: best-recorded Gold | Silver | Bronze | Unverified
+slot_source: original GameGuide campaign/mission_ledger.md
+best_medal_count: {Gold:3,Silver:1,Bronze:0}    // verified from current original ledger at design time
+count_label: '4 / 18 medals recorded'           // NOT 4/18 Gold or 4/18 official completion
+nav_header_actions: ['Home']                   // no Story / Adventure / Atlas header buttons
+first_body_container: 'Mission Control'
+mission_rows: only actual **currently observed** story markers; if unobserved show truthfully unknown
+```
+
+### Read and interaction flow
+
+1. Load the current original GameGuide Chapter 2 mission identity manifest (007–024) and *latest authoritative medal ledger*. Never fill missing entries with `bronze`, `available` or `played`.
+2. Render 18 visible thin segments, the achievement line (`3 Gold · 1 Silver · 0 Bronze`) and `4/18 recorded`. Numbered order is a *visual source index*, not a compulsory mission order.
+3. A segment inspection action reads the existing mission ID and the best verified medal; it does NOT open that mission, record Gold or make it available.
+4. Read real observed available-map-marker authority separately. It is currently **not evidenced by the canonical ledger**, so the default Mission Control empty state must say the current available markers have **not been confirmed**. A design demonstration may show invented markers *only* within a clearly distinct fictional scenario preview.
+5. Once a marker is confirmed, show a compact mission title and genuinely working **Open complete Field Guide** action. Prioritization/hazard rules remain in the companion logic, not duplicated as UI assumptions.
+6. The Home action brings the user back to the header/Mission Control entry; nested mission/Atlas return stays semantic. Other domains are on-demand via context, not header navigation.
+
+### Accessibility and honesty
+
+At 18 slots across a narrow phone, each line segment may be thinner than a tap target. Use separate broad pressable hit areas or a labelled `Inspect mission segment` selection control. Expose IDs, names and statuses in text; preserve keyboard focus and labels. No fake percentage, auto-current GPS, false medal save confirmation or fictional live mission marker.
+
+### Deferred decision
+
+Where exactly the **Adventure** and **Atlas** containers sit under Mission Control, and how they open, remains deliberately **unsettled** for later A/B testing. This iteration concerns the top header + first Mission Control container only.
