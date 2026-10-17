@@ -20,16 +20,25 @@
 | Current `main` registry and Wave 4 plan | VERIFIED GitHub read; exact match |
 | `main...agent/atlas-world-events-031` | VERIFIED no changed paths, ahead 0 / behind 1 |
 | Own three target paths | All 404 on assigned branch at startup |
-| This initial checkpoint | PENDING COMMIT AND EXPLICIT BRANCH READBACK before research |
+| Initial checkpoint | VERIFIED `a2b73f6914727a41058888e0b65edd230dd14382`, blob `1966c09c0f5c3685f82c1518fb9f940a9213b8ee` |
+| Full D21 dossier | VERIFIED `0c1eeab2d6c4e49a23bd5feffe23e7c2587802c2`, blob `fae72554913475ca36cbdb83e20c26801f1899e5`: 11 sections, 32 claims, 19 sources, 3 examples |
 
 **Last verified branch parent:** `0021c319d0232c3a303aeadbe899055260120d54`.  
-**Uncommitted / recoverable work:** None claimed; no substantive research undertaken.  
+**Last verified research commit BEFORE milestone checkpoint:** `0c1eeab2d6c4e49a23bd5feffe23e7c2587802c2`. **Uncommitted work:** none claimed; full dossier durable and read back.  
 **Unknown:** all player encounter flags, documents, decisions, Honor, rewards, region, time, chapter and save data. General research must not serve as campaign evidence.
 
 ## Exact recovery step
-1. **NEXT ACTION:** verify this checkpoint's commit and blob on `agent/atlas-world-events-031`; only afterward read D21 taxonomy and D08/D13/D18/D22/D25 read-only and source-check third-party/official evidence.
-2. Commit complete 11-section D21 dossier and verify readback, source URLs, condition matrix, contradictions, three Chapter 2 examples, user-truth boundary.
-3. Update checkpoint with delivered artifact, author and commit handoff, then close checkpoint `DELIVERED_REVIEW_PENDING`.
+1. **NEXT ACTION:** Commit the final handoff at `agents/handoffs/2026-10-17_atlas_world_events_031.md`; verify it by exact branch readback.
+2. **COMPLETED:** D21 11 sections, 32 claims, 19 source URLs, event/choice/recurrence matrix, contradictions, 3 examples and read-only handoff design.
+3. **NEXT CLOSURE:** after handoff verification, update this checkpoint to `DELIVERED_REVIEW_PENDING` and stop writes.
 4. Compare changed paths against **latest** `main`, verify exact three leased blobs and terminal SHA; report owner review gate and STOP edits.
 
 **Stop condition:** Three verified leased files; workflow `DELIVERED_REVIEW_PENDING`, research `RESEARCHED — REVIEW PENDING` not adopted. Only coordinator may merge or change registry.
+## Research milestone audit — 2026-10-17
+
+- Delivered D21 on own branch: dossier commit `0c1eeab2d6c4e49a23bd5feffe23e7c2587802c2`, SHA `fae72554913475ca36cbdb83e20c26801f1899e5`. All 11 sections and all assigned provisional leaf IDs found.
+- 32 precise claim ledger assertions (EV21-C01 to C32); 19 documented sources (E01–E19); source confidence separates official Rockstar Honor qualitative rule from guide/wiki event staging and contested timing. Three conditional Chapter 2 scenarios present.
+- Classification vocabulary includes `CONFIRMED FINITE`, `CONDITIONAL`, `REPEATABLE`, `DISPUTED`; finite site/unique reward distinguished from repeatable random-event family. Official 25 Chance Encounters not conflated with Bushwhacked/Stranger/Ranters.
+- D25 main dossier did not exist during research; peer task has separate lease. Interface is read-only/pending, no fabricated delivery or adoption.
+- Unresolved: site skip stage and clock, Railroad deed stall, event credit witness-vs-interact semantics, exact per-action Honor amount, vampire unique weapon recovery, per-NPC reward recurrence, edition-specific variations.
+- Exact branch compare before handoff: `main` b3b9023; branch ahead two, behind one; only checkpoint and D21 dossier changed. No shared/decoder/original GameGuide files edited.
