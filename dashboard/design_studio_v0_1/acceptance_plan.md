@@ -214,3 +214,21 @@ No self-merging, no source-admission changes, no game state inferred or written.
 | S12 | Test mobile/keyboard | Complete row hit area, readable small annotation, no horizontal clutter, tooltip-independent essential information | UNTESTED |
 
 **Next owner question:** Prefer A1 (inline intros), A2 (separate spotlight), or a hybrid where A2 is reserved for major newly introduced gameplay systems? Do not ratify until observed click-through feedback. The header remains LOCKED and source authority unchanged.
+
+
+---
+
+## Owner-confirmed A1 final direction — v0.8 tests
+
+**Decision recorded:** A1 compact inline feature note accepted. Keep warm-gold stars and change visible label from "Introduces" to **"New possibilities"**. Reject A2 separate spotlight and permanent featured mission presentation. Header still locked.
+
+| Test | Pass criterion | Current state |
+|---|---|---|
+| Inline appearance | Golden sparkles followed by "New possibilities · Fishing" or the appropriate source-backed mechanic, inside its matching mission row | Design approved, client pending |
+| Regular mission | No invented system opportunity or visual decoration when no relevant mechanic exists | Client pending |
+| Source truth | Future mechanic introduction does not claim the player already owns/unlocked it | Client pending |
+| Urgent mission | Small "Time-sensitive" row annotation for specifically active John wagon stage; no global card/countdown | Client pending |
+| Action | Whole row opens the complete original Guide; icon and label are not extra controls | Client pending |
+| Responsive | Short subline wraps legibly on phone without altering locked header | Mobile untested |
+
+These criteria supersede the earlier A1/A2 selection test. Do not mark actual click-through PASS until the owner has tried it.
