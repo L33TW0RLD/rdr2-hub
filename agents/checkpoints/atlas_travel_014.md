@@ -1,37 +1,45 @@
-# Atlas Travel 014 — Initial Specialist Checkpoint
+# Atlas Travel 014 — Specialist Checkpoint (post-research)
 
-**Task ID:** `atlas-travel-014`  
-**Task/Issue:** [Atlas Wave 2 #17](https://github.com/L33TW0RLD/rdr2-hub/issues/17)  
-**Branch:** `agent/atlas-travel-014`  
-**Registration baseline / starting branch SHA:** `9931058e69ac3c6e7923841da87813de7f015f41`  
-**Latest main inspected:** `6f08f4ed60abde51831f8b72cf6c363aa49feb2d` (coordination commit only; branch one behind, no changed paths)  
-**Started:** 2026-10-17 UTC  
-**Workflow state:** `IN_PROGRESS` · **Research maturity:** `DRAFT`
+**Task ID:** \`atlas-travel-014\` · **Issue:** [#17](https://github.com/L33TW0RLD/rdr2-hub/issues/17)  
+**Branch:** \`agent/atlas-travel-014\`  
+**Registered baseline:** \`9931058e69ac3c6e7923841da87813de7f015f41\`  
+**Main inspected at startup:** \`6f08f4ed60abde51831f8b72cf6c363aa49feb2d\`  
+**Checkpoint day:** 2026-10-17 UTC  
+**Workflow state:** \`IN_PROGRESS\`, final handoff pending  
+**Research maturity:** \`RESEARCHED_REVIEW_PENDING\` — **NOT ADOPTED**
 
-## Scope and authorization
-User explicitly assigned this **conversation** Issue #17 / `atlas-travel-014` and reiterated continuation on its own Wave 2 branch after coordinator's conflict recovery message. **Routing discrepancy:** current coordinator Wave 2 chart labels thread 007 as the travel specialist, while this conversation previously delivered specialist 013. This checkpoint does **not** revise the registry or claim it matches that thread label. Issue #17, travel branch and exclusive file lease are internally consistent. `atlas-compendium-019` is already active under a separate specialist conversation, so this task does not edit it.
+## Exact lease, owner and protected paths
+1. \`systems_atlas/dossiers/d11_travel_wilderness_camps_v0_1.md\`
+2. \`agents/checkpoints/atlas_travel_014.md\`
+3. \`agents/handoffs/2026-10-17_atlas_travel_014.md\`
 
-Deliver one full research dossier for S07.M01–M05: on-foot/mounted traversal, route planning, railway/stagecoach versus camp fast travel, boats/wagons, temporary wilderness camps, practical constraints, Chapter 2 unlock/gate conditions, patch/edition risks, optional examples and exact source/claim ledger. T0/T1 default.
+All other Hub paths, prior tasks and branches, \`save_intelligence/\` PR #24, original \`L33TW0RLD/rdr2\`, D01/D02/D04/D06 Wave 1 sources and D13 law/robbery work are **READ ONLY**. No rebase, force push, merge or direct edits to main.
 
-**Exclusive permitted write paths — exactly three:**
-1. `systems_atlas/dossiers/d11_travel_wilderness_camps_v0_1.md`
-2. `agents/checkpoints/atlas_travel_014.md`
-3. `agents/handoffs/2026-10-17_atlas_travel_014.md`
+## Context and routing discrepancy
+Owner gave this persistent conversation Issue #17 explicitly, then reiterated coordinator conflict recovery / continue on the **travel** branch; however the Wave 2 registry routes travel to specialist 007 while this conversation previously held specialist 013. The registry remains unchanged and coordinator should review thread identity before integration. The separate compendium-019 branch was found already checkpointed by another specialist chat and was **not edited**. The travel branch had no prior worker changes on initial recovery.
 
-**Protected/read-only:** previous agent task branches, `agents/registry.md`, other governance/shared indexes, Atlas taxonomy/manifest, `save_intelligence/` and PR #24, original `L33TW0RLD/rdr2` campaign/mission/guides, D01/D02/D06 Wave 1 and D13 law/robbery research. No rebase, force push, self-merge or ratification.
+## Durable, verified work
 
-## Verified at recovery
-- Latest main, registry, Wave 2 launch and Issue #17 read; owner explicitly waived the known one-commit-behind-main nonissue.
-- Exact travel branch exists at registered baseline with `main...agent/atlas-travel-014`: ahead 0, behind 1, no changed files.
-- All three leased files absent before this initial checkpoint.
-- Wave 1 D01/D02/D04/D06 are merged **RESEARCHED — REVIEW PENDING**, not adopted; crosslinks read-only.
-- No claimed player map/horse/fast-travel unlock or movement state.
-- No substantive research yet; only task/authority recovery.
+| Milestone | Commit or exact readback | Verification |
+|---|---|---|
+| Initial **pre-research** checkpoint | \`ab5e643f174aab2c20a9ec62a0f82d813150b14e\` | VERIFIED explicit branch readback |
+| D11 complete evidence dossier | \`057a449afb2b5b341dd5b8b736962ef3390a4d2b\` | VERIFIED readback blob \`52db99a9ce1d5bf892f23a27be20e336ceed030d\`, 289 lines |
+| D11 scope/content checks | 11 numbered sections, S07.M01–M05, 24 claim IDs, 23 source IDs, 3 Chapter 2 examples, primary Rockstar 1.15 link and RDR1/Online negative proof | PASSED programmatic readback |
+| Allowed-path compare before this checkpoint update | ahead 2 / behind 1, only checkpoint + dossier changed | VERIFIED |
 
-## Recovery contract
-- **Last verified commit before this checkpoint:** `9931058e69ac3c6e7923841da87813de7f015f41`.
-- **Exact next permitted action:** Verify this initial checkpoint's commit by fetching its file with explicit `ref=agent/atlas-travel-014`, then independently source-check D11 Story Mode travel and temporary wilderness camp mechanics.
-- **Remaining sequence:** Produce full 11-section D11 dossier; evidence/contradiction audit; commit and verify; advance checkpoint; write final handoff; branch compare and exact 3-file readback; stop.
-- **Unresolved:** fast travel/cargo behavior, player fast-travel map activation, train/stagecoach fare/availability and temporary camp restrictions all need independent verification.
-- **Hard blockers:** none identified; routing label discrepancy documented for coordinator.
-- **Stop:** `DELIVERED_REVIEW_PENDING` upon verified deliverables, without merge, index edits, or unverified game-state claims.
+**Last verified commit BEFORE this update:** \`057a449afb2b5b341dd5b8b736962ef3390a4d2b\`.
+
+## Research limits and disputes to transfer
+- Stagecoach blocking with bounty “anywhere” versus state-local restrictions — **DISPUTED** (PowerPyx, RDR2.org bounty and wiki); inspect current coach menu and crime state.
+- Horse loaded-pelt/carcass retention after fast travel — **DISPUTED**; normal successful travel stories conflict with loss/stuck reports. Deliver valuable ordinary cargo directly, verify Horse Cargo and vendor after any transition; D01/D04 are read-only.
+- Rockstar 1.15 formally adds player-founded camp fast travel after lodging upgrade: **HIGH** primary; launch-era guides are version-bound. RDR1 waypoint camp travel and Red Dead Online pamphlets must never leak into Story Mode.
+- Temporary camp exact placement radius, cost/clock for paid transport, available boat/persistent return craft and mission passenger handling not fully verified: **UNKNOWN**.
+- Base lodging prices $220 + $325 subject to actual Ledger/edition/discount; D02 owns spending.
+
+## Exact successor action
+1. **Current phase:** dossier written, committed, read back; final handoff not yet written.
+2. **Exact next permitted action:** Create **only** \`agents/handoffs/2026-10-17_atlas_travel_014.md\` on this branch, including main baseline, two verified commits, source disputes, owner review choices, scoped comparison and later exact verification requirement.
+3. **Then:** read handoff, dossier and checkpoint by explicit \`ref=agent/atlas-travel-014\`, compare to freshest main, update this checkpoint to \`DELIVERED_REVIEW_PENDING\`, verify three-path lease, report terminal SHA in chat.
+4. **Blockers:** no GitHub write conflict or gameplay hard dependency encountered; routing label discrepancy is disclosed, not silently fixed.
+5. **Stop:** \`DELIVERED_REVIEW_PENDING\`; no self-merging/ratifying/index changes.
+6. **Live player progress:** current unlocks, route history, horses, cargo, saves, medals and camp purchases remain **UNKNOWN**.
