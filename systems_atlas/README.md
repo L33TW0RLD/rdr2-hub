@@ -1,8 +1,23 @@
 # Systems Atlas
 
-**Status:** TAXONOMY DRAFT / UNRATIFIED · **Updated:** 2026-10-16.
+**Status:** TAXONOMY DRAFT / UNRATIFIED · **Six source-checked dossiers integrated as RESEARCHED — REVIEW PENDING** · **Updated:** 2026-10-17.
 
 The Atlas documents gameplay mechanics and dependencies for RDR2 Story Mode. It is a **reference**, not a live campaign commander, compulsory checklist or proof of the player's progress.
+
+## Wave 1 — researched dossiers (NOT ADOPTED)
+
+Six parallel specialists delivered complete source-checked Story Mode references. **Content maturity is `RESEARCHED — REVIEW PENDING`**, not ratified gameplay authority, and actual player unlocks, purchases, objects, saves and achievements remain unverified until GameGuide/player evidence.
+
+| Dossier | Systems / practical focus | Review status |
+|---|---|---|
+| [D01 Horse lifecycle](dossiers/d01_horse_lifecycle_v0_1.md) | Ownership, temporary/stabled horse, bonding, saddle/cargo and loss | REVIEW PENDING — horse-cargo recovery unresolved |
+| [D02 Camp Ledger](dossiers/d02_camp_ledger_upgrades_v0_1.md) | Strauss return/deposit gate, funds, purchasing, upgrades | REVIEW PENDING — price and wallet shortfall caveats |
+| [D03 Satchels / Pearson](dossiers/d03_satchels_crafting_v0_1.md) | Recipes, tools, material reservation and intact-carcass distinctions | REVIEW PENDING — squirrel pelt/carcass discrepancy |
+| [D04 Hunting](dossiers/d04_hunting_transport_v0_1.md) | 3-star quality, species weapons, clean kills, recipients | REVIEW PENDING — trinket/decay uncertainty |
+| [D05 Camp life](dossiers/d05_camp_life_opportunities_v0_1.md) | Companion activities, requests and chapter-specific risks | REVIEW PENDING — some activity credit / Pearson triggers disputed |
+| [D06 Inventory](dossiers/d06_inventory_items_v0_1.md) | Item classes, unique components, safe disposition, limits | REVIEW PENDING — storage/rare-item recovery limitations |
+
+**Read the [Wave 1 cross-dossier integration review](reviews/2026-10-17_wave1_cross_dossier_review.md) before recommending an irreversible sale, donation, rare material consumption, horse/cargo transition or chapter-sensitive activity.** One dossier owns each general rule; related dossiers link it read-only. Taxonomy Sxx.Mnn leaf IDs and S31 remain provisional.
 
 ## Taxonomy Architect 002 — review-only additions
 
@@ -44,4 +59,4 @@ The Atlas is **one shared mechanics knowledge foundation** for Mission Control, 
 - [Free Roam examples](../free_roam/content/README.md) — link Atlas mechanic rules without inventing acquired gear or completed tasks.
 - [Companion routing](../companion/context_contract_v1.md) — explanatory detours and return context.
 
-**Dossier production:** registered research specialists [Atlas Parallel Wave 1](../agents/atlas_parallel_wave1_v1.md) own six future files under `systems_atlas/dossiers/`: D01 Horses (007), D02 Camp (008), D04 Hunting (009), D03 Satchels (011), D05 Camp Life (012), and D06 Inventory (013). They are currently **PLANNED**, not completed. Keep the broader D01–D28 backlog, statuses, original S01–S30 and provisional S31 untouched. Directory/file creation by task agents does not mean owner adoption.
+**Dossier production:** [Atlas Parallel Wave 1](../agents/atlas_parallel_wave1_v1.md) delivered D01–D06 references for coordinator integration; each remains **RESEARCHED — REVIEW PENDING**. Continue the broader D07–D28 research backlog with separate tasks and leave the original S01–S30/proposed S31 unchanged. Merged research does **not** mean owner/gameplay adoption.
