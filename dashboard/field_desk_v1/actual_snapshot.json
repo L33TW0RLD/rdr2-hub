@@ -1,0 +1,79 @@
+{
+  "schema": "field_desk_snapshot_v1",
+  "authority": "GAMEGUIDE_READ_ONLY",
+  "as_of": "2026-10-18",
+  "canonical_record_at": "2026-10-17",
+  "sources": {
+    "campaign": "L33TW0RLD/rdr2/campaign/current_state.md",
+    "medals": "L33TW0RLD/rdr2/campaign/mission_ledger.md",
+    "collectibles": "L33TW0RLD/rdr2/campaign/collectibles_and_missables.md",
+    "unlock_map": "L33TW0RLD/rdr2-hub/systems_atlas/unlock_and_dependency_map_v0_1.md",
+    "design": "L33TW0RLD/rdr2-hub#62",
+    "progression": "L33TW0RLD/rdr2-hub#60"
+  },
+  "chapter": {
+    "number": 2,
+    "name": "Horseshoe Overlook",
+    "player_current_position": "UNKNOWN"
+  },
+  "medals": {
+    "global_gold": 9,
+    "global_gold_target": 104,
+    "completed_medal_entries": 10,
+    "chapter2_best": {
+      "007": "GOLD",
+      "008": "GOLD",
+      "010": "SILVER",
+      "021": "GOLD"
+    },
+    "gold_replay_pending": [
+      "010"
+    ]
+  },
+  "last_reported": {
+    "horse_bonding_level": 4,
+    "hosea_bear_mission_completed": false,
+    "horse_brush_visible": false,
+    "notes": "Player observations dated 2026-10-17; do not override newer player evidence."
+  },
+  "collectibles": {
+    "cornwall_mining_letter": "PLAYER_REPORTED_COLLECTED",
+    "cornwall_oil_letter": "PLAYER_REPORTED_COLLECTED",
+    "jimmy_brooks_pen": "UNKNOWN",
+    "camp_book_rambles": "UNKNOWN",
+    "dutch_speech_notes": "UNKNOWN",
+    "ledger": "UNKNOWN",
+    "leather_working_tools": "UNKNOWN"
+  },
+  "save_archives": {
+    "matched_byte_for_byte": true,
+    "source": "Two same-content ZIP attachments, inspected 2026-10-18; metadata only",
+    "slots": [
+      {
+        "slot": "SRDR30000",
+        "label": "All That Glitters",
+        "percent": 14.6,
+        "save_label_time": "2026-10-17T19:16:43"
+      },
+      {
+        "slot": "SRDR30001",
+        "label": "All That Glitters",
+        "percent": 14.4,
+        "save_label_time": "2026-10-17T17:01:00"
+      },
+      {
+        "slot": "SRDR30002",
+        "label": "Paying a Social Call",
+        "percent": 13.5,
+        "save_label_time": "2026-10-17T11:56:03"
+      },
+      {
+        "slot": "SRDR30015",
+        "label": "(Autosave) All That Glitters",
+        "percent": 14.6,
+        "save_label_time": "2026-10-17T19:09:02"
+      }
+    ],
+    "decoding_boundary": "Save labels and percentages do not prove mission completion, gold, inventory, ledger, cash, markers or unlocks."
+  }
+}
