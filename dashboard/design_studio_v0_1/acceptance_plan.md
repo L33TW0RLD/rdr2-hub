@@ -317,3 +317,23 @@ The owner selected A1 permanently for this design iteration and approved the fin
 **Pending owner choice:** A stable system directory, B dynamically promoted one-at-a-time focus, or a specifically described hybrid. Do not silently ratify B from the assistant's design preference. Adventure Project/Outing A/B remains separately unselected until this system categorization resolves the third-container architecture.
 
 No self-merge, no GameGuide edits, no automatic save tracking.
+
+---
+
+## Owner-selected Adaptive Focus icon tiles — v1.3 acceptance
+
+**Decision:** B adaptive focus selected; replace the old system dropdown with six square icon/name controls (five game domains plus Overview fallback). These checks supersede v1.2's undecided A/B selection; do not imply client acceptance without user testing.
+
+| Check | Expected | State |
+|---|---|---|
+| SQ1 · Square geometry | Touch-friendly square icon-led buttons, each with centered system name below its icon | OWNER DIRECTION; CLIENT PENDING |
+| SQ2 · Instant selection | Tap Horse, Camp or Wilderness; one featured system changes without starting a new chat turn | CLIENT PENDING |
+| SQ3 · Overview | Overview returns to compact system browse without asserting a featured current activity | CLIENT PENDING |
+| SQ4 · Consistent identity | Selected tile, featured heading and related links agree; no source-mapping drift | CLIENT PENDING |
+| SQ5 · Action separation | Picker is local UI selection, Explore performs a real current source-reading turn | CLIENT PENDING |
+| SQ6 · Six-tile wrapping | Desktop and phone both show all six reachable without forced horizontal scroll, truncation or tiny tap targets | PHONE UNTESTED |
+| SQ7 · Semantic control | Meaningful name/selected state via label and a non-color-only active style | CLIENT PENDING |
+| SQ8 · Truth | Toggling a tile never claims player owns/unlocked any game system, made a purchase or selected a permanent project | CONTRACT |
+| SQ9 · Locks | Medal rail/dots, Bronze, Home and Mission Control typography/actions untouched | OWNER LOCKED |
+
+No source adoption, original campaign write, self-merge, or independent game system progress store.
