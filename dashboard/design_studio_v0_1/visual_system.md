@@ -1,0 +1,543 @@
+# RDR2 Field Desk — Visual System v0.1
+
+**Status:** DESIGN PROPOSAL / PROTOTYPE, NOT RATIFIED  
+**Issue:** [#61](https://github.com/L33TW0RLD/rdr2-hub/issues/61) · **Base:** Hub `main` at `ee18b0842ac1f2a3b472b7580e295536da4c2c8f`  
+**Medium:** ChatGPT-native layouts and functioning controls. Not an external website, desktop overlay or persistent application.
+
+## 1. Visual direction
+
+**Working name: The Field Desk.** It should feel like Arthur's notebook meeting a clear modern mission dashboard, not an antique saloon-themed skin or an analytics cockpit. Beautiful because *hierarchy is legible*, choices are coherent, and nothing crowds out the next action.
+
+- **Tone:** restrained frontier editorial, clean open space, narrow use of imagery, readable neutral text, strong section titles, fine dividers.
+- **Material:** use native ChatGPT surfaces and system typography. No faux leather, huge background illustrations, ornamental borders, misleading period maps, invented live red badges or packed financial-style KPIs.
+- **Priority:** one main focal point per response. Secondary options compact and visible but not competitive.
+- **Character:** a small recurring contextual header; iconography for navigation categories (book, compass, bag, atlas), never as the only label; dossier-style phase rail only in Mission Control.
+- **Text, not image, for truth:** chapter, source maturity, specific availability and Gold deadlines are always real text accessible to screen readers.
+- **Imagery:** optional single spoiler-safe, scene-matching illustration ONLY if trustworthy and genuinely useful. Text layout must survive without imagery.
+
+## 2. Design tokens as behavior, not magic CSS
+
+Use semantic token names compatible with actual available native UI:
+
+| Role | Native pattern | Meaning |
+|---|---|---|
+| Primary panel | standard surface, readable heading and body | Current task |
+| Secondary information | subtle `surface-secondary` + smaller body | Context, reason, source |
+| Group edge | light `border` + radius | Separate one actionable destination |
+| Divider | subtle grey | Hierarchy break, not decoration |
+| Interactive destination | entire pressable labelled row/card | Genuine view change or user-turn submission |
+| Selected navigation | contrasting subtle background + emphasized label | Local focus, not mission completion |
+| Safety risk | alert icon and direct action text | Evidence-backed active irreversible event ONLY |
+| Confirmed gameplay result | truthful provenance from original GameGuide | Never inferred from a checkbox |
+| Source status | plain `Research pending / Confirmed by GameGuide / Fictional fixture` | Avoid deceptive `LIVE` badge |
+| Depth | L0–L4 information disclosure | Don't put all content at L1 |
+
+Approximate density targets (heuristics, not pixel guarantees):
+- L0 header: 2 compact lines plus one optional evidence-backed warning; no fake current GPS.
+- L1 Home: main next choice + two compact meaningful alternatives, one contextual project/outing; short enough to scan without a full-screen scroll.
+- L2 Project: 3–5 clearly titled related tracks, status per *specific capability* (e.g. `Satchel tools unconfirmed`, not `Pearson locked`).
+- L3 Atlas: quick rule first, then practical and optional comprehensive depth.
+- L4 Mission: **full original Field Guide v1.1** Gold metrics + chronological A–final phases + all critical inline warnings + expandable Intel; intentionally longer, because accuracy outranks dashboard compactness.
+
+## 3. Primary navigation
+
+Visible main destinations should be discoverable **without making them mandatory**:
+
+```text
+RDR2  /  THE FIELD DESK              CHAPTER 2 · FICTIONAL REHEARSAL
+Horseshoe Overlook                   Exact live position: NOT CONNECTED
+
+[ Home ]   [ Story ]   [ Adventure ]   [ Atlas ]
+
+HOME — What deserves your attention?
+-------------------------------------------------------
+FEATURED    Develop the Camp
+            Why it matters · one next meaningful step       [Open]
+STORY       Uncle · Javier — two *observed fictional* options
+OUTING      Explore the Heartlands (conditional)
+QUESTION    "How do perfect pelts work?" → directly open Atlas
+-------------------------------------------------------
+Source: fictional scenario • only your reported/gameguide facts count
+```
+
+The four destinations are **wayfinding**, not four always-visible dashboards. ChatGPT conversational intent must route directly to the asked feature: `"I want to hunt"` should show Hunting, not a Home-first instruction.
+
+**Avoid a compulsory carousel of cards.** A full mission guide is a different content mode, not a reduced card inside Home. Within a mission, keep an obvious `Back to Story` or return-to-origin action.
+
+## 4. Structural anatomy
+
+1. **Identity + truthful header:** RDR2 / Field Desk, chapter/camp only if source or fixture actually supplies it, a short origin line (`SIMULATION` when fictional), one safety alert if applicable.
+2. **Universal wayfinder:** Home, Story, Adventure, Atlas. A selected view has clear emphasis and a genuinely working navigation event.
+3. **Breadcrumb row (when nested):** e.g. `Adventure › Camp › Pearson`. Back restores the immediate semantic target, Home resets local path. Across new ChatGPT messages request source reconstruction, not fake local persistence.
+4. **Primary reading plane:** current user's intent. The central unit is either one project, one outing, one mechanic or the full mission guide.
+5. **One contextual next step:** relevant and safe if evidence supports it. `Wait / learn / another mission` can be an action; never force one quest to precede another because its file number is lower.
+6. **Optional depth:** related systems, raw source link, optional Intel, why-this suggestion. Expand in place.
+7. **Source footnote:** short provenance/classification. No 104-line catalog of supporting references in every main panel.
+
+## 5. Presentation choices
+
+| Surface | Hero content | Secondary | Escalation |
+|---|---|---|---|
+| Home | One recommended meaningful decision with why-now | Two genuine alternatives and one watch item | Go directly to a focused surface |
+| Story list | Several **observed** markers, not fixed order | Pending marker research clearly separate | Selected mission opens entire original Field Guide |
+| Adventure | One continuing PROJECT and one chosen OUTING | Three to five project tracks; resources unknown unless observed | Expand track or mechanic with return target |
+| Atlas browse | Search or curated families, no full taxonomy dump | Research maturity and context | Quick / Practical / Comprehensive lesson |
+| Atlas detail | Direct 30-second answer | Applicability, pitfall, deeper source, return | Expanded study or supported outing |
+| Mission guide | All Gold metrics and chronological phases | Relevant phase Intel; critical warnings INLINE | Report/preflight and source-based reconstruction |
+| Campaign review | Only ledger-confirmed facts | Report or unknown status | GameGuide handles verified changes |
+
+## 6. Mobile & accessibility
+
+- All important content fits in a single vertical reading column. No mandatory horizontal scrolling or forced fixed sidebar.
+- Nav labels stay textual and wrap or compress sensibly; never rely on icon-only controls.
+- Pressable rows/cards should be large enough to tap comfortably, with button names describing their effect. Avoid decorative action surfaces.
+- Controls must be keyboard and screen-reader accessible through native host behavior; no tap-target overlap.
+- Compact cards hold 2–4 lines; long guides contain their own phase-local navigation without hiding phase A→final.
+- Unknown state should be explicit (`not checked`, `current map unknown`) and never rendered as a zero, greyed-complete, or green success.
+- One evidenced active warning stays near the related risk, not buried inside closed Intel or below 20 unrelated cards.
+- Screens must remain understandable without any optional image.
+
+## 7. What this prototype does not claim
+
+No persistent full-screen app, React website, independently styled native fonts, data sync, actual in-game minimap/GPS, automatic player-control detection, cross-turn checkbox restoration, full save decoder, autonomous live project tracking, universal adoption of Atlas research or game-owned medal progress. All Chapter 2 demonstrations are explicitly **fictional** and do not overwrite the user's recorded campaign.
+
+## 8. Review hypothesis
+
+Try **Contextual Field Desk** before a permanent console. Keep navigation visually accessible, while primary content remains purpose-specific and collapses back to one focused action. The design succeeds if a player can answer `what next?` on Home, find a project, ask a mechanic question, and get the entire original mission guide with **at most two deliberate navigation actions** for each path.
+
+This is a design proposal for owner critique, not an adopted universal standard.
+
+
+---
+
+## 9. Owner-selected refinement v0.2 — Current Chapter medal rail (2026-10-17)
+
+**Owner A/B preference:** **Placement A + Style A + Emphasis B**. This section supersedes the provisional top-level four-button header in §§3–4; the broader hierarchy of screens survives, but navigation is exposed contextually instead of as fixed Story/Adventure/Atlas header buttons.
+
+### Exact visual structure
+
+```text
+RDR2 HUB / FIELD DESK                         [Home]
+HORSESHOE OVERLOOK
+Chapter II
+
+  3 GOLD     1 SILVER   ·   4 / 18 recorded
+  ━━━ ━━━ ━━━ ━━━ ━━━ ━━━ ... 18 thin medal segments
+  (best reported medal by fixed Chapter 2 mission identity)
+
+MISSION CONTROL
+  Available mission markers (ONLY currently confirmed)
+  When no current marker evidence: say "Not checked"
+  No fictional mission listed as actually available
+
+  [one observed mission row, if known]   → original FULL Field Guide
+```
+
+**Rail:** exactly **18 equally sized mission segments**, Chapter 2 Operation **007–024**, reference order only. Nominal line height **4px** (selected mark may rise to 5–6px); narrow consistent ~2–3px separation; flat/subtle corners, no chunky progress fill, no equal-width-looking continuous generic completion line. Keep generous vertical breathing room and a compact achievement line so the fine rail remains an intentional focal object.
+
+**Color semantics:** Gold = warm muted gold (`#D6AC49`), Silver = quiet cool silver (`#C2C9D1`), Bronze = muted bronze (`#B47D59`), Unverified = neutral dim slate (`#424750`). These are **proposed design colors**, not permanent implementation tokens or accessibility-tested semantic colors. Text labels provide equivalent meaning; never require color vision alone.
+
+**Evidence-backed demonstration readback (2026-10-17, original GameGuide `main`):** 007 Gold, 008 Gold, 010 Silver, 021 Gold, remaining fourteen chapter mission identities unverified; **3 Gold, 1 Silver, 0 Bronze, 14 without recorded medals**. The ledger has ten completed medal-bearing entries across all chapters, including six Chapter 1 Gold, but **the displayed bar is Chapter 2 only**. Source: `L33TW0RLD/rdr2/campaign/mission_ledger.md`; current medal statements are user-reported except 021 Gold with in-game screenshot evidence. Do not infer save persistence, current map marker presence or a medal for any unknown slot. Best medal recorded is not equivalent to independently reloaded save state.
+
+**Heading emphasis:** achievement-focused **3 Gold** first, with **1 Silver · 0 Bronze**, then **4/18 recorded** as secondary numerics. Avoid a large KPI hero that steals attention from Mission Control. This is not a percentage-of-game completion bar.
+
+**Interaction:** the visible line is deliberately slim, so do **not** require tapping a 4px target. Either use padded/invisible semantic segment pressable hit zones, plus a labelled accessible mission selector, or the mission selector alone. Selecting a slot reveals Operation ID, title and truthful medal status in a compact detail line, not a full modal.
+
+### Header/navigation redesign
+
+- **Home** remains the *only* visible universal header action.
+- **Mission Control is the first primary container immediately beneath the rail.**
+- Do **not** show Story / Adventure / Atlas as three header buttons. These are valid internal destinations exposed via conversational intent, related-content links or subordinate section navigation **below** Mission Control.
+- Mission Control lists **ONLY observed/confirmed current mission markers**, never completed historical operations as if they were presently available. `Unknown markers` is an explicit, useful empty state: invite observation and do not populate a fake mission shelf.
+- Gold **replay cleanup** is a distinct action from live Story markers; Operation 010 Silver should not appear in `Available missions` merely because it is replayable. A separate replay context may be shown when requested.
+- Keep user-selected full original Guide v1.1 as a different detailed content mode.
+- Under Mission Control, projects/Atlas can be represented later as meaningful secondary containers; **do not design below-the-fold layouts in this header-specific checkpoint**.
+
+**Current acceptance gate:** look at the thin 18-slot line on both desktop and phone, confirm the type hierarchy and check inspectability. Only then finalize colors, density and below-Mission-Control containers.
+
+
+---
+
+## 10. Owner feedback v0.3 — completely clean medal rail (2026-10-17)
+
+**This latest decision supersedes the previous segment inspection treatment in §9.**
+
+- Header subtitle: **`Chapter II` only**. Remove `Mission medals`; medal meaning is already expressed by the colors and summary.
+- **Remove the whole under-rail inspection section**, including `18 missions · Select a segment to inspect`, the ugly mission dropdown, and the persistent details/status panel.
+- **One interaction:** hovering a rail segment may reveal a native tooltip with *only the mission title*; clicking/tapping the segment may open a tiny anchored popover containing **the mission title only**, no Operation number, redundant medal name or `Unverified` narration.
+- Keep each segment's **visible stroke 4px** and provide an enlarged accessible hit area that does not increase visible rail thickness. A click toggles its small title popover; no additional buttons, below-rail cards or forced expanded view.
+- A screen reader/keyboard should still receive a meaningful accessible segment name/status via native semantics or an offscreen accessible description, even though visible popover text is title-only. This is an accessibility requirement for later client verification; the design must not force a visual dropdown just to be accessible.
+- Selected segment is a local UI inspection only, **not** an implicit Story marker, mission open, earned medal or save update.
+- Keep the rail as an intentional, breathable element directly before **Mission Control**; do not insert a permanent bottom row or legend between them.
+
+**Resulting vertical hierarchy:** `Horseshoe Overlook` → `Chapter II` → `3 Gold · 1 Silver · 0 Bronze     4/18 recorded` → `18-slot precision rail` → **Mission Control**.
+
+This is a **design-only** amendment. Segment popover behavior and accessibility await owner click-through; no source authority or gameplay changes.
+
+
+---
+
+## 11. Owner feedback v0.4 — hover title, click opens source (2026-10-17)
+
+**Supersedes §10's click-toggle popover.** The current popover as rendered is visually intrusive; user asked for **mouseover to reveal mission title, click for action**.
+
+- Keep the visible **18 × 4px** rail, achievements and immediate Mission Control placement unchanged.
+- Hover a segment: display the mission title **only**, using the host's lightweight hover tooltip (no manually framed persistent popover, badge, extra inspector, operation number or medal-verification line).
+- Clicking a segment: **open the selected mission's original full GameGuide Field Guide**, as a reference/replay page, via a real user-invoked source-reload turn. Clicking an unobserved/neutral mission must NEVER imply that its map marker is currently available, its medal was earned, or that Gold replay is underway.
+- Keep the segment's hit area substantially taller than its 4px visible stroke; visible thickness is separate from input geometry. On touch devices with no hover, tapping invokes the primary guide action; accessible control names can carry mission title and medal provenance.
+- The design cannot control the host's native tooltip colors/shape. If these hover labels are still aesthetically wrong in the actual client, investigate a client-supported custom hover presentation later rather than rebuilding a click popover.
+- No action is hidden exclusively behind hover. The click action remains discoverable through short global context (e.g. the overall header purpose) and control accessibility; avoid replacing the removed under-rail UI with a new instruction band.
+- Mission Control remains the first main container; the slim medal rail is **a chapter-wide historical mission index**, not the list of currently available mission markers.
+
+**Unchanged:** Chapter II only, 3 Gold / 1 Silver / 0 Bronze / 4 of 18 recorded per original GameGuide, other fourteen neutral. No save or gameplay writes.
+
+
+---
+
+## 12. Owner decision v0.5 — map-marker dots and bronze tint (2026-10-17)
+
+**Keep the owner-approved v0.4 header exactly:** `Horseshoe Overlook`, `Chapter II`, the best-medal summary, the 18-segment thin rail, lightweight **hover for title** and **click for full original Field Guide**. Its tooltip appearance and spacing were positively reviewed. No dropdown or persistent detail panel returns.
+
+**Only two additions:**
+
+1. **Mission availability as a separate second micro-mark:** a discrete ~4–5px neutral/bright dot **directly below the corresponding mission's existing medal segment** when that mission's marker is actually observed on the player's in-game map. Align one dot to the *center of each exact segment's column*. Empty columns have **no dot**. The dot is not a second mission list, a medal type, a completion mark, a progress step, nor an interactable secondary target. The parent segment's hover title and click→full Field Guide behavior remains unchanged.
+2. **Bronze is actually bronze visually:** the `Bronze` summary typography uses the already-proposed warm muted bronze `#B47D59` and any **best-recorded BRONZE** segment uses that hue. Current authoritative Chapter 2 **best medals** contain zero Bronze (the original Bronze earned on 021 was later superseded by Gold). Do not invent a Bronze segment just to demonstrate the color.
+
+### Evidence and states for dots
+
+| Map-marker evidence | Dot state | Legitimate meaning |
+|---|---|---|
+| Explicit currently observed Chapter 2 mission marker from current real player report / authoritative verified observation | **Visible light neutral dot** | That specific mission marker was observed available at the supplied checkpoint |
+| Explicit synthetic fixture marker, within clearly labelled **design/demo mode only** | **Visible light neutral dot** | Simulated availability, never actual current game |
+| No current marker observation / marker not checked | **No dots**, not a completed or unavailable verdict | Live map availability is **unknown** |
+| Historical completed mission or medal-only ledger record | No dot unless a distinct current observation exists | Past Gold/Silver/Bronze is **not** proof of a currently available Story marker |
+| Previously observed but outdated checkpoint | Do not automatically retain as currently visible | Must revalidate on relevant game-state change or new observation |
+
+**Visual geometry:** rail remains ~4px high, segmented with narrow 2–3px gap; dot row sits close beneath it (approx. 5–7px between centerlines/visual marks), no legend, instructions, dropdown or under-rail inspector. Both marks share a generously padded **one-button** hit area per mission. Dots should have a neutral ivory/light color (not gold), so Gold achievement and availability are not visually conflated.
+
+**Accessibility:** the segment's accessible label can state title and current marker observation **separately from best medal**. In contrast, the *visible hover tooltip remains title-only*, per owner instruction. No information can rely solely on hover or color: confirmed-marker mission rows in Mission Control provide text equivalents; unverified map status is explicitly explained in that container when needed.
+
+**Current medal record:** 007 Gold; 008 Gold; 010 Silver; 021 Gold; fourteen unknown. Summary **3 Gold / 1 Silver / 0 Bronze / 4 of 18 recorded** unchanged. Current mission markers have **not been read from the map**; design dot examples must be labelled fictional/illustrative outside the header rather than representing actual available missions.
+
+**Presentation goal:** the secondary marks are a quiet annotation of the rail, **not a new bulky information row**. Do not enlarge the header or insert more chrome. User-approved hover and action are preserved exactly.
+
+Status: DESIGN SPECIFIED; dot positioning, hover integration and mobile legibility require client click-through.
+
+
+---
+
+## 13. Mission Control container v0.6 — exploratory A/B/C, header locked (2026-10-17)
+
+**Design gate:** Chapter II header/18-segment best-medal rail, status summary, neutral map-availability dots, hover-title, click-full-source and Home **LOCKED by owner**. This proposal changes **only the first Mission Control container beneath it**; no header restyle or new header navigation tabs. Do not treat any variant as approved until the owner selects it.
+
+### What Mission Control owns
+
+**Mission Control is a choice surface, not a miniature full Field Guide and not a replay catalogue.** It displays only missions whose markers were actually observed available in the relevant game checkpoint; other known mission dossiers remain reference-accessible through the medal rail. It must not silently infer eligibility from story numbering, medal history or disputed prerequisites.
+
+**The central decision:** how do we make two, four or more observed choices feel effortless without turning this into a repetitive dashboard?
+
+#### Variant A — Compact Mission List (high scan efficiency)
+
+- One clean shared container. Row = mission heading, one meaningful muted descriptor (mission-giver only when independently observed/researched), single chevron / entire row activates full original guide.
+- No redundant "Available" label on every row; container title + source confidence do that once.
+- Thin dividers, no heavy card nested around every mission, no thumbnails by default.
+- Scales best to three or more choices and mobile.
+
+#### Variant B — Editorial Mission Cards (more character)
+
+- Separate restrained full-width cards with heading, one **source-grounded spoiler-free** sentence of premise, NPC label when known, small arrow.
+- Never show fabricated Gold deadlines, location, difficulty, implied route or earned medals.
+- Story previews may be wider on desktop but retain one-column order on mobile, no generic stock image requirement.
+- Stronger atmosphere but takes more vertical room.
+
+#### Variant C — Featured Choice + Alternates (contextual focus)
+
+- One top featured observed option with **transparent why-featured** rationale only when genuinely supported by expressed player intent, active safety risk or a deliberate selection; otherwise feature **none**, not the first numbered operation.
+- Remaining observed choices as compact rows below. Do not imply featured choice is canonical mission order or that alternatives are unavailable.
+- If a specific skippable event is explicitly active, it can receive the spotlight with a direct inline safety explanation; **no invented countdown**.
+- Strongest pacing, but highest risk of accidental steering and hiding legitimate choices.
+
+### Required states in each variant
+
+| State | Display rule | What must not happen |
+|---|---|---|
+| Two observed markers | Two equally available actions | Forced "Mission 007 first" |
+| Four or more observed markers | All can be reached; compact format, no default teaser for every entry | Hide a mission solely because the screen is short |
+| **Unknown map** | Small honest empty state: "Available markers not checked"; one real action to ask for a map observation | Display zero available or infer marker visibility from ledger |
+| Explicitly active skippable Story stage | Action-critical warning **inline and visible**, appropriate mission top-ranked by safety—not generic preference | Timer/countdown guessed, camping/hunting suggestion above risk |
+| Replay requested | Separate clear replay/Gold cleanup context; when medal already Gold, don't invent a pending cleanup | Mix medal history into presently available Story markers |
+
+**Real available markers currently unverified:** any displayed NPC mission list in the in-chat design example must be introduced as **SIMULATED MARKERS**. The actual canonical medal ledger is a historical best-result record, not current map telemetry.
+
+### Micro-visuals and interaction constraints
+
+1. **Header → divider → Mission Control title → available mission choices**. The container should begin close to the rail without another status dashboard.
+2. Main primary action is **open the complete original GameGuide Field Guide**. The card/row itself can be the click surface; a chevron communicates navigation but is not a separate inert control.
+3. Body should not have redundant operation IDs, medal counts, Gold/Silver/Bronze labels, or a progress bar. Those already belong in the locked header.
+4. A small \`Observed markers / Simulated fixture\` evidence cue can sit *once* below the heading—not once per row.
+5. A/B/C switchers, scene selectors and voting controls are **design-lab only**, not part of the final Mission Control container.
+6. First visible result should be useful in one glance, mobile-first.
+7. Selecting a mission never completes it; every action requests the **full source**, re-checks current protocol, and keeps source-reported medal history separate from the fictional availability vignette.
+8. Keep location, Gold count, mission length, time deadline and honor choices out of mission cards unless independently sourced, materially relevant and spoiler-safe. Even then the full Field Guide remains authoritative.
+9. The existing **small map dot** and visible mission list derive from the same observed marker IDs; never let them disagree because of local styling.
+10. Unknown vs not available vs already completed are separate epistemic states. An absence of a dot without current map observation is not proof of unavailability.
+11. Use actual player intent to feature when appropriate. Don't use source file order as ranking.
+12. Prefer native semantic pressable rows / buttons; on desktop and mobile the entire row provides a generous hit zone.
+
+### Design recommendation to test, not ratify
+
+Hypothesis: **A (list)** as scalable default, with **C's top featured exception only for a truly active risk**. Compare to B because the owner values a more immersive presentation. In particular test 2 vs 4 vs 0 observed markers, and one urgent story marker. Pick based on real screenshot/interaction feedback, not preference claimed by the design author.
+
+**Design-only scope:** no changing medal colors/segments, no fake chapter progress, no new Story gates, no original GameGuide edits. The historical v0.1 always-visible four-button header is superseded by the locked owner design.
+
+
+---
+
+## 14. Owner preference v0.7 — compact list, urgency label, system unlock spotlight (2026-10-18)
+
+**Owner feedback:** Chose **A (compact mission list) over B (editorial mission cards)**. Reject C as a separate always-featured mission layout; its *visual emphasis capability* may instead be applied to significant **gameplay-system introductions unlocked by completing a mission**. An active optional skippable Story opportunity should receive a **small meaningful inline "Time-sensitive" label**, not automatically a giant featured card.
+
+This supersedes the provisional A/B/C choice in §13. It does **not** change the owner-LOCKED medal header, dots, hover title, full-Guide click or Home.
+
+### Baseline: list always remains a list
+
+Mission Control rows have one readable mission title, one optional character identifier, and a coherent whole-row source action. Avoid repeating chapter/operation numbers, medal results, Gold-count badges, difficulty stars or generic location in each row. Use thin row separators, no individual heavy nested card per mission.
+
+An **urgency label** must be an evidence-backed annotation *on the affected row*, not a ranking algorithm or a global red panel. Example label: `[clock icon] Time-sensitive` with a short truly actionable explanation only if a specific skippable stage is **actually observed active**. No claimed expiry timer. Screen readers must receive urgency text, not color alone.
+
+### Distinguish "system introduction" from "already owned"
+
+A source-linked mission may **introduce a mechanic on/after completion**, but the preview must not state the player already owns a horse brush, fishing rod or Fence access. Three bounded Chapter 2 examples from the existing progression research:
+
+| Mission | Source-grounded normal route | Preview-safe language |
+|---|---|---|
+| *Exit Pursued by a Bruised Ego* (Hosea) | The normal story route introduces stables and horse-brush care. | `Introduces: Stables & horse care` |
+| *A Fisher of Men* (Abigail) | The normal story route introduces fishing. | `Introduces: Fishing` |
+| *The Spines of America* (Hosea) | Completing this mission introduces **Seamus's wagon Fence** at Emerald Ranch, not every Fence in the game. | `Introduces: Emerald Ranch wagon Fence` |
+
+All are **normal-route progression research, not confirmed owned abilities**. Check mission-source corroboration/Atlas research maturity when displaying. No universal game-mode unlock guarantees.
+
+### Two next design alternatives — A1 / A2
+
+**A1 — Inline system note:** Keep one-line `[sparkles/compass] Introduces: Fishing` **under the relevant mission row** when it is a material new system; other rows remain single-line. Upside: immediately connects the mechanic to its mission. Downside: multiple such rows can create clutter.
+
+**A2 — One supporting "New possibilities" spotlight below the list:** Keep **all rows equally compact**. Below the list, one quiet, source-grounded feature strip/card reads `NEW POSSIBILITY / Fishing / Introduced through A Fisher of Men` with a genuine `Learn fishing` action that opens the owning Atlas research. Upside: a positive, more atmospheric feature emphasis without making that Story mission artificially dominant. Downside: one extra object under the list; it must be absent when there's no genuinely relevant upcoming mechanic or during activated Story urgency. The feature box must never be mistaken for newly *unlocked* content in the player's current save.
+
+**Selection policy:** Show one spotlight at most, chosen by explicit user goal/project or a clearly materially relevant and high-confidence upcoming source-bound system introduction. Without that, show no spotlight rather than arbitrarily choosing the earliest numbered mission. Optional feature focus is not a mission recommendation/order. Avoid repeating a spotlight already explained unless status changes or the user asks.
+
+**Active urgent scenario:** Inline `Time-sensitive` label on the exact oil-wagon mission row and a very short immediate consequence if supported. Suppress unrelated feature spotlight for that moment; keep all other observed missions selectable. Distinguish urgent actionable Gold/skippability from an optional "new possibility".
+
+**Owner review pending:** Compare A1 vs A2 in native client with two/four observed fictional missions, a new feature that matters, a no-feature state, and a specific active wagon-risk state. Do not self-ratify A1/A2. Current best hypothesis A2 for truly major introductions, A1 for minor contextual notes, but only one visual emphasis at a time.
+
+
+---
+
+## 15. Owner-selected Mission Control v0.8 — inline golden New possibilities
+
+**Selected:** Compact list A with inline feature hints A1. **Not selected:** separate A2 feature spotlight, full-featured C card or editorial cards B. Header stays **LOCKED**.
+
+A mission with a material source-backed upcoming gameplay mechanic may display one compact second line:
+
+- Warm-gold sparkles icon (`#D6AC49`) as the highlighted accent, rather than grey stars.
+- Label: **New possibilities · Fishing**, **New possibilities · Stables & horse care**, or **New possibilities · Emerald Ranch wagon Fence**.
+- The line is an *upcoming system preview tied to completing the mission*, NOT a claim the feature or equipment is already unlocked or owned. Gate on evidence, observed mission marker and current capability status; do not show it for every mission.
+- The normal-route mappings are `m009 → stable_brush`, `m018 → ordinary_fishing`, `m013 → emerald_wagon_fence` (Seamus's wagon Fence only). Atlas adoption remains provisional.
+- Activated John oil wagon task receives a small **Time-sensitive** label on the matching mission row, not a big featured mission card or invented timer.
+- The entire row still opens the original full GameGuide Field Guide. Stars and urgency text are visual annotations, not independent buttons.
+- If no relevant future mechanic is confirmed, show an ordinary minimal row. No external spotlight container under the list.
+
+**Visual priority:** mission title first; understated character name; one warm-gold star + short New possibilities line. The gold star is *not a Gold medal*. The header medal rail alone owns medal results. No header adjustments.
+
+**Status:** design selected by owner. Client click and mobile acceptance still pending.
+
+
+---
+
+## 16. Owner LOCK v0.9 — title-case New Possibilities and simultaneous urgency (2026-10-18)
+
+The owner finalized the compact Mission Control A1 treatment with two corrections. This section **supersedes any earlier language recommending that active urgency suppress inline feature introductions**.
+
+1. **Exact displayed label: `New Possibilities`** (both words capitalized). Example: gold sparkles + `New Possibilities · Stables & horse care`. The warm-gold sparkles remain the only decorative accent; no detached spotlight, extra card or heavy badge.
+2. **Urgency and feature introductions coexist.** When John's oil-wagon assignment is actively time-sensitive, attach a concise `Time-sensitive` label to John's row; **retain** each other available mission's source-verified `New Possibilities` line (e.g., Hosea still previews stables). Risk presentation should not hide unrelated information about valid player choices.
+
+Neither indicator changes story prerequisites, in-game availability, medal state, mission ordering or priority. Future feature text is hidden **only for its own evidence reasons** (mission not observed, feature already accessible, unsupported source claim, or no substantive introduction)—never merely because a different row is urgent. Same full original Field Guide row-click action.
+
+**LOCKED:** Chapter II medal/header rail and dot lane, hover titles, Home, compact mission rows, gold stars, title-case `New Possibilities` and simultaneous inline urgency labels. No original GameGuide, real campaign, progress engine or source admission changes. Client device acceptance still pending.
+
+---
+
+## 17. Final Mission Control microtype and next-container design study v1.0 (2026-10-18)
+
+**Owner-finalized microtype:** The gold sparkle remains. The mini-label beside it is **`NEW POSSIBILITIES`** in small, compact, **bold uppercase**, matching the owner's supplied visual reference. The **rest of the label preserves its previous regular mixed-case typography**, e.g.:
+
+```text
+✧  NEW POSSIBILITIES   ·   Stables & horse care
+   ↑ small, bold uppercase    ↑ normal body font
+```
+
+Use warm subdued gold (`#D6AC49`) for the **sparkle** and a legible light neutral for the uppercase mini-label (the screenshot uses light text); the mechanic description remains normal muted body text. Do not capitalize the mechanic, bold the entire line, create a colored badge, or increase its height. Earlier v0.9 title-case advice is superseded by this final specific typography approval.
+
+**Owner lock:** The Chapter II header and Mission Control list (compact A1, separate urgency row label, independently visible source-backed features) are **DESIGN LOCKED**. Actual source-adapter implementation and mobile-device confirmation remain untested.
+
+### Next design boundary: Adventure container *beneath* Mission Control
+
+**Design research, not owner approval yet.** The next content surface below Mission Control is Free Roam, rendered with the player-facing name **Adventure**. No new permanent Home/Story/Adventure/Atlas header tabs.
+
+Canonical Free Roam rhythms from `free_roam/README.md`:
+- PROJECT: an optional multi-session purpose, currently represented by a *conditional* `Develop the Gang's Camp` reference; never falsely call it a user-selected active project.
+- OUTING: one coherent optional trip, currently `Heartlands Hunting Reconnaissance` design content; valid only if Arthur actually has roaming control and the chosen location/tools make sense. No fabricated wildlife/loot.
+- DISCOVERY: emergent reaction to what the player finds, **not** a scripted map-pin catalogue or a mandatory third checklist.
+
+#### Candidate Adventure A — balanced, flat two-row container
+
+One section heading, then two flat pressable rows (PROJECT / OUTING) with brief benefit, one next *observable* prerequisite, and a chevron. A single gentle line below says unexpected discoveries can change the plan. No heavy nested progress meter or fictitious completed milestones.
+
+#### Candidate Adventure B — one contextual thread with optional alternative
+
+One source-linked suggested PROJECT occupies slightly more space for the next sensible action, with OUTING as a compact alternative row; Discovery remains a subtle permission, not a prepared hidden-reward prompt. A "suggested" focus needs a real player preference or explicit **fictional UI fixture**, not arbitrary assignment.
+
+**Presentation tests:** compare A/B with fictional confirmed free-roam control, real-control-unknown, and a fictional active John oil-wagon urgency state. In unknown control mode, make conditional invitation explicit and offer one real "check whether Arthur can roam" action. During a confirmed active irreversible stage, subordinate the outing and give the full original Story guide priority; do not present hunting as if safely available.
+
+Both candidate rows should route to their exact Hub source document in a new ChatGPT turn and query latest authoritative GameGuide for *availability only*. Clicking Project/Outing is **not a gameplay action or completion record**. Projects and outings are `DRAFT / NOT ADOPTED` content and should be labelled as planning help, not authoritative campaign state.
+
+**Acceptance:** user has not selected A or B. This study is the next iteration, preserving both locked components untouched.
+
+
+---
+
+## 18. Owner color lock v1.1 — darker Bronze, no layout changes (2026-10-18)
+
+Owner approved the combined current-chapter header and Mission Control view, requesting **only a darker, more distinguishable Bronze hue**.
+
+**Active palette:** Gold `#D6AC49`; Silver `#C2C9D1`; **Bronze `#A76D52`** (muted copper-brown, replaces lighter prior `#C28A60` and `#B47D59` proposals); Unverified `#454A52`.
+
+Apply Bronze consistently to **both the header's `Bronze` summary label and any Bronze best-medal segment**. The new Bronze is darker and redder than the gold rail; it retains approximately 4.95:1 contrast against black. Neither medal color is status proof by itself; text and tooltip/title access remain available.
+
+**NO other redesign:** 18 thin mission segments and separately sourced map-marker dots, current-chapter-only scope, hover-title/click-full-Guide, Home, and A1 compact Mission Control including small bold uppercase `NEW POSSIBILITIES` and independent Time-sensitive label all remain **LOCKED**. Actual Chapter II record presently has 0 best-Bronze medals; synthetic later-chapter-stage simulations can display Bronze for visual verification but must remain unmistakably fictional.
+
+Adventure/system categorization below Mission Control remains **UNSELECTED**. This color adjustment is the only newly locked visual change. Client color validation still pending.
+
+
+---
+
+## 19. Living Systems prominence study v1.2 — what deserves Mission-scale space? (2026-10-18)
+
+**User direction:** Before designing Adventure or any third container, classify game systems by deserved **UI prominence**. Some merit nearly Mission Control's weight, some a smaller linked presence, and some are purely complementary/contextual. The approved Chapter II header, bronze token, Mission Control, hover/click, map dots, small bold uppercase \`NEW POSSIBILITIES\` and urgency are **LOCKED**; this study begins *below* them.
+
+**Reference scope:** read the existing \`systems_atlas/mechanics_taxonomy_v0_2.md\` S01–S30 with **S31 PROPOSED ONLY**, the source-checked but **RESEARCHED — REVIEW PENDING** D01–D28 dossiers, and the conditional Free Roam Project/Outing/Discovery model. This is a **presentation taxonomy**, NOT a rewrite or adoption of the Atlas mechanic taxonomy. Do not turn indexed mechanic coverage into owned equipment, verified active quest availability or release-ready guides.
+
+### 1. Presentation roles, not one static ranking for each mechanic
+
+| Role | Default visible form | Promotion or suppression evidence |
+|---|---|---|
+| **LOCKED STORY** | Existing chapter header and full Mission Control container | Always first on Home, but explicit player query can open another system directly; do not force mission path |
+| **MAJOR / Living system** | At most ONE nearly Mission-scale featured container below Story, with a meaningful purpose and next choice | Explicit player interest, a confirmed active project/milestone or an observed newly accessible mechanic. None if no credible focus |
+| **SUPPORTING / linked system** | 2–4 compact rows/sections under a relevant major system or in a small browse rail; can be opened directly | Nearby goal, related unlocked system, relevant question. Promote when the player intentionally undertakes the system as their primary activity |
+| **CONTEXTUAL / companion intelligence** | Brief inline tip, safety line or source-linked optional Field Intel at actual action window; no permanent panel | Only when directly relevant, action-critical, observed or explicitly requested. It may expand into a focused Atlas view on request |
+| **ATLAS ONLY** | On-demand searchable reference; no home real estate by default | Always available by conversation or source-backed local discoverability, no 30-card dashboard |
+
+**Adaptive and reversible:** "Fishing" may be supporting before the normal Chapter 2 introduction but **major for a player-initiated fishing outing**. "Horse care" can become major during stabling/bonding decisions and shrink to an inline travel reminder afterward. "Gold objectives" stay in Mission Control rather than becoming a second cross-system scorecard. There is no inferred, permanent user "favorite systems" ranking.
+
+### 2. Whole-taxonomy assignment: S01–S31 without duplicating research authority
+
+"Primary home" is the **UX browse grouping**, not a second owner of mechanic facts. A cross-link may appear in several relevant situations.
+
+| Atlas families | Player-facing domain | Normal role | Conditional changes |
+|---|---|---|---|
+| S30 chapter/mission flow, replay, saves | **Story** | LOCKED STORY; completed with original Field Guide and campaign | Save/replay warnings may surface contextually; Gold source never duplicated |
+| S08 Camp resources, S09 Ledger, S10 Pearson crafting, S11 gang life | **Camp & Crafting** | MAJOR candidate | Ledger/upgrade/satchel subtopics become supporting or inline outside an actual camp project; chapter-limited observed scenes can receive a small timely note |
+| S06 horse lifecycle and S07 travel, routes, temporary camps | **Horse & Travel** | MAJOR candidate | Routine waypoints and mounted controls are contextual; horse recovery/loss can be action-critical |
+| S12 hunting, S13 legendary wildlife, S14 fishing, S15 herbs, S16 field recipes | **Wilderness** | MAJOR candidate | Fishing/herbs/cooking often supporting; a dedicated fishing/legendary expedition promotes that topic to major |
+| S18 treasure, S19 NPC bounties, S20 robberies, S21 Stranger strands, S22 chance encounters, S23 exploration, S24 gangs, S25 town life/minigames | **World & Activities** | MAJOR candidate as a player-selected adventure theme | Treasure/robbery/bounty/town games supporting; S22 spontaneous events primarily CONTEXTUAL, never fake pre-revealed pins |
+| S26 challenges, S27 collectibles/hand-ins, S28 Compendium, S29 distinct completion goals | **Progress & Collections** | MAJOR candidate | One selected challenge/collection may promote; avoid implying total 100%, all Gold, achievements and exhaustive collections are the same objective |
+| S17 inventory, valuables, money, vendor routing | **Resources & Gear** | SUPPORTING | Scarce/unique-item disposal warnings are contextual and possibly critical; a dedicated inventory audit can be a focused Atlas answer |
+| S04 combat and weapon mechanics | **Skills & Combat** | SUPPORTING | Precise Gold combat advice belongs in active Mission Field Guide; learning combat can become a major *requested lesson* without a permanent front-page combat card |
+| S03 cosmetics/clothing | **Life & Style** | SUPPORTING / on demand | Thermal outfit warning contextual; self-directed fashion/photo session can get full focused study |
+| S01 vitals, S02 condition/rest, S05 Honor/law, S31 contextual prompts (**S31 PROPOSED**) | **Companion Intelligence** | CONTEXTUAL / reference only | Honor/health/control guidance must appear at the relevant decision, never clutter Home; any explicit request opens Atlas |
+
+**No omissions:** S01–S31 are accounted for once each as a primary UX grouping. S31 remains PROPOSED (taxonomy only). Dossier adoption gates apply independently.
+
+### 3. Two competing presentations BELOW the locked first two containers
+
+**A — Department shelves:** Five same-weight discoverable flat rows: Camp & Crafting; Horse & Travel; Wilderness; World & Activities; Progress & Collections. A small "Skills / Resources / Life & Style" link remains. Pros: stable browse organization. Cons: spreads equal attention to unrelated systems and underuses high-value focus.
+
+**B — Living focus + small index:** One MAJOR focus surface only if source/player intent grounds it, then 2–4 small quick-access domains. Example: player explicitly working on satchels → **Camp & Crafting** gets meaningful first step; Horse & Travel / Wilderness / Progress are compact. Unknown intent → NO invented featured goal; just the small discoverable domain index. Pros: feels like an adaptive adventure; Cons: must clearly distinguish selected player objective from suggested optional example.
+
+**Dynamic examples for the design lab:**
+- CAMP: optional interest in satchel upgrade → Camp & Crafting large; Wilderness, Resources & Gear, Horse as compact linked support. Ledger/purchase **unknown** until GameGuide/player confirmation.
+- HORSE: explicit horse-training interest → Horse & Travel large; Wilderness, Camp, Progress compact; horse Level 4 reported but stable/brush access not confirmed in latest read.
+- WILDERNESS: intentional perfect-pelt outing → Wilderness large; Horse cargo, crafting, gear compact; no invented 3-star species or owned weapon.
+- PROGRESS: explicit completion planning → Progress & Collections large; World, Camp, Wilderness compact; never invent checklist counts or combine completion definitions.
+- UNSET: no current focus or current free-roam control unknown → do not auto-select a large domain. Show discoverable index and ask only for a critical missing observation when necessary.
+
+### 4. Rules to preserve the companion character
+
+- A system can be a large reading view **without being a permanent large home dashboard widget**. Direct chat requests bypass Home navigation and load a focused, fully sourced Atlas explanation.
+- Do not simply expose 31 Atlas families as 31 equal user-facing destinations. Full mechanics taxonomy remains an internal source address.
+- Never make Project, Outing, and Discovery **the whole organizing taxonomy**: these are *ways of enjoying systems*, not mutually exclusive system families. A horse outing can serve a camp Project; discovery can replace the route.
+- Only one active major focus by default. A player may explicitly browse another major domain without losing the real Story marker list or status truth.
+- System emphasis is not a recommendation to rush an irreversible story unlock or complete all optional material before Story.
+- No invented live map/progress, no permanent sync claims, no implicit modification to GameGuide.
+- Client A/B comparison and owner acceptance remain PENDING; do **not** label presentation A or B ratified yet.
+
+**Proposed experiment:** evaluate the five fictional focus states above in a native design lab; compare A (department shelves) and B (one relevant focus + compact cross-system links). Use exact source-backed routes on real click, not decorative fake controls; do not create new heading tabs in the locked header.
+
+---
+
+## 20. Owner-selected v1.3 — Adaptive Focus + icon-square system picker (2026-10-18)
+
+**Owner selection:** B **Adaptive Focus** wins over fixed equal-weight directory shelves. Replace the previous system-focus **dropdown** with a visible, responsive set of **square selectable controls**. Each square shows a prominent **system icon above its system name**; the selected square visibly differs from the unselected ones.
+
+### Picker design
+
+- Six options: **Overview** (no feature highlighted), **Camp & Crafting**, **Horse & Travel**, **Wilderness**, **World & Activities**, **Progress & Collections**. Overview is explicitly a browse state, **not a sixth major game system**.
+- Each entire square is clickable/tappable; choose the focus immediately **inside the current response**, without sending an unnecessary new ChatGPT turn or opening a source yet.
+- Use a responsive wrap/grid rather than scroll-hiding systems. Icons stay recognizable, labels fit in **one or two centered lines**, and hit areas remain comfortably tappable.
+- Visual order is stable. Use restrained native surfaces and a clear selected appearance (subtle surface/highlight and border contrast, not gold achievement badges). The approved gold palette remains reserved for actual medals and `NEW POSSIBILITIES` stars.
+- Do not draw a decorative button that does nothing: selecting updates the featured system and supporting references. Keyboard/screen reader semantics should convey the system label and selected state.
+- **Below selector:** One large focused system when selected, with one meaningful sourced next step and an actual **Explore** action. With **Overview** selected, do not invent a focus; show the five domains compactly instead. Supporting links stay discoverable without redundant giant cards.
+- **Action difference:** tile click = local UI focus only; Explore click = a new source-grounded Atlas/Free Roam turn. Neither action writes a game unlock, mission completion, Gold or a saved activity.
+- Treat focus selection as ephemeral UI state, not evidence of player interest persisting across chats or any actual in-game screen.
+- The five system domains and their Atlas ownership mappings from §19 remain unchanged. Supporting/Contextual domains remain source-searchable; no accidental promotion of all 31 indexed mechanics to giant dashboard tiles.
+
+### Layout acceptance to test
+
+Use both desktop and phone previews to confirm 6 controls fit via wrapping without horizontal overflow; label lengths such as **Progress & Collections** must be readable. Check instant switching among Camp, Horse, Wilderness and Overview, and verify that the major content genuinely changes while the two **owner-locked Header + Mission Control** containers remain untouched.
+
+**Status:** B Adaptive Focus and square icon selector are selected as design direction; actual host/client presentation and responsive validation remain PENDING OWNER.
+
+
+---
+
+## 21. Owner correction v1.4 — header-sized inline focus controls, related systems restored (2026-10-18)
+
+**Owner feedback:** the v1.3 full-size square icon tiles were **far too large** and made the picker into a competing primary dashboard section. The intended controls were **small, inline, header-scale selector boxes**—square-ish mini-icons with a compact system name below, tucked into the `Your World` heading/heading area. The former **Related systems** compact list was correct and must be RESTORED.
+
+### Revised anatomy
+
+```text
+YOUR WORLD
+[□ Camp][□ Horse][□ Wild][□ World][□ Progress][□ Overview]
+     (mini inline icon+label controls, no giant tile grid)
+
+┌─────────────────────────────────────────────┐
+│ (icon)  HORSE & TRAVEL                      │
+│ Description, one useful evidence-safe step  │
+│                          [Explore]          │
+└─────────────────────────────────────────────┘
+
+RELATED SYSTEMS
+  Wilderness                                ›
+  Camp & Crafting                           ›
+  Progress & Collections                    ›
+  World & Activities                        ›
+```
+
+- **Inline focus buttons:** nominal ~70–85px wide by ~52–64px high rather than prior ~104px+ square feature tiles; one small icon, compact centered one/two-line system name; subdued selected treatment. Align to the title row on wide screens; allow close-coupled wrapping immediately under the heading on mobile. Avoid a tall independent picker grid or another content container just for selection. Six IDs remain, but `Overview` may use an unobtrusive home/grid glyph.
+- **Major content remains major:** Only selected system gets the existing spacious *featured system* panel. It is NOT replaced by selector squares.
+- **Related systems remain beneath the feature** as the previous **simple vertical compact linked list with chevrons**. Do not replace that list with icons/tiles, a duplicate six-domain grid, or a second set of giant cards. Exactly 2–4 relevant links; actions read the appropriate source. They may navigate directly to the relevant guide (not necessarily require another focus-picker click).
+- **No focus case:** no fabricated major card; offer an honest compact index.
+- **Semantics:** tile click locally changes focus; `Explore` and related-system click perform genuine source-reading turns; focus choice doesn't assert actual game unlocks.
+- Header+Mission Control and their owners' locks remain unchanged.
+
+**Selection status:** Adaptive focus B and the tiny-inline-controls / restored Related systems composition are the newly corrected **design direction**. Exact mini tile size/wrapping is a visual tuning hypothesis, **not yet desktop/mobile click-validated**.
