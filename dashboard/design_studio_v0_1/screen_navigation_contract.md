@@ -506,3 +506,23 @@ Examples for synthetic testing:
 ### Open design selection
 
 A/B remains **unselected** pending the owner's interactive comparison. The eventual title of the section (Adventure, Your World, etc.) is likewise unsettled. Preserve all previously locked header/mission decisions; no new global navigation tabs, live source writes or automatic sync claims.
+
+---
+
+## 21. Owner-selected adaptive focus picker v1.3 — local tile selection
+
+**Decision:** Adaptive focus B is selected. Fixed directory A loses as a primary layout but survives as the **Overview** fallback. The systems selector MUST be a group of responsive **square icon-led buttons**, each with the **system name beneath its icon**. No dropdown.
+
+Stable local tile IDs: `overview` (no active focus), `camp`, `horse`, `wilderness`, `world`, `progress`. Overview is a UI state rather than a standalone game system. Other IDs map to existing §20 source routes and Sxx families; don't alter Atlas ownership.
+
+**Selection flow:** activating a tile changes the in-message `selected_domain`, highlighted tile, and the one major content feature below it. It must not launch a new turn on tile selection, trigger a mission, mutate progress or claim the user has chosen a permanent project. A separate full-width `Explore [domain]` action reads the correct current Hub/Atlas source and original GameGuide campaign state.
+
+**Overview fallback:** if no system focus can be grounded, select Overview and show five compact available domain references. A design rehearsal may preselect a fictional focus only with an explicit surrounding simulation label.
+
+**Supporting content:** when one system is selected, show a meaningful, small set of related system references, not second and third major cards. Source navigation must remain real. The selected tile and its feature must always agree.
+
+**Responsiveness:** 6 square touch-friendly controls wrap across available screen width. The icon and one-to-two-line system labels fit without truncation or horizontal overflow. Native interaction semantics, readable label and active appearance should remain distinguishable by more than color alone. No invented persistent browser/app state.
+
+**Locked surfaces:** Current Chapter header, thin medal segments, dot lane, hover mission-title, click full Guide, darker Bronze `#A76D52`, and compact Mission Control with **small bold uppercase NEW POSSIBILITIES** remain unchanged.
+
+**Decision state:** owner selected Adaptive Focus plus icon-square selector. Final actual UI click and phone-size acceptance PENDING.
