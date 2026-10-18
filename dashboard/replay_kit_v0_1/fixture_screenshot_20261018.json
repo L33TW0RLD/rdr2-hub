@@ -1,0 +1,25 @@
+{
+  "fixture_id": "screenshot_2026_10_18_074820",
+  "classification": "SIMULATION_FIXTURE_NOT_GAME_STATE",
+  "evidence": "User-provided 580x438 screenshot, 2026-10-18",
+  "chapter": "Chapter II",
+  "camp": "Horseshoe Overlook",
+  "medals_left_to_right": [
+    "gold","gold","gold","silver","gold","bronze",
+    "unknown","gold","silver","gold","unknown","unknown",
+    "unknown","unknown","unknown","unknown","unknown","unknown"
+  ],
+  "map_marker_dot_zero_based_slots": [6,10,11],
+  "screenshot_summary": {"gold":6,"silver":2,"bronze":1,"recorded":9,"total":18},
+  "mission_rows": [
+    {"title":"The Spines of America","giver":"Hosea","annotation":"NEW POSSIBILITIES","introduction":"Emerald Ranch wagon Fence"},
+    {"title":"Pouring Forth Oil — II","giver":"John","annotation":"Time-sensitive","introduction":null},
+    {"title":"A Fisher of Men","giver":"Abigail","annotation":"NEW POSSIBILITIES","introduction":"Fishing"}
+  ],
+  "provenance_rules": [
+    "This is a screenshot-derived SIMULATION fixture, never evidence of actual player progress or current map markers.",
+    "The image establishes bar/dot positions and visible row titles; it does not independently establish exact slot-to-mission identity.",
+    "Before live play, recover original GameGuide campaign and mission source; preserve Gold/save/mission status authority in that repository.",
+    "Do not silently convert the screenshot's 6/2/1 to the older reported 3/1/0; contexts differ."
+  ]
+}
