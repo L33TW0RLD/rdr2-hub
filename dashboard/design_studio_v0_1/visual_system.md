@@ -481,3 +481,27 @@ Adventure/system categorization below Mission Control remains **UNSELECTED**. Th
 - Client A/B comparison and owner acceptance remain PENDING; do **not** label presentation A or B ratified yet.
 
 **Proposed experiment:** evaluate the five fictional focus states above in a native design lab; compare A (department shelves) and B (one relevant focus + compact cross-system links). Use exact source-backed routes on real click, not decorative fake controls; do not create new heading tabs in the locked header.
+
+---
+
+## 20. Owner-selected v1.3 — Adaptive Focus + icon-square system picker (2026-10-18)
+
+**Owner selection:** B **Adaptive Focus** wins over fixed equal-weight directory shelves. Replace the previous system-focus **dropdown** with a visible, responsive set of **square selectable controls**. Each square shows a prominent **system icon above its system name**; the selected square visibly differs from the unselected ones.
+
+### Picker design
+
+- Six options: **Overview** (no feature highlighted), **Camp & Crafting**, **Horse & Travel**, **Wilderness**, **World & Activities**, **Progress & Collections**. Overview is explicitly a browse state, **not a sixth major game system**.
+- Each entire square is clickable/tappable; choose the focus immediately **inside the current response**, without sending an unnecessary new ChatGPT turn or opening a source yet.
+- Use a responsive wrap/grid rather than scroll-hiding systems. Icons stay recognizable, labels fit in **one or two centered lines**, and hit areas remain comfortably tappable.
+- Visual order is stable. Use restrained native surfaces and a clear selected appearance (subtle surface/highlight and border contrast, not gold achievement badges). The approved gold palette remains reserved for actual medals and `NEW POSSIBILITIES` stars.
+- Do not draw a decorative button that does nothing: selecting updates the featured system and supporting references. Keyboard/screen reader semantics should convey the system label and selected state.
+- **Below selector:** One large focused system when selected, with one meaningful sourced next step and an actual **Explore** action. With **Overview** selected, do not invent a focus; show the five domains compactly instead. Supporting links stay discoverable without redundant giant cards.
+- **Action difference:** tile click = local UI focus only; Explore click = a new source-grounded Atlas/Free Roam turn. Neither action writes a game unlock, mission completion, Gold or a saved activity.
+- Treat focus selection as ephemeral UI state, not evidence of player interest persisting across chats or any actual in-game screen.
+- The five system domains and their Atlas ownership mappings from §19 remain unchanged. Supporting/Contextual domains remain source-searchable; no accidental promotion of all 31 indexed mechanics to giant dashboard tiles.
+
+### Layout acceptance to test
+
+Use both desktop and phone previews to confirm 6 controls fit via wrapping without horizontal overflow; label lengths such as **Progress & Collections** must be readable. Check instant switching among Camp, Horse, Wilderness and Overview, and verify that the major content genuinely changes while the two **owner-locked Header + Mission Control** containers remain untouched.
+
+**Status:** B Adaptive Focus and square icon selector are selected as design direction; actual host/client presentation and responsive validation remain PENDING OWNER.
