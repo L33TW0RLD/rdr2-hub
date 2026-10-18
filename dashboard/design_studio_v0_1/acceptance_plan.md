@@ -337,3 +337,23 @@ No self-merge, no GameGuide edits, no automatic save tracking.
 | SQ9 · Locks | Medal rail/dots, Bronze, Home and Mission Control typography/actions untouched | OWNER LOCKED |
 
 No source adoption, original campaign write, self-merge, or independent game system progress store.
+
+
+---
+
+## Adaptive Focus v1.4 — compact selector correction tests
+
+Owner feedback on v1.3: system selector **far too large**, originally intended **header-sized inline icon/label boxes**. **Related systems** compact linked list was good and must remain intact.
+
+| Test | Acceptance | State |
+|---|---|---|
+| F01 · Selector size | Small inline focus boxes, not a giant square-tile gallery; icon above tiny system label | OWNER DIRECTION, CLIENT PENDING |
+| F02 · Heading integration | Controls live beside/just under `Your World` title, wrapping neatly on mobile | CLIENT PENDING |
+| F03 · Selected focus | Tapping one mini control updates only major feature panel locally | CLIENT PENDING |
+| F04 · Related systems | Previous 2–4 compact chevron-linked rows appear beneath the featured system | OWNER DIRECTION, CLIENT PENDING |
+| F05 · Related click | Each row opens its actual Hub/Atlas research path in a fresh turn | CLIENT PENDING |
+| F06 · Explore click | Featured Explore stays the separate real source-reading action | CLIENT PENDING |
+| F07 · Overview | No invented focus, compact browse without huge duplicate tiles | CLIENT PENDING |
+| F08 · Locked predecessors | Current-chapter header/medal rail/dots, Mission Control, bronze and NEW POSSIBILITIES unchanged | OWNER LOCK |
+
+**Supersession:** prior v1.3 SQ1 and SQ6 expectations of large 1:1 selector squares are *historical proposals*, not the final corrected geometry. Source/ownership and actual gameplay records remain unchanged.
