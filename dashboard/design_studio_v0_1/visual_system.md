@@ -505,3 +505,39 @@ Adventure/system categorization below Mission Control remains **UNSELECTED**. Th
 Use both desktop and phone previews to confirm 6 controls fit via wrapping without horizontal overflow; label lengths such as **Progress & Collections** must be readable. Check instant switching among Camp, Horse, Wilderness and Overview, and verify that the major content genuinely changes while the two **owner-locked Header + Mission Control** containers remain untouched.
 
 **Status:** B Adaptive Focus and square icon selector are selected as design direction; actual host/client presentation and responsive validation remain PENDING OWNER.
+
+
+---
+
+## 21. Owner correction v1.4 — header-sized inline focus controls, related systems restored (2026-10-18)
+
+**Owner feedback:** the v1.3 full-size square icon tiles were **far too large** and made the picker into a competing primary dashboard section. The intended controls were **small, inline, header-scale selector boxes**—square-ish mini-icons with a compact system name below, tucked into the `Your World` heading/heading area. The former **Related systems** compact list was correct and must be RESTORED.
+
+### Revised anatomy
+
+```text
+YOUR WORLD
+[□ Camp][□ Horse][□ Wild][□ World][□ Progress][□ Overview]
+     (mini inline icon+label controls, no giant tile grid)
+
+┌─────────────────────────────────────────────┐
+│ (icon)  HORSE & TRAVEL                      │
+│ Description, one useful evidence-safe step  │
+│                          [Explore]          │
+└─────────────────────────────────────────────┘
+
+RELATED SYSTEMS
+  Wilderness                                ›
+  Camp & Crafting                           ›
+  Progress & Collections                    ›
+  World & Activities                        ›
+```
+
+- **Inline focus buttons:** nominal ~70–85px wide by ~52–64px high rather than prior ~104px+ square feature tiles; one small icon, compact centered one/two-line system name; subdued selected treatment. Align to the title row on wide screens; allow close-coupled wrapping immediately under the heading on mobile. Avoid a tall independent picker grid or another content container just for selection. Six IDs remain, but `Overview` may use an unobtrusive home/grid glyph.
+- **Major content remains major:** Only selected system gets the existing spacious *featured system* panel. It is NOT replaced by selector squares.
+- **Related systems remain beneath the feature** as the previous **simple vertical compact linked list with chevrons**. Do not replace that list with icons/tiles, a duplicate six-domain grid, or a second set of giant cards. Exactly 2–4 relevant links; actions read the appropriate source. They may navigate directly to the relevant guide (not necessarily require another focus-picker click).
+- **No focus case:** no fabricated major card; offer an honest compact index.
+- **Semantics:** tile click locally changes focus; `Explore` and related-system click perform genuine source-reading turns; focus choice doesn't assert actual game unlocks.
+- Header+Mission Control and their owners' locks remain unchanged.
+
+**Selection status:** Adaptive focus B and the tiny-inline-controls / restored Related systems composition are the newly corrected **design direction**. Exact mini tile size/wrapping is a visual tuning hypothesis, **not yet desktop/mobile click-validated**.
