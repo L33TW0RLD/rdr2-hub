@@ -526,3 +526,21 @@ Stable local tile IDs: `overview` (no active focus), `camp`, `horse`, `wildernes
 **Locked surfaces:** Current Chapter header, thin medal segments, dot lane, hover mission-title, click full Guide, darker Bronze `#A76D52`, and compact Mission Control with **small bold uppercase NEW POSSIBILITIES** remain unchanged.
 
 **Decision state:** owner selected Adaptive Focus plus icon-square selector. Final actual UI click and phone-size acceptance PENDING.
+
+
+---
+
+## 22. Owner correction v1.4 — compact focus strip and related system rows
+
+Supersedes §21's oversize six-square grid presentation. **Adaptive focus stays selected; only focus-picker geometry and related-system presentation change.**
+
+- Render the focus picker as **miniature inline icon-over-name controls at heading scale** inside the `Your World` heading area (or closely wrapped beneath it on narrow screens). No large tiles in a second section; they should behave like a compact switcher, not content cards.
+- Keep the six stable IDs and real labels: `overview`, `camp`, `horse`, `wilderness`, `world`, `progress`. A small icon sits above the name, selected state is visibly clear without gold-medal styling.
+- Focus controls perform only local focus switching; don't launch a source read or record campaign/player interest.
+- Restore the **Related systems** area **under the expanded selected system**, using its previous flat row list of 2–4 neighboring topics, each whole-row pressable with chevron and actual source-read action.
+- The selected focus retains one major content panel with name, concise grounded explanation/next step, and an `Explore` source-read action.
+- In `overview`, show compact category browse rather than inventing a user's active project or presenting a major feature.
+- Width responsiveness: header-scale controls wrap inline near heading with short one/two-line labels; no giant 1:1 tile matrix taking most of the screen and no scroll-clipping on narrow phones.
+- The approved Chapter II header and Mission Control remain untouched, including rail/colors/dots, hover action, uppercase small-bold `NEW POSSIBILITIES`, urgent labels and full original Guide behavior.
+
+**Owner-confirmed:** prior related-system links were preferable to replacing them with tiles. **Still pending:** real client check of exact mini-control sizing, wrap and click behavior.
